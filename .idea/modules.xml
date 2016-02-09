@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TheMachinePlugin.iml" filepath="$PROJECT_DIR$/TheMachinePlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SmartCity/SmartCity.iml" filepath="$PROJECT_DIR$/../SmartCity/SmartCity.iml" />
     </modules>
   </component>
 </project>
