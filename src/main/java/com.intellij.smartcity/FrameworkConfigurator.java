@@ -17,9 +17,9 @@ import javax.swing.*;
 /**
  * @author Anna Bulenkova
  */
-public class SmartCityFramework extends FrameworkTypeEx {
-    public static final String FRAMEWORK_ID = "smartcity";
-    protected SmartCityFramework() {
+public class FrameworkConfigurator extends FrameworkTypeEx {
+    public static final String FRAMEWORK_ID = "SmartCity";
+    protected FrameworkConfigurator() {
         super(FRAMEWORK_ID);
     }
 
@@ -30,7 +30,7 @@ public class SmartCityFramework extends FrameworkTypeEx {
             @NotNull
             @Override
             public FrameworkTypeEx getFrameworkType() {
-                return SmartCityFramework.this;
+                return FrameworkConfigurator.this;
             }
 
             @NotNull

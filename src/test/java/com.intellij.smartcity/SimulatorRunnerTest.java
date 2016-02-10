@@ -8,14 +8,14 @@ import org.junit.Test;
 /**
  * Created by ruan0408 on 30/01/2016.
  */
-public class SmartCitySimulatorRunnerTest extends LightCodeInsightFixtureTestCase {
+public class SimulatorRunnerTest extends LightCodeInsightFixtureTestCase {
 
-    private SmartCitySimulatorRunner runner;
+    private SimulatorRunner runner;
 
     @Before
     public void setUp() throws Exception {
         super.setUp();
-        runner = new SmartCitySimulatorRunner();
+        runner = new SimulatorRunner();
     }
 
     @Override

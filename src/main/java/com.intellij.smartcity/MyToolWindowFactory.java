@@ -12,15 +12,15 @@ import com.intellij.openapi.wm.ToolWindowFactory;
 /**
  * Created by ruan0408 on 9/02/2016.
  */
+
 //TODO Hide tool window if the Smart City Framework is not part of the project.
-//TODO Move the simulator run button to the tool window.
-public class SmartCityToolWindowFactory implements ToolWindowFactory, Condition {
+public class MyToolWindowFactory implements ToolWindowFactory, Condition {
 
     private ToolWindow myToolWindow;
     private ActionToolbar toolbar;
     private SimpleToolWindowPanel toolWindowPanel;
 
-    public SmartCityToolWindowFactory() {
+    public MyToolWindowFactory() {
         toolWindowPanel = new SimpleToolWindowPanel(true, true);
     }
 
@@ -71,12 +71,12 @@ public class SmartCityToolWindowFactory implements ToolWindowFactory, Condition 
 //    private ToolWindow myToolWindow;
 //
 //
-//    public SmartCityToolWindowFactory() {
+//    public MyToolWindowFactory() {
 //        hideToolWindowButton.addActionListener(e -> myToolWindow.hide(null));
 //        if (refreshToolWindowButton == null) System.out.println("AUEHAUHEUAHUEAHUHAUEHAH");
 //        refreshToolWindowButton.addActionListener(new ActionListener() {
 //            public void actionPerformed(ActionEvent e) {
-//                SmartCityToolWindowFactory.this.currentDateTime();
+//                MyToolWindowFactory.this.currentDateTime();
 //            }
 //        });
 //    }
