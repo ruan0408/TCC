@@ -5,7 +5,6 @@ import com.intellij.openapi.actionSystem.ActionToolbar;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
-import com.intellij.openapi.util.Condition;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
 
@@ -13,8 +12,7 @@ import com.intellij.openapi.wm.ToolWindowFactory;
  * Created by ruan0408 on 9/02/2016.
  */
 
-//TODO Hide tool window if the Smart City Framework is not part of the project.
-public class MyToolWindowFactory implements ToolWindowFactory, Condition {
+public class MyToolWindowFactory implements ToolWindowFactory{
 
     private ToolWindow myToolWindow;
     private ActionToolbar toolbar;
@@ -31,11 +29,6 @@ public class MyToolWindowFactory implements ToolWindowFactory, Condition {
         toolbar = createToolbar(project);
         myToolWindow.getComponent().add(toolWindowPanel);
         toolWindowPanel.setToolbar(toolbar.getComponent());
-    }
-
-    @Override
-    public boolean value(Object o) {
-        return true;
     }
 
     private ActionToolbar createToolbar(final Project project) {
