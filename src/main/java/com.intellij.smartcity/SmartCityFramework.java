@@ -18,7 +18,7 @@ import javax.swing.*;
  * @author Anna Bulenkova
  */
 public class SmartCityFramework extends FrameworkTypeEx {
-    public static final String FRAMEWORK_ID = "SmartCity";
+    public static final String FRAMEWORK_ID = "smartcity";
     protected SmartCityFramework() {
         super(FRAMEWORK_ID);
     }

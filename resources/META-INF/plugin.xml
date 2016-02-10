@@ -1,5 +1,5 @@
 <idea-plugin version="2">
-  <id>com.themachine.id</id>
+  <id>com.intellij.smartcity</id>
   <name>Smart City Framework</name>
   <version>1.0</version>
   <vendor email="ruan.cocito@gmail.com" url="http://www.linux.ime.usp.br/~ruan/mac0499/">YourCompany</vendor>
@@ -25,14 +25,27 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <framework.type implementation="com.intellij.smartcity.SmartCityFramework"/>
-    <toolWindow id="Smart City" icon="/plusIcon.png" anchor="right" factoryClass="com.intellij.smartcity.SmartCityToolWindowFactory"/>
+    <toolWindow id="Smart City" icon="/plusIcon.png" anchor="bottom"
+                factoryClass="com.intellij.smartcity.SmartCityToolWindowFactory"
+                conditionClass="com.intellij.smartcity.SmartCityToolWindowFactory"/>
   </extensions>
 
   <actions>
-    <!-- Add your actions here -->
+    <group id="SmartCity.Toolbar">
+      <separator/>
+    </group>
+
     <action id="smartcityrunner" class="com.intellij.smartcity.SmartCitySimulatorRunner" text="Smart City Runner"
             description="Runs the smart city simulator">
       <add-to-group group-id="RunMenu" anchor="last"/>
+    </action>
+
+    <!--<group id="SmartCity.ButtonToolBar" text="SmartCity button toolbar" popup="true">-->
+    <!--</group>-->
+
+    <action id="SmartCity.RunSimulator" text="Run Simulator" icon="/plusIcon.png"
+            class="com.intellij.smartcity.SmartCitySimulatorRunner">
+      <add-to-group group-id="SmartCity.Toolbar" anchor="first"/>
     </action>
   </actions>
 

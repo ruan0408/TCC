@@ -1,26 +1,65 @@
 package com.intellij.smartcity;
 
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionToolbar;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.SimpleToolWindowPanel;
+import com.intellij.openapi.util.Condition;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
 
 /**
  * Created by ruan0408 on 9/02/2016.
  */
-public class SmartCityToolWindowFactory implements ToolWindowFactory {
+//TODO Hide tool window if the Smart City Framework is not part of the project.
+//TODO Move the simulator run button to the tool window.
+public class SmartCityToolWindowFactory implements ToolWindowFactory, Condition {
 
     private ToolWindow myToolWindow;
+    private ActionToolbar toolbar;
+    private SimpleToolWindowPanel toolWindowPanel;
 
     public SmartCityToolWindowFactory() {
-
+        toolWindowPanel = new SimpleToolWindowPanel(true, true);
     }
 
     // Create the tool window content.
     @Override
     public void createToolWindowContent(Project project, ToolWindow toolWindow) {
         myToolWindow = toolWindow;
+        toolbar = createToolbar(project);
+        myToolWindow.getComponent().add(toolWindowPanel);
+        toolWindowPanel.setToolbar(toolbar.getComponent());
     }
 
+    @Override
+    public boolean value(Object o) {
+        return true;
+    }
+
+    private ActionToolbar createToolbar(final Project project) {
+        DefaultActionGroup groupFromConfig = (DefaultActionGroup) ActionManager.getInstance().getAction("SmartCity.Toolbar");
+        DefaultActionGroup group = new DefaultActionGroup(groupFromConfig); // copy required (otherwise config action group gets modified)
+
+        //ActionManager.getInstance().createButtonToolbar()
+//        DefaultActionGroup filterGroup = new DefaultActionGroup();
+//        Iterable<ChangesFilter> filters = changesFilters.getFilters();
+//        for (ChangesFilter filter : filters) {
+//            filterGroup.add(filter.getAction(project));
+//        }
+//        filterGroup.add(new Separator());
+//        group.add(filterGroup, Constraints.FIRST);
+//
+//        changesFilters.addObserver(new Observer() {
+//            @Override
+//            public void update(Observable observable, Object o) {
+//                reloadChanges(project, true);
+//            }
+//        });
+
+        return ActionManager.getInstance().createActionToolbar("SmartCity.Toolbar", group, true);
+    }
 }
 
 //    private JButton refreshToolWindowButton;
