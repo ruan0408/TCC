@@ -26,7 +26,7 @@
   <extensions defaultExtensionNs="com.intellij">
     <framework.type implementation="com.intellij.smartcity.FrameworkConfigurator"/>
     <!--<facetType implementation="com.intellij.smartcity.MyFacetType"/>-->
-    <toolWindow id="Smart City" icon="/plusIcon.png" anchor="right"
+    <toolWindow id="Smart City" icon="/smartCityIcon.png" anchor="right"
                 factoryClass="com.intellij.smartcity.MyToolWindowFactory"
                 conditionClass="com.intellij.smartcity.FrameworkConfigurator"/>
   </extensions>
@@ -34,7 +34,7 @@
   <actions>
     <group id="SmartCity.Toolbar">
       <!--<separator/>-->
-      <action id="SmartCity.RunSimulator" text="Run Simulator" icon="/plusIcon.png"
+      <action id="SmartCity.RunSimulator" text="Run Simulator" icon="/runSimulatorIcon.jpg"
               class="com.intellij.smartcity.SimulatorRunner">
       </action>
     </group>
