@@ -14,22 +14,23 @@ import java.io.InputStreamReader;
 /**
  * Created by ruan0408 on 11/02/2016.
  */
-public class HttpUrlConnectionWrapper {
+public class HttpUrlConnector {
 
-    public static String executePostWithoutForm(String targetURL) {
+    private CloseableHttpClient client = HttpClients.createDefault();
+
+    public String executePostWithoutForm(String targetURL) {
         return executeRequest(new HttpPost(targetURL));
     }
 
-    public static String executeGet(String url) {
+    public String executeGet(String url) {
         return executeRequest(new HttpGet(url));
     }
 
     @Nullable
-    private static String executeRequest(HttpRequestBase request) {
-        try (CloseableHttpClient client = HttpClients.createDefault();
-             CloseableHttpResponse response = client.execute(request);
+    public String executeRequest(HttpRequestBase request) {
+        try (CloseableHttpResponse response = client.execute(request);
              BufferedReader rd = new BufferedReader(
-                     new InputStreamReader(response.getEntity().getContent()));) {
+                     new InputStreamReader(response.getEntity().getContent()))) {
 
             StringBuffer result = new StringBuffer();
             String line = "";

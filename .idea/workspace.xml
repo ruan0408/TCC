@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ruan0408.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnectionWrapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPIWrapperTest.java" />
+    <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="API Wrapper half way through.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/Bus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusCorridor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLineNow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLinePositions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusNow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStop.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopNow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopWithLines.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithLine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStop.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStopAndLine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPITest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPIWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPIWrapperTest.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnectionWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPIWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPIWrapper.java" />
     </list>
     <ignored path="TheMachinePlugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,47 +49,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <file leaf-file-name="OlhoVivoAPI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="90" selection-start-line="36" selection-start-column="90" selection-end-line="36" selection-end-column="90" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OlhoVivoAPIWrapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPIWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpUrlConnectionWrapper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnectionWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9357278">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.7372401">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#724#725#0" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OlhoVivoAPIWrapperTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPIWrapperTest.java">
+      <file leaf-file-name="OlhoVivoAPITest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPITest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="102" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="102" />
+              <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,8 +79,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Action" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -136,7 +125,27 @@
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPIWrapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnectionWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnector.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPIWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLinePositions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusNow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/PredictedArrival.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopNow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLineNow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/PredictedArrivals.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopWithLines.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithBusLineAndBusStop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithLineAndStop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithBusLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithBusStop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusCorridor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithLine.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPITest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPI.java" />
       </list>
     </option>
   </component>
@@ -420,7 +429,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -443,19 +452,19 @@
       <recent name="com.intellij.smartcity" />
       <recent name="com.themachineplugin" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.intellij.smartcity" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.intellij.smartcity" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OlhoVivoAPIWrapperTest">
-    <configuration default="false" name="OlhoVivoAPIWrapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OlhoVivoAPITest">
+    <configuration default="false" name="OlhoVivoAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.intellij.smartcity.*" />
@@ -466,7 +475,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.intellij.smartcity" />
-      <option name="MAIN_CLASS_NAME" value="com.intellij.smartcity.OlhoVivoAPIWrapperTest" />
+      <option name="MAIN_CLASS_NAME" value="com.intellij.smartcity.OlhoVivoAPITest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -980,11 +989,11 @@
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Test Smart City Runner" />
       <item index="1" class="java.lang.String" itemvalue="Plugin.Run Smart City" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPIWrapperTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPIWrapperTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest" />
       </list>
     </recent_temporary>
   </component>
@@ -1015,7 +1024,7 @@
       <workItem from="1455056693377" duration="3837000" />
       <workItem from="1455066870993" duration="18541000" />
       <workItem from="1455132029438" duration="14130000" />
-      <workItem from="1455227357321" duration="6101000" />
+      <workItem from="1455227357321" duration="21595000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1047,43 +1056,49 @@
       <option name="project" value="LOCAL" />
       <updated>1455158206634</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Http post working now">
+      <created>1455286970493</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1455286970493</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.11 at 23h 11m 47s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 42m 24s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.11 at 23h 12m 18s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 52m 49s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.11 at 23h 15m 35s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 53m 07s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.11 at 23h 16m 21s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 54m 07s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.11 at 23h 43m 42s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 55m 03s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.11 at 23h 48m 21s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 56m 49s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.11 at 23h 52m 50s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 57m 23s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.12 at 04h 09m 37s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 57m 32s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.12 at 12h 10m 11s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 58m 18s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPIWrapperTest - 2016.02.12 at 12h 21m 35s.xml">
-      <configuration name="OlhoVivoAPIWrapperTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.13 at 16h 58m 50s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66652000" />
+    <option name="totallyTimeSpent" value="82146000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1096,7 +1111,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1105,11 +1120,11 @@
       <window_info id="Gerrit" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27951807" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.49331105" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.49331105" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1170,7 +1185,8 @@
     <MESSAGE value="Renames classes and fixes Run Simulation button.&#10;" />
     <MESSAGE value="Doesn't build tool window if project doesn't support the Smart City Framework&#10;" />
     <MESSAGE value="Changes run simulator icon and toolwindow icon." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes run simulator icon and toolwindow icon." />
+    <MESSAGE value="Http post working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Http post working now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1187,94 +1203,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/SimulatorRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/SimulatorRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/SimulatorRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/SimulatorRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#1323#1324#0" expanded="false" />
+            <element signature="e#1375#1376#0" expanded="false" />
+            <element signature="e#3800#3801#0" expanded="false" />
+            <element signature="e#3865#3866#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1290,6 +1224,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,6 +1232,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="5" selection-start-line="62" selection-start-column="39" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <element signature="e#1323#1324#0" expanded="false" />
+            <element signature="e#1375#1376#0" expanded="false" />
+            <element signature="e#3800#3801#0" expanded="false" />
+            <element signature="e#3865#3866#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1312,6 +1253,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,13 +1347,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/SimulatorRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/vfs/LocalFileSystem.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1494,6 +1429,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="64" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
+          <folding>
+            <element signature="e#1323#1324#0" expanded="false" />
+            <element signature="e#1375#1376#0" expanded="false" />
+            <element signature="e#3800#3801#0" expanded="false" />
+            <element signature="e#3865#3866#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1501,6 +1442,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1511,7 +1455,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-22.5">
           <caret line="36" column="90" selection-start-line="36" selection-start-column="90" selection-end-line="36" selection-end-column="90" />
           <folding />
         </state>
@@ -1521,37 +1465,144 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7088847">
           <caret line="28" column="71" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPIWrapperTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="102" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="102" />
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/SimulatorRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4473684">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLinePositions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusNow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLineNow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34210527">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopWithLines.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28947368">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13157895">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusCorridor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18421052">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStopAndLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopNow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21052632">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPIWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnectionWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9357278">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.7372401">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
           </folding>
         </state>
       </provider>
