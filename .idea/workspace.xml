@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="API Wrapper half way through.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/Bus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusCorridor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLineNow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLinePositions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusNow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopNow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopWithLines.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithLine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStopAndLine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPITest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPIWrapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com.intellij.smartcity/OlhoVivoAPIWrapperTest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnectionWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/HttpUrlConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TheMachinePlugin.iws" />
@@ -1024,7 +1007,7 @@
       <workItem from="1455056693377" duration="3837000" />
       <workItem from="1455066870993" duration="18541000" />
       <workItem from="1455132029438" duration="14130000" />
-      <workItem from="1455227357321" duration="21595000" />
+      <workItem from="1455227357321" duration="21621000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1062,7 +1045,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455286970493</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="API Wrapper half way through.">
+      <created>1455391129797</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1455391129797</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1098,7 +1087,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82146000" />
+    <option name="totallyTimeSpent" value="82172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1186,7 +1175,8 @@
     <MESSAGE value="Doesn't build tool window if project doesn't support the Smart City Framework&#10;" />
     <MESSAGE value="Changes run simulator icon and toolwindow icon." />
     <MESSAGE value="Http post working now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Http post working now" />
+    <MESSAGE value="API Wrapper half way through." />
+    <option name="LAST_COMMIT_MESSAGE" value="API Wrapper half way through." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
