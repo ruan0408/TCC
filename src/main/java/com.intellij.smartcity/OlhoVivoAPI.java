@@ -1,7 +1,6 @@
 package com.intellij.smartcity;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Created by ruan0408 on 10/02/2016.
@@ -9,7 +8,8 @@ import com.google.gson.GsonBuilder;
 public class OlhoVivoAPI {
 
     private static final String BASE_URL = "http://api.olhovivo.sptrans.com.br/v0/";
-    private static Gson jsonParser = new GsonBuilder().serializeNulls().create();
+//    private static Gson jsonParser = new GsonBuilder().serializeNulls().create();
+    private static ObjectMapper jsonParser = new ObjectMapper();
     private String authKey;
     private HttpUrlConnector httpConnector;
 
@@ -31,7 +31,7 @@ public class OlhoVivoAPI {
         String url = BASE_URL +"/Linha/Buscar?termosBusca="+termosBusca;
         String jsonResponse = httpConnector.executeGet(url);
 
-        return jsonParser.fromJson(jsonResponse, BusLine[].class);
+        return jsonToObject(jsonResponse, BusLine[].class);
     }
 
     public String getBusLineDetails(int busLineCode) {
@@ -45,57 +45,66 @@ public class OlhoVivoAPI {
     public BusStop[] searchBusStops(String searchTerms) {
         String url = BASE_URL +"/Parada/Buscar?termosBusca="+searchTerms;
         String jsonResponse = httpConnector.executeGet(url);
-
-        return jsonParser.fromJson(jsonResponse, BusStop[].class);
+        return jsonToObject(jsonResponse, BusStop[].class);
+//        return jsonParser.fromJson(jsonResponse, BusStop[].class);
     }
 
     public BusStop[] searchBusStopsByLine(int busLineCode) {
         String url = BASE_URL +"/Parada/BuscarParadasPorLinha?codigoLinha="+busLineCode;
         String jsonResponse = httpConnector.executeGet(url);
-
-        return jsonParser.fromJson(jsonResponse, BusStop[].class);
+        return jsonToObject(jsonResponse, BusStop[].class);
+//        return jsonParser.fromJson(jsonResponse, BusStop[].class);
     }
 
     public BusStop[] searchBusStopsByCorridor(int busCorridorCode) {
         String url = BASE_URL + "/Parada/BuscarParadasPorCorredor?codigoCorredor="+busCorridorCode;
         String jsonResponse = httpConnector.executeGet(url);
-
-        return jsonParser.fromJson(jsonResponse, BusStop[].class);
+        return jsonToObject(jsonResponse, BusStop[].class);
+//        return jsonParser.fromJson(jsonResponse, BusStop[].class);
     }
 
     public BusCorridor[] getAllBusCorridors() {
         String url = BASE_URL + "/Corredor";
         String jsonResponse = httpConnector.executeGet(url);
-
-        return jsonParser.fromJson(jsonResponse, BusCorridor[].class);
+        return jsonToObject(jsonResponse, BusCorridor[].class);
+//        return jsonParser.fromJson(jsonResponse, BusCorridor[].class);
     }
 
     public BusLinePositions searchBusPositionsByLine(int busLineCode) {
         String url = BASE_URL + "/Posicao?codigoLinha="+busLineCode;
         String jsonResponse = httpConnector.executeGet(url);
-
-        return jsonParser.fromJson(jsonResponse, BusLinePositions.class);
+        return jsonToObject(jsonResponse, BusLinePositions.class);
+//        return jsonParser.fromJson(jsonResponse, BusLinePositions.class);
     }
 
     public ForecastWithStopAndLine getForecastWithStopAndLine(int busStopCode, int busLineCode) {
         String url = BASE_URL + "/Previsao?codigoParada="+busStopCode+"&codigoLinha="+busLineCode;
         String jsonResponse = httpConnector.executeGet(url);
-
-        return jsonParser.fromJson(jsonResponse, ForecastWithStopAndLine.class);
+        return jsonToObject(jsonResponse, ForecastWithStopAndLine.class);
+//        return jsonParser.fromJson(jsonResponse, ForecastWithStopAndLine.class);
     }
 
     public ForecastWithLine getForecastWithLine(int busLineCode) {
         String url = BASE_URL + "/Previsao/Linha?codigoLinha="+busLineCode;
         String jsonResponse = httpConnector.executeGet(url);
-
-        return jsonParser.fromJson(jsonResponse, ForecastWithLine.class);
+        return jsonToObject(jsonResponse, ForecastWithLine.class);
+//        return jsonParser.fromJson(jsonResponse, ForecastWithLine.class);
     }
 
     public ForecastWithStop getForecastWithStop(int busStopCode) {
         String url = BASE_URL + "/Previsao/Parada?codigoParada="+busStopCode;
         String jsonResponse = httpConnector.executeGet(url);
+        return jsonToObject(jsonResponse, ForecastWithStop.class);
+//        return jsonParser.fromJson(jsonResponse, ForecastWithStop.class);
+    }
 
-        return jsonParser.fromJson(jsonResponse, ForecastWithStop.class);
+    private <T> T jsonToObject(String jsonResponse, Class<T> tClass) {
+        try {
+            return jsonParser.readValue(jsonResponse, tClass);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
 

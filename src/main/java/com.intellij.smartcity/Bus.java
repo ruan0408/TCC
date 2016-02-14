@@ -1,17 +1,23 @@
 package com.intellij.smartcity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * Created by ruan0408 on 12/02/2016.
  */
 public class Bus {
 
-    private String p;
-    private boolean a;
-    private double py;
-    private double px;
+    private String prefixNumber;
+    private boolean wheelChairCapable;
+    private double latitude;
+    private double longitude;
 
-    public String getPrefixNumber() {return p;}
-    public boolean isWheelChairCapable() {return a;}
-    public double getLatitude() {return py;}
-    public double getLongitude() {return px;}
+    @JsonProperty("p")
+    public String getPrefixNumber() {return prefixNumber;}
+    @JsonProperty("a")
+    public boolean isWheelChairCapable() {return wheelChairCapable;}
+    @JsonProperty("py")
+    public double getLatitude() {return latitude;}
+    @JsonProperty("px")
+    public double getLongitude() {return longitude;}
 }
