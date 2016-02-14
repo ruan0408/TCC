@@ -1,5 +1,6 @@
 package com.intellij.smartcity;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -10,13 +11,11 @@ public class ForecastWithLine {
     private String currentTime;
     private BusStopNow[] busStops;
 
-    @JsonProperty("hr")
-    public String getCurrentTime() {
-        return currentTime;
-    }
+    @JsonCreator
+    public ForecastWithLine(@JsonProperty("hr") String currentTime,
+                            @JsonProperty("ps") BusStopNow[] busStops) {
 
-    @JsonProperty("ps")
-    public BusStopNow[] getBusStops() {
-        return busStops;
+        this.currentTime = currentTime;
+        this.busStops = busStops;
     }
 }

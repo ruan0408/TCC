@@ -10,7 +10,6 @@ public class BusStopWithLines {
 
     private BusStop busStop;
     private BusLineNow[] busLines;
-//cp np py px l
 
     @JsonCreator
     public BusStopWithLines(@JsonProperty("cp") int busStopCode,
@@ -19,15 +18,7 @@ public class BusStopWithLines {
                             @JsonProperty("px") double busStopLongitude,
                             @JsonProperty("l") BusLineNow[] busLines) {
 
-        busStop.setCode(busStopCode);
-        busStop.setName(busStopName);
-        busStop.setLatitude(busStopLatitude);
-        busStop.setLongitude(busStopLongitude);
+        busStop = new BusStop(busStopCode, busStopName, busStopLatitude, busStopLongitude);
         this.busLines = busLines;
     }
-
-//    @JsonProperty("l")
-//    public BusLineNow[] getBusLines() {
-//        return busLines;
-//    }
 }

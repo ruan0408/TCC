@@ -18,7 +18,7 @@ public class OlhoVivoAPITest {
 
     private final String AUTHKEY = "3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3";
 //    Gson jsonParser = new GsonBuilder().serializeNulls().create();
-    ObjectMapper jsonParser = new ObjectMapper();
+    ObjectMapper jsonParser = OlhoVivoAPI.jsonParser;
     private OlhoVivoAPI api;
 
     @Before

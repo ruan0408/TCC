@@ -1,5 +1,6 @@
 package com.intellij.smartcity;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -7,16 +8,41 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class BusCorridor {
 
-    private int codCot;
-    private int code;
-    private String name;
+    @JsonProperty("CodCot") private int codCot;
+    @JsonProperty("CodCorredor") private int code;
+    @JsonProperty("Nome") private String name;
 
-    @JsonProperty("CodCot")
-    public int getCodCot() {return codCot; }
+    @JsonCreator
+    protected BusCorridor(@JsonProperty("CodCot") int codCot,
+                          @JsonProperty("CodCorredor")int code,
+                          @JsonProperty("Nome") String name) {
 
-    @JsonProperty("CodCorredor")
-    public int getCode() {return code;}
+        this.codCot = codCot;
+        this.code = code;
+        this.name = name;
+    }
 
-    @JsonProperty("Nome")
-    public String getName() {return name;}
+    /**
+     *
+     * @return codCot. I don't know what that is. It's not documented and it's always zero.
+     */
+    public int getCodCot() {
+        return codCot;
+    }
+
+    /**
+     *
+     * @return Code of the corridor.
+     */
+    public int getCode() {
+        return code;
+    }
+
+    /**
+     *
+     * @return The name of the corridor.
+     */
+    public String getName() {
+        return name;
+    }
 }

@@ -1,5 +1,7 @@
 package com.intellij.smartcity;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -9,11 +11,13 @@ public class OlhoVivoAPI {
 
     private static final String BASE_URL = "http://api.olhovivo.sptrans.com.br/v0/";
 //    private static Gson jsonParser = new GsonBuilder().serializeNulls().create();
-    private static ObjectMapper jsonParser = new ObjectMapper();
+    public static ObjectMapper jsonParser = new ObjectMapper();
     private String authKey;
     private HttpUrlConnector httpConnector;
 
     public OlhoVivoAPI(String key) {
+        jsonParser.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+
         authKey = key;
         httpConnector = new HttpUrlConnector();
     }
@@ -30,7 +34,7 @@ public class OlhoVivoAPI {
     public BusLine[] searchBusLines(String termosBusca) {
         String url = BASE_URL +"/Linha/Buscar?termosBusca="+termosBusca;
         String jsonResponse = httpConnector.executeGet(url);
-
+        System.out.println(jsonResponse);
         return jsonToObject(jsonResponse, BusLine[].class);
     }
 
@@ -87,6 +91,7 @@ public class OlhoVivoAPI {
     public ForecastWithLine getForecastWithLine(int busLineCode) {
         String url = BASE_URL + "/Previsao/Linha?codigoLinha="+busLineCode;
         String jsonResponse = httpConnector.executeGet(url);
+
         return jsonToObject(jsonResponse, ForecastWithLine.class);
 //        return jsonParser.fromJson(jsonResponse, ForecastWithLine.class);
     }

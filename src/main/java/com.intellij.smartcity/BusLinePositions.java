@@ -1,5 +1,6 @@
 package com.intellij.smartcity;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -7,19 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class BusLinePositions {
 
-//    private String hr;
-//    private Bus[] vs;
-
-    private String currenTime;
+    private String currentTime;
     private Bus[] vehicles;
 
-    @JsonProperty("hr")
-    public String getCurrenTime() {
-        return currenTime;
-    }
+    @JsonCreator
+    public BusLinePositions(@JsonProperty("hr") String currentTime,
+                            @JsonProperty("vs") Bus[] vehicles) {
 
-    @JsonProperty("vs")
-    public Bus[] getVehicles() {
-        return vehicles;
+        this.currentTime = currentTime;
+        this.vehicles = vehicles;
     }
 }
