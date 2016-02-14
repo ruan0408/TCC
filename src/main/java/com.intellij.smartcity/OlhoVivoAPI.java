@@ -34,11 +34,16 @@ public class OlhoVivoAPI {
         return jsonParser.fromJson(jsonResponse, BusLine[].class);
     }
 
+    public String getBusLineDetails(int busLineCode) {
+        String url = BASE_URL +"/Linha/CarregarDetalhes?codigoLinha="+busLineCode;
+        String jsonResponse = httpConnector.executeGet(url);
+        return jsonResponse;
+    }
     //TODO getBusLineDetails
     //TODO write methods for all classes
 
-    public BusStop[] searchBusStops(String termosBusca) {
-        String url = BASE_URL +"/Parada/Buscar?termosBusca="+termosBusca;
+    public BusStop[] searchBusStops(String searchTerms) {
+        String url = BASE_URL +"/Parada/Buscar?termosBusca="+searchTerms;
         String jsonResponse = httpConnector.executeGet(url);
 
         return jsonParser.fromJson(jsonResponse, BusStop[].class);
@@ -89,7 +94,7 @@ public class OlhoVivoAPI {
     public ForecastWithStop getForecastWithStop(int busStopCode) {
         String url = BASE_URL + "/Previsao/Parada?codigoParada="+busStopCode;
         String jsonResponse = httpConnector.executeGet(url);
-        System.out.println(jsonResponse);
+
         return jsonParser.fromJson(jsonResponse, ForecastWithStop.class);
     }
 }

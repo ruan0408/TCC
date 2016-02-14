@@ -42,6 +42,12 @@ public class OlhoVivoAPITest {
     }
 
     @Test
+    public void testGetBusLineDetails() throws Exception {
+        String response = api.getBusLineDetails(1273);
+        Assert.assertEquals("[]", response);
+    }
+
+    @Test
     public void testSearchBusStops() throws Exception {
         BusStop[] busStops = api.searchBusStops("afonso");
 

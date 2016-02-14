@@ -8,4 +8,7 @@ public class BusCorridor {
     private int CodCot;
     private int CodCorredor;
     private String Nome;
+
+    public int getCode() {return CodCorredor;}
+    public String getName() {return Nome;}
 }

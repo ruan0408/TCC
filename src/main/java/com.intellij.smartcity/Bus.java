@@ -6,7 +6,12 @@ package com.intellij.smartcity;
 public class Bus {
 
     private String p;
-    private String a;
+    private boolean a;
     private double py;
     private double px;
+
+    public String getPrefixNumber() {return p;}
+    public boolean isWheelChairCapable() {return a;}
+    public double getLatitude() {return py;}
+    public double getLongitude() {return px;}
 }

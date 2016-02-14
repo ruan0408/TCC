@@ -19,7 +19,14 @@ public class BusLine {
     private String DenominacaoTSTP;
     private String Informacoes;
 
-    public int getLineCode() {
+    public int getCode() {
         return CodigoLinha;
     }
+    public boolean isCircular() {return Circular;}
+    public String getDestinationSign() { return Letreiro; }
+    public int getHeading() {return Sentido;}
+    public int getType() {return Tipo; }
+    public String getDestinationSignMTST() {return DenominacaoTPTS; }
+    public String getDestinationSignSTMT() {return DenominacaoTSTP; }
+    public String getInfo() {return Informacoes;}
 }
