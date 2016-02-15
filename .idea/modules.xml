@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../SmartCity/SmartCity.iml" filepath="$PROJECT_DIR$/../SmartCity/SmartCity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OlhoVivoAPI/OlhoVivoAPI.iml" filepath="$PROJECT_DIR$/OlhoVivoAPI/OlhoVivoAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmartCity.iml" filepath="$PROJECT_DIR$/SmartCity.iml" />
     </modules>
   </component>
 </project>
