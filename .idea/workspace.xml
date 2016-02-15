@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/Bus.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/Bus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLineNow.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLineNow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLinePositions.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusLinePositions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusNow.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusNow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStop.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopNow.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopNow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopWithLines.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/BusStopWithLines.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithLine.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStop.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStopAndLine.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStopAndLine.java" />
     </list>
     <ignored path="TheMachinePlugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1009,7 +999,7 @@
       <workItem from="1455056693377" duration="3837000" />
       <workItem from="1455066870993" duration="18541000" />
       <workItem from="1455132029438" duration="14130000" />
-      <workItem from="1455227357321" duration="52650000" />
+      <workItem from="1455227357321" duration="53137000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1083,7 +1073,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455470160185</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Creates acess methods and necessary documentation. Still need some testing on the bean classes.">
+      <created>1455500792924</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1455500792924</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1119,7 +1115,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113201000" />
+    <option name="totallyTimeSpent" value="113688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1186,7 +1182,8 @@
     <MESSAGE value="Writing methos for wrapper classes." />
     <MESSAGE value="Trying to delegate instead of hierarchy with jackson." />
     <MESSAGE value="Delagating instead of using hierarchy. Still need to create useful getter methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delagating instead of using hierarchy. Still need to create useful getter methods." />
+    <MESSAGE value="Creates acess methods and necessary documentation. Still need some testing on the bean classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creates acess methods and necessary documentation. Still need some testing on the bean classes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
