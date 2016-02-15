@@ -12,13 +12,27 @@ public class BusStopNow {
     private BusNow[] vehicles;
 
     @JsonCreator
-    public BusStopNow(@JsonProperty("cp") int busStopCode,
-                      @JsonProperty("np") String busStopName,
-                      @JsonProperty("py") double busStopLatitude,
-                      @JsonProperty("px") double busStopLongitude,
-                      @JsonProperty("vs") BusNow[] vehicles ) {
+    protected BusStopNow(@JsonProperty("cp") int busStopCode,
+                         @JsonProperty("np") String busStopName,
+                         @JsonProperty("py") double busStopLatitude,
+                         @JsonProperty("px") double busStopLongitude,
+                         @JsonProperty("vs") BusNow[] vehicles ) {
 
         busStop = new BusStop(busStopCode, busStopName, busStopLatitude, busStopLongitude);
         this.vehicles = vehicles;
+    }
+
+    /**
+     * @return This bus stop.
+     */
+    public BusStop getBusStop() {
+        return busStop;
+    }
+
+    /**
+     * @return The current vehicles that pass by this bus stop.
+     */
+    public BusNow[] getVehicles() {
+        return vehicles;
     }
 }

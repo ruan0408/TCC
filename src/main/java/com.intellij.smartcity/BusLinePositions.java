@@ -12,10 +12,24 @@ public class BusLinePositions {
     private Bus[] vehicles;
 
     @JsonCreator
-    public BusLinePositions(@JsonProperty("hr") String currentTime,
-                            @JsonProperty("vs") Bus[] vehicles) {
+    protected BusLinePositions(@JsonProperty("hr") String currentTime,
+                               @JsonProperty("vs") Bus[] vehicles) {
 
         this.currentTime = currentTime;
         this.vehicles = vehicles;
+    }
+
+    /**
+     * @return The time the response was sent.
+     */
+    public String getCurrentTime() {
+        return currentTime;
+    }
+
+    /**
+     * @return The vehicles on this line.
+     */
+    public Bus[] getVehicles() {
+        return vehicles;
     }
 }

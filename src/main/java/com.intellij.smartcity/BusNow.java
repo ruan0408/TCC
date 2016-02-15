@@ -11,13 +11,20 @@ public class BusNow extends Bus {
     private String predictedArrivalTime;
 
     @JsonCreator
-    public BusNow(@JsonProperty("p") String prefixNumber,
-                  @JsonProperty("a") boolean wheelChairCapable,
-                  @JsonProperty("py") double latitude,
-                  @JsonProperty("px") double longitude,
-                  @JsonProperty("t") String predictedArrivalTime) {
+    protected BusNow(@JsonProperty("p") String prefixNumber,
+                     @JsonProperty("a") boolean wheelChairCapable,
+                     @JsonProperty("py") double latitude,
+                     @JsonProperty("px") double longitude,
+                     @JsonProperty("t") String predictedArrivalTime) {
 
         super(prefixNumber, wheelChairCapable, latitude, longitude);
         this.predictedArrivalTime = predictedArrivalTime;
+    }
+
+    /**
+     * @return The predicted arrival time of this bus at the related bus stop.
+     */
+    public String getPredictedArrivalTime() {
+        return predictedArrivalTime;
     }
 }

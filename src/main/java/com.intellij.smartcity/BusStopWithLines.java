@@ -12,13 +12,31 @@ public class BusStopWithLines {
     private BusLineNow[] busLines;
 
     @JsonCreator
-    public BusStopWithLines(@JsonProperty("cp") int busStopCode,
-                            @JsonProperty("np") String busStopName,
-                            @JsonProperty("py") double busStopLatitude,
-                            @JsonProperty("px") double busStopLongitude,
-                            @JsonProperty("l") BusLineNow[] busLines) {
+    protected BusStopWithLines(@JsonProperty("cp") int busStopCode,
+                               @JsonProperty("np") String busStopName,
+                               @JsonProperty("py") double busStopLatitude,
+                               @JsonProperty("px") double busStopLongitude,
+                               @JsonProperty("l") BusLineNow[] busLines) {
 
         busStop = new BusStop(busStopCode, busStopName, busStopLatitude, busStopLongitude);
         this.busLines = busLines;
+    }
+
+    /**
+     * @return The bus stop related to the request.
+     */
+    public BusStop getBusStop() {
+        return busStop;
+    }
+
+    public BusLineNow[] getBusLines() {
+        return busLines;
+    }
+
+    public BusNow[] getBuses() {
+        if (busLines == null) return null;
+        if (busLines.length > 1) return null;
+
+        return busLines[0].getVehicles();
     }
 }

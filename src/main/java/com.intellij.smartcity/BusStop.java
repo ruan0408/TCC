@@ -14,7 +14,7 @@ public class BusStop {
     @JsonProperty("Latitude") private double latitude;
     @JsonProperty("Longitude") private double longitude;
 
-    public BusStop(int code, String name, double latitude, double longitude) {
+    protected BusStop(int code, String name, double latitude, double longitude) {
         this.code = code;
         this.name = name;
         this.latitude = latitude;
@@ -22,12 +22,47 @@ public class BusStop {
     }
 
     @JsonCreator
-    public BusStop(@JsonProperty("CodigoParada") int code,
-                   @JsonProperty("Nome") String name,
-                   @JsonProperty("Endereco") String address,
-                   @JsonProperty("Latitude") double latitude,
-                   @JsonProperty("Longitude") double longitude) {
+    protected BusStop(@JsonProperty("CodigoParada") int code,
+                      @JsonProperty("Nome") String name,
+                      @JsonProperty("Endereco") String address,
+                      @JsonProperty("Latitude") double latitude,
+                      @JsonProperty("Longitude") double longitude) {
         this(code, name, latitude, longitude);
         this.address = address;
+    }
+
+    /**
+     * @return The code of this bus stop.
+     */
+    public int getCode() {
+        return code;
+    }
+
+    /**
+     * @return The name of this bus stop.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return The address of this bus stop.
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * @return The latitude of this bus stop.
+     */
+    public double getLatitude() {
+        return latitude;
+    }
+
+    /**
+     * @return The longitude of this bus stop.
+     */
+    public double getLongitude() {
+        return longitude;
     }
 }

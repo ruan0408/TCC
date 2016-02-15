@@ -15,9 +15,9 @@ public class Bus {
 
     @JsonCreator
     protected Bus(@JsonProperty("p") String prefixNumber,
-               @JsonProperty("a")boolean wheelChairCapable,
-               @JsonProperty("py")double latitude,
-               @JsonProperty("px")double longitude) {
+                  @JsonProperty("a")boolean wheelChairCapable,
+                  @JsonProperty("py")double latitude,
+                  @JsonProperty("px")double longitude) {
         this.prefixNumber = prefixNumber;
         this.wheelChairCapable = wheelChairCapable;
         this.latitude = latitude;
