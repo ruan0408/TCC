@@ -17,7 +17,7 @@ import static org.junit.Assert.assertThat;
 public class OlhoVivoAPITest {
 
     private final String AUTHKEY = "3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3";
-    ObjectMapper jsonParser = OlhoVivoAPI.jsonParser;
+    private ObjectMapper jsonParser = OlhoVivoAPI.jsonParser;
     private OlhoVivoAPI api;
 
     @Before
@@ -89,6 +89,7 @@ public class OlhoVivoAPITest {
     public void testGetForecastWithLineAndStop() throws Exception {
         ForecastWithStopAndLine forecast = api.getForecastWithStopAndLine(260015039, 1877);
         String currentTime = new SimpleDateFormat("HH:mm").format(new Date());
+
         assertThat(jsonParser.writeValueAsString(forecast), containsString(currentTime));
     }
 
@@ -103,6 +104,8 @@ public class OlhoVivoAPITest {
     public void testGetForecastWithStop() throws Exception {
         ForecastWithStop forecast = api.getForecastWithStop(7014417);
         String currentTime = new SimpleDateFormat("HH:mm").format(new Date());
+
+        Assert.assertEquals(7014417, forecast.getBusStop().getCode());
         assertThat(jsonParser.writeValueAsString(forecast), containsString(currentTime));
     }
 }

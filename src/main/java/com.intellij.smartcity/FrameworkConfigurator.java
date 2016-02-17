@@ -63,7 +63,7 @@ public class FrameworkConfigurator extends FrameworkTypeEx implements Condition<
                         //do what you want here: setup a library, generate a specific file, etc
                         generateSmartCitySupportFile(module.getProject());
 
-
+                        //TODO Add here (?) the support for the apache spark jar.
 //                        final FacetManager facetManager = FacetManager.getInstance(module);
 //                        ModifiableFacetModel facetModel = facetManager.createModifiableModel();
 //

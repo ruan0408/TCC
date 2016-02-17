@@ -3,6 +3,12 @@ package com.intellij.olhovivoapi;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jetbrains.annotations.Nullable;
+import org.onebusaway.gtfs.impl.GtfsDaoImpl;
+import org.onebusaway.gtfs.serialization.GtfsReader;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by ruan0408 on 10/02/2016.
@@ -10,15 +16,34 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class OlhoVivoAPI {
 
     private static final String BASE_URL = "http://api.olhovivo.sptrans.com.br/v0/";
+    private static final String GTFS_PATH = "gtfs-sp";
     protected static ObjectMapper jsonParser = new ObjectMapper();
+    protected static GtfsReader gtfsReader;
     private String authKey;
     private HttpUrlConnector httpConnector;
 
     public OlhoVivoAPI(String key) {
         jsonParser.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-
+        loadGtfs();
         authKey = key;
         httpConnector = new HttpUrlConnector();
+    }
+
+    //TODO Use the store to get information from gtfs
+    //TODO Try to download the gtfs file in a new thread.
+    //TODO Load the gtfs in a new thread.
+
+    private void loadGtfs() {
+        gtfsReader = new GtfsReader();
+        GtfsDaoImpl store = new GtfsDaoImpl();
+        try {
+            gtfsReader.setInputLocation(new File(getClass().getClassLoader().
+                    getResource(GTFS_PATH).getPath()));
+            gtfsReader.setEntityStore(store);
+            gtfsReader.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean authenticate() {
@@ -91,6 +116,7 @@ public class OlhoVivoAPI {
         return jsonToObject(jsonResponse, ForecastWithStop.class);
     }
 
+    @Nullable
     private <T> T jsonToObject(String jsonResponse, Class<T> tClass) {
         try {
             return jsonParser.readValue(jsonResponse, tClass);
