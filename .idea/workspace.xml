@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/agency.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/calendar.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/fare_attributes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/fare_rules.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/frequencies.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/routes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/shapes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/stop_times.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/stops.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/resources/gtfs-sp/trips.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/OlhoVivoAPI.iml" afterPath="$PROJECT_DIR$/OlhoVivoAPI/OlhoVivoAPI.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartCity.iml" afterPath="$PROJECT_DIR$/SmartCity.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java" />
     </list>
     <ignored path="TheMachinePlugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +51,8 @@
       <file leaf-file-name="OlhoVivoAPI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5280899">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.7977528">
+              <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,7 +90,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -1093,7 +1079,7 @@
       <workItem from="1455132029438" duration="14130000" />
       <workItem from="1455227357321" duration="53137000" />
       <workItem from="1455557253536" duration="2127000" />
-      <workItem from="1455559794032" duration="6574000" />
+      <workItem from="1455559794032" duration="8112000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1185,25 +1171,16 @@
       <option name="project" value="LOCAL" />
       <updated>1455559572594</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Beginning use of gtfs module.">
+      <created>1455680075311</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1455680075311</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OlhoVivoAPITest - 2016.02.15 at 16h 17m 17s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.15 at 16h 20m 04s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 00h 58m 13s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 00h 59m 29s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 01h 00m 08s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="OlhoVivoAPITest - 2016.02.17 at 01h 02m 54s.xml">
       <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
@@ -1219,9 +1196,24 @@
     <history-entry file="OlhoVivoAPITest - 2016.02.17 at 01h 12m 39s.xml">
       <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 13h 05m 33s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 13h 06m 10s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 13h 06m 24s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 13h 06m 37s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OlhoVivoAPITest - 2016.02.17 at 13h 36m 43s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122389000" />
+    <option name="totallyTimeSpent" value="123927000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1234,7 +1226,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1243,7 +1235,7 @@
       <window_info id="Gerrit" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27943262" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1292,7 +1284,8 @@
     <MESSAGE value="Creates acess methods and necessary documentation. Still need some testing on the bean classes." />
     <MESSAGE value="workspace.xml..." />
     <MESSAGE value="Accomodating the OlhoVivoAPI on its own module." />
-    <option name="LAST_COMMIT_MESSAGE" value="Accomodating the OlhoVivoAPI on its own module." />
+    <MESSAGE value="Beginning use of gtfs module." />
+    <option name="LAST_COMMIT_MESSAGE" value="Beginning use of gtfs module." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1729,8 +1722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5280899">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.7977528">
+          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
