@@ -46,7 +46,7 @@ public class BusLineNow {
      * @return The destination sign of this bus line.
      */
     public String getDestinationSign() {
-        return busLine.getDestinationSign();
+        return busLine.getNumberSign();
     }
 
     /**

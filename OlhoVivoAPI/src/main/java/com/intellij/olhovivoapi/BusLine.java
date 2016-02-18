@@ -15,7 +15,7 @@ public class BusLine {
 
     @JsonProperty("CodigoLinha") private int code;
     @JsonProperty("Circular") private boolean circular;
-    @JsonProperty("Letreiro") private String destinationSign;
+    @JsonProperty("Letreiro") private String numberSign;
     @JsonProperty("Sentido") private int heading;
     @JsonProperty("Tipo") private int type;
     @JsonProperty("DenominacaoTPTS") private String destinationSignMTST;
@@ -23,11 +23,11 @@ public class BusLine {
     @JsonProperty("Informacoes") private String info;
 
 
-    protected BusLine(int code, String destinationSign, int heading,
-                   String destinationSignMTST, String destinationSignSTMT) {
+    protected BusLine(int code, String numberSign, int heading,
+                      String destinationSignMTST, String destinationSignSTMT) {
 
         this.code = code;
-        this.destinationSign = destinationSign;
+        this.numberSign = numberSign;
         this.heading = heading;
         this.destinationSignMTST = destinationSignMTST;
         this.destinationSignSTMT = destinationSignSTMT;
@@ -36,14 +36,14 @@ public class BusLine {
     @JsonCreator
     protected BusLine(@JsonProperty("CodigoLinha") int code,
                       @JsonProperty("Circular") boolean circular,
-                      @JsonProperty("Letreiro") String destinationSign,
+                      @JsonProperty("Letreiro") String numberSign,
                       @JsonProperty("Sentido") int heading,
                       @JsonProperty("Tipo") int type,
                       @JsonProperty("DenominacaoTPTS") String destinationSignMTST,
                       @JsonProperty("DenominacaoTSTP") String destinationSignSTMT,
                       @JsonProperty("Informacoes") String info) {
 
-        this(code, destinationSign, heading, destinationSignMTST, destinationSignSTMT);
+        this(code, numberSign, heading, destinationSignMTST, destinationSignSTMT);
         this.circular = circular;
         this.type = type;
         this.info = info;
@@ -66,8 +66,8 @@ public class BusLine {
     /**
      * @return The destination sign, i.e. the destination being shown in the billboard.
      */
-    public String getDestinationSign() {
-        return destinationSign;
+    public String getNumberSign() {
+        return numberSign;
     }
 
     /**
