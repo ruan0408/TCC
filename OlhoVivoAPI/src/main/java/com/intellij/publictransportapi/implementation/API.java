@@ -17,7 +17,7 @@ import java.util.List;
 public class API {
 
     private static final String GTFS_PATH = "gtfs-sp";//TODO remove this
-    private static OlhoVivoAPI olhoVivoAPI;
+    protected static OlhoVivoAPI olhoVivoAPI;
     private static GtfsReader gtfsReader;
     protected static GtfsDaoImpl store;
 
