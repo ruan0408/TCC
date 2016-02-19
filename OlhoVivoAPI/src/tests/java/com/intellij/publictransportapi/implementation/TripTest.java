@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.util.List;
+
 /**
  * Created by ruan0408 on 18/02/2016.
  */
@@ -19,13 +21,16 @@ public class TripTest {
     public void testGetDepartureInterval() throws Exception {
         int departureInterval = APITest.alvim.getDepartureInterval("19:04");
         Assert.assertEquals(720, departureInterval);
+
+        departureInterval = APITest.bonifacio.getDepartureInterval("09:00");
+        Assert.assertEquals(720, departureInterval);
     }
 
     //TODO this test is dependent on the current time. Mock it.
     @Test
     public void testGetDepartureIntervalNow() throws Exception {
         int departureInterval = APITest.bonifacio.getDepartureIntervalNow();
-        Assert.assertEquals(1800, departureInterval);
+        Assert.assertEquals(720, departureInterval);
     }
 
     @Test
@@ -36,18 +41,22 @@ public class TripTest {
 
     @Test
     public void testGetDetails() throws Exception {
-        String ans = API.olhoVivoAPI.getBusLineDetails(APITest.usp.getInternalId());
+        String ans = APITest.usp.getDetails();
         Assert.assertEquals("[]", ans);
     }
 
     @Test
     public void testGetShape() throws Exception {
-
+        Shape shape = APITest.usp.getShape();
+        Assert.assertEquals(417, shape.size());
     }
 
     @Test
     public void testGetAllStops() throws Exception {
-
+        List<Stop> allStops = APITest.butanta.getAllStops();
+        System.out.println(allStops.size());
+        for (Stop s : allStops)
+            System.out.println(s.toString());
     }
 
     @Test
