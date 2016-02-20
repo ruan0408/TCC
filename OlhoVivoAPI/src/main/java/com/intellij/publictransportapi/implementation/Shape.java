@@ -1,6 +1,9 @@
 package com.intellij.publictransportapi.implementation;
 
 import org.apache.commons.lang.text.StrBuilder;
+import org.onebusaway.gtfs.model.ShapePoint;
+
+import java.util.List;
 
 /**
  * Created by ruan0408 on 17/02/2016.
@@ -22,6 +25,19 @@ public class Shape {
     public Point[] getPoints() {return points;}
 
     public double[] getTraveledDistances() {return traveledDistances;}
+
+    protected static Shape convert(List<ShapePoint> shapes) {
+        shapes.sort(Utils.compBySequence);
+        Point[] points = new Point[shapes.size()];
+        double[] distances = new double[shapes.size()];
+
+        for (int i = 0; i < shapes.size(); i++) {
+            ShapePoint p = shapes.get(i);
+            points[i] = new Point(p.getLat(), p.getLon());
+            distances[i] = p.getDistTraveled();
+        }
+        return new Shape(points, distances);
+    }
 
     @Override
     public String toString() {

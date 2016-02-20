@@ -1,5 +1,7 @@
 package com.intellij.publictransportapi.implementation;
 
+import com.intellij.olhovivoapi.BusLinePositions;
+import com.intellij.olhovivoapi.BusStop;
 import org.apache.commons.lang.text.StrBuilder;
 import org.onebusaway.gtfs.model.Frequency;
 import org.onebusaway.gtfs.model.ShapePoint;
@@ -7,7 +9,10 @@ import org.onebusaway.gtfs.model.StopTime;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 
 /**
@@ -29,6 +34,8 @@ public class Trip {
 
     public int getInternalId() {return internalId;}
 
+    public Route getRoute() {return route;}
+
     public String getGtfsId() {
         if (route.getTripMTST().equals(this) && !route.isCircular())
             return route.fullNumberSign()+"-1";
@@ -48,8 +55,6 @@ public class Trip {
         }
         return shapeId;
     }
-
-    public Route getRoute() {return route;}
 
     public String getDestinationSign() { return destinationSign;}
 
@@ -71,37 +76,10 @@ public class Trip {
         Predicate<ShapePoint> predicate;
         predicate = point -> point.getShapeId().getId().equals(getShapeId());
 
-        List<ShapePoint>shapes = API.filterGtfsToList("getAllShapePoints", predicate);
-        Comparator<ShapePoint> comp = (p1, p2) -> {
-            if (p1.getSequence() < p2.getSequence()) return -1;
-            if (p1.getSequence() > p2.getSequence()) return 1;
-            return 0;
-        };
-        shapes.sort(comp);
-        Point[] points = new Point[shapes.size()];
-        double[] distances = new double[shapes.size()];
+        List<ShapePoint> shapes = API.filterGtfsToList("getAllShapePoints", predicate);
 
-        for (int i = 0; i < shapes.size(); i++) {
-            ShapePoint p = shapes.get(i);
-            points[i] = new Point(p.getLat(), p.getLon());
-            distances[i] = p.getDistTraveled();
-        }
-
-        return new Shape(points, distances);
+        return Shape.convert(shapes);
     }
-
-//    public List<Stop> getAllStops() {
-//        BusStop[] busStops = API.getBusStopsByTrip(internalId);
-//        System.out.println(busStops.length);
-//        List<Stop> stops = new ArrayList<>(busStops.length);
-//
-//        for (int i = 0; i < busStops.length; i++) {
-//            BusStop s = busStops[i];
-//            Point coord = new Point(s.getLatitude(), s.getLongitude());
-//            stops.add(new Stop(s.getCode(), s.getName(), s.getAddress(), coord));
-//        }
-//        return stops;
-//    }
 
     public List<Stop> getAllStops() {
         Predicate<StopTime> predicate;
@@ -110,13 +88,7 @@ public class Trip {
         List<StopTime> filtered =
                 API.filterGtfsToList("getAllStopTimes", predicate);
 
-        Comparator<StopTime> comp = (s1, s2) -> {
-            if (s1.getStopSequence() < s2.getStopSequence()) return -1;
-            if (s1.getStopSequence() > s2.getStopSequence()) return 1;
-            return 0;
-        };
-
-        filtered.sort(comp);
+        filtered.sort(Utils.compByStopSequence);
 
         List<org.onebusaway.gtfs.model.Stop> filtered2 =
                 new ArrayList<>(filtered.size());
@@ -131,14 +103,24 @@ public class Trip {
         for (org.onebusaway.gtfs.model.Stop s: filtered2) {
             int id = Integer.parseInt(s.getId().getId());
             Point location = new Point(s.getLat(), s.getLon());
-            //TODO use olhovivo to try and fill address
-            finalList.add(new Stop(id, s.getName(),"", location));
+            finalList.add(new Stop(id, s.getName(), location));
         }
+
+        //TODO this could be easily improved using a map
+        BusStop[] busStops = API.getBusStopsByTrip(internalId);
+        for (int i = 0; i < busStops.length; i++)
+            for (Stop s: finalList)
+                if (s.getId() == busStops[i].getCode()) {
+                    s.setAddress(busStops[i].getAddress());
+                    break;
+                }
+
         return finalList;
     }
 
     public List<Bus> getAllBuses() {
-        return null;
+        BusLinePositions busesWithTrip = API.getBusesByTrip(internalId);
+        return Bus.convert(busesWithTrip.getVehicles());
     }
 
     public List<PredictedBus> getPredictedBuses(Stop stop) {

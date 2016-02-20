@@ -54,14 +54,14 @@ public class TripTest {
     @Test
     public void testGetAllStops() throws Exception {
         List<Stop> allStops = APITest.butanta.getAllStops();
-        System.out.println(allStops.size());
-        for (Stop s : allStops)
-            System.out.println(s.toString());
+        Assert.assertEquals(32, allStops.size());
     }
 
+    //Depends on the current number of buses running...
     @Test
     public void testGetAllBuses() throws Exception {
-
+        List<Bus> allBuses = APITest.alvim.getAllBuses();
+        Assert.assertEquals(3, allBuses.size());
     }
 
     @Test

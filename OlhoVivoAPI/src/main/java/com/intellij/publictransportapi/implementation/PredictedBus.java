@@ -5,6 +5,10 @@ package com.intellij.publictransportapi.implementation;
  */
 public class PredictedBus extends Bus {
 
+    protected PredictedBus(com.intellij.olhovivoapi.Bus bus) {
+        super(bus);
+    }
+
     public String getPredictedArrival() {
         return null;
     }

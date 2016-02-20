@@ -22,8 +22,7 @@ public class OlhoVivoAPI {
         httpConnector = new HttpUrlConnector();
     }
 
-    //TODO Use the store to get information from gtfs
-    //TODO Try to download the gtfs file in a new thread.
+    //TODO Try to download the gtfs file in a new thread within the plugin.
     //TODO Load the gtfs in a new thread.
 
     public boolean authenticate() {
@@ -71,7 +70,7 @@ public class OlhoVivoAPI {
         return jsonToObject(jsonResponse, BusCorridor[].class);
     }
 
-    public BusLinePositions searchBusPositionsByLine(int busLineCode) {
+    public BusLinePositions searchBusesByLine(int busLineCode) {
         String url = BASE_URL + "/Posicao?codigoLinha="+busLineCode;
         String jsonResponse = httpConnector.executeGet(url);
         return jsonToObject(jsonResponse, BusLinePositions.class);

@@ -1,6 +1,7 @@
 package com.intellij.publictransportapi.implementation;
 
 import com.intellij.olhovivoapi.BusLine;
+import com.intellij.olhovivoapi.BusLinePositions;
 import com.intellij.olhovivoapi.BusStop;
 import com.intellij.olhovivoapi.OlhoVivoAPI;
 import com.intellij.openapi.util.Pair;
@@ -88,7 +89,11 @@ public class API {
         return olhoVivoAPI.searchBusStopsByLine(internalTripId);
     }
 
-    protected static  <T> List<T> filterGtfsToList(String methodName, Predicate<T> filter) {
+    protected static BusLinePositions getBusesByTrip(int internalTripId) {
+        return olhoVivoAPI.searchBusesByLine(internalTripId);
+    }
+
+    protected static <T> List<T> filterGtfsToList(String methodName, Predicate<T> filter) {
         try {
             Method method = API.store.getClass().getMethod(methodName);
             Stream<T> all = ((Collection<T>)method.invoke(API.store)).stream();
@@ -107,4 +112,6 @@ public class API {
         if (filtered.isEmpty()) return null;
         return filtered.get(0);
     }
+
+
 }

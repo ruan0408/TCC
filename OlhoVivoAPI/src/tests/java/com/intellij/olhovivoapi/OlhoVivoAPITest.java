@@ -2,7 +2,7 @@ package com.intellij.olhovivoapi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
@@ -16,12 +16,12 @@ import static org.junit.Assert.assertThat;
  */
 public class OlhoVivoAPITest {
 
-    private final String AUTHKEY = "3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3";
-    private ObjectMapper jsonParser = OlhoVivoAPI.jsonParser;
-    private OlhoVivoAPI api;
+    private static final String AUTHKEY = "3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3";
+    private static ObjectMapper jsonParser = OlhoVivoAPI.jsonParser;
+    private static OlhoVivoAPI api;
 
-    @Before
-    public void setUp() throws Exception {
+    @BeforeClass
+    public static void setUp() throws Exception {
         api = new OlhoVivoAPI(AUTHKEY);
         api.authenticate();
     }
@@ -52,7 +52,6 @@ public class OlhoVivoAPITest {
     @Test
     public void testSearchBusStops() throws Exception {
         BusStop[] busStops = api.searchBusStops("afonso");
-
         String correct = "[{\"CodigoParada\":340015329,\"Nome\":\"AFONSO BRAZ B/C1\",\"Endereco\":\"R ARMINDA/ R BALTHAZAR DA VEIGA\",\"Latitude\":-23.592938,\"Longitude\":-46.672727},{\"CodigoParada\":340015328,\"Nome\":\"AFONSO BRAZ B/C2\",\"Endereco\":\"R ARMINDA/ R BALTHAZAR DA VEIGA\",\"Latitude\":-23.59337,\"Longitude\":-46.672766},{\"CodigoParada\":340015333,\"Nome\":\"AFONSO BRAZ C/B1\",\"Endereco\":\"R DOUTORA MARIA AUGUSTA SARAIVA/ R NATIVIDADE\",\"Latitude\":-23.59572,\"Longitude\":-46.673285},{\"CodigoParada\":340015331,\"Nome\":\"AFONSO BRAZ C/B2\",\"Endereco\":\"R DOUTORA MARIA AUGUSTA SARAIVA/ R NATIVIDADE\",\"Latitude\":-23.595087,\"Longitude\":-46.673152}]";
         Assert.assertEquals(correct, jsonParser.writeValueAsString(busStops));
     }
@@ -83,7 +82,7 @@ public class OlhoVivoAPITest {
 
     @Test
     public void testSearchBusPositionsByLine() throws Exception {
-        BusLinePositions busLinePositions = api.searchBusPositionsByLine(34041);
+        BusLinePositions busLinePositions = api.searchBusesByLine(34041);
         String currentTime = new SimpleDateFormat("HH:mm").format(new Date());
         assertThat(jsonParser.writeValueAsString(busLinePositions), containsString(currentTime));
     }

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Point.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/API.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/API.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Bus.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Bus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java" afterPath="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java" />
@@ -49,11 +52,11 @@
         <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/API.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="9" selection-start-line="97" selection-start-column="30" selection-end-line="99" selection-end-column="9" />
+              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2993#2994#0" expanded="true" />
-                <element signature="e#3061#3062#0" expanded="true" />
+                <element signature="e#3043#3044#0" expanded="true" />
+                <element signature="e#3111#3112#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,25 +77,16 @@
       <file leaf-file-name="Trip.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Trip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9092628">
-              <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
+            <state vertical-scroll-proportion="-1.2741021">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1986#1987#0" expanded="true" />
-                <element signature="e#2039#2040#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stop.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-              <folding>
-                <element signature="e#814#815#0" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
+                <element signature="e#2153#2154#0" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#4147#4148#0" expanded="true" />
+                <element signature="e#4174#4175#0" expanded="true" />
+                <element signature="e#4238#4239#0" expanded="true" />
+                <element signature="e#4265#4266#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,10 +96,24 @@
         <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
               <folding>
-                <element signature="e#417#418#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictedStop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+              <folding>
+                <element signature="e#207#208#0" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,9 +123,22 @@
         <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/TripTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictedBus.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,12 +156,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OlhoVivoAPITest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java">
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-              <folding />
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -206,11 +229,8 @@
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/PredictedBus.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Corridor.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Route.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Utils.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Bus.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Bus.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/PredictedBus.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Corridor.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Corridor.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/PredictedStop.java" />
@@ -219,16 +239,19 @@
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Trip.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/BusLine.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Route.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Point.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/API.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/APITest.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/TripTest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Utils.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/API.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Trip.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Bus.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/TripTest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java" />
       </list>
     </option>
   </component>
@@ -832,6 +855,58 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="false" name="OlhoVivoAPITest.testSearchBusStops" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.intellij.olhovivoapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="OlhoVivoAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.intellij.olhovivoapi" />
+      <option name="MAIN_CLASS_NAME" value="com.intellij.olhovivoapi.OlhoVivoAPITest" />
+      <option name="METHOD_NAME" value="testSearchBusStops" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TripTest.testGetAllStops" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.intellij.publictransportapi.implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="OlhoVivoAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.intellij.publictransportapi.implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.intellij.publictransportapi.implementation.TripTest" />
+      <option name="METHOD_NAME" value="testGetAllStops" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="SmartCity" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1328,18 +1403,22 @@
       <log_file path="$USER_HOME$/Library/Caches/IntelliJIdea15/plugins-sandbox/system/log/idea.log" checked="false" skipped="true" show_all="false" alias="IDEA LOG" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Test Smart City Runner" />
       <item index="1" class="java.lang.String" itemvalue="Plugin.Run Smart City" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.APITest" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.TripTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest.testSearchBusStops" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.TripTest.testGetAllStops" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.TripTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.APITest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TripTest.testGetAllStops" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest.testSearchBusStops" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.APITest" />
       </list>
     </recent_temporary>
   </component>
@@ -1373,7 +1452,7 @@
       <workItem from="1455227357321" duration="53137000" />
       <workItem from="1455557253536" duration="2127000" />
       <workItem from="1455559794032" duration="53496000" />
-      <workItem from="1455843136091" duration="17557000" />
+      <workItem from="1455843136091" duration="23500000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1489,43 +1568,49 @@
       <option name="project" value="LOCAL" />
       <updated>1455847220095</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implementing getAllStops. Still need to try to use olhovivo to get more information.">
+      <created>1455909766534</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1455909766534</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="APITest - 2016.02.19 at 16h 50m 24s.xml">
-      <configuration name="APITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.19 at 16h 39m 59s.xml">
+    <history-entry file="OlhoVivoAPITest - 2016.02.20 at 12h 08m 45s.xml">
       <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.19 at 16h 42m 15s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest_testSearchBusStops - 2016.02.20 at 12h 09m 40s.xml">
+      <configuration name="OlhoVivoAPITest.testSearchBusStops" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.19 at 16h 49m 39s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest_testSearchBusStops - 2016.02.20 at 12h 12m 10s.xml">
+      <configuration name="OlhoVivoAPITest.testSearchBusStops" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPITest - 2016.02.19 at 16h 50m 05s.xml">
-      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest_testSearchBusStops - 2016.02.20 at 12h 12m 45s.xml">
+      <configuration name="OlhoVivoAPITest.testSearchBusStops" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TripTest - 2016.02.19 at 16h 42m 35s.xml">
+    <history-entry file="OlhoVivoAPITest_testSearchBusStops - 2016.02.20 at 12h 31m 08s.xml">
+      <configuration name="OlhoVivoAPITest.testSearchBusStops" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TripTest - 2016.02.20 at 13h 06m 39s.xml">
       <configuration name="TripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TripTest - 2016.02.19 at 16h 43m 25s.xml">
+    <history-entry file="TripTest - 2016.02.20 at 13h 11m 06s.xml">
       <configuration name="TripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TripTest - 2016.02.19 at 16h 44m 46s.xml">
+    <history-entry file="TripTest - 2016.02.20 at 13h 12m 57s.xml">
       <configuration name="TripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TripTest - 2016.02.19 at 16h 46m 53s.xml">
-      <configuration name="TripTest" configurationId="JUnit" />
+    <history-entry file="TripTest_testGetAllStops - 2016.02.20 at 12h 31m 43s.xml">
+      <configuration name="TripTest.testGetAllStops" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TripTest - 2016.02.19 at 16h 51m 01s.xml">
-      <configuration name="TripTest" configurationId="JUnit" />
+    <history-entry file="TripTest_testGetAllStops - 2016.02.20 at 12h 32m 10s.xml">
+      <configuration name="TripTest.testGetAllStops" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186868000" />
+    <option name="totallyTimeSpent" value="192811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1600,7 +1685,8 @@
     <MESSAGE value="Integrating gtfs" />
     <MESSAGE value="Adds searchTrip to API and getDepartureInterval to Trip." />
     <MESSAGE value="Implements getDepartureIntervalNow, getDetails and getWorkingDays on Trip." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implements getDepartureIntervalNow, getDetails and getWorkingDays on Trip." />
+    <MESSAGE value="Implementing getAllStops. Still need to try to use olhovivo to get more information." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing getAllStops. Still need to try to use olhovivo to get more information." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1619,8 +1705,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2993#2994#0" expanded="true" />
-            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3111#3112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1765,16 +1851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/BusLinePositions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithStop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3323486">
@@ -1895,16 +1971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/Bus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035416666">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.smartcity/SimulatorRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1923,30 +1989,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07481297">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Corridor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16832918">
           <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Bus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26184538">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="e#300#301#0" expanded="false" />
-            <element signature="e#327#328#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1966,17 +2013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1988,13 +2024,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java">
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18388791">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4798599">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="10" />
           <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/BusLinePositions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2002,30 +2074,53 @@
     <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/API.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="9" selection-start-line="97" selection-start-column="30" selection-end-line="99" selection-end-column="9" />
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2993#2994#0" expanded="true" />
-            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3111#3112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/Bus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.18388791">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2042,32 +2137,36 @@
     <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/TripTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java">
+    <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding>
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Trip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9092628">
-          <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
+        <state vertical-scroll-proportion="-1.2741021">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1986#1987#0" expanded="true" />
-            <element signature="e#2039#2040#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#4147#4148#0" expanded="true" />
+            <element signature="e#4174#4175#0" expanded="true" />
+            <element signature="e#4238#4239#0" expanded="true" />
+            <element signature="e#4265#4266#0" expanded="true" />
           </folding>
         </state>
       </provider>

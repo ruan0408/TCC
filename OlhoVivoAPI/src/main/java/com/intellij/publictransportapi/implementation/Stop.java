@@ -15,7 +15,7 @@ public class Stop {
     private String address;
     private Point location;
 
-    public Stop(int id, String name, String address, Point location) {
+    public Stop(int id, String name, Point location) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -29,6 +29,8 @@ public class Stop {
     public String getAddress() {return address;}
 
     public Point getLocation() {return location;}
+
+    public void setAddress(String address) {this.address = address;}
 
     public Trip getAllTrips() {
         return null;
