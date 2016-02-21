@@ -5,6 +5,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ruan0408 on 18/02/2016.
@@ -13,8 +14,7 @@ public class TripTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        API.init("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3");
-        APITest.loadTestObjects();
+        APITest.setUp();
     }
 
     @Test
@@ -26,7 +26,7 @@ public class TripTest {
         Assert.assertEquals(720, departureInterval);
     }
 
-    //TODO this test is dependent on the current time. Mock it.
+    //Depends on the current time.
     @Test
     public void testGetDepartureIntervalNow() throws Exception {
         int departureInterval = APITest.bonifacio.getDepartureIntervalNow();
@@ -64,13 +64,17 @@ public class TripTest {
         Assert.assertEquals(3, allBuses.size());
     }
 
+    //TODO dont know how to test this.
     @Test
     public void testGetPredictedBuses() throws Exception {
-
+        List<PredictedBus> prediction = APITest.alvim.getPredictedBuses(APITest.campanella);
+        Assert.assertTrue(!prediction.isEmpty());
     }
 
+    //TODO dont know how to test this also.
     @Test
     public void testGetAllPredictions() throws Exception {
-
+        Map<Stop, List<PredictedBus>> allPredictions = APITest.alvim.getAllPredictions();
+        Assert.assertTrue(!allPredictions.isEmpty());
     }
 }

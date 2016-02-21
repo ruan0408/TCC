@@ -1,7 +1,6 @@
 package com.intellij.publictransportapi.implementation;
 
-import com.intellij.olhovivoapi.BusLinePositions;
-import com.intellij.olhovivoapi.BusStop;
+import com.intellij.olhovivoapi.*;
 import org.apache.commons.lang.text.StrBuilder;
 import org.onebusaway.gtfs.model.Frequency;
 import org.onebusaway.gtfs.model.ShapePoint;
@@ -9,10 +8,7 @@ import org.onebusaway.gtfs.model.StopTime;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Predicate;
 
 /**
@@ -81,6 +77,7 @@ public class Trip {
         return Shape.convert(shapes);
     }
 
+    //TODO include description and address on the stop.
     public List<Stop> getAllStops() {
         Predicate<StopTime> predicate;
         predicate = s -> s.getTrip().getId().getId().equals(getGtfsId());
@@ -99,15 +96,10 @@ public class Trip {
             filtered2.add(API.filterGtfsToElement("getAllStops", predicate2));
         }
 
-        List<Stop> finalList = new ArrayList<>(filtered2.size());
-        for (org.onebusaway.gtfs.model.Stop s: filtered2) {
-            int id = Integer.parseInt(s.getId().getId());
-            Point location = new Point(s.getLat(), s.getLon());
-            finalList.add(new Stop(id, s.getName(), location));
-        }
+        List<Stop> finalList = Stop.convert(filtered2);
 
         //TODO this could be easily improved using a map
-        BusStop[] busStops = API.getBusStopsByTrip(internalId);
+        BusStop[] busStops = API.getStopsByTrip(internalId);
         for (int i = 0; i < busStops.length; i++)
             for (Stop s: finalList)
                 if (s.getId() == busStops[i].getCode()) {
@@ -120,15 +112,28 @@ public class Trip {
 
     public List<Bus> getAllBuses() {
         BusLinePositions busesWithTrip = API.getBusesByTrip(internalId);
-        return Bus.convert(busesWithTrip.getVehicles());
+        return Bus.convert(busesWithTrip.getVehicles(), Bus.class);
     }
 
     public List<PredictedBus> getPredictedBuses(Stop stop) {
-        return null;
+        ForecastWithStopAndLine forecast =
+                API.getForecastByStopAndTrip(internalId, stop.getId());
+
+        return PredictedBus.convert(forecast.getBuses());
     }
 
     public Map<Stop, List<PredictedBus>> getAllPredictions() {
-        return null;
+        ForecastWithLine forecast = API.getForecastByTrip(internalId);
+
+        BusStopNow[] busStopNowArray = forecast.getBusStops();
+        Map<Stop, List<PredictedBus>> map = new HashMap<>(busStopNowArray.length);
+
+        for (int i = 0; i < busStopNowArray.length; i++) {
+            BusStopNow stopNow = busStopNowArray[i];
+            map.put(Stop.buildFromBusStop(stopNow.getBusStop()),
+                    PredictedBus.convert(stopNow.getVehicles()));
+        }
+        return map;
     }
 
     public int getDepartureInterval(String hhmm) {

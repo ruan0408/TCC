@@ -4,6 +4,7 @@ import org.onebusaway.gtfs.model.ShapePoint;
 import org.onebusaway.gtfs.model.StopTime;
 
 import java.util.Comparator;
+import java.util.List;
 
 /**
  * Created by ruan0408 on 20/02/2016.
@@ -21,4 +22,8 @@ public class Utils {
         if (p1.getSequence() > p2.getSequence()) return 1;
         return 0;
     };
+
+    protected static <T> void printList(List<T> list) {
+        for (T t : list) System.out.println(t.toString());
+    }
 }

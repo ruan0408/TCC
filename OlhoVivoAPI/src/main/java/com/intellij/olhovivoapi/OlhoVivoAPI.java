@@ -95,7 +95,7 @@ public class OlhoVivoAPI {
         return jsonToObject(jsonResponse, ForecastWithStop.class);
     }
 
-    public Pair<BusLine, BusLine> getBothTrips(String lineNumber) throws Exception{
+    public Pair<BusLine, BusLine> getBothTrips(String lineNumber) throws Exception {
         BusLine[] busLines = this.searchBusLines(lineNumber);
 
         if (busLines.length == 2 && busLines[0].getHeading() == 1)

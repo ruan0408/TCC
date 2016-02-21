@@ -1,9 +1,6 @@
 package com.intellij.publictransportapi.implementation;
 
-import com.intellij.olhovivoapi.BusLine;
-import com.intellij.olhovivoapi.BusLinePositions;
-import com.intellij.olhovivoapi.BusStop;
-import com.intellij.olhovivoapi.OlhoVivoAPI;
+import com.intellij.olhovivoapi.*;
 import com.intellij.openapi.util.Pair;
 import org.onebusaway.gtfs.impl.GtfsDaoImpl;
 import org.onebusaway.gtfs.serialization.GtfsReader;
@@ -81,16 +78,35 @@ public class API {
         return trips;
     }
 
+    public static List<Corridor> getAllCorridors() {
+        BusCorridor[] corridors = olhoVivoAPI.getAllBusCorridors();
+        return Corridor.convert(corridors);
+    }
+
     protected static String getTripDetails(int internalTripId) {
         return olhoVivoAPI.getBusLineDetails(internalTripId);
     }
 
-    protected static BusStop[] getBusStopsByTrip(int internalTripId) {
+    protected static BusStop[] getStopsByTrip(int internalTripId) {
         return olhoVivoAPI.searchBusStopsByLine(internalTripId);
     }
 
     protected static BusLinePositions getBusesByTrip(int internalTripId) {
         return olhoVivoAPI.searchBusesByLine(internalTripId);
+    }
+
+    protected static ForecastWithStopAndLine
+    getForecastByStopAndTrip(int internalTripId, int stopId) {
+        return olhoVivoAPI.getForecastWithStopAndLine(stopId, internalTripId);
+    }
+
+    protected static ForecastWithLine
+    getForecastByTrip(int internalTripId) {
+        return olhoVivoAPI.getForecastWithLine(internalTripId);
+    }
+
+    protected static BusStop[] getStopsByCorridor(int corridorId) {
+        return olhoVivoAPI.searchBusStopsByCorridor(corridorId);
     }
 
     protected static <T> List<T> filterGtfsToList(String methodName, Predicate<T> filter) {

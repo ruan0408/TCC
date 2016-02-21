@@ -13,6 +13,14 @@ public class APITest {
 
     public static Trip alvim, bonifacio, usp, butanta;
     public static Route route273l, route8012;
+    public static Stop campanella;
+    public static Corridor campoLimpo;
+
+    @BeforeClass
+    public static void setUp() throws Exception {
+        API.init("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3");
+        loadTestObjects();
+    }
 
     public static void loadTestObjects() {
         route273l = new Route("273L", 10, false, null);
@@ -44,12 +52,10 @@ public class APITest {
         route8012.setMTST(usp);
         route8012.setSTMT(butanta);
 
-    }
+        campanella = new Stop(360004869,
+                "Av. Dos Campanellas", new Point(-23.536056,-46.467776));
 
-    @BeforeClass
-    public static void setUp() throws Exception {
-        API.init("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3");
-        loadTestObjects();
+        campoLimpo = new Corridor(8, "Campo Limpo");
     }
 
     @Test
