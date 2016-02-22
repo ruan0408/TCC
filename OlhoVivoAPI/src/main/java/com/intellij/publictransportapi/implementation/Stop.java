@@ -1,11 +1,14 @@
 package com.intellij.publictransportapi.implementation;
 
-import com.intellij.olhovivoapi.BusStop;
+import com.intellij.olhovivoapi.*;
 import org.apache.commons.lang.text.StrBuilder;
+import org.onebusaway.gtfs.model.StopTime;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 
 /**
  * Created by ruan0408 on 17/02/2016.
@@ -35,16 +38,38 @@ public class Stop {
 
     public void setAddress(String address) {this.address = address;}
 
-    public Trip getAllTrips() {
-        return null;
+    public List<Trip> getAllTrips() {
+        Predicate<StopTime> predicate =
+                s -> s.getStop().getId().getId().equals(id+"");
+
+        List<StopTime> stopTimes = API.filterGtfsToList("getAllStopTimes", predicate);
+
+        List<Trip> trips = new ArrayList<>(stopTimes.size());
+        for (StopTime stopTime : stopTimes)
+            trips.add(Trip.buildFrom(stopTime.getTrip()));
+
+        return trips;
     }
 
     public List<PredictedBus> getPredictedBuses(Trip trip) {
-        return null;
+        ForecastWithStopAndLine forecast =
+                API.getForecastByStopAndTrip(trip.getInternalId(), id);
+
+        return PredictedBus.convert(forecast.getBuses());
     }
 
     public Map<Trip, List<PredictedBus>> getAllPredictions() {
-        return null;
+        ForecastWithStop forecast = API.getForecastByStop(id);
+
+        BusLineNow[] busLineNowArray = forecast.getBusLines();
+        Map<Trip, List<PredictedBus>> map = new HashMap<>(busLineNowArray.length);
+
+        for (int i = 0; i < busLineNowArray.length; i++) {
+            BusLineNow lineNow = busLineNowArray[i];
+            map.put(Trip.buildFrom(lineNow.getBusLine()),
+                    PredictedBus.convert(lineNow.getVehicles()));
+        }
+        return map;
     }
 
     protected static

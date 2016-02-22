@@ -13,7 +13,7 @@ public class APITest {
 
     public static Trip alvim, bonifacio, usp, butanta;
     public static Route route273l, route8012;
-    public static Stop campanella;
+    public static Stop campanella, brasiliana;
     public static Corridor campoLimpo;
 
     @BeforeClass
@@ -55,6 +55,9 @@ public class APITest {
         campanella = new Stop(360004869,
                 "Av. Dos Campanellas", new Point(-23.536056,-46.467776));
 
+        brasiliana = new Stop(120010354,
+                "Biblioteca Brasiliana", new Point(-23.562368,-46.723045));
+
         campoLimpo = new Corridor(8, "Campo Limpo");
     }
 
@@ -70,6 +73,11 @@ public class APITest {
         Assert.assertTrue(tripList.size() == 2);
         Assert.assertTrue(tripList.contains(usp));
         Assert.assertTrue(tripList.contains(butanta));
+    }
 
+    @Test
+    public void testGetAllCorridors() throws Exception {
+        List<Corridor> allCorridors = API.getAllCorridors();
+        Assert.assertEquals(7, allCorridors.size());
     }
 }

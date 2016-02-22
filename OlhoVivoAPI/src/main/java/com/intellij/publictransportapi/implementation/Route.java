@@ -1,7 +1,12 @@
 package com.intellij.publictransportapi.implementation;
 
 
+import com.intellij.olhovivoapi.BusLine;
+import com.intellij.openapi.util.Pair;
 import org.apache.commons.lang.text.StrBuilder;
+import org.onebusaway.gtfs.model.FareRule;
+
+import java.util.function.Predicate;
 
 /**
  * Created by ruan0408 on 17/02/2016.
@@ -14,6 +19,8 @@ public class Route {
     private String info;
     private Trip mtst;
     private Trip stmt;
+
+    private Route(){}
 
     public Route(String numberSign, int type, boolean circular, String info) {
         this.numberSign = numberSign;
@@ -48,11 +55,14 @@ public class Route {
 
     public String fullNumberSign() {return numberSign+"-"+type;}
 
-    /* METHODS THAT WILL USE THE GTFS*/
+    public double getFarePrice() {
+        Predicate<FareRule> predicate;
+        predicate = f -> f.getRoute().getId().getId().equals(fullNumberSign());
 
-    public double getFarePrice() {return 0;}
+        FareRule rule = API.filterGtfsToElement("getAllFareRules", predicate);
 
-    public String getLongName() {return null;}
+        return rule.getFare().getPrice();
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -70,6 +80,30 @@ public class Route {
         builder.appendln("info: "+info);
 
         return builder.toString();
+    }
+
+    protected static Route buildFrom(String fullNumberSign) {
+        Route newRoute = new Route();
+        Pair<BusLine, BusLine> bothTrips = API.getBothTrips(fullNumberSign);
+
+        newRoute.setNumberSign(fullNumberSign.substring(0,3));
+        newRoute.setType(Integer.parseInt(fullNumberSign.substring(5)));
+        newRoute.setCircular(bothTrips.first.isCircular());
+        newRoute.setInfo(bothTrips.first.getInfo());
+
+        Trip mtst = new Trip();
+        mtst.setInternalId(bothTrips.first.getCode());
+        mtst.setDestinationSign(bothTrips.first.getDestinationSignMTST());
+        mtst.setRoute(newRoute);
+
+        Trip stmt = new Trip();
+        stmt.setInternalId(bothTrips.second.getCode());
+        stmt.setDestinationSign(bothTrips.second.getDestinationSignSTMT());
+        stmt.setRoute(newRoute);
+
+        newRoute.setMTST(mtst);
+        newRoute.setSTMT(stmt);
+        return newRoute;
     }
 
     @Override

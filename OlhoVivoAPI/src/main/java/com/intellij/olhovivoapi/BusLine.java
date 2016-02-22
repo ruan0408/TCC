@@ -106,7 +106,6 @@ public class BusLine {
     /**
      * @return General information about this line.
      */
-    public String getInfo() {
-        return info;
-    }
+    public String getInfo() {return info;}
+
 }

@@ -15,17 +15,19 @@ public class BusLineNow {
 
     @JsonCreator
     protected BusLineNow(@JsonProperty("cl") int busLineCode,
-                         @JsonProperty("c") String busLineDestinationSign,
+                         @JsonProperty("c") String fullNumberSign,
                          @JsonProperty("sl") int heading,
                          @JsonProperty("lt0") String destinationSignMTST,
                          @JsonProperty("lt1") String destinationSignSTMT,
                          @JsonProperty("qv") int numberOfVehicles,
                          @JsonProperty("vs") BusNow[] vehicles) {
 
-        busLine = new BusLine(busLineCode, busLineDestinationSign, heading, destinationSignMTST,destinationSignSTMT);
+        busLine = new BusLine(busLineCode, fullNumberSign, heading, destinationSignMTST,destinationSignSTMT);
         this.numberOfVehicles = numberOfVehicles;
         this.vehicles = vehicles;
     }
+
+    public BusLine getBusLine() {return busLine;}
 
     /**
      * @return The code of this bus line.

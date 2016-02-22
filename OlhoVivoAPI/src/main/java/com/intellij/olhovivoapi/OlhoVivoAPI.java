@@ -95,16 +95,28 @@ public class OlhoVivoAPI {
         return jsonToObject(jsonResponse, ForecastWithStop.class);
     }
 
-    public Pair<BusLine, BusLine> getBothTrips(String lineNumber) throws Exception {
-        BusLine[] busLines = this.searchBusLines(lineNumber);
+//    //TODO refactor this. Make the first be the heading 1 and the second heading 2. And dont throw all these exceptions
+//    public Pair<BusLine, BusLine> getBothTrips(String lineNumber) throws Exception {
+//        BusLine[] busLines = this.searchBusLines(lineNumber);
+//
+//        if (busLines.length == 2 && busLines[0].getHeading() == 1)
+//            return new Pair<>(busLines[0], busLines[1]);
+//        else if (busLines.length == 2)
+//            return new Pair<>(busLines[1], busLines[0]);
+//        else if (busLines.length == 1)
+//            return new Pair<>(busLines[0], null);
+//        else throw new Exception();
+//    }
 
-        if (busLines.length == 2 && busLines[0].getHeading() == 1)
+    //TODO assuming olhovivo will ALWAYS return two results for the same line number
+    public Pair<BusLine, BusLine> getBothTrips(String fullNumberSign) throws Exception {
+        BusLine[] busLines = this.searchBusLines(fullNumberSign);
+
+        if (busLines.length != 2) throw new Exception();
+        if (busLines[0].getHeading() == 1)
             return new Pair<>(busLines[0], busLines[1]);
-        else if (busLines.length == 2)
-            return new Pair<>(busLines[1], busLines[0]);
-        else if (busLines.length == 1)
-            return new Pair<>(busLines[0], null);
-        else throw new Exception();
+
+        return new Pair<>(busLines[1], busLines[0]);
     }
 
     @Nullable

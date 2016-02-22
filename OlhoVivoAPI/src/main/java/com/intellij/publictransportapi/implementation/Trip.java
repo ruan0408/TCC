@@ -28,6 +28,10 @@ public class Trip {
 
     public void setRoute(Route route) { this.route = route;}
 
+    public void setShapeId(String shapeId) {
+        this.shapeId = shapeId;
+    }
+
     public int getInternalId() {return internalId;}
 
     public Route getRoute() {return route;}
@@ -77,6 +81,7 @@ public class Trip {
         return Shape.convert(shapes);
     }
 
+    //TODO refactor this method.
     //TODO include description and address on the stop.
     public List<Stop> getAllStops() {
         Predicate<StopTime> predicate;
@@ -153,6 +158,25 @@ public class Trip {
 
         String time = new SimpleDateFormat("HH:mm").format(new Date());
         return getDepartureInterval(time);
+    }
+
+    protected static
+    Trip buildFrom(org.onebusaway.gtfs.model.Trip trip) {
+        Route parentRoute = Route.buildFrom(trip.getRoute().getShortName());
+
+        if (trip.getDirectionId().equals("1"))
+            return parentRoute.getTripMTST();
+
+        return parentRoute.getTripSTMT();
+    }
+
+    protected static Trip buildFrom(BusLine line) {
+        Route parentRoute = Route.buildFrom(line.getNumberSign());
+
+        if (line.getHeading() == 1)
+            return parentRoute.getTripMTST();
+
+        return parentRoute.getTripSTMT();
     }
 
     private int getDepartureInterval(long time) {

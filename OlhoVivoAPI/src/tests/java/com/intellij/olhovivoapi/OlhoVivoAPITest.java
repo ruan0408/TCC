@@ -35,9 +35,6 @@ public class OlhoVivoAPITest {
     @Test
     public void testSearchBusLines() throws Exception {
         BusLine[] busLines = api.searchBusLines("8000");
-        for (int i = 0; i < busLines.length; i++) {
-            System.out.println(busLines[i].getCode());
-        }
 
         String correct = "[{\"CodigoLinha\":1273,\"Circular\":false,\"Letreiro\":\"8000\",\"Sentido\":1,\"Tipo\":10,\"DenominacaoTPTS\":\"PCA.RAMOS DE AZEVEDO\",\"DenominacaoTSTP\":\"TERMINAL LAPA\",\"Informacoes\":null},{\"CodigoLinha\":34041,\"Circular\":false,\"Letreiro\":\"8000\",\"Sentido\":2,\"Tipo\":10,\"DenominacaoTPTS\":\"PCA.RAMOS DE AZEVEDO\",\"DenominacaoTSTP\":\"TERMINAL LAPA\",\"Informacoes\":null}]";
         Assert.assertEquals(correct, jsonParser.writeValueAsString(busLines));

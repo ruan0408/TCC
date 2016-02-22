@@ -41,39 +41,16 @@ public class API {
         }
     }
 
-    //TODO refactor this method
     public static List<Trip> searchTrip(String term) {
         BusLine[] busLines = olhoVivoAPI.searchBusLines(term);
         List<Trip> trips = new ArrayList<>(busLines.length);
 
         for (int i = 0; i < busLines.length; i++) {
-            try {
-                Pair<BusLine, BusLine> pair = olhoVivoAPI.getBothTrips(busLines[i].getNumberSign());
-                Trip tripMTST = new Trip();
-                Trip tripSTMT = null;
+            String fullNumberSign = busLines[i].getNumberSign()+"-"+busLines[i].getType();
+            Route parentRoute = Route.buildFrom(fullNumberSign);
 
-                Route route = new Route(busLines[i].getNumberSign(), busLines[i].getType(),
-                        busLines[i].isCircular(), busLines[i].getInfo());
-                route.setSTMT(tripSTMT);
-
-                tripMTST.setInternalId(pair.getFirst().getCode());
-                tripMTST.setDestinationSign(pair.getFirst().getDestinationSignMTST());
-                tripMTST.setRoute(route);
-
-                if (pair.getSecond() != null) {
-                    tripSTMT = new Trip();
-                    tripSTMT.setInternalId(pair.getSecond().getCode());
-                    tripSTMT.setDestinationSign(pair.getSecond().getDestinationSignSTMT());
-                    tripSTMT.setRoute(route);
-                }
-                route.setSTMT(tripSTMT);
-
-                if (busLines[i].getHeading() == 1) trips.add(tripMTST);
-                else trips.add(tripSTMT);
-            } catch (Exception e) {
-                System.err.println("Error when getting both trips");
-                e.printStackTrace();
-            }
+            if (busLines[i].getHeading() == 1) trips.add(parentRoute.getTripMTST());
+            else trips.add(parentRoute.getTripSTMT());
         }
         return trips;
     }
@@ -105,8 +82,22 @@ public class API {
         return olhoVivoAPI.getForecastWithLine(internalTripId);
     }
 
+    protected static ForecastWithStop
+    getForecastByStop(int stopId) {
+        return olhoVivoAPI.getForecastWithStop(stopId);
+    }
+
     protected static BusStop[] getStopsByCorridor(int corridorId) {
         return olhoVivoAPI.searchBusStopsByCorridor(corridorId);
+    }
+
+    protected static Pair<BusLine, BusLine> getBothTrips(String fullNumberSign) {
+        try {
+            return olhoVivoAPI.getBothTrips(fullNumberSign);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     protected static <T> List<T> filterGtfsToList(String methodName, Predicate<T> filter) {
