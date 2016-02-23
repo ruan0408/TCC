@@ -25,7 +25,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <framework.type implementation="com.intellij.smartcity.FrameworkConfigurator"/>
-    <!--<facetType implementation="com.intellij.smartcity.MyFacetType"/>-->
+    <!--<facetType implementation="com.intellij.com.intellij.plugin.MyFacetType"/>-->
     <toolWindow internalId="Smart City" icon="/smartCityIcon.png" anchor="right"
                 factoryClass="com.intellij.smartcity.MyToolWindowFactory"
                 conditionClass="com.intellij.smartcity.FrameworkConfigurator"/>
