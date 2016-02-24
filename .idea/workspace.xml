@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/HttpUrlConnectorTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/agency.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/calendar.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/fare_attributes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/fare_rules.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/frequencies.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/routes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/shapes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/stop_times.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/stops.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/gtfs-sp/trips.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
     </list>
     <ignored path="TheMachinePlugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,16 +48,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HttpUrlConnector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HttpUrlConnector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24007562">
-              <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,7 +85,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,7 +97,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,7 +109,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2085#2086#0" expanded="false" />
+                <element signature="e#2153#2154#0" expanded="false" />
+                <element signature="e#2714#2715#0" expanded="false" />
+                <element signature="e#2784#2785#0" expanded="false" />
+                <element signature="e#2859#2860#0" expanded="false" />
+                <element signature="e#2921#2922#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStop.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStopAndLine.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java" />
@@ -177,6 +205,7 @@
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/HttpUrlConnector.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/HttpUrlConnectorTest.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -246,20 +275,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheMachinePlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,20 +285,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jackson-2.7.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -538,6 +539,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -588,7 +590,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TheMachinePlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1315,11 +1330,11 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.Test Smart City Runner" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.SimulatorRunnerTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.APITest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CorridorTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StopTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TripTest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.RouteTest" />
-      <item index="7" class="java.lang.String" itemvalue="Plugin.Run Smart City" />
+      <item index="3" class="java.lang.String" itemvalue="Plugin.Run Smart City" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CorridorTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.StopTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.TripTest" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.RouteTest" />
       <item index="8" class="java.lang.String" itemvalue="JUnit.HttpUrlConnectorTest" />
     </list>
     <recent_temporary>
@@ -1364,6 +1379,7 @@
       <workItem from="1455559794032" duration="53496000" />
       <workItem from="1455843136091" duration="61326000" />
       <workItem from="1456235790418" duration="8314000" />
+      <workItem from="1456277223012" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1563,7 +1579,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238951000" />
+    <option name="totallyTimeSpent" value="239326000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1576,34 +1592,34 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gerrit" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27831325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26752505" sideWeight="0.49331105" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.50668895" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27831325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1658,6 +1674,60 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/SimulatorRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/HttpUrlConnectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2085#2086#0" expanded="false" />
+            <element signature="e#2153#2154#0" expanded="false" />
+            <element signature="e#2714#2715#0" expanded="false" />
+            <element signature="e#2784#2785#0" expanded="false" />
+            <element signature="e#2859#2860#0" expanded="false" />
+            <element signature="e#2921#2922#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/plusIcon.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1792,7 +1862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33274958">
           <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1800,15 +1869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2244389">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1824,16 +1884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding>
-            <element signature="e#858#859#0" expanded="false" />
-            <element signature="e#893#894#0" expanded="false" />
-            <element signature="e#1023#1024#0" expanded="false" />
-            <element signature="e#1063#1064#0" expanded="false" />
-            <element signature="e#1165#1166#0" expanded="false" />
-            <element signature="e#1196#1197#0" expanded="false" />
-            <element signature="e#1300#1301#0" expanded="false" />
-            <element signature="e#1332#1333#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1841,7 +1891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1849,7 +1898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2268431">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1857,7 +1905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.17013232">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1865,7 +1912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5387524">
           <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1873,7 +1919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6540643">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1881,7 +1926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8223062">
           <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1889,7 +1933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38752362">
           <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1897,7 +1940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5973535">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1905,7 +1947,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1913,7 +1957,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2085#2086#0" expanded="false" />
+            <element signature="e#2153#2154#0" expanded="false" />
+            <element signature="e#2714#2715#0" expanded="false" />
+            <element signature="e#2784#2785#0" expanded="false" />
+            <element signature="e#2859#2860#0" expanded="false" />
+            <element signature="e#2921#2922#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1921,7 +1973,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1935,13 +1989,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24007562">
-          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
