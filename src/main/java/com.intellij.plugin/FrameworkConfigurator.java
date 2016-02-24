@@ -18,9 +18,6 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @author Anna Bulenkova
- */
 public class FrameworkConfigurator extends FrameworkTypeEx implements Condition<Project>{
     public static final String FRAMEWORK_ID = "SmartCity";
     private static final String supportFile = "/resources/smartCitySupport.txt";
