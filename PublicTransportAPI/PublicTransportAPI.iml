@@ -10,8 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/tests/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/tests/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/python" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="IntelliJ IDEA IU-143.1821.5" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="commons-beanutils-1.9.2" level="application" />
     <orderEntry type="library" name="jackson-2.7.0" level="application" />

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PublicTransportAPI/PublicTransportAPI.iml" filepath="$PROJECT_DIR$/PublicTransportAPI/PublicTransportAPI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/OlhoVivoAPI/PublicTransportAPI.iml" filepath="$PROJECT_DIR$/OlhoVivoAPI/PublicTransportAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/SmartSampa.iml" filepath="$PROJECT_DIR$/SmartSampa.iml" />
     </modules>
   </component>
