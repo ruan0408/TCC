@@ -1,5 +1,6 @@
 package com.intellij.publictransportapi;
 
+import com.intellij.utils.APIConnectionException;
 import com.intellij.olhovivoapi.BusCorridor;
 import org.apache.commons.lang.text.StrBuilder;
 
@@ -23,7 +24,7 @@ public class Corridor {
 
     public String getName() {return name;}
 
-    public List<Stop> getAllStops() {
+    public List<Stop> getAllStops() throws APIConnectionException {
         return Stop.convert(API.getStopsByCorridor(id));
     }
 

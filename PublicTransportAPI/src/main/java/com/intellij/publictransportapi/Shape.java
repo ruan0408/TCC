@@ -1,5 +1,6 @@
 package com.intellij.publictransportapi;
 
+import com.intellij.utils.Utils;
 import org.apache.commons.lang.text.StrBuilder;
 import org.onebusaway.gtfs.model.ShapePoint;
 

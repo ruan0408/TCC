@@ -1,4 +1,4 @@
-package com.intellij.publictransportapi;
+package com.intellij.utils;
 
 import org.onebusaway.gtfs.model.ShapePoint;
 import org.onebusaway.gtfs.model.StopTime;
@@ -12,23 +12,23 @@ import java.util.List;
  */
 public class Utils {
 
-    protected static Comparator<StopTime> compByStopSequence = (s1, s2) -> {
+    public static Comparator<StopTime> compByStopSequence = (s1, s2) -> {
         if (s1.getStopSequence() < s2.getStopSequence()) return -1;
         if (s1.getStopSequence() > s2.getStopSequence()) return 1;
         return 0;
     };
 
-    protected static Comparator<ShapePoint> compBySequence = (p1, p2) -> {
+    public static Comparator<ShapePoint> compBySequence = (p1, p2) -> {
         if (p1.getSequence() < p2.getSequence()) return -1;
         if (p1.getSequence() > p2.getSequence()) return 1;
         return 0;
     };
 
-    protected static <T> void printList(List<T> list) {
+    public static <T> void printList(List<T> list) {
         for (T t : list) System.out.println(t.toString());
     }
 
-    protected static
+    public static
     List<org.onebusaway.gtfs.model.Stop> convert(List<StopTime> stopTimes) {
         List<org.onebusaway.gtfs.model.Stop> list =
                 new ArrayList<>(stopTimes.size());

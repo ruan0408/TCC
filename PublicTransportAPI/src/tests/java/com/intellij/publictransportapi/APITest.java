@@ -18,7 +18,8 @@ public class APITest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        API.init("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3");
+        API.init("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3",
+                "ruan0408", "costaruan");
         loadTestObjects();
     }
 

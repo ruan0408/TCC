@@ -1,48 +1,31 @@
 package com.intellij.publictransportapi;
 
+import com.intellij.utils.APIConnectionException;
+import com.intellij.gtfsapi.GTFSApi;
 import com.intellij.olhovivoapi.*;
 import com.intellij.openapi.util.Pair;
-import org.onebusaway.gtfs.impl.GtfsDaoImpl;
-import org.onebusaway.gtfs.serialization.GtfsReader;
 
-import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by ruan0408 on 17/02/2016.
  */
 public class API {
 
-    private static final String GTFS_PATH = "gtfs-sp";//TODO remove this
-    protected static OlhoVivoAPI olhoVivoAPI;
-    private static GtfsReader gtfsReader;
-    protected static GtfsDaoImpl store;
+    protected static OlhoVivoAPI olhoVivoApi;
+    protected static GTFSApi gtfsApi;
 
-    public static void init(String key) {
-        olhoVivoAPI = new OlhoVivoAPI(key);
-        olhoVivoAPI.authenticate();//TODO not sure about this.
-        gtfsReader = new GtfsReader();
-
-        store = new GtfsDaoImpl();
-        try {
-            gtfsReader.setInputLocation(new File(API.class.getClassLoader().
-                    getResource(GTFS_PATH).getPath()));
-            gtfsReader.setEntityStore(store);
-            gtfsReader.run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void
+    init(String key, String login, String password) throws APIConnectionException {
+        olhoVivoApi = OlhoVivoAPI.getInstance(key);
+        gtfsApi = GTFSApi.getInstance(login, password);
     }
 
-    public static List<Trip> searchTrip(String term) {
-        BusLine[] busLines = olhoVivoAPI.searchBusLines(term);
+    public static List<Trip> searchTrip(String term) throws APIConnectionException {
+        BusLine[] busLines = olhoVivoApi.searchBusLines(term);
         List<Trip> trips = new ArrayList<>(busLines.length);
 
         for (int i = 0; i < busLines.length; i++) {
@@ -55,45 +38,45 @@ public class API {
         return trips;
     }
 
-    public static List<Corridor> getAllCorridors() {
-        BusCorridor[] corridors = olhoVivoAPI.getAllBusCorridors();
+    public static List<Corridor> getAllCorridors() throws APIConnectionException {
+        BusCorridor[] corridors = olhoVivoApi.getAllBusCorridors();
         return Corridor.convert(corridors);
     }
 
-    protected static String getTripDetails(int internalTripId) {
-        return olhoVivoAPI.getBusLineDetails(internalTripId);
+    protected static String getTripDetails(int internalTripId) throws IOException {
+        return olhoVivoApi.getBusLineDetails(internalTripId);
     }
 
-    protected static BusStop[] getStopsByTrip(int internalTripId) {
-        return olhoVivoAPI.searchBusStopsByLine(internalTripId);
+    protected static BusStop[] getStopsByTrip(int internalTripId) throws APIConnectionException {
+        return olhoVivoApi.searchBusStopsByLine(internalTripId);
     }
 
-    protected static BusLinePositions getBusesByTrip(int internalTripId) {
-        return olhoVivoAPI.searchBusesByLine(internalTripId);
+    protected static BusLinePositions getBusesByTrip(int internalTripId) throws APIConnectionException {
+        return olhoVivoApi.searchBusesByLine(internalTripId);
     }
 
     protected static ForecastWithStopAndLine
-    getForecastByStopAndTrip(int internalTripId, int stopId) {
-        return olhoVivoAPI.getForecastWithStopAndLine(stopId, internalTripId);
+    getForecastByStopAndTrip(int internalTripId, int stopId) throws APIConnectionException {
+        return olhoVivoApi.getForecastWithStopAndLine(stopId, internalTripId);
     }
 
     protected static ForecastWithLine
-    getForecastByTrip(int internalTripId) {
-        return olhoVivoAPI.getForecastWithLine(internalTripId);
+    getForecastByTrip(int internalTripId) throws APIConnectionException {
+        return olhoVivoApi.getForecastWithLine(internalTripId);
     }
 
     protected static ForecastWithStop
-    getForecastByStop(int stopId) {
-        return olhoVivoAPI.getForecastWithStop(stopId);
+    getForecastByStop(int stopId) throws APIConnectionException {
+        return olhoVivoApi.getForecastWithStop(stopId);
     }
 
-    protected static BusStop[] getStopsByCorridor(int corridorId) {
-        return olhoVivoAPI.searchBusStopsByCorridor(corridorId);
+    protected static BusStop[] getStopsByCorridor(int corridorId) throws APIConnectionException {
+        return olhoVivoApi.searchBusStopsByCorridor(corridorId);
     }
 
     protected static Pair<BusLine, BusLine> getBothTrips(String fullNumberSign) {
         try {
-            return olhoVivoAPI.getBothTrips(fullNumberSign);
+            return olhoVivoApi.getBothTrips(fullNumberSign);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -101,23 +84,11 @@ public class API {
     }
 
     protected static <T> List<T> filterGtfsToList(String methodName, Predicate<T> filter) {
-        try {
-            Method method = API.store.getClass().getMethod(methodName);
-            Stream<T> all = ((Collection<T>)method.invoke(API.store)).stream();
-
-            List<T> filtered = all.filter(filter).collect(Collectors.toList());
-            return filtered;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+        return gtfsApi.filterToList(methodName, filter);
     }
 
     protected static  <T> T filterGtfsToElement(String methodName, Predicate<T> filter) {
-        List<T> filtered = filterGtfsToList(methodName, filter);
-
-        if (filtered.isEmpty()) return null;
-        return filtered.get(0);
+        return gtfsApi.filterToElement(methodName, filter);
     }
 
 

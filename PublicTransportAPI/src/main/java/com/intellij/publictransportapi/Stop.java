@@ -1,5 +1,6 @@
 package com.intellij.publictransportapi;
 
+import com.intellij.utils.APIConnectionException;
 import com.intellij.olhovivoapi.*;
 import org.apache.commons.lang.text.StrBuilder;
 import org.onebusaway.gtfs.model.StopTime;
@@ -52,7 +53,7 @@ public class Stop {
         return trips;
     }
 
-    public List<PredictedBus> getPredictedBuses(Trip trip) {
+    public List<PredictedBus> getPredictedBuses(Trip trip) throws APIConnectionException {
         ForecastWithStopAndLine forecast =
                 API.getForecastByStopAndTrip(trip.getInternalId(), id);
 
@@ -61,7 +62,7 @@ public class Stop {
         return PredictedBus.convert(forecast.getBuses());
     }
 
-    public Map<Trip, List<PredictedBus>> getAllPredictions() {
+    public Map<Trip, List<PredictedBus>> getAllPredictions() throws APIConnectionException {
         ForecastWithStop forecast = API.getForecastByStop(id);
 
         BusLineNow[] busLineNowArray = forecast.getBusLines();

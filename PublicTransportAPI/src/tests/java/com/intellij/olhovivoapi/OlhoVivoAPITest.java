@@ -22,12 +22,11 @@ public class OlhoVivoAPITest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        api = new OlhoVivoAPI(AUTHKEY);
-        api.authenticate();
+        api = OlhoVivoAPI.getInstance(AUTHKEY);
     }
 
     @Test
-    public void testAuthenticate() {
+    public void testAuthenticate() throws Exception{
         boolean resp = api.authenticate();
         Assert.assertTrue(resp);
     }

@@ -23,7 +23,6 @@ public class StopTest {
         Assert.assertEquals(9, allTrips.size());
     }
 
-    //might throw null pointer exceptions...
     @Test
     public void testGetPredictedBuses() throws Exception {
         List<PredictedBus> prediction =

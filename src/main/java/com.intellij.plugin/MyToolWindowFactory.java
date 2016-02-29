@@ -32,7 +32,7 @@ public class MyToolWindowFactory implements ToolWindowFactory{
     }
 
     private ActionToolbar createToolbar(final Project project) {
-        DefaultActionGroup groupFromConfig = (DefaultActionGroup) ActionManager.getInstance().getAction("SmartCity.Toolbar");
+        DefaultActionGroup groupFromConfig = (DefaultActionGroup) ActionManager.getInstance().getAction("SmartSampa.Toolbar");
         DefaultActionGroup group = new DefaultActionGroup(groupFromConfig); // copy required (otherwise config action group gets modified)
 
         //ActionManager.getInstance().createButtonToolbar()
@@ -51,7 +51,7 @@ public class MyToolWindowFactory implements ToolWindowFactory{
 //            }
 //        });
 
-        return ActionManager.getInstance().createActionToolbar("SmartCity.Toolbar", group, true);
+        return ActionManager.getInstance().createActionToolbar("SmartSampa.Toolbar", group, true);
     }
 }
 

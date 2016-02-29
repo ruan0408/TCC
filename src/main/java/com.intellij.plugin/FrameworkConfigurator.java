@@ -19,8 +19,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class FrameworkConfigurator extends FrameworkTypeEx implements Condition<Project>{
-    public static final String FRAMEWORK_ID = "SmartCity";
-    private static final String supportFile = "/resources/smartCitySupport.txt";
+    public static final String FRAMEWORK_ID = "SmartSampa";
+    private static final String supportFile = "/resources/smartSampaSupport.txt";
 
     public FrameworkConfigurator() {
         super(FRAMEWORK_ID);
@@ -58,7 +58,7 @@ public class FrameworkConfigurator extends FrameworkTypeEx implements Condition<
                     @Override
                     public void addSupport(@NotNull Module module, @NotNull ModifiableRootModel model, @NotNull ModifiableModelsProvider provider) {
                         //do what you want here: setup a library, generate a specific file, etc
-                        generateSmartCitySupportFile(module.getProject());
+                        generatePluginSupportFile(module.getProject());
 
                         //TODO Add here (?) the support for the apache spark jar.
 //                        final FacetManager facetManager = FacetManager.getInstance(module);
@@ -66,7 +66,7 @@ public class FrameworkConfigurator extends FrameworkTypeEx implements Condition<
 //
 //                        // UI Stuff with your JComponent, Settings updates...
 //
-//                        Facet facet = FacetManager.getInstance(model.getModule()).addFacet(MyFacetType.getInstance(), "SmartCity", null);
+//                        Facet facet = FacetManager.getInstance(model.getModule()).addFacet(MyFacetType.getInstance(), "Plugin", null);
 //                        facetModel.addFacet(facet);
 //                        facetModel.commit();
 
@@ -84,7 +84,7 @@ public class FrameworkConfigurator extends FrameworkTypeEx implements Condition<
     @NotNull
     @Override
     public String getPresentableName() {
-        return "Smart City Framework";
+        return "Smart Sampa Framework";
     }
 
     @NotNull
@@ -93,7 +93,7 @@ public class FrameworkConfigurator extends FrameworkTypeEx implements Condition<
         return AllIcons.Providers.Apache;
     }
 
-    private void generateSmartCitySupportFile(Project project) {
+    private void generatePluginSupportFile(Project project) {
         File genFile = new File(getPathToSupportFile(project));
         try {
             genFile.getParentFile().mkdirs();

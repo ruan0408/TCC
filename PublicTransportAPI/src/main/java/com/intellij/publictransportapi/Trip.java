@@ -1,11 +1,14 @@
 package com.intellij.publictransportapi;
 
+import com.intellij.utils.APIConnectionException;
 import com.intellij.olhovivoapi.*;
+import com.intellij.utils.Utils;
 import org.apache.commons.lang.text.StrBuilder;
 import org.onebusaway.gtfs.model.Frequency;
 import org.onebusaway.gtfs.model.ShapePoint;
 import org.onebusaway.gtfs.model.StopTime;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -67,7 +70,7 @@ public class Trip {
         return trip.getServiceId().getId();
     }
 
-    public String getDetails() {
+    public String getDetails() throws IOException {
         return API.getTripDetails(internalId);
     }
 
@@ -80,7 +83,7 @@ public class Trip {
         return Shape.convert(shapes);
     }
 
-    public List<Stop> getAllStops() {
+    public List<Stop> getAllStops() throws APIConnectionException {
         Predicate<StopTime> predicate;
         predicate = s -> s.getTrip().getId().getId().equals(getGtfsId());
 
@@ -104,12 +107,12 @@ public class Trip {
         return stopsFromGtfs;
     }
 
-    public List<com.intellij.publictransportapi.Bus> getAllBuses() {
+    public List<com.intellij.publictransportapi.Bus> getAllBuses() throws APIConnectionException {
         BusLinePositions busesWithTrip = API.getBusesByTrip(internalId);
         return com.intellij.publictransportapi.Bus.convert(busesWithTrip.getVehicles(), com.intellij.publictransportapi.Bus.class);
     }
 
-    public List<PredictedBus> getPredictedBuses(Stop stop) {
+    public List<PredictedBus> getPredictedBuses(Stop stop) throws APIConnectionException {
         ForecastWithStopAndLine forecast =
                 API.getForecastByStopAndTrip(internalId, stop.getId());
 
@@ -118,7 +121,7 @@ public class Trip {
         return PredictedBus.convert(forecast.getBuses());
     }
 
-    public Map<Stop, List<PredictedBus>> getAllPredictions() {
+    public Map<Stop, List<PredictedBus>> getAllPredictions() throws APIConnectionException {
         ForecastWithLine forecast = API.getForecastByTrip(internalId);
 
         BusStopNow[] busStopNowArray = forecast.getBusStops();
@@ -191,11 +194,10 @@ public class Trip {
 
     @Override
     public String toString() {
-        StrBuilder builder = new StrBuilder();
-        builder.append(route.basicToString());
-        builder.appendln("internalId: "+ internalId);
-        builder.appendln("destinationSign: "+destinationSign);
-
-        return builder.toString();
+        return new StrBuilder().
+                append(route.basicToString()).
+                appendln("internalId: "+ internalId).
+                appendln("destinationSign: "+destinationSign).
+                toString();
     }
 }

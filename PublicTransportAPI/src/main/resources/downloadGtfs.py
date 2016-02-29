@@ -1,6 +1,10 @@
 #!/usr/bin/python
 import re
+import sys
+import os
+import zipfile
 from mechanize import Browser
+
 
 def add_event_target(form, target):
     #Creates a new __EVENTTARGET control and adds the value specified
@@ -19,8 +23,8 @@ resp = br.open( "http://www.sptrans.com.br/desenvolvedores/Default.aspx" )
 
 br.select_form( 'frmDev' )
 add_event_target(br.form, 'btnDevPlaceLogin')
-br.form[ 'devPlaceUserName' ] = 'ruan0408'
-br.form[ 'devPlaceUserPass' ] = 'costaruan'
+br.form[ 'devPlaceUserName' ] = sys.argv[1]
+br.form[ 'devPlaceUserPass' ] = sys.argv[2]
 
 resp = br.submit()
 
@@ -32,6 +36,15 @@ add_event_target(br.form, 'btDownloadGTFS')
 
 resp = br.submit()
 
-fileobj = open('/Users/ruan0408/Downloads/downloadGtfs.zip', 'w+')
+#download the gtfs, which happens to be in zip format.
+filezip = sys.argv[3]+'.zip'
+fileobj = open(filezip, 'w+')
 fileobj.write(resp.read())
+#unzip it to a folder with name sys.argv[3]
+zip = zipfile.ZipFile(filezip)
+zip.extractall(sys.argv[3])
+#close the descriptor
 fileobj.close()
+#delete the .zip file
+os.remove(filezip)
+

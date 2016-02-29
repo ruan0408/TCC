@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="Untracking gtfs files.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/python/downloadGtfs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/smartSampaIcon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/gtfsapi/GTFSApi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/utils/APIConnectionException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/utils/HttpUrlConnector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/gtfsapi/GTFSApiTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/HttpUrlConnectorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/smartCityIcon.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Utils.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/utils/Utils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/python/downloadGtfs.py" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/downloadGtfs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/PublicTransportAPI.iml" afterPath="$PROJECT_DIR$/PublicTransportAPI/PublicTransportAPI.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/API.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/API.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Corridor.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Corridor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Shape.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Shape.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Stop.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Stop.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Trip.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Trip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/APITest.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/APITest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/StopTest.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/StopTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa.iml" afterPath="$PROJECT_DIR$/SmartSampa.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.plugin/FrameworkConfigurator.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.plugin/FrameworkConfigurator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com.intellij.plugin/MyToolWindowFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com.intellij.plugin/MyToolWindowFactory.java" />
     </list>
     <ignored path="TheMachinePlugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,42 +63,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SimulatorRunner.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/SimulatorRunner.java">
+      <file leaf-file-name="CorridorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/CorridorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.028355388">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OlhoVivoAPI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
+      <file leaf-file-name="Trip.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Trip.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+              <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#Trip#0" expanded="false" />
+                <element signature="method#setInternalId#0;class#Trip#0" expanded="false" />
+                <element signature="method#setDestinationSign#0;class#Trip#0" expanded="false" />
+                <element signature="method#setRoute#0;class#Trip#0" expanded="false" />
+                <element signature="method#getInternalId#0;class#Trip#0" expanded="false" />
+                <element signature="method#getRoute#0;class#Trip#0" expanded="false" />
+                <element signature="method#getGtfsId#0;class#Trip#0" expanded="false" />
+                <element signature="method#getShapeId#0;class#Trip#0" expanded="false" />
+                <element signature="method#getDestinationSign#0;class#Trip#0" expanded="false" />
+                <element signature="method#getWorkingDays#0;class#Trip#0" expanded="false" />
+                <element signature="method#getShape#0;class#Trip#0" expanded="false" />
+                <element signature="method#getDepartureInterval#0;class#Trip#0" expanded="false" />
+                <element signature="method#getDepartureIntervalNow#0;class#Trip#0" expanded="false" />
+                <element signature="method#buildFrom#0;class#Trip#0" expanded="false" />
+                <element signature="method#buildFrom#1;class#Trip#0" expanded="false" />
+                <element signature="method#getDepartureInterval#1;class#Trip#0" expanded="false" />
+                <element signature="method#equals#0;class#Trip#0" expanded="false" />
+                <element signature="method#toString#0;class#Trip#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="API.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/API.java">
+      <file leaf-file-name="GTFSApi.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/gtfsapi/GTFSApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2085#2086#0" expanded="false" />
-                <element signature="e#2153#2154#0" expanded="false" />
-                <element signature="e#2714#2715#0" expanded="false" />
-                <element signature="e#2784#2785#0" expanded="false" />
-                <element signature="e#2859#2860#0" expanded="false" />
-                <element signature="e#2921#2922#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.4820416">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,8 +119,8 @@
       <list>
         <option value="Action" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,57 +145,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/ForecastWithStopAndLine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/OlhoVivoAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.intellij.smartcity/FrameworkConfigurator.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Route.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Shape.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/PredictedStop.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Bus.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Trip.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/PredictedBus.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Corridor.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Route.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Bus.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/PredictedBus.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Corridor.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/PredictedStop.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Shape.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Stop.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/model/Trip.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Shape.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedStop.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Shape.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithStopAndLine.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Bus.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/PredictedBus.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/TripTest.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/CorridorTest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Bus.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/PredictedBus.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/TripTest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/CorridorTest.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/APITest.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/API.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/APITest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/API.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/BusLine.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/StopTest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/StopTest.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/BusLineNow.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/implementation/RouteTest.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Route.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Utils.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Point.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Corridor.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/tests/java/com/intellij/publictransportapi/RouteTest.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Route.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Utils.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Point.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Corridor.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Trip.java" />
-        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/implementation/Stop.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Trip.java" />
         <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Stop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.intellij.plugin/MyToolWindowFactory.java" />
+        <option value="$PROJECT_DIR$/OlhoVivoAPI/src/main/java/com/intellij/publictransportapi/Stop.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.intellij.plugin/SimulatorRunner.java" />
         <option value="$PROJECT_DIR$/src/test/java/com.intellij.plugin/SimulatorRunnerTest.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithStopAndLine.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Stop.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Trip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.intellij.plugin/FrameworkConfigurator.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/HttpUrlConnector.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/HttpUrlConnectorTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/python/downloadGtfs.py" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/out/production/SmartCity/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.plugin/FrameworkConfigurator.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com.intellij.plugin/MyToolWindowFactory.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/GTFSManager.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/gtfsapi/GTFSManager.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Trip.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Corridor.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Stop.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/CorridorTest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/APIConnectionException.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/resources/downloadGtfs.py" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/gtfsapi/GTFSApi.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/gtfsapi/GTFSApiTest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/API.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/APITest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/StopTest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/utils/Utils.java" />
       </list>
     </option>
   </component>
@@ -236,13 +266,9 @@
     </navigator>
     <panes>
       <pane id="Scope">
-        <subPane subId="Project Files">
+        <subPane subId="Production">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="SmartCity">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -252,21 +278,11 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="SmartCity">
+            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="SmartCity">
+            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -278,7 +294,11 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java">
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -286,25 +306,11 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheMachinePlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -314,7 +320,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -324,7 +330,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -332,87 +338,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.intellij.plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.intellij.plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -426,7 +358,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -448,7 +380,41 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicTransportAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publictransportapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -478,7 +444,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -495,16 +461,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -524,13 +486,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="python" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartCity" />
+              <option name="myItemId" value="SmartSampa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -548,6 +518,100 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publictransportapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicTransportAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="olhovivoapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicTransportAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intellij" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gtfsapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TheMachinePlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -561,9 +625,9 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -572,7 +636,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/faculdade/tcc/libraries/httpmime-4.5.1.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/faculdade/tcc/libraries/jackson-databind-2.7.0.jar!/" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="right" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="539" />
@@ -581,10 +645,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.intellij.gtfsapi" />
       <recent name="com.intellij" />
-      <recent name="com.intellij.publictransportapi.implementation" />
-      <recent name="com.intellij.smartcity" />
-      <recent name="com.themachineplugin" />
+      <recent name="com.intellij.publictransportapi" />
+      <recent name="com.intellij.plugin" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -594,6 +658,7 @@
       <recent name="com.intellij.olhovivoapi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PublicTransportAPI/src/main/resources" />
       <recent name="$PROJECT_DIR$/PublicTransportAPI2" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -602,14 +667,14 @@
       <recent name="com.intellij.olhovivoapi" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.intellij.smartcity" />
+      <recent name="com.intellij.plugin" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HttpUrlConnectorTest">
+  <component name="RunManager" selected="JUnit.TripTest">
     <configuration default="false" name="CorridorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.intellij.publictransportapi.implementation.*" />
+          <option name="PATTERN" value="com.intellij.publictransportapi" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -632,36 +697,10 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="StopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.intellij.publictransportapi.implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="PublicTransportAPI" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.intellij.publictransportapi" />
-      <option name="MAIN_CLASS_NAME" value="com.intellij.publictransportapi.StopTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="TripTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.intellij.publictransportapi.implementation.*" />
+          <option name="PATTERN" value="com.intellij.publictransportapi" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -684,23 +723,23 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="RouteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="OlhoVivoAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.intellij.publictransportapi.implementation.*" />
+          <option name="PATTERN" value="com.intellij.olhovivoapi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="PublicTransportAPI" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.intellij.publictransportapi" />
-      <option name="MAIN_CLASS_NAME" value="com.intellij.publictransportapi.RouteTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.intellij.olhovivoapi" />
+      <option name="MAIN_CLASS_NAME" value="com.intellij.olhovivoapi.OlhoVivoAPITest" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -710,18 +749,44 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="HttpUrlConnectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RouteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.intellij.*" />
+          <option name="PATTERN" value="com.intellij.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="PublicTransportAPI" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.intellij" />
-      <option name="MAIN_CLASS_NAME" value="com.intellij.HttpUrlConnectorTest" />
+      <option name="PACKAGE_NAME" value="com.intellij.publictransportapi" />
+      <option name="MAIN_CLASS_NAME" value="com.intellij.publictransportapi.RouteTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="StopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.intellij.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="PublicTransportAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.intellij.publictransportapi" />
+      <option name="MAIN_CLASS_NAME" value="com.intellij.publictransportapi.StopTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -902,6 +967,26 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -1068,6 +1153,52 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1188,6 +1319,116 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PublicTransportAPI" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1266,7 +1507,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Run Smart City" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="false" name="Run Smart Sampa" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="SmartSampa" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -ea" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -1278,20 +1519,20 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.Test Smart City Runner" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.SimulatorRunnerTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.APITest" />
-      <item index="3" class="java.lang.String" itemvalue="Plugin.Run Smart City" />
+      <item index="3" class="java.lang.String" itemvalue="Plugin.Run Smart Sampa" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.CorridorTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.StopTest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TripTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.TripTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest" />
       <item index="7" class="java.lang.String" itemvalue="JUnit.RouteTest" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.HttpUrlConnectorTest" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.StopTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HttpUrlConnectorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TripTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RouteTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StopTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CorridorTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TripTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CorridorTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StopTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RouteTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest" />
       </list>
     </recent_temporary>
   </component>
@@ -1328,7 +1569,18 @@
       <workItem from="1455843136091" duration="61326000" />
       <workItem from="1456235790418" duration="8314000" />
       <workItem from="1456277223012" duration="2696000" />
-      <workItem from="1456303663964" duration="15172000" />
+      <workItem from="1456303663964" duration="21261000" />
+      <workItem from="1456450218973" duration="2440000" />
+      <workItem from="1456504060190" duration="12000" />
+      <workItem from="1456504103786" duration="908000" />
+      <workItem from="1456505521545" duration="859000" />
+      <workItem from="1456506392009" duration="1766000" />
+      <workItem from="1456508796223" duration="4187000" />
+      <workItem from="1456602552646" duration="5549000" />
+      <workItem from="1456609288885" duration="172000" />
+      <workItem from="1456609510404" duration="6280000" />
+      <workItem from="1456683510744" duration="4320000" />
+      <workItem from="1456710300896" duration="417000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1504,43 +1756,49 @@
       <option name="project" value="LOCAL" />
       <updated>1456278696547</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Adding python script for downloading gtfs.">
+      <created>1456375379601</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1456375379601</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 19h 34m 52s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="CorridorTest - 2016.02.28 at 22h 34m 31s.xml">
+      <configuration name="CorridorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 19h 37m 16s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="GTFSApiTest - 2016.02.28 at 22h 00m 38s.xml">
+      <configuration name="GTFSApiTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 21h 20m 53s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="GTFSApiTest - 2016.02.28 at 22h 22m 48s.xml">
+      <configuration name="GTFSApiTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 21h 40m 04s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="GTFSApiTest - 2016.02.28 at 22h 26m 03s.xml">
+      <configuration name="GTFSApiTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 22h 22m 25s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="GTFSApiTest - 2016.02.28 at 22h 30m 42s.xml">
+      <configuration name="GTFSApiTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 23h 02m 03s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="OlhoVivoAPITest - 2016.02.28 at 22h 34m 11s.xml">
+      <configuration name="OlhoVivoAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 23h 07m 04s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="RouteTest - 2016.02.28 at 22h 34m 49s.xml">
+      <configuration name="RouteTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 23h 08m 25s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="StopTest - 2016.02.28 at 22h 35m 16s.xml">
+      <configuration name="StopTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 23h 09m 27s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="TripTest - 2016.02.28 at 22h 32m 29s.xml">
+      <configuration name="TripTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HttpUrlConnectorTest - 2016.02.24 at 23h 12m 21s.xml">
-      <configuration name="HttpUrlConnectorTest" configurationId="JUnit" />
+    <history-entry file="TripTest - 2016.02.28 at 22h 45m 56s.xml">
+      <configuration name="TripTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256819000" />
+    <option name="totallyTimeSpent" value="289818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1566,7 +1824,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27831325" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26752505" sideWeight="0.49331105" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27753934" sideWeight="0.49331105" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1600,7 +1858,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Adds Tool Window, framework configuration on project creation and renames packages" />
     <MESSAGE value="Moves Run simulator button to tool window." />
     <MESSAGE value="Renames classes and fixes Run Simulation button.&#10;" />
     <MESSAGE value="Doesn't build tool window if project doesn't support the Smart City Framework&#10;" />
@@ -1625,7 +1882,8 @@
     <MESSAGE value="removing files?" />
     <MESSAGE value="Trying to automatically download the gtfs file." />
     <MESSAGE value="Untracking gtfs files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Untracking gtfs files." />
+    <MESSAGE value="Adding python script for downloading gtfs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding python script for downloading gtfs." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1638,151 +1896,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/SimulatorRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/HttpUrlConnectorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/API.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2085#2086#0" expanded="false" />
-            <element signature="e#2153#2154#0" expanded="false" />
-            <element signature="e#2714#2715#0" expanded="false" />
-            <element signature="e#2784#2785#0" expanded="false" />
-            <element signature="e#2859#2860#0" expanded="false" />
-            <element signature="e#2921#2922#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/plusIcon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/vfs/LocalFileSystem.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/kotlin-runtime.jar!/kotlin/jvm/internal/Intrinsics.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="642" column="0" selection-start-line="642" selection-start-column="0" selection-end-line="642" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/components/impl/ComponentManagerImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="989" column="0" selection-start-line="989" selection-start-column="0" selection-end-line="989" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/util/containers/ConcurrentHashMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/util/pico/DefaultPicoContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/components/ServiceKt.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/module/impl/ModuleImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/application/impl/ApplicationImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="48" selection-start-line="174" selection-start-column="48" selection-end-line="174" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ide/util/projectWizard/ModuleBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17234042">
           <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/smartCityIcon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.5">
-          <caret line="36" column="90" selection-start-line="36" selection-start-column="90" selection-end-line="36" selection-end-column="90" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1827,25 +1944,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2244389">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com.intellij.plugin/SimulatorRunnerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026269702">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SmartSampa.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9451554">
+          <caret line="472" column="40" selection-start-line="472" selection-start-column="40" selection-end-line="472" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/ruan0408.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/FrameworkConfigurator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/MyToolWindowFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47285464">
+          <caret line="53" column="74" selection-start-line="53" selection-start-column="74" selection-end-line="53" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5886654">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/PublicTransportAPI.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/SimulatorRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/Bus.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Corridor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/PredictedBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Stop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/utils/HttpUrlConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1856,61 +2076,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/MyToolWindowFactory.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithStop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2268431">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/FrameworkConfigurator.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.17013232">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/RouteTest.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusStopWithLines.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5387524">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/TripTest.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusStopNow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6540643">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Stop.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusStop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8223062">
-          <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Trip.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusNow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38752362">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/StopTest.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusLineNow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5973535">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusCorridor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusLinePositions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18388791">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/resources/downloadGtfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/gtfsapi/GTFSApiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1918,57 +2198,132 @@
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/API.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2085#2086#0" expanded="false" />
-            <element signature="e#2153#2154#0" expanded="false" />
-            <element signature="e#2714#2715#0" expanded="false" />
-            <element signature="e#2784#2785#0" expanded="false" />
-            <element signature="e#2859#2860#0" expanded="false" />
-            <element signature="e#2921#2922#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/TripTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018703243">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/HttpUrlConnector.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/CorridorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14962594">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13092269">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/RouteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47460595">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/StopTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/utils/APIConnectionException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42031524">
+          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/publictransportapi/APITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026269702">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/HttpUrlConnectorTest.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.29071805">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.intellij.plugin/SimulatorRunner.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/publictransportapi/Trip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028355388">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
+          <folding>
+            <element signature="docComment;class#Trip#0" expanded="false" />
+            <element signature="method#setInternalId#0;class#Trip#0" expanded="false" />
+            <element signature="method#setDestinationSign#0;class#Trip#0" expanded="false" />
+            <element signature="method#setRoute#0;class#Trip#0" expanded="false" />
+            <element signature="method#getInternalId#0;class#Trip#0" expanded="false" />
+            <element signature="method#getRoute#0;class#Trip#0" expanded="false" />
+            <element signature="method#getGtfsId#0;class#Trip#0" expanded="false" />
+            <element signature="method#getShapeId#0;class#Trip#0" expanded="false" />
+            <element signature="method#getDestinationSign#0;class#Trip#0" expanded="false" />
+            <element signature="method#getWorkingDays#0;class#Trip#0" expanded="false" />
+            <element signature="method#getShape#0;class#Trip#0" expanded="false" />
+            <element signature="method#getDepartureInterval#0;class#Trip#0" expanded="false" />
+            <element signature="method#getDepartureIntervalNow#0;class#Trip#0" expanded="false" />
+            <element signature="method#buildFrom#0;class#Trip#0" expanded="false" />
+            <element signature="method#buildFrom#1;class#Trip#0" expanded="false" />
+            <element signature="method#getDepartureInterval#1;class#Trip#0" expanded="false" />
+            <element signature="method#equals#0;class#Trip#0" expanded="false" />
+            <element signature="method#toString#0;class#Trip#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/gtfsapi/GTFSApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4820416">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding />
         </state>
       </provider>

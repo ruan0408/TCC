@@ -1,6 +1,6 @@
 <idea-plugin version="2">
-  <internalId>com.intellij.smartcity</internalId>
-  <name>Smart City Framework</name>
+  <id>com.intellij.plugin</id>
+  <name>Smart Sampa Framework</name>
   <version>1.0</version>
   <vendor email="ruan.cocito@gmail.com" url="http://www.linux.ime.usp.br/~ruan/mac0499/">YourCompany</vendor>
 
@@ -24,18 +24,18 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
-    <framework.type implementation="com.intellij.smartcity.FrameworkConfigurator"/>
+    <framework.type implementation="com.intellij.plugin.FrameworkConfigurator"/>
     <!--<facetType implementation="com.intellij.com.intellij.plugin.MyFacetType"/>-->
-    <toolWindow internalId="Smart City" icon="/smartCityIcon.png" anchor="right"
-                factoryClass="com.intellij.smartcity.MyToolWindowFactory"
-                conditionClass="com.intellij.smartcity.FrameworkConfigurator"/>
+    <toolWindow id="SmartSampa" icon="/smartSampaIcon.png" anchor="right"
+                factoryClass="com.intellij.plugin.MyToolWindowFactory"
+                conditionClass="com.intellij.plugin.FrameworkConfigurator"/>
   </extensions>
 
   <actions>
-    <group internalId="SmartCity.Toolbar">
+    <group id="SmartSampa.Toolbar">
       <!--<separator/>-->
-      <action internalId="SmartCity.RunSimulator" text="Run Simulator" icon="/runSimulatorIcon.jpg"
-              class="com.intellij.smartcity.SimulatorRunner">
+      <action id="plugin.RunSimulator" text="Run Simulator" icon="/runSimulatorIcon.jpg"
+              class="com.intellij.plugin.SimulatorRunner">
       </action>
     </group>
 
