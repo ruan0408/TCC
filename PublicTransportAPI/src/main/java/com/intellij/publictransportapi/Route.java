@@ -11,7 +11,7 @@ import java.util.function.Predicate;
 /**
  * Created by ruan0408 on 17/02/2016.
  */
-public class Route {
+public class Route extends APIUser{
 
     private String numberSign;
     private int type;
@@ -59,16 +59,17 @@ public class Route {
         Predicate<FareRule> predicate;
         predicate = f -> f.getRoute().getId().getId().equals(fullNumberSign());
 
-        FareRule rule = API.filterGtfsToElement("getAllFareRules", predicate);
+        FareRule rule = api.filterGtfsToElement("getAllFareRules", predicate);
 
         return rule.getFare().getPrice();
     }
 
     protected static Route buildFrom(String fullNumberSign) {
         Route newRoute = new Route();
-        Pair<BusLine, BusLine> bothTrips = API.getBothTrips(fullNumberSign);
+        Pair<BusLine, BusLine> bothTrips = api.getBothTrips(fullNumberSign);
 
         newRoute.setNumberSign(fullNumberSign.substring(0,3));
+
         newRoute.setType(Integer.parseInt(fullNumberSign.substring(5)));
         newRoute.setCircular(bothTrips.first.isCircular());
         newRoute.setInfo(bothTrips.first.getInfo());

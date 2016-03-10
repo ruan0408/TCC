@@ -14,26 +14,26 @@ public class StopTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        APITest.setUp();
+        PublicTransportAPITest.setUp();
     }
 
     @Test
     public void testGetAllTrips() throws Exception {
-        List<Trip> allTrips = APITest.campanella.getAllTrips();
+        List<Trip> allTrips = PublicTransportAPITest.campanella.getAllTrips();
         Assert.assertEquals(9, allTrips.size());
     }
 
     @Test
     public void testGetPredictedBuses() throws Exception {
         List<PredictedBus> prediction =
-                APITest.usp.getPredictedBuses(APITest.brasiliana);
+                PublicTransportAPITest.usp.getPredictedBuses(PublicTransportAPITest.brasiliana);
         Assert.assertTrue(!prediction.isEmpty());
     }
 
     @Test
     public void testGetAllPredictions() throws Exception {
         Map<Trip, List<PredictedBus>> predictions =
-                APITest.campanella.getAllPredictions();
+                PublicTransportAPITest.campanella.getAllPredictions();
 
         Assert.assertTrue(!predictions.isEmpty());
     }

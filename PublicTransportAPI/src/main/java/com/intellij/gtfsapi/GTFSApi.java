@@ -19,7 +19,7 @@ import java.util.stream.Stream;
  */
 public class GTFSApi {
 
-    private static final int UPDATE_INTERVAL = 3;
+    private static final int UPDATE_INTERVAL = 3;//days
     private static final String SMART_SAMPA_PATH = System.getProperty("user.home")+"/"+"SmartSampa/";
     private static final String GTFS_PATH = SMART_SAMPA_PATH + "gtfs-sp";
     private static final String DOWNLOAD_GTFS_SCRIPT_PATH =
@@ -30,16 +30,12 @@ public class GTFSApi {
     private String login;
     private String password;
 
-    public static GTFSApi
-    getInstance(String login, String password) throws APIConnectionException {
-        GTFSApi gtfsApi = new GTFSApi();
-        gtfsApi.login = login;
-        gtfsApi.password = password;
-        gtfsApi.initialize();
-        return gtfsApi;
+    public GTFSApi(String login, String password) {
+        this.login = login;
+        this.password = password;
     }
 
-    private void initialize() throws APIConnectionException {
+    public void init() {
         gtfsReader = new GtfsReader();
         store = new GtfsDaoImpl();
         checkDirs();
@@ -81,7 +77,7 @@ public class GTFSApi {
         return false;
     }
 
-    private void updateGtfs() throws APIConnectionException {
+    private void updateGtfs() {
         File gtfsDir = new File(GTFS_PATH);
         long currentTime = System.currentTimeMillis();
         long interval = Duration.ofDays(UPDATE_INTERVAL).toMillis();
@@ -91,7 +87,7 @@ public class GTFSApi {
 
     }
 
-    private void downloadGtfs() throws APIConnectionException {
+    private void downloadGtfs() {
 
         ProcessBuilder pb = new ProcessBuilder("python", DOWNLOAD_GTFS_SCRIPT_PATH,
                 login, password, GTFS_PATH);

@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Wrapper class for the bus line json returned by the API.
+ * Wrapper class for the bus line json returned by the PublicTransportAPI.
  * The fields are not in camel case so we can automatically parse the json.
  * */
 public class BusLine {

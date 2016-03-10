@@ -22,7 +22,8 @@ public class OlhoVivoAPITest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        api = OlhoVivoAPI.getInstance(AUTHKEY);
+        api = new OlhoVivoAPI(AUTHKEY);
+        api.authenticate();
     }
 
     @Test

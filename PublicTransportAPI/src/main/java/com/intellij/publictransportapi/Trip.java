@@ -1,28 +1,31 @@
 package com.intellij.publictransportapi;
 
-import com.intellij.utils.APIConnectionException;
 import com.intellij.olhovivoapi.*;
+import com.intellij.utils.APIConnectionException;
 import com.intellij.utils.Utils;
 import org.apache.commons.lang.text.StrBuilder;
 import org.onebusaway.gtfs.model.Frequency;
 import org.onebusaway.gtfs.model.ShapePoint;
 import org.onebusaway.gtfs.model.StopTime;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * Created by ruan0408 on 17/02/2016.
  */
-public class Trip {
+public class Trip extends APIUser{
 
     private int internalId;
     private String shapeId = null;
     private Route route;
     private String destinationSign;
+
+    //TODO make sure user cant instantiate classes that I dont want him to.
+    protected Trip() {}
 
     public void setInternalId(int internalId) {this.internalId = internalId;}
 
@@ -51,7 +54,7 @@ public class Trip {
             predicate = trip -> trip.getId().getId().equals(getGtfsId());
 
             org.onebusaway.gtfs.model.Trip trip =
-                    API.filterGtfsToElement("getAllTrips", predicate);
+                    api.filterGtfsToElement("getAllTrips", predicate);
 
             shapeId = trip.getShapeId().getId();
         }
@@ -65,34 +68,34 @@ public class Trip {
         predicate = t -> t.getId().getId().equals(getGtfsId());
 
         org.onebusaway.gtfs.model.Trip trip =
-                API.filterGtfsToElement("getAllTrips", predicate);
+                api.filterGtfsToElement("getAllTrips", predicate);
 
         return trip.getServiceId().getId();
     }
 
-    public String getDetails() throws IOException {
-        return API.getTripDetails(internalId);
+    public String getDetails() {
+        return api.getTripDetails(internalId);
     }
 
     public Shape getShape() {
         Predicate<ShapePoint> predicate;
         predicate = point -> point.getShapeId().getId().equals(getShapeId());
 
-        List<ShapePoint> shapes = API.filterGtfsToList("getAllShapePoints", predicate);
+        List<ShapePoint> shapes = api.filterGtfsToList("getAllShapePoints", predicate);
 
         return Shape.convert(shapes);
     }
 
-    public List<Stop> getAllStops() throws APIConnectionException {
+    public List<Stop> getAllStops() {
         Predicate<StopTime> predicate;
         predicate = s -> s.getTrip().getId().getId().equals(getGtfsId());
 
-        List<StopTime> filtered = API.filterGtfsToList("getAllStopTimes", predicate);
+        List<StopTime> filtered = api.filterGtfsToList("getAllStopTimes", predicate);
 
         filtered.sort(Utils.compByStopSequence);
 
         List<Stop> stopsFromGtfs = Stop.convert(Utils.convert(filtered));
-        List<Stop> stopsFromOlhoVivo = Stop.convert(API.getStopsByTrip(internalId));
+        List<Stop> stopsFromOlhoVivo = Stop.convert(api.getStopsByTrip(internalId));
 
         Map<Stop, Stop> map = new Hashtable<>(stopsFromOlhoVivo.size());
 
@@ -107,14 +110,14 @@ public class Trip {
         return stopsFromGtfs;
     }
 
-    public List<com.intellij.publictransportapi.Bus> getAllBuses() throws APIConnectionException {
-        BusLinePositions busesWithTrip = API.getBusesByTrip(internalId);
-        return com.intellij.publictransportapi.Bus.convert(busesWithTrip.getVehicles(), com.intellij.publictransportapi.Bus.class);
+    public List<Bus> getAllBuses() throws APIConnectionException {
+        BusLinePositions busesWithTrip = api.getBusesByTrip(internalId);
+        return Bus.convert(busesWithTrip.getVehicles(), Bus.class);
     }
 
     public List<PredictedBus> getPredictedBuses(Stop stop) throws APIConnectionException {
         ForecastWithStopAndLine forecast =
-                API.getForecastByStopAndTrip(internalId, stop.getId());
+                api.getForecastByStopAndTrip(internalId, stop.getId());
 
         if (forecast.getBuses() == null) return new ArrayList<>();
 
@@ -122,7 +125,7 @@ public class Trip {
     }
 
     public Map<Stop, List<PredictedBus>> getAllPredictions() throws APIConnectionException {
-        ForecastWithLine forecast = API.getForecastByTrip(internalId);
+        ForecastWithLine forecast = api.getForecastByTrip(internalId);
 
         BusStopNow[] busStopNowArray = forecast.getBusStops();
         Map<Stop, List<PredictedBus>> map = new HashMap<>(busStopNowArray.length);
@@ -155,6 +158,15 @@ public class Trip {
     }
 
     protected static
+    List<Trip> convert(List<org.onebusaway.gtfs.model.Trip> list) {
+
+        List<Trip> trips = list.parallelStream()
+                .map(t -> buildFrom(t))
+                .collect(Collectors.toList());
+        return trips;
+    }
+
+    protected static
     Trip buildFrom(org.onebusaway.gtfs.model.Trip trip) {
         Route parentRoute = Route.buildFrom(trip.getRoute().getShortName());
 
@@ -178,7 +190,7 @@ public class Trip {
         predicate = f -> f.getTrip().getId().getId().equals(getGtfsId()) &&
                 (f.getStartTime() <= time) && (time < f.getEndTime());
 
-        Frequency f = API.filterGtfsToElement("getAllFrequencies", predicate);
+        Frequency f = api.filterGtfsToElement("getAllFrequencies", predicate);
         return f.getHeadwaySecs();
     }
 

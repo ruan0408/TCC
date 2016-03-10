@@ -1,11 +1,9 @@
 package com.intellij.utils;
 
-import java.io.IOException;
-
 /**
  * Created by ruan0408 on 27/02/2016.
  */
-public class APIConnectionException extends IOException {
+public class APIConnectionException extends RuntimeException {
 
     public APIConnectionException(String message) {
         super(message);

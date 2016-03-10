@@ -11,12 +11,12 @@ public class RouteTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        APITest.setUp();
+        PublicTransportAPITest.setUp();
     }
 
     @Test
     public void testGetFarePrice() throws Exception {
-        double price = APITest.route8012.getFarePrice();
+        double price = PublicTransportAPITest.route8012.getFarePrice();
         Assert.assertEquals(3.80, price, 0.00001);
     }
 }

@@ -1,6 +1,6 @@
 package com.intellij.gtfsapi;
 
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -8,14 +8,15 @@ import org.junit.Test;
  */
 public class GTFSApiTest {
 
-    @Before
-    public void setUp() throws Exception {
+    private static GTFSApi gtfsApi;
 
+    @BeforeClass
+    public static void setUp() throws Exception {
+        gtfsApi = new GTFSApi("ruan0408", "costaruan");
     }
 
     @Test
-    public void testGetInstance() throws Exception {
-        GTFSApi.getInstance("ruan0408", "costaruan");
-
+    public void testInit() throws Exception {
+        gtfsApi.init();
     }
 }

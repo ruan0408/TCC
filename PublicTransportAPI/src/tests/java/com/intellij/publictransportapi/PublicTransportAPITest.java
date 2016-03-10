@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by ruan0408 on 18/02/2016.
  */
-public class APITest {
+public class PublicTransportAPITest extends APIUser {
 
     public static Trip alvim, bonifacio, usp, butanta;
     public static Route route273l, route8012;
@@ -18,8 +18,9 @@ public class APITest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        API.init("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3",
+        api.init("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3",
                 "ruan0408", "costaruan");
+
         loadTestObjects();
     }
 
@@ -64,13 +65,13 @@ public class APITest {
 
     @Test
     public void testSearchTrip() throws Exception {
-        List<Trip> tripList = API.searchTrip("273L");
+        List<Trip> tripList = api.searchTrip("273L");
 
         Assert.assertTrue(tripList.size() == 2);
         Assert.assertTrue(tripList.contains(alvim));
         Assert.assertTrue(tripList.contains(bonifacio));
 
-        tripList = API.searchTrip("8012");
+        tripList = api.searchTrip("8012");
         Assert.assertTrue(tripList.size() == 2);
         Assert.assertTrue(tripList.contains(usp));
         Assert.assertTrue(tripList.contains(butanta));
@@ -78,7 +79,13 @@ public class APITest {
 
     @Test
     public void testGetAllCorridors() throws Exception {
-        List<Corridor> allCorridors = API.getAllCorridors();
+        List<Corridor> allCorridors = api.getAllCorridors();
         Assert.assertEquals(7, allCorridors.size());
+    }
+
+    @Test
+    public void testGetAllBuses() throws Exception {
+        List<Bus> allBuses = api.getAllBuses();
+        Assert.assertTrue(!allBuses.isEmpty());
     }
 }

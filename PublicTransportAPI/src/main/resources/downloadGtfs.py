@@ -2,6 +2,7 @@
 import re
 import sys
 import os
+import shutil
 import zipfile
 from mechanize import Browser
 
@@ -42,9 +43,16 @@ fileobj = open(filezip, 'w+')
 fileobj.write(resp.read())
 #unzip it to a folder with name sys.argv[3]
 zip = zipfile.ZipFile(filezip)
+
+#remove the old gtfs folder
+shutil.rmtree(sys.argv[3], ignore_errors=True)
+
+#create the new gtfs folder
 zip.extractall(sys.argv[3])
+
 #close the descriptor
 fileobj.close()
+
 #delete the .zip file
 os.remove(filezip)
 

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by ruan0408 on 17/02/2016.
  */
-public class Corridor {
+public class Corridor extends APIUser {
 
     private int id;
     private String name;
@@ -25,7 +25,7 @@ public class Corridor {
     public String getName() {return name;}
 
     public List<Stop> getAllStops() throws APIConnectionException {
-        return Stop.convert(API.getStopsByCorridor(id));
+        return Stop.convert(api.getStopsByCorridor(id));
     }
 
     protected static List<Corridor> convert(BusCorridor[] corridors) {

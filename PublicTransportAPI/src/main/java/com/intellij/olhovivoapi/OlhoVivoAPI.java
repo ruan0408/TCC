@@ -20,23 +20,13 @@ public class OlhoVivoAPI {
     private String authKey;
     private HttpUrlConnector httpConnector;
 
-    public static OlhoVivoAPI getInstance(String key) {
-        OlhoVivoAPI api = new OlhoVivoAPI(key);
-        try {
-            api.authenticate();
-        } catch (APIConnectionException e) {
-            e.printStackTrace();
-        }
-        return api;
-    }
-
-    private OlhoVivoAPI(String key) {
+    public OlhoVivoAPI(String key) {
         jsonParser.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         authKey = key;
         httpConnector = new HttpUrlConnector();
     }
 
-    public boolean authenticate() throws APIConnectionException {
+    public boolean authenticate() {
 
         String url = BASE_URL +"Login/Autenticar?token="+authKey;
         String response = null;
@@ -51,61 +41,66 @@ public class OlhoVivoAPI {
         return false;
     }
 
-    public BusLine[] searchBusLines(String termosBusca) throws APIConnectionException {
+    public BusLine[] searchBusLines(String termosBusca) {
         String url = BASE_URL +"/Linha/Buscar?termosBusca="+termosBusca;
         return performQuery(url, BusLine[].class);
     }
 
     //TODO this is weird.
-    public String getBusLineDetails(int busLineCode) throws IOException {
+    public String getBusLineDetails(int busLineCode) {
         String url = BASE_URL +"/Linha/CarregarDetalhes?codigoLinha="+busLineCode;
-        String jsonResponse = httpConnector.executeGet(url);
+        String jsonResponse = null;
+        try {
+            jsonResponse = httpConnector.executeGet(url);
+        } catch (IOException e) {
+            throw APIConnectionException.throwOlhoVivoConnectionException();
+        }
         return jsonResponse;
     }
 
-    public BusStop[] searchBusStops(String searchTerms) throws APIConnectionException {
+    public BusStop[] searchBusStops(String searchTerms) {
         String url = BASE_URL +"/Parada/Buscar?termosBusca="+searchTerms;
         return performQuery(url, BusStop[].class);
     }
 
-    public BusStop[] searchBusStopsByLine(int busLineCode) throws APIConnectionException {
+    public BusStop[] searchBusStopsByLine(int busLineCode) {
         String url = BASE_URL +"/Parada/BuscarParadasPorLinha?codigoLinha="+busLineCode;
         return performQuery(url, BusStop[].class);
     }
 
-    public BusStop[] searchBusStopsByCorridor(int busCorridorCode) throws APIConnectionException {
+    public BusStop[] searchBusStopsByCorridor(int busCorridorCode) {
         String url = BASE_URL + "/Parada/BuscarParadasPorCorredor?codigoCorredor="+busCorridorCode;
         return performQuery(url, BusStop[].class);
     }
 
-    public BusCorridor[] getAllBusCorridors() throws APIConnectionException {
+    public BusCorridor[] getAllBusCorridors() {
         String url = BASE_URL + "/Corredor";
         return performQuery(url, BusCorridor[].class);
     }
 
-    public BusLinePositions searchBusesByLine(int busLineCode) throws APIConnectionException {
+    public BusLinePositions searchBusesByLine(int busLineCode) {
         String url = BASE_URL + "/Posicao?codigoLinha="+busLineCode;
         return performQuery(url, BusLinePositions.class);
     }
 
     public ForecastWithStopAndLine
-    getForecastWithStopAndLine(int busStopCode, int busLineCode) throws APIConnectionException {
+    getForecastWithStopAndLine(int busStopCode, int busLineCode) {
         String url = BASE_URL + "/Previsao?codigoParada="+busStopCode+"&codigoLinha="+busLineCode;
         return performQuery(url, ForecastWithStopAndLine.class);
     }
 
-    public ForecastWithLine getForecastWithLine(int busLineCode) throws APIConnectionException {
+    public ForecastWithLine getForecastWithLine(int busLineCode) {
         String url = BASE_URL + "/Previsao/Linha?codigoLinha="+busLineCode;
         return performQuery(url, ForecastWithLine.class);
     }
 
     public ForecastWithStop
-    getForecastWithStop(int busStopCode) throws APIConnectionException {
+    getForecastWithStop(int busStopCode) {
         String url = BASE_URL + "/Previsao/Parada?codigoParada="+busStopCode;
         return performQuery(url, ForecastWithStop.class);
     }
 
-    private <T> T performQuery(String url, Class<T> tClass) throws APIConnectionException {
+    private <T> T performQuery(String url, Class<T> tClass) {
         String jsonResponse = null;
         try {
             jsonResponse = httpConnector.executeGet(url);
@@ -117,7 +112,8 @@ public class OlhoVivoAPI {
     }
 
     //TODO assuming olhovivo will ALWAYS return two results for the same line number
-    public Pair<BusLine, BusLine> getBothTrips(String fullNumberSign) throws Exception {
+    public Pair<BusLine, BusLine>
+    getBothTrips(String fullNumberSign) throws Exception {
         BusLine[] busLines = this.searchBusLines(fullNumberSign);
 
         if (busLines.length != 2) throw new Exception();

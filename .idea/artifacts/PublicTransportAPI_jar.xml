@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PublicTransportAPI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PublicTransportAPI_jar</output-path>
+    <root id="archive" name="PublicTransportAPI.jar">
+      <element id="module-output" name="PublicTransportAPI" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/faculdade/tcc/libraries/onebusaway-gtfs-1.3.5-20150503.062919-1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/faculdade/tcc/libraries/onebusaway-csv-entities-1.1.5-20150503.061302-1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/faculdade/tcc/libraries/commons-beanutils-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/faculdade/tcc/libraries/jackson-annotations-2.7.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/faculdade/tcc/libraries/jackson-core-2.7.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/faculdade/tcc/libraries/jackson-databind-2.7.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

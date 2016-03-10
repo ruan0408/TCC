@@ -13,12 +13,12 @@ public class CorridorTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        APITest.setUp();
+        PublicTransportAPITest.setUp();
     }
 
     @Test
     public void testGetAllStops() throws Exception {
-        List<Stop> allStops = APITest.campoLimpo.getAllStops();
+        List<Stop> allStops = PublicTransportAPITest.campoLimpo.getAllStops();
         Assert.assertEquals(33, allStops.size());
     }
 }

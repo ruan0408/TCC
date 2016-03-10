@@ -15,7 +15,7 @@ import java.util.function.Predicate;
  * Created by ruan0408 on 17/02/2016.
  */
 //TODO maybe add a getDescription.
-public class Stop {
+public class Stop extends APIUser {
 
     private Integer id = null;
     private String name;
@@ -44,7 +44,7 @@ public class Stop {
         Predicate<StopTime> predicate =
                 s -> s.getStop().getId().getId().equals(id+"");
 
-        List<StopTime> stopTimes = API.filterGtfsToList("getAllStopTimes", predicate);
+        List<StopTime> stopTimes = api.filterGtfsToList("getAllStopTimes", predicate);
 
         List<Trip> trips = new ArrayList<>(stopTimes.size());
         for (StopTime stopTime : stopTimes)
@@ -55,7 +55,7 @@ public class Stop {
 
     public List<PredictedBus> getPredictedBuses(Trip trip) throws APIConnectionException {
         ForecastWithStopAndLine forecast =
-                API.getForecastByStopAndTrip(trip.getInternalId(), id);
+                api.getForecastByStopAndTrip(trip.getInternalId(), id);
 
         if (forecast.getBuses() == null) return new ArrayList<>();
 
@@ -63,7 +63,7 @@ public class Stop {
     }
 
     public Map<Trip, List<PredictedBus>> getAllPredictions() throws APIConnectionException {
-        ForecastWithStop forecast = API.getForecastByStop(id);
+        ForecastWithStop forecast = api.getForecastByStop(id);
 
         BusLineNow[] busLineNowArray = forecast.getBusLines();
         Map<Trip, List<PredictedBus>> map = new HashMap<>(busLineNowArray.length);
