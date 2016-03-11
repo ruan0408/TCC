@@ -6,17 +6,17 @@ import org.junit.Test;
 /**
  * Created by ruan0408 on 27/02/2016.
  */
-public class GTFSApiTest {
+public class GtfsAPITest {
 
-    private static GTFSApi gtfsApi;
+    private static GtfsAPI gtfsAPI;
 
     @BeforeClass
     public static void setUp() throws Exception {
-        gtfsApi = new GTFSApi("ruan0408", "costaruan");
+        gtfsAPI = new GtfsAPI("ruan0408", "costaruan");
     }
 
     @Test
     public void testInit() throws Exception {
-        gtfsApi.init();
+        gtfsAPI.init();
     }
 }

@@ -1,6 +1,6 @@
 package com.intellij.publictransportapi;
 
-import com.intellij.gtfsapi.GTFSApi;
+import com.intellij.gtfsapi.GtfsAPI;
 import com.intellij.olhovivoapi.*;
 import com.intellij.openapi.util.Pair;
 import com.intellij.utils.APIConnectionException;
@@ -17,7 +17,7 @@ public class PublicTransportAPI {
 
     private static PublicTransportAPI myInstance = new PublicTransportAPI();
     private static OlhoVivoAPI olhoVivoApi;
-    private static GTFSApi gtfsApi;
+    private static GtfsAPI gtfsApi;
 
     private PublicTransportAPI() {}
 
@@ -28,7 +28,7 @@ public class PublicTransportAPI {
     public void init(String key, String login, String password) {
         olhoVivoApi = new OlhoVivoAPI(key);
         olhoVivoApi.authenticate();
-        gtfsApi = new GTFSApi(login, password);
+        gtfsApi = new GtfsAPI(login, password);
         gtfsApi.init();
     }
 
