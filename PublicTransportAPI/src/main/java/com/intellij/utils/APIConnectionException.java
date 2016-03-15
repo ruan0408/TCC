@@ -9,11 +9,4 @@ public class APIConnectionException extends RuntimeException {
         super(message);
     }
 
-    public static APIConnectionException throwOlhoVivoConnectionException() {
-        return new APIConnectionException("A problem happened when connecting to the Olho Vivo API");
-    }
-
-    public static APIConnectionException throwGTFSConnectionException() {
-        return new APIConnectionException("The GTFS folder was not found");
-    }
 }

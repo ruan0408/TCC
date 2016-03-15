@@ -1,7 +1,5 @@
 package com.intellij.gtfsapi;
 
-import com.intellij.utils.APIConnectionException;
-
 import java.io.IOException;
 
 /**
@@ -20,12 +18,12 @@ public class GtfsDownloader {
         this.password = password;
     }
 
-    public void downloadToDir(String pathToDir) {
+    public void downloadToDir(String pathToDir) throws IOException {
         try {
             startDownloadProcessOnPath(pathToDir);
         } catch (Exception e) {
             e.printStackTrace();
-            throw APIConnectionException.throwGTFSConnectionException();
+            throw new IOException("Failed to download the GTFS files");
         }
     }
 

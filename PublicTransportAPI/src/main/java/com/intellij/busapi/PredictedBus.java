@@ -1,9 +1,6 @@
-package com.intellij.publictransportapi;
+package com.intellij.busapi;
 
-import com.intellij.olhovivoapi.BusNow;
 import org.apache.commons.lang.text.StrBuilder;
-
-import java.util.List;
 
 /**
  * Created by ruan0408 on 17/02/2016.
@@ -14,15 +11,6 @@ public class PredictedBus extends Bus {
 
     public String getPredictedArrival() {return predictedArrival;}
     public String setPredictedArrival(String arrival) {return predictedArrival = arrival;}
-
-    protected static List<PredictedBus> convert(BusNow[] buses) {
-
-        List<PredictedBus> list = convert(buses, PredictedBus.class);
-        for (int i = 0; i < buses.length; i++)
-            list.get(i).setPredictedArrival(buses[i].getPredictedArrivalTime());
-
-        return list;
-    }
 
     @Override
     public String toString() {

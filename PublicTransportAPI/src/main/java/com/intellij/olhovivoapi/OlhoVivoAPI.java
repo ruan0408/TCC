@@ -34,7 +34,7 @@ public class OlhoVivoAPI {
             response = httpConnector.executePostWithoutForm(url);
         } catch (IOException e) {
             e.printStackTrace();
-            throw APIConnectionException.throwOlhoVivoConnectionException();
+            throw new APIConnectionException("There was a problem authenticating with the OlhoVivoAPI");
         }
 
         if (response.equalsIgnoreCase("true")) return true;
@@ -53,7 +53,8 @@ public class OlhoVivoAPI {
         try {
             jsonResponse = httpConnector.executeGet(url);
         } catch (IOException e) {
-            throw APIConnectionException.throwOlhoVivoConnectionException();
+            throw new APIConnectionException("There was a problem getting the " +
+                    "details of the line of code: "+ busLineCode);
         }
         return jsonResponse;
     }
@@ -106,17 +107,18 @@ public class OlhoVivoAPI {
             jsonResponse = httpConnector.executeGet(url);
         } catch (IOException e) {
             e.printStackTrace();
-            throw APIConnectionException.throwOlhoVivoConnectionException();
+            throw new APIConnectionException("There was a problem performing the query: "+url);
         }
         return jsonToObject(jsonResponse, tClass);
     }
 
-    //TODO assuming olhovivo will ALWAYS return two results for the same line number
+    //assuming olhovivo will ALWAYS return two results for the same line number
     public Pair<BusLine, BusLine>
-    getBothTrips(String fullNumberSign) throws Exception {
+    getBothTrips(String fullNumberSign) {
         BusLine[] busLines = this.searchBusLines(fullNumberSign);
 
-        if (busLines.length != 2) throw new Exception();
+        if (busLines.length != 2)
+            throw new RuntimeException("Couldn't find two trips for the fullNumberSign: "+fullNumberSign);
         if (busLines[0].getHeading() == 1)
             return new Pair<>(busLines[0], busLines[1]);
 

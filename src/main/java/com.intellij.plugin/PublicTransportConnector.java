@@ -1,6 +1,5 @@
 package com.intellij.plugin;
 
-import com.intellij.publictransportapi.PublicTransportAPI;
 import com.intellij.utils.APIConnectionException;
 
 /**

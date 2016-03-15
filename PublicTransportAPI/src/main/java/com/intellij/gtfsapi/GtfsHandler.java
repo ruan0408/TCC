@@ -1,5 +1,6 @@
 package com.intellij.gtfsapi;
 
+import com.intellij.utils.APIConnectionException;
 import com.intellij.utils.SmartSampaDir;
 import org.onebusaway.gtfs.impl.GtfsDaoImpl;
 import org.onebusaway.gtfs.serialization.GtfsReader;
@@ -25,23 +26,34 @@ public class GtfsHandler {
         gtfsDownloader = new GtfsDownloader(login, password);
     }
 
-    public GtfsDaoImpl getGtfsAcessor() throws IOException {
+    public GtfsDaoImpl getGtfsAcessor() {
         ensureGtfsIsUsable();
         return loadGtfsAndGetDataAcessor();
     }
 
-    private GtfsDaoImpl loadGtfsAndGetDataAcessor() throws IOException {
-        GtfsReader gtfsReader = new GtfsReader();
-        GtfsDaoImpl acessor = new GtfsDaoImpl();
-        gtfsReader.setInputLocation(new File(GTFS_PATH));
-        gtfsReader.setEntityStore(acessor);
-        gtfsReader.run();
-        return acessor;
+    private GtfsDaoImpl loadGtfsAndGetDataAcessor() {
+        try {
+            GtfsReader gtfsReader = new GtfsReader();
+            GtfsDaoImpl acessor = new GtfsDaoImpl();
+            gtfsReader.setInputLocation(new File(GTFS_PATH));
+            gtfsReader.setEntityStore(acessor);
+            gtfsReader.run();
+            return acessor;
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new APIConnectionException("The "+GTFS_DIR_NAME+" was not found");
+        }
     }
 
     private void ensureGtfsIsUsable() {
-        if (!smartSampaDir.hasSubDir(GTFS_DIR_NAME) || gtfsDirNeedsUpdate())
+        try {
+            if (!smartSampaDir.hasSubDir(GTFS_DIR_NAME) || gtfsDirNeedsUpdate())
             gtfsDownloader.downloadToDir(GTFS_PATH);
+        } catch (IOException e) {
+            e.printStackTrace();
+            if (!smartSampaDir.hasSubDir(GTFS_DIR_NAME))
+                throw new APIConnectionException("Couldn't download the GTFS files");
+        }
     }
 
     private boolean gtfsDirNeedsUpdate() {

@@ -1,17 +1,12 @@
-package com.intellij.publictransportapi;
+package com.intellij.busapi;
 
 
-import com.intellij.olhovivoapi.BusLine;
-import com.intellij.openapi.util.Pair;
 import org.apache.commons.lang.text.StrBuilder;
-import org.onebusaway.gtfs.model.FareRule;
-
-import java.util.function.Predicate;
 
 /**
  * Created by ruan0408 on 17/02/2016.
  */
-public class Route extends APIUser{
+public class Route {
 
     private String numberSign;
     private int type;
@@ -20,13 +15,16 @@ public class Route extends APIUser{
     private Trip mtst;
     private Trip stmt;
 
-    private Route(){}
+    private DataToRouteFacade adapter;
+
+    protected Route(){}
 
     protected Route(String numberSign, int type, boolean circular, String info) {
         this.numberSign = numberSign;
         this.type = type;
         this.circular = circular;
         this.info = info;
+        adapter = new DataToRouteFacade();
     }
 
     public void setMTST(Trip mtst) {this.mtst = mtst;}
@@ -56,37 +54,11 @@ public class Route extends APIUser{
     public String fullNumberSign() {return numberSign+"-"+type;}
 
     public double getFarePrice() {
-        Predicate<FareRule> predicate;
-        predicate = f -> f.getRoute().getId().getId().equals(fullNumberSign());
-
-        FareRule rule = api.filterGtfsToElement("getAllFareRules", predicate);
-
-        return rule.getFare().getPrice();
+        return adapter.getFarePrice(fullNumberSign());
     }
 
-    protected static Route buildFrom(String fullNumberSign) {
-        Route newRoute = new Route();
-        Pair<BusLine, BusLine> bothTrips = api.getBothTrips(fullNumberSign);
-
-        newRoute.setNumberSign(fullNumberSign.substring(0,3));
-
-        newRoute.setType(Integer.parseInt(fullNumberSign.substring(5)));
-        newRoute.setCircular(bothTrips.first.isCircular());
-        newRoute.setInfo(bothTrips.first.getInfo());
-
-        Trip mtst = new Trip();
-        mtst.setInternalId(bothTrips.first.getCode());
-        mtst.setDestinationSign(bothTrips.first.getDestinationSignMTST());
-        mtst.setRoute(newRoute);
-
-        Trip stmt = new Trip();
-        stmt.setInternalId(bothTrips.second.getCode());
-        stmt.setDestinationSign(bothTrips.second.getDestinationSignSTMT());
-        stmt.setRoute(newRoute);
-
-        newRoute.setMTST(mtst);
-        newRoute.setSTMT(stmt);
-        return newRoute;
+    public static Route buildFrom(String fullNumberSign, String heading, Trip trip) {
+        return DataToRouteFacade.buildFrom(fullNumberSign, heading, trip);
     }
 
     protected String basicToString() {
@@ -104,7 +76,15 @@ public class Route extends APIUser{
         if (!(obj instanceof Route)) return false;
 
         Route that = (Route) obj;
-        return this.numberSign.equals(that.numberSign);
+        return this.fullNumberSign().equals(that.fullNumberSign());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + numberSign.hashCode();
+        result = 31 * result + type;
+        return result;
     }
 
     @Override

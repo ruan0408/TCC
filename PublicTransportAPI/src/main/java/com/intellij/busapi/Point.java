@@ -1,4 +1,4 @@
-package com.intellij.publictransportapi;
+package com.intellij.busapi;
 
 /**
  * Created by ruan0408 on 19/02/2016.
@@ -28,5 +28,15 @@ public class Point {
             return true;
 
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        long longPy = Double.doubleToLongBits(py);
+        long longPx = Double.doubleToLongBits(px);
+        int result = 17;
+        result = 31 * result + (int)(longPy^(longPy>>>32));
+        result = 31 * result + (int)(longPx^(longPx>>>32));
+        return result;
     }
 }

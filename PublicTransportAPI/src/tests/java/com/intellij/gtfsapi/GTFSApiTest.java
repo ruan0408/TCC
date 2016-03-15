@@ -1,6 +1,5 @@
 package com.intellij.gtfsapi;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -10,13 +9,8 @@ public class GtfsAPITest {
 
     private static GtfsAPI gtfsAPI;
 
-    @BeforeClass
-    public static void setUp() throws Exception {
-        gtfsAPI = new GtfsAPI("ruan0408", "costaruan");
-    }
-
     @Test
-    public void testInit() throws Exception {
-        gtfsAPI.init();
+    public void testGetInstance() throws Exception {
+        GtfsAPI.getInstance();
     }
 }
