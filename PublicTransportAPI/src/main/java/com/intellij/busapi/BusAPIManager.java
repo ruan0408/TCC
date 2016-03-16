@@ -7,10 +7,11 @@ import com.intellij.olhovivoapi.OlhoVivoAPI;
  * Created by ruan0408 on 12/03/2016.
  */
 public class BusAPIManager {
-    private static final BusAPIManager ourInstance = new BusAPIManager();
 
-    protected static GtfsAPI gtfs;
-    protected static OlhoVivoAPI olhovivo;
+    public static GtfsAPI gtfs;
+    public static OlhoVivoAPI olhovivo;
+
+    private static final BusAPIManager ourInstance = new BusAPIManager();
 
     private static String sptransLogin;
     private static String sptransPassword;

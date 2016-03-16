@@ -12,20 +12,20 @@ import java.util.Map;
  */
 public class Trip {
 
-    private DataToTripFacade adapter;
+    private DataToTripFacade dataFacade;
     private Route route;
     private String destinationSign;
 
     private Trip(){}
 
     protected Trip(String fullNumberSign, String heading, boolean isCircular) {
-        adapter = new DataToTripFacade(fullNumberSign, heading, isCircular);
+        dataFacade = new DataToTripFacade(fullNumberSign, heading, isCircular);
     }
 
     public static Trip getTrip(String fullNumberSign, String heading) {
         Trip trip = new Trip();
         Route route = Route.buildFrom(fullNumberSign, heading, trip);
-        trip.adapter = new DataToTripFacade(fullNumberSign, heading, route.isCircular());
+        trip.dataFacade = new DataToTripFacade(fullNumberSign, heading, route.isCircular());
         trip.setRoute(route);
         return trip;
     }
@@ -51,15 +51,15 @@ public class Trip {
     }
 
     public List<Stop> getAllStops() {
-        return adapter.getAllStops();
+        return dataFacade.getAllStops();
     }
 
     public List<PredictedBus> getPredictionsAtStop(Stop stop) {
-        return adapter.getPredictionsAtStop(stop);
+        return dataFacade.getPredictionsAtStop(stop);
     }
 
     public int getDepartureIntervalAtTime(String hhmm) {
-        return adapter.getDepartureIntervalAtTime(hhmm);
+        return dataFacade.getDepartureIntervalAtTime(hhmm);
     }
 
     public int getDepartureIntervalNow() {
@@ -68,19 +68,19 @@ public class Trip {
     }
 
     public Shape getShape() {
-        return adapter.getShape();
+        return dataFacade.getShape();
     }
 
     public List<Bus> getAllRunningBuses() {
-        return adapter.getAllRunningBuses();
+        return dataFacade.getAllRunningBuses();
     }
 
     public String getWorkingDays() {
-        return adapter.getWorkingDays();
+        return dataFacade.getWorkingDays();
     }
 
     public Map<Stop, List<PredictedBus>> getAllPredictions() {
-        return adapter.getAllPredictions();
+        return dataFacade.getAllPredictions();
     }
 
     public double getFarePrice() {
@@ -88,7 +88,7 @@ public class Trip {
     }
 
     public int getOlhovivoTripId() {
-        return adapter.getOlhovivoTripId();
+        return dataFacade.getOlhovivoTripId();
     }
 
     @Override

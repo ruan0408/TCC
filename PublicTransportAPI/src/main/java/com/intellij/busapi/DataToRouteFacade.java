@@ -3,19 +3,22 @@ package com.intellij.busapi;
 import com.intellij.olhovivoapi.BusLine;
 import com.intellij.openapi.util.Pair;
 
+import static com.intellij.busapi.BusAPIManager.gtfs;
+import static com.intellij.busapi.BusAPIManager.olhovivo;
+
 /**
  * Created by ruan0408 on 13/03/2016.
  */
-public class DataToRouteFacade extends BusAPIUser {
+public class DataToRouteFacade {
 
 
     public double getFarePrice(String fullNumberSign) {
-        return gtfsAPI.getFarePrice(fullNumberSign);
+        return gtfs.getFarePrice(fullNumberSign);
     }
 
     protected static Route buildFrom(String fullNumberSign, String heading, Trip trip) {
         Route newRoute = new Route();
-        Pair<BusLine, BusLine> bothTrips = olhoVivoAPI.getBothTrips(fullNumberSign);
+        Pair<BusLine, BusLine> bothTrips = olhovivo.getBothTrips(fullNumberSign);
 
         newRoute.setNumberSign(fullNumberSign.substring(0,4));
         newRoute.setType(Integer.parseInt(fullNumberSign.substring(5)));

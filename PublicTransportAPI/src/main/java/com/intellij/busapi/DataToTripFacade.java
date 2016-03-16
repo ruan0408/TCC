@@ -7,10 +7,13 @@ import org.onebusaway.gtfs.model.StopTime;
 
 import java.util.*;
 
+import static com.intellij.busapi.BusAPIManager.gtfs;
+import static com.intellij.busapi.BusAPIManager.olhovivo;
+
 /**
  * Created by ruan0408 on 12/03/2016.
  */
-public class DataToTripFacade extends BusAPIUser {
+public class DataToTripFacade {
 
     private int olhovivoTripId;
     private String gtfsTripId;
@@ -24,43 +27,43 @@ public class DataToTripFacade extends BusAPIUser {
     }
 
     public static List<Trip> searchTripByTerm(String term) {
-        BusLine[] busLines = olhoVivoAPI.searchBusLines(term);
+        BusLine[] busLines = olhovivo.searchBusLines(term);
         List<Trip> trips = DataToAPIConverter.busLinesArrayToTrips(busLines);
         return trips;
     }
 
     public List<Stop> getAllStops() {
-        List<StopTime> stopTimes = gtfsAPI.getAllStopTimesFromTripId(gtfsTripId);
+        List<StopTime> stopTimes = gtfs.getAllStopTimesFromTripId(gtfsTripId);
 
         stopTimes = orderStopTimesBySequenceNumber(stopTimes);
 
         List<Stop> stopsFromGtfs = DataToAPIConverter.stopTimesToStops(stopTimes);
         List<Stop> stopsFromOlhoVivo = DataToAPIConverter.busStopArrayToStops(
-                olhoVivoAPI.searchBusStopsByLine(olhovivoTripId));
+                olhovivo.searchBusStopsByLine(olhovivoTripId));
 
         return getStopsWithAddresses(stopsFromGtfs, stopsFromOlhoVivo);
     }
 
     public String getWorkingDays() {
-        return gtfsAPI.getWorkingDays(gtfsTripId);
+        return gtfs.getWorkingDays(gtfsTripId);
     }
 
     public Shape getShape() {
-        List<ShapePoint> shapePoints = gtfsAPI.getShape(tripShapeId);
+        List<ShapePoint> shapePoints = gtfs.getShape(tripShapeId);
         return DataToAPIConverter.shapePointsToShape(shapePoints);
     }
 
     public int getDepartureIntervalAtTime(String hhmm) {
-        return gtfsAPI.getDepartureIntervalAtTime(gtfsTripId, hhmm);
+        return gtfs.getDepartureIntervalAtTime(gtfsTripId, hhmm);
     }
 
     public List<Bus> getAllRunningBuses() {
-        BusLinePositions busesWithTrip = olhoVivoAPI.searchBusesByLine(olhovivoTripId);
+        BusLinePositions busesWithTrip = olhovivo.searchBusesByLine(olhovivoTripId);
         return DataToAPIConverter.olhovivoBusArrayToBuses(busesWithTrip.getVehicles());
     }
 
     public Map<Stop, List<PredictedBus>> getAllPredictions() {
-        ForecastWithLine forecast = olhoVivoAPI.getForecastWithLine(olhovivoTripId);
+        ForecastWithLine forecast = olhovivo.getForecastWithLine(olhovivoTripId);
         BusStopNow[] busStopNowArray = forecast.getBusStops();
         Map<Stop, List<PredictedBus>> map = new HashMap<>(busStopNowArray.length);
 
@@ -74,7 +77,7 @@ public class DataToTripFacade extends BusAPIUser {
 
     public List<PredictedBus> getPredictionsAtStop(Stop stop) {
         ForecastWithStopAndLine forecast =
-                olhoVivoAPI.getForecastWithStopAndLine(stop.getId(), olhovivoTripId);
+                olhovivo.getForecastWithStopAndLine(stop.getId(), olhovivoTripId);
 
         BusNow[] predictedBuses = forecast.getBuses();
         if (predictedBuses == null)
@@ -83,7 +86,7 @@ public class DataToTripFacade extends BusAPIUser {
         return DataToAPIConverter.busNowArrayToPredictedBuses(predictedBuses);
     }
 
-    protected int getOlhovivoTripId() {
+    public int getOlhovivoTripId() {
         return olhovivoTripId;
     }
 

@@ -15,7 +15,7 @@ public class Route {
     private Trip mtst;
     private Trip stmt;
 
-    private DataToRouteFacade adapter;
+    private DataToRouteFacade dataFacade;
 
     protected Route(){}
 
@@ -24,7 +24,7 @@ public class Route {
         this.type = type;
         this.circular = circular;
         this.info = info;
-        adapter = new DataToRouteFacade();
+        dataFacade = new DataToRouteFacade();
     }
 
     public void setMTST(Trip mtst) {this.mtst = mtst;}
@@ -54,7 +54,7 @@ public class Route {
     public String fullNumberSign() {return numberSign+"-"+type;}
 
     public double getFarePrice() {
-        return adapter.getFarePrice(fullNumberSign());
+        return dataFacade.getFarePrice(fullNumberSign());
     }
 
     public static Route buildFrom(String fullNumberSign, String heading, Trip trip) {
