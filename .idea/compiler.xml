@@ -23,10 +23,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="PublicTransportAPI" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="WebDemo" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="PublicTransportAPI" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
