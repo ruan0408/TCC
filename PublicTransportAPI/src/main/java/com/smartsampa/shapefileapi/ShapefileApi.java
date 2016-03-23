@@ -28,17 +28,16 @@ import java.util.stream.Collectors;
 /**
  * Created by ruan0408 on 22/03/2016.
  */
-public class ShapefileApi {
+public class ShapefileAPI {
 
     private static final char latitudeZoneSP = 'K';
     private static final int longitudeZoneSP = 23;
-    private static final String SMART_SAMPA_DIR_PATH = SmartSampaDir.getInstance().getPath();
 
     private String shapefilePath;
     List<SimpleFeature> features;
 
-    public ShapefileApi(String relativaPath) {
-        shapefilePath = SMART_SAMPA_DIR_PATH+"/"+relativaPath;
+    public ShapefileAPI(String relativePath) {
+        shapefilePath = SmartSampaDir.getPath()+"/"+relativePath;
     }
 
     public void init() {

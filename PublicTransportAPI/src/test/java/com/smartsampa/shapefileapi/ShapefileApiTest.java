@@ -6,11 +6,11 @@ import org.junit.Test;
 /**
  * Created by ruan0408 on 22/03/2016.
  */
-public class ShapefileApiTest {
+public class ShapefileAPITest {
 
-    private static final ShapefileApi shapefileApi;
+    private static final ShapefileAPI shapefileApi;
     static {
-        shapefileApi = new ShapefileApi("faixa_onibus/sirgas_faixa_onibus.shp");
+        shapefileApi = new ShapefileAPI("faixa_onibus/sirgas_faixa_onibus.shp");
         shapefileApi.init();
     }
 
