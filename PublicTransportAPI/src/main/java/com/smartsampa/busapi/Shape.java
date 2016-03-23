@@ -2,6 +2,9 @@ package com.smartsampa.busapi;
 
 import com.google.common.base.Objects;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by ruan0408 on 17/02/2016.
  */
@@ -15,6 +18,10 @@ public class Shape {
         this.traveledDistances = traveledDistances;
     }
 
+    public Shape(List<Point> points) {
+        this.points = points.toArray(new Point[points.size()]);
+    }
+
     public int size() {
         return points.length;
     }
@@ -26,8 +33,8 @@ public class Shape {
     @Override
     public String toString() {
         return Objects.toStringHelper(this)
-                .add("points", points)
-                .add("traveledDistances", traveledDistances)
+                .add("points", Arrays.toString(points))
+                .add("traveledDistances", Arrays.toString(traveledDistances))
                 .toString();
     }
 }

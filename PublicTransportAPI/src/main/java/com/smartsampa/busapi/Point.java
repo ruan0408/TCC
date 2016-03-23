@@ -23,8 +23,8 @@ public class Point {
         if (!(obj instanceof Point)) return false;
         Point that = (Point) obj;
 
-        if (Math.abs(this.px-that.px) < 0.000001 &&
-                Math.abs(this.py-that.py) < 0.000001)
+        if (Math.abs(this.px-that.px) < 0.0000000000000001 &&
+                Math.abs(this.py-that.py) < 0.0000000000000001)
             return true;
 
         return false;

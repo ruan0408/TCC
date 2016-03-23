@@ -41,7 +41,6 @@ public class ForecastWithStopAndLine {
         return busStopWithLines.getBusLines();
     }
 
-    //TODO Create exceptions for situations like the one below. busStopWithLines could be null.
     /**
      * @return The current state of the buses running on the related line,
      * with respect to the related bus stop.

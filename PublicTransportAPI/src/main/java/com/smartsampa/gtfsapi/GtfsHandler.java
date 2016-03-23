@@ -14,11 +14,11 @@ import java.time.Duration;
  */
 public class GtfsHandler {
 
-    private static final SmartSampaDir smartSampaDir = SmartSampaDir.getInstance();
+    private static final SmartSampaDir SMART_SAMPA_DIR = SmartSampaDir.getInstance();
     private static final int UPDATE_INTERVAL_IN_DAYS = 3;
     private static final long UPDATE_INTERVAL_IN_MILLIS = Duration.ofDays(UPDATE_INTERVAL_IN_DAYS).toMillis();
     private static final String GTFS_DIR_NAME = "gtfs-sp";
-    private static final String GTFS_PATH = smartSampaDir.getPath()+"/"+GTFS_DIR_NAME;
+    private static final String GTFS_PATH = SMART_SAMPA_DIR.getPath()+"/"+GTFS_DIR_NAME;
 
     private GtfsDownloader gtfsDownloader;
 
@@ -47,11 +47,11 @@ public class GtfsHandler {
 
     private void ensureGtfsIsUsable() {
         try {
-            if (!smartSampaDir.hasSubDir(GTFS_DIR_NAME) || gtfsDirNeedsUpdate())
+            if (!SMART_SAMPA_DIR.hasSubDir(GTFS_DIR_NAME) || gtfsDirNeedsUpdate())
                 gtfsDownloader.downloadToDir(GTFS_PATH);
         } catch (IOException e) {
             e.printStackTrace();
-            if (!smartSampaDir.hasSubDir(GTFS_DIR_NAME))
+            if (!SMART_SAMPA_DIR.hasSubDir(GTFS_DIR_NAME))
                 throw new APIConnectionException("Couldn't download the GTFS files");
         }
     }

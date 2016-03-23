@@ -7,7 +7,7 @@ import java.util.Collection;
  */
 public class Utils {
 
-    public static <T> void printList(Collection<T> list) {
+    public static <T> void printCollection(Collection<T> list) {
         for (T t : list)
             System.out.println(t.toString());
     }

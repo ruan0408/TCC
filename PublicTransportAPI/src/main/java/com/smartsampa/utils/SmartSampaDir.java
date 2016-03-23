@@ -8,7 +8,6 @@ import java.io.File;
 public class SmartSampaDir {
 
     public static final String DIR_NAME = "SmartSampa";
-    //TODO make this path platform independent
     private static final String PATH = System.getProperty("user.home")+"/"+ DIR_NAME;
 
     private static SmartSampaDir ourInstance = new SmartSampaDir();

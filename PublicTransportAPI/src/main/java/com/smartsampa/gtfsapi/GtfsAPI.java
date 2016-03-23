@@ -32,7 +32,6 @@ public class GtfsAPI {
     private GtfsDaoImpl gtfsAcessor;
     private GtfsHandler gtfsHandler;
 
-
     public GtfsAPI(String login, String password) {
         gtfsHandler = new GtfsHandler(login, password);
     }

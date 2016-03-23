@@ -47,17 +47,14 @@ public class OlhoVivoAPI {
         return performQuery(url, BusLine[].class);
     }
 
-    //TODO this is weird.
     public String getBusLineDetails(int busLineCode) {
-        String url = BASE_URL +"/Linha/CarregarDetalhes?codigoLinha="+busLineCode;
-        String jsonResponse = null;
         try {
-            jsonResponse = httpConnector.executeGet(url);
+            String url = BASE_URL +"/Linha/CarregarDetalhes?codigoLinha="+busLineCode;
+            return httpConnector.executeGet(url);
         } catch (IOException e) {
             throw new APIConnectionException("There was a problem getting the " +
                     "details of the line of code: "+ busLineCode);
         }
-        return jsonResponse;
     }
 
     public BusStop[] searchBusStops(String searchTerms) {
