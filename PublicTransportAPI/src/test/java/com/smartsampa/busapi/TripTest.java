@@ -2,12 +2,14 @@ package com.smartsampa.busapi;
 
 
 import org.junit.Assert;
+import org.junit.Assume;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
 import java.util.Map;
 
+import static com.smartsampa.busapi.BusAPITestUtils.isAfter4amAndBeforeMidnight;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -86,13 +88,15 @@ public class TripTest {
 
     @Test
     public void testGetAllRunningBuses() throws Exception {
+        Assume.assumeTrue(isAfter4amAndBeforeMidnight());
         List<Bus> allBuses = alvim.getAllRunningBuses();
         Assert.assertTrue(allBuses.size() > 0);
     }
 
-    //may fail
     @Test
     public void testGetPredictedBusesAtStop() throws Exception {
+        Assume.assumeTrue(isAfter4amAndBeforeMidnight());
+
         int campanellaStopId = 360004869;
         Stop campanella = mock(Stop.class);
         when(campanella.getId()).thenReturn(campanellaStopId);
@@ -103,6 +107,8 @@ public class TripTest {
 
     @Test
     public void testGetAllPredictions() throws Exception {
+        Assume.assumeTrue(isAfter4amAndBeforeMidnight());
+
         Map<Stop, List<PredictedBus>> allPredictions = alvim.getAllPredictions();
         Assert.assertTrue(!allPredictions.isEmpty());
     }
