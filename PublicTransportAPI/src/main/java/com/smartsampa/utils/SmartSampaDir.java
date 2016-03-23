@@ -7,24 +7,21 @@ import java.io.File;
  */
 public class SmartSampaDir {
 
-    public static final String DIR_NAME = "SmartSampa";
-    private static final String PATH = System.getProperty("user.home")+"/"+ DIR_NAME;
+    private static final String DIR_NAME;
+    private static final String PATH;
+    private static final File DIRECTORY;
 
-    private static SmartSampaDir ourInstance = new SmartSampaDir();
-    private File directory;
-
-    public static SmartSampaDir getInstance() {return ourInstance;}
-
-    private SmartSampaDir() {
-        directory = new File(PATH);
-        directory.mkdir();
+    static {
+        DIR_NAME = "SmartSampa";
+        PATH = System.getProperty("user.home")+"/"+ DIR_NAME;
+        DIRECTORY = new File(PATH);
     }
 
-    public boolean hasSubDir(String dirName) {
-        return new File(directory.getPath()+"/"+dirName).exists();
+    public static boolean hasSubDir(String dirName) {
+        return new File(DIRECTORY.getPath()+"/"+dirName).exists();
     }
 
-    public String getPath() {
-        return directory.getPath();
+    public static String getPath() {
+        return DIRECTORY.getPath();
     }
 }

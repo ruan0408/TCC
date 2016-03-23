@@ -1,6 +1,8 @@
 package com.smartsampa.busapi;
 
 import com.smartsampa.gtfsapi.GtfsAPI;
+import com.smartsampa.gtfsapi.GtfsDownloader;
+import com.smartsampa.gtfsapi.GtfsHandler;
 import com.smartsampa.olhovivoapi.OlhoVivoAPI;
 
 /**
@@ -24,8 +26,9 @@ public class BusAPIManager {
     private BusAPIManager() {}
 
     public void init() {
-        gtfs = new GtfsAPI(sptransLogin, sptransPassword);
-        gtfs.init();
+        GtfsDownloader gtfsDownloader = new GtfsDownloader(sptransLogin, sptransPassword);
+        GtfsHandler gtfsHandler = new GtfsHandler(gtfsDownloader);
+        gtfs = new GtfsAPI(gtfsHandler.getGtfsAcessor());
         olhovivo = new OlhoVivoAPI(olhovivoKey);
         olhovivo.authenticate();
     }

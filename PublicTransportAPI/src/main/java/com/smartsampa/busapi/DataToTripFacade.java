@@ -5,6 +5,7 @@ import com.smartsampa.olhovivoapi.*;
 import org.onebusaway.gtfs.model.ShapePoint;
 import org.onebusaway.gtfs.model.StopTime;
 
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
@@ -58,7 +59,12 @@ public class DataToTripFacade {
     }
 
     public int getDepartureIntervalAtTime(String hhmm) {
-        return BusAPIManager.gtfs.getDepartureIntervalAtTime(gtfsTripId, hhmm);
+        try {
+            return BusAPIManager.gtfs.getDepartureIntervalAtTime(gtfsTripId, hhmm);
+        } catch (ParseException e) {
+            throw new RuntimeException("Error when parsing "+hhmm+
+                    " in method getDepartureIntervalAtTime");
+        }
     }
 
     public List<Bus> getAllRunningBuses() {

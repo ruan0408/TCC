@@ -105,6 +105,7 @@ public class OlhoVivoAPITest {
         Assert.assertTrue(busesPosition.length > 0);
     }
 
+    //can go wrong, if buses is null
     @Test
     public void testGetForecastWithLineAndStop() throws Exception {
         ForecastWithStopAndLine forecast =
@@ -123,6 +124,7 @@ public class OlhoVivoAPITest {
         Assert.assertTrue(busStops.length > 0);
     }
 
+    //can go wrong at night
     @Test
     public void testGetForecastWithStop() throws Exception {
         ForecastWithStop forecast = api.getForecastWithStop(campanellaStopId);

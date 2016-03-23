@@ -28,9 +28,9 @@ public class DataToStopFacade {
         ForecastWithStop forecast = olhovivo.getForecastWithStop(stopId);
         BusLineNow[] busLineNowArray = forecast.getBusLines();
 
-        Map<Trip, List<PredictedBus>> map = new HashMap<>(busLineNowArray.length);
+        Map<Trip, List<PredictedBus>> map = new HashMap<>();
 
-        for (int i = 0; i < busLineNowArray.length; i++) {
+        for (int i = 0; busLineNowArray != null && i < busLineNowArray.length; i++) {
             BusLineNow lineNow = busLineNowArray[i];
             map.put(DataToAPIConverter.busLineToTrip(lineNow.getBusLine()),
                     DataToAPIConverter.busNowArrayToPredictedBuses(lineNow.getVehicles()));

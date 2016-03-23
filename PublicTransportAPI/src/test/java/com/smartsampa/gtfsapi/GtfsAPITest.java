@@ -11,7 +11,8 @@ public class GtfsAPITest {
 
     @Test
     public void testGetInstance() throws Exception {
-        gtfsAPI = new GtfsAPI("ruan0408", "costaruan");
-        gtfsAPI.init();
+        GtfsDownloader gtfsDownloader = new GtfsDownloader("ruan0408", "costaruan");
+        GtfsHandler gtfsHandler = new GtfsHandler(gtfsDownloader);
+        gtfsAPI = new GtfsAPI(gtfsHandler.getGtfsAcessor());
     }
 }

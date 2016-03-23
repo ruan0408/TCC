@@ -1,6 +1,6 @@
 package com.smartsampa.busapi;
 
-import com.smartsampa.shapefileapi.ShapefileApi;
+import com.smartsampa.shapefileapi.ShapefileAPI;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.MultiLineString;
 import org.jetbrains.annotations.NotNull;
@@ -14,12 +14,12 @@ import java.util.stream.Collectors;
  */
 public class DataToBusLaneFacade {
 
-    private static String SHAPEFILE_RELATIVE_PATH;
-    private static ShapefileApi shapefileApi;
+    private static final String SHAPEFILE_RELATIVE_PATH;
+    private static final ShapefileAPI shapefileApi;
 
     static {
         SHAPEFILE_RELATIVE_PATH = "faixa_onibus/sirgas_faixa_onibus.shp";
-        shapefileApi = new ShapefileApi(SHAPEFILE_RELATIVE_PATH);
+        shapefileApi = new ShapefileAPI(SHAPEFILE_RELATIVE_PATH);
         shapefileApi.init();
     }
 

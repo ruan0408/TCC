@@ -30,14 +30,9 @@ public class GtfsAPI {
     };
 
     private GtfsDaoImpl gtfsAcessor;
-    private GtfsHandler gtfsHandler;
 
-    public GtfsAPI(String login, String password) {
-        gtfsHandler = new GtfsHandler(login, password);
-    }
-
-    public void init() {
-        gtfsAcessor = gtfsHandler.getGtfsAcessor();
+    public GtfsAPI(GtfsDaoImpl gtfsAcessor) {
+        this.gtfsAcessor = gtfsAcessor;
     }
 
     public List<StopTime> getAllStopTimesFromTripId(String gtfsTripId) {
@@ -69,17 +64,12 @@ public class GtfsAPI {
         return rule.getFare().getPrice();
     }
 
-    public int getDepartureIntervalAtTime(String gtfsTripId, String hhmm) {
-        try {
-            Date date = new SimpleDateFormat("HH:mm").parse(hhmm);
-            Date date0 = new SimpleDateFormat("HH:mm").parse("00:00");
-            long time = (date.getTime() - date0.getTime())/1000;
+    public int getDepartureIntervalAtTime(String gtfsTripId, String hhmm) throws ParseException {
+        Date date = new SimpleDateFormat("HH:mm").parse(hhmm);
+        Date date0 = new SimpleDateFormat("HH:mm").parse("00:00");
+        long time = (date.getTime() - date0.getTime())/1000;
 
-            return getDepartureInterval(gtfsTripId, time);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return -1;
+        return getDepartureInterval(gtfsTripId, time);
     }
 
     public List<Trip> getAllTrips(int stopId) {

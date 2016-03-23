@@ -57,10 +57,11 @@ public class TripTest {
     }
 
     //Depends on the current time.
+    //can go wrong after 1am.
     @Test
     public void testGetDepartureIntervalNow() throws Exception {
         int departureInterval = bonifacio.getDepartureIntervalNow();
-        Assert.assertNotEquals(-1, departureInterval);
+        Assert.assertTrue(departureInterval > 0);
     }
 
     @Test
@@ -89,6 +90,7 @@ public class TripTest {
         Assert.assertTrue(allBuses.size() > 0);
     }
 
+    //may fail
     @Test
     public void testGetPredictedBusesAtStop() throws Exception {
         int campanellaStopId = 360004869;

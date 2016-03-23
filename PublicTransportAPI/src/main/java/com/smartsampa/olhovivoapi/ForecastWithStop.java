@@ -31,6 +31,7 @@ public class ForecastWithStop {
      * @return The bus stop related to the request.
      */
     public BusStop getBusStop() {
+        if (busStopWithLines == null) return null;
         return busStopWithLines.getBusStop();
     }
 
@@ -38,6 +39,7 @@ public class ForecastWithStop {
      * @return The bus lines that pass by this bus stop.
      */
     public BusLineNow[] getBusLines() {
+        if (busStopWithLines == null) return null;
         return busStopWithLines.getBusLines();
     }
 
