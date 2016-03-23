@@ -49,7 +49,13 @@ public class DataToBusLaneFacade {
         buslane.setAddressStart(feature.getAttribute("tx_inicio_").toString());
         buslane.setAddressEnd(feature.getAttribute("tx_fim_log").toString());
         buslane.setDistrict(feature.getAttribute("tx_distrit").toString());
+        buslane.setImplantationDate(feature.getAttribute("dt_implant").toString());
+        buslane.setStartWorkingTime(feature.getAttribute("ho_inicio_").toString());
+        buslane.setEndWorkingTime(feature.getAttribute("ho_fim_fun").toString());
+        buslane.setStreetSide(feature.getAttribute("nm_tipo_fa").toString());
 
+        buslane.setAmoutWorkingHours(Integer.parseInt(feature.getAttribute("qt_ho_func").toString()));
+        buslane.setRegionCode(Integer.parseInt(feature.getAttribute("cd_regiao_").toString()));
         buslane.setSizeInMeters(Double.parseDouble(feature.getAttribute("qt_metro_f").toString()));
 
         List<Point> points = getPointsFromFeatures(featureList);

@@ -23,4 +23,12 @@ public class BusLaneTest {
         Assert.assertNotNull(busLanes);
         Assert.assertEquals(1, busLanes.size());
     }
+
+    @Test
+    public void testGetShape() throws Exception {
+        List<BusLane> busLanes = BusLane.getAllBusLanes();
+        Assert.assertTrue(busLanes.stream()
+                .allMatch(b -> (b.getShape().getPoints()) != null));
+
+    }
 }
