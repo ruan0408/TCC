@@ -9,7 +9,7 @@ import static com.smartsampa.busapi.BusAPIManager.olhovivo;
 /**
  * Created by ruan0408 on 13/03/2016.
  */
-public class DataToRouteFacade {
+public class RouteFacade {
 
 
     public double getFarePrice(String fullNumberSign) {

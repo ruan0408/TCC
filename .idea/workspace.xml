@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/risk/Pluviometer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/risk/PluviometerFacade.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/risk/PluviometerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToBusLaneFacade.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLaneFacade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToCorridorFacade.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/CorridorFacade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToRouteFacade.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/RouteFacade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToStopFacade.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/StopFacade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToTripFacade.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/TripFacade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/BusAPITestUtils.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/BusAPITestUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLane.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Corridor.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Corridor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Route.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Route.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Stop.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Stop.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Trip.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Trip.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/TripTest.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/TripTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/shapefileapi/ShapefileApiTest.java" afterPath="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/shapefileapi/ShapefileApiTest.java" />
     </list>
     <ignored path="TheMachinePlugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,12 +56,12 @@
     <favorites_list name="TheMachinePlugin" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ShapefileAPITest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/shapefileapi/ShapefileAPITest.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PluviometerFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/risk/PluviometerFacade.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,10 +70,11 @@
       <file leaf-file-name="ShapefileAPI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4182243">
-              <caret line="98" column="78" selection-start-line="98" selection-start-column="72" selection-end-line="98" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.63084114">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#721#722#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,8 +89,8 @@
         <option value="HTML File" />
         <option value="Singleton" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,20 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusStopNow.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusStop.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/BusStopWithLines.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithLine.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithStop.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/ForecastWithStopAndLine.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/olhovivoapi/OlhoVivoAPI.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/busapi/BusAPITest.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/busapi/BusAPITestUtils.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/busapi/TripTest.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/busapi/RouteTest.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/busapi/StopTest.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/busapi/CorridorTest.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/intellij/busapi/DataToTripFacade.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/intellij/olhovivoapi/OlhoVivoAPITest.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/tests/java/com/smartsampa/busapi/CorridorTest.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/PredictedBus.java" />
@@ -142,16 +143,30 @@
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/gtfsapi/GtfsAPITest.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToTripFacade.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToStopFacade.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStop.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java" />
-        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToBusLaneFacade.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLane.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/BusLaneTest.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/BusAPITestUtils.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/risk/Pluviometer.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/risk/PluviometerTest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToAPIConverter.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToCorridorFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/CorridorFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToStopFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/StopFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToTripFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/TripFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToBusLaneFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToRouteFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/RouteFacade.java" />
         <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/TripTest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/shapefileapi/ShapefileHandler.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/risk/PluviometerFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLaneFacade.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/shapefileapi/ShapefileAPITest.java" />
+        <option value="$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java" />
       </list>
     </option>
   </component>
@@ -259,21 +274,67 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Production">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PublicTransportAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -319,6 +380,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shapefileapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicTransportAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartsampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="risk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -486,64 +577,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicTransportAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartsampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="risk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicTransportAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartsampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="busapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Production">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PublicTransportAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -559,7 +664,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4325095" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -573,35 +678,29 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="right" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="539" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="FullScreen" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.intellij.plugin" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.intellij.busapi" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.smartsampa.risk" />
       <recent name="com.smartsampa.shapefileapi" />
       <recent name="com.intellij.gtfsapi" />
       <recent name="com.intellij" />
       <recent name="com.intellij.publictransportapi" />
-      <recent name="com.intellij.plugin" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.smartsampa.shapefileapi" />
       <recent name="com.smartsampa" />
       <recent name="com.intellij" />
-      <recent name="com.intellij.olhovivoapi" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.intellij.model" />
       <recent name="com.intellij.olhovivoapi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -610,21 +709,28 @@
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.intellij.model" />
+      <recent name="com.intellij.olhovivoapi" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.intellij.plugin" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.smartsampa in PublicTransportAPI">
-    <configuration default="false" name="BusLaneTest.testSearchByTerm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PluviometerTest.getAllPluviometers">
+    <configuration default="false" name="ShapefileAPITest.testPrintPluviometerProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.smartsampa.busapi.*" />
+          <option name="PATTERN" value="com.smartsampa.shapefileapi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="PublicTransportAPI" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.busapi" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.busapi.BusLaneTest" />
-      <option name="METHOD_NAME" value="testSearchByTerm" />
+      <option name="PACKAGE_NAME" value="com.smartsampa.shapefileapi" />
+      <option name="MAIN_CLASS_NAME" value="com.smartsampa.shapefileapi.ShapefileAPITest" />
+      <option name="METHOD_NAME" value="testPrintPluviometerProperties" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -638,98 +744,93 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="com.smartsampa in PublicTransportAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ShapefileAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.smartsampa.*" />
+          <option name="PATTERN" value="com.smartsampa.shapefileapi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="PublicTransportAPI" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa" />
+      <option name="PACKAGE_NAME" value="com.smartsampa.shapefileapi" />
+      <option name="MAIN_CLASS_NAME" value="com.smartsampa.shapefileapi.ShapefileAPITest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BusLaneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.smartsampa.busapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="PublicTransportAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.smartsampa.busapi" />
+      <option name="MAIN_CLASS_NAME" value="com.smartsampa.busapi.BusLaneTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PluviometerTest.getAllPluviometers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.smartsampa.risk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="PublicTransportAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.smartsampa.risk" />
+      <option name="MAIN_CLASS_NAME" value="com.smartsampa.risk.PluviometerTest" />
+      <option name="METHOD_NAME" value="getAllPluviometers" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in PublicTransportAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="PublicTransportAPI" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BusLaneTest.testGetShape" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.smartsampa.busapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="PublicTransportAPI" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.busapi" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.busapi.BusLaneTest" />
-      <option name="METHOD_NAME" value="testGetShape" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="OlhoVivoAPITest.testSearchBusStopsByLine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.smartsampa.olhovivoapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="PublicTransportAPI" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.olhovivoapi" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.olhovivoapi.OlhoVivoAPITest" />
-      <option name="METHOD_NAME" value="testSearchBusStopsByLine" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="OlhoVivoAPITest.testGetForecastWithLineAndStop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.smartsampa.olhovivoapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="PublicTransportAPI" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.olhovivoapi" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.olhovivoapi.OlhoVivoAPITest" />
-      <option name="METHOD_NAME" value="testGetForecastWithLineAndStop" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1458,19 +1559,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Plugin.Run Smart Sampa" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BusLaneTest.testSearchByTerm" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.com.smartsampa in PublicTransportAPI" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BusLaneTest.testGetShape" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest.testSearchBusStopsByLine" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest.testGetForecastWithLineAndStop" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ShapefileAPITest.testPrintPluviometerProperties" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ShapefileAPITest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BusLaneTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PluviometerTest.getAllPluviometers" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.All in PublicTransportAPI" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.com.smartsampa in PublicTransportAPI" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest.testGetForecastWithLineAndStop" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.OlhoVivoAPITest.testSearchBusStopsByLine" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BusLaneTest.testSearchByTerm" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BusLaneTest.testGetShape" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PluviometerTest.getAllPluviometers" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in PublicTransportAPI" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ShapefileAPITest.testPrintPluviometerProperties" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BusLaneTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ShapefileAPITest" />
       </list>
     </recent_temporary>
   </component>
@@ -1528,7 +1629,11 @@
       <workItem from="1457898670503" duration="59112000" />
       <workItem from="1458614349329" duration="3003000" />
       <workItem from="1458617435199" duration="387000" />
-      <workItem from="1458618597361" duration="33598000" />
+      <workItem from="1458618597361" duration="35013000" />
+      <workItem from="1459090290901" duration="3118000" />
+      <workItem from="1459335340000" duration="61000" />
+      <workItem from="1459883937711" duration="966000" />
+      <workItem from="1460123026241" duration="14296000" />
     </task>
     <task id="LOCAL-00001" summary="Adds Tool Window, framework configuration on project creation and renames packages">
       <created>1455058463195</created>
@@ -1788,43 +1893,49 @@
       <option name="project" value="LOCAL" />
       <updated>1458757820247</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Adds assumptions to tests that fail if run after midnight and before 4am.">
+      <created>1458764640246</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1458764640246</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BusLaneTest_testGetShape - 2016.03.23 at 12h 21m 59s.xml">
-      <configuration name="BusLaneTest.testGetShape" configurationId="JUnit" />
+    <history-entry file="All_in_PublicTransportAPI - 2016.04.08 at 16h 22m 13s.xml">
+      <configuration name="All in PublicTransportAPI" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BusLaneTest_testSearchByTerm - 2016.03.23 at 15h 16m 37s.xml">
-      <configuration name="BusLaneTest.testSearchByTerm" configurationId="JUnit" />
+    <history-entry file="All_in_PublicTransportAPI - 2016.04.08 at 16h 25m 26s.xml">
+      <configuration name="All in PublicTransportAPI" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BusLaneTest_testSearchByTerm - 2016.03.23 at 15h 16m 54s.xml">
-      <configuration name="BusLaneTest.testSearchByTerm" configurationId="JUnit" />
+    <history-entry file="BusLaneTest - 2016.04.08 at 12h 54m 33s.xml">
+      <configuration name="BusLaneTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPITest_testGetForecastWithLineAndStop - 2016.03.23 at 16h 56m 08s.xml">
-      <configuration name="OlhoVivoAPITest.testGetForecastWithLineAndStop" configurationId="JUnit" />
+    <history-entry file="PluviometerTest_getAllPluviometers - 2016.04.08 at 15h 33m 10s.xml">
+      <configuration name="PluviometerTest.getAllPluviometers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPITest_testGetForecastWithLineAndStop - 2016.03.23 at 17h 02m 44s.xml">
-      <configuration name="OlhoVivoAPITest.testGetForecastWithLineAndStop" configurationId="JUnit" />
+    <history-entry file="PluviometerTest_getAllPluviometers - 2016.04.08 at 16h 51m 18s.xml">
+      <configuration name="PluviometerTest.getAllPluviometers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OlhoVivoAPITest_testSearchBusStopsByLine - 2016.03.23 at 16h 50m 56s.xml">
-      <configuration name="OlhoVivoAPITest.testSearchBusStopsByLine" configurationId="JUnit" />
+    <history-entry file="ShapefileAPITest - 2016.04.08 at 12h 44m 56s.xml">
+      <configuration name="ShapefileAPITest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_smartsampa_in_PublicTransportAPI - 2016.03.23 at 01h 14m 04s.xml">
-      <configuration name="com.smartsampa in PublicTransportAPI" configurationId="JUnit" />
+    <history-entry file="ShapefileAPITest_testPrintPluviometerProperties - 2016.04.08 at 12h 44m 32s.xml">
+      <configuration name="ShapefileAPITest.testPrintPluviometerProperties" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_smartsampa_in_PublicTransportAPI - 2016.03.23 at 16h 34m 56s.xml">
-      <configuration name="com.smartsampa in PublicTransportAPI" configurationId="JUnit" />
+    <history-entry file="ShapefileAPITest_testPrintPluviometerProperties - 2016.04.08 at 12h 45m 14s.xml">
+      <configuration name="ShapefileAPITest.testPrintPluviometerProperties" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_smartsampa_in_PublicTransportAPI - 2016.03.23 at 16h 54m 14s.xml">
-      <configuration name="com.smartsampa in PublicTransportAPI" configurationId="JUnit" />
+    <history-entry file="ShapefileAPITest_testPrintPluviometerProperties - 2016.04.08 at 12h 57m 33s.xml">
+      <configuration name="ShapefileAPITest.testPrintPluviometerProperties" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_smartsampa_in_PublicTransportAPI - 2016.03.23 at 17h 11m 11s.xml">
-      <configuration name="com.smartsampa in PublicTransportAPI" configurationId="JUnit" />
+    <history-entry file="ShapefileAPITest_testPrintPluviometerProperties - 2016.04.08 at 15h 34m 21s.xml">
+      <configuration name="ShapefileAPITest.testPrintPluviometerProperties" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501293000" />
+    <option name="totallyTimeSpent" value="521149000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1840,17 +1951,17 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253012" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.4914163" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987952" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4506024" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22891566" sideWeight="0.48569384" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38433734" sideWeight="0.48569384" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23819743" sideWeight="0.4901257" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24749643" sideWeight="0.4901257" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1889,7 +2000,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Accomodating the OlhoVivoAPI on its own module." />
     <MESSAGE value="Beginning use of gtfs module." />
     <MESSAGE value="Integrating gtfs" />
     <MESSAGE value="Adds searchTrip to API and getDepartureInterval to Trip." />
@@ -1914,7 +2024,8 @@
     <MESSAGE value="Adds dependency injection to gtfsapi module." />
     <MESSAGE value="Adds new fields to BusLane." />
     <MESSAGE value="Excluding files from the old SmartSampa module from git." />
-    <option name="LAST_COMMIT_MESSAGE" value="Excluding files from the old SmartSampa module from git." />
+    <MESSAGE value="Adds assumptions to tests that fail if run after midnight and before 4am." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds assumptions to tests that fail if run after midnight and before 4am." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1927,253 +2038,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/BusCorridor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/BusLineNow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="18" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/BusNow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/BusStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/BusStopNow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/BusStopWithLines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/ForecastWithLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5798005">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/olhovivoapi/BusLinePositions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6584939">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.intellij">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.intellij</OriginalElement>
-          <nodes>
-            <node x="" y="">com.intellij.pom</node>
-            <node x="" y="">com.intellij.testFramework</node>
-            <node x="" y="">com.intellij.application</node>
-            <node x="" y="">com.intellij.refactoring</node>
-            <node x="" y="">com.intellij.ToolExtensionPoints</node>
-            <node x="" y="">com.intellij.tools</node>
-            <node x="" y="">com.intellij.concurrency</node>
-            <node x="" y="">com.intellij.gtfsapi</node>
-            <node x="" y="">com.intellij.lang</node>
-            <node x="" y="">com.intellij.vcsUtil</node>
-            <node x="" y="">com.intellij.openapi</node>
-            <node x="" y="">com.intellij.persistence</node>
-            <node x="" y="">com.intellij.json</node>
-            <node x="" y="">com.intellij.vcs</node>
-            <node x="" y="">com.intellij.embedding</node>
-            <node x="" y="">com.intellij.reference</node>
-            <node x="" y="">com.intellij.BundleBase</node>
-            <node x="" y="">com.intellij.injected</node>
-            <node x="" y="">com.intellij.diff</node>
-            <node x="" y="">com.intellij.idea</node>
-            <node x="" y="">com.intellij.semantic</node>
-            <node x="" y="">com.intellij.AppTopics</node>
-            <node x="" y="">com.intellij.profile</node>
-            <node x="" y="">com.intellij.ultimate</node>
-            <node x="" y="">com.intellij.jarFinder</node>
-            <node x="" y="">com.intellij.ClassFinder</node>
-            <node x="" y="">com.intellij.jsp</node>
-            <node x="" y="">com.intellij.util</node>
-            <node x="" y="">com.intellij.externalSystem</node>
-            <node x="" y="">com.intellij.core</node>
-            <node x="" y="">com.intellij.notification</node>
-            <node x="" y="">com.intellij.tests</node>
-            <node x="" y="">com.intellij.conversion</node>
-            <node x="" y="">com.intellij.configurationStore</node>
-            <node x="" y="">com.intellij.errorreport</node>
-            <node x="" y="">com.intellij.indentation</node>
-            <node x="" y="">com.intellij.TestAll</node>
-            <node x="" y="">com.intellij.AbstractBundle</node>
-            <node x="" y="">com.intellij.projectView</node>
-            <node x="" y="">com.intellij.TestCaseLoader</node>
-            <node x="" y="">com.intellij.utils</node>
-            <node x="" y="">com.intellij.CommonBundle</node>
-            <node x="" y="">com.intellij.spring</node>
-            <node x="" y="">com.intellij.ExtensionPoints</node>
-            <node x="" y="">com.intellij.html</node>
-            <node x="" y="">com.intellij.lifecycle</node>
-            <node x="" y="">com.intellij.facet</node>
-            <node x="" y="">com.intellij.Patches</node>
-            <node x="" y="">com.intellij.framework</node>
-            <node x="" y="">com.intellij.JavaTestUtil</node>
-            <node x="" y="">com.intellij.find</node>
-            <node x="" y="">com.intellij.codeInspection</node>
-            <node x="" y="">com.intellij.remote</node>
-            <node x="" y="">com.intellij.codeEditor</node>
-            <node x="" y="">com.intellij.FileSetTestCase</node>
-            <node x="" y="">com.intellij.uiDesigner</node>
-            <node x="" y="">com.intellij.tokenindex</node>
-            <node x="" y="">com.intellij.moduleDependencies</node>
-            <node x="" y="">com.intellij.busapi</node>
-            <node x="" y="">com.intellij.slicer</node>
-            <node x="" y="">com.intellij.webcore</node>
-            <node x="" y="">com.intellij.spellchecker</node>
-            <node x="" y="">com.intellij.buildfiles</node>
-            <node x="" y="">com.intellij.extapi</node>
-            <node x="" y="">com.intellij.structuralsearch</node>
-            <node x="" y="">com.intellij.navigation</node>
-            <node x="" y="">com.intellij.externalDependencies</node>
-            <node x="" y="">com.intellij.peer</node>
-            <node x="" y="">com.intellij.security</node>
-            <node x="" y="">com.intellij.sql</node>
-            <node x="" y="">com.intellij.testIntegration</node>
-            <node x="" y="">com.intellij.platform</node>
-            <node x="" y="">com.intellij.xdebugger</node>
-            <node x="" y="">com.intellij.featureStatistics</node>
-            <node x="" y="">com.intellij.a</node>
-            <node x="" y="">com.intellij.history</node>
-            <node x="" y="">com.intellij.jpa</node>
-            <node x="" y="">com.intellij.patterns</node>
-            <node x="" y="">com.intellij.formatting</node>
-            <node x="" y="">com.intellij.ant</node>
-            <node x="" y="">com.intellij.cyclicDependencies</node>
-            <node x="" y="">com.intellij.lexer</node>
-            <node x="" y="">com.intellij.project</node>
-            <node x="" y="">com.intellij.TestRecorder</node>
-            <node x="" y="">com.intellij.packageDependencies</node>
-            <node x="" y="">com.intellij.spi</node>
-            <node x="" y="">com.intellij.dvcs</node>
-            <node x="" y="">com.intellij.ide</node>
-            <node x="" y="">com.intellij.diagnostic</node>
-            <node x="" y="">com.intellij.ui</node>
-            <node x="" y="">com.intellij.javaee</node>
-            <node x="" y="">com.intellij.codeHighlighting</node>
-            <node x="" y="">com.intellij.olhovivoapi</node>
-            <node x="" y="">com.intellij.internal</node>
-            <node x="" y="">com.intellij.debugger</node>
-            <node x="" y="">com.intellij.mock</node>
-            <node x="" y="">com.intellij.psi</node>
-            <node x="" y="">com.intellij.remoteServer</node>
-            <node x="" y="">com.intellij.GroupBasedTestClassFilter</node>
-            <node x="" y="">com.intellij.problems</node>
-            <node x="" y="">com.intellij.analysis</node>
-            <node x="" y="">com.intellij.impl</node>
-            <node x="" y="">com.intellij.designer</node>
-            <node x="" y="">com.intellij.xml</node>
-            <node x="" y="">com.intellij.jam</node>
-            <node x="" y="">com.intellij.diagram</node>
-            <node x="" y="">com.intellij.ProjectTopics</node>
-            <node x="" y="">com.intellij.compiler</node>
-            <node x="" y="">com.intellij.codeStyle</node>
-            <node x="" y="">com.intellij.packaging</node>
-            <node x="" y="">com.intellij.dupLocator</node>
-            <node x="" y="">com.intellij.database</node>
-            <node x="" y="">com.intellij.help</node>
-            <node x="" y="">com.intellij.jps</node>
-            <node x="" y="">com.intellij.TestClassesFilter</node>
-            <node x="" y="">com.intellij.unscramble</node>
-            <node x="" y="">com.intellij.usages</node>
-            <node x="" y="">com.intellij.icons</node>
-            <node x="" y="">com.intellij.projectImport</node>
-            <node x="" y="">com.intellij.javadoc</node>
-            <node x="" y="">com.intellij.execution</node>
-            <node x="" y="">com.intellij.PatternListTestClassFilter</node>
-            <node x="" y="">com.intellij.usageView</node>
-            <node x="" y="">com.intellij.codeInsight</node>
-            <node x="" y="">com.intellij.css</node>
-            <node x="" y="">com.intellij.rt</node>
-            <node x="" y="">com.intellij.aop</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6491431117374006" x="2980.0" y="757.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.intellij.busapi">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.intellij.busapi</OriginalElement>
-          <nodes>
-            <node x="" y="">com.intellij.busapi.DataToRouteFacade</node>
-            <node x="" y="">com.intellij.busapi.APIToDataConverter</node>
-            <node x="" y="">com.intellij.busapi.DataToStopFacade</node>
-            <node x="" y="">com.intellij.busapi.Route</node>
-            <node x="" y="">com.intellij.busapi.Bus</node>
-            <node x="" y="">com.intellij.busapi.Stop</node>
-            <node x="" y="">com.intellij.busapi.Trip</node>
-            <node x="" y="">com.intellij.busapi.DataToAPIConverter</node>
-            <node x="" y="">com.intellij.busapi.DataToTripFacade</node>
-            <node x="" y="">com.intellij.busapi.Shape</node>
-            <node x="" y="">com.intellij.busapi.BusAPIManager</node>
-            <node x="" y="">com.intellij.busapi.Corridor</node>
-            <node x="" y="">com.intellij.busapi.PredictedBus</node>
-            <node x="" y="">com.intellij.busapi.DataToCorridorFacade</node>
-            <node x="" y="">com.intellij.busapi.Point</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.5881081081081081" x="453.0" y="438.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>Production</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Route.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2210,15 +2078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4488778">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToCorridorFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18953069">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2226,7 +2085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2166065">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2234,15 +2092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29301745">
           <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2250,7 +2099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54151624">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2258,7 +2106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48555955">
           <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2266,7 +2113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2693267">
           <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2287,7 +2133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13092269">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2295,10 +2140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2310,47 +2151,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Trip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToRouteFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Stop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#1055#1056#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToStopFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43502825">
-          <caret line="32" column="85" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToTripFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3235294">
-          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2358,7 +2162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.86023295">
           <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2366,10 +2169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5108153">
           <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <marker date="1458705612000" expanded="false" signature="542:702" placeholder="{...}" />
-            <marker date="1458705612000" expanded="true" signature="790:934" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2377,17 +2176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66056573">
           <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToBusLaneFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2395,57 +2183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7352941">
           <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="169" column="46" selection-start-line="169" selection-start-column="46" selection-end-line="169" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2028#2029#0" expanded="false" />
-            <element signature="e#2072#2073#0" expanded="false" />
-            <element signature="e#2121#2122#0" expanded="false" />
-            <element signature="e#2165#2166#0" expanded="false" />
-            <element signature="e#2217#2218#0" expanded="false" />
-            <element signature="e#2261#2262#0" expanded="false" />
-            <element signature="e#2325#2326#0" expanded="false" />
-            <element signature="e#2381#2382#0" expanded="false" />
-            <element signature="e#2445#2446#0" expanded="false" />
-            <element signature="e#2501#2502#0" expanded="false" />
-            <element signature="e#2561#2562#0" expanded="false" />
-            <element signature="e#2613#2614#0" expanded="false" />
-            <element signature="e#2676#2677#0" expanded="false" />
-            <element signature="e#2734#2735#0" expanded="false" />
-            <element signature="e#2887#2888#0" expanded="false" />
-            <element signature="e#2915#2916#0" expanded="false" />
-            <element signature="e#2949#2950#0" expanded="false" />
-            <element signature="e#2979#2980#0" expanded="false" />
-            <element signature="e#3018#3019#0" expanded="false" />
-            <element signature="e#3053#3054#0" expanded="false" />
-            <element signature="e#3090#3091#0" expanded="false" />
-            <element signature="e#3123#3124#0" expanded="false" />
-            <element signature="e#3158#3159#0" expanded="false" />
-            <element signature="e#3189#3190#0" expanded="false" />
-            <element signature="e#3228#3229#0" expanded="false" />
-            <element signature="e#3263#3264#0" expanded="false" />
-            <element signature="e#3300#3301#0" expanded="false" />
-            <element signature="e#3333#3334#0" expanded="false" />
-            <element signature="e#3367#3368#0" expanded="false" />
-            <element signature="e#3400#3401#0" expanded="false" />
-            <element signature="e#3437#3438#0" expanded="false" />
-            <element signature="e#3470#3471#0" expanded="false" />
-            <element signature="e#3513#3514#0" expanded="false" />
-            <element signature="e#3552#3553#0" expanded="false" />
-            <element signature="e#3595#3596#0" expanded="false" />
-            <element signature="e#3634#3635#0" expanded="false" />
-            <element signature="e#3675#3676#0" expanded="false" />
-            <element signature="e#3712#3713#0" expanded="false" />
-            <element signature="e#3753#3754#0" expanded="false" />
-            <element signature="e#3793#3794#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2453,7 +2190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36764705">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2461,7 +2197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36764705">
           <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2469,7 +2204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36764705">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2481,29 +2215,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/TripTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="57" selection-start-line="109" selection-start-column="57" selection-end-line="109" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/BusLaneTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78431374">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/CorridorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6617647">
           <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2515,36 +2230,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/StopTest.java">
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/Trip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8039216">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#924#925#0" expanded="false" />
+            <element signature="e#980#981#0" expanded="false" />
+            <element signature="e#1024#1025#0" expanded="false" />
+            <element signature="e#1058#1059#0" expanded="false" />
+            <element signature="e#1123#1124#0" expanded="false" />
+            <element signature="e#1177#1178#0" expanded="false" />
+            <element signature="e#1208#1209#0" expanded="false" />
+            <element signature="e#1236#1237#0" expanded="false" />
+            <element signature="e#1278#1279#0" expanded="false" />
+            <element signature="e#1316#1317#0" expanded="false" />
+            <element signature="e#1355#1356#0" expanded="false" />
+            <element signature="e#1402#1403#0" expanded="false" />
+            <element signature="e#1467#1468#0" expanded="false" />
+            <element signature="e#1527#1528#0" expanded="false" />
+            <element signature="e#1585#1586#0" expanded="false" />
+            <element signature="e#1651#1652#0" expanded="false" />
+            <element signature="e#1859#1860#0" expanded="false" />
+            <element signature="e#1903#1904#0" expanded="false" />
+            <element signature="e#1948#1949#0" expanded="false" />
+            <element signature="e#2002#2003#0" expanded="false" />
+            <element signature="e#2040#2041#0" expanded="false" />
+            <element signature="e#2090#2091#0" expanded="false" />
+            <element signature="e#2154#2155#0" expanded="false" />
+            <element signature="e#2207#2208#0" expanded="false" />
+            <element signature="e#2243#2244#0" expanded="false" />
+            <element signature="e#2286#2287#0" expanded="false" />
+            <element signature="e#2324#2325#0" expanded="false" />
+            <element signature="e#2377#2378#0" expanded="false" />
+            <element signature="e#2423#2424#0" expanded="false" />
+            <element signature="e#2468#2469#0" expanded="false" />
+            <element signature="e#2508#2509#0" expanded="false" />
+            <element signature="e#2549#2550#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13.jar!/com/vividsolutions/jts/geom/Lineal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15831135">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13.jar!/com/vividsolutions/jts/geom/GeometryCollection.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.5145119">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13.jar!/com/vividsolutions/jts/geom/MultiLineString.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23746702">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13.jar!/com/vividsolutions/jts/geom/Geometry.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3456464">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13.jar!/com/vividsolutions/jts/geom/Point.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23746702">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/risk/Pluviometer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9970458">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/risk/PluviometerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37666175">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/BusLaneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5539143">
+          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/StopFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/RouteFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/CorridorFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13092269">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/StopTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95386535">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/BusLaneFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/TripFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.056109726">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/shapefileapi/ShapefileAPITest.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39276809">
+          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/target/test-classes/com/smartsampa/olhovivoapi/OlhoVivoAPITest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5436409">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#5324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2531172">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/test/java/com/smartsampa/busapi/TripTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17082295">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29925188">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/busapi/DataToAPIConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/risk/PluviometerFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportAPI/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4182243">
-          <caret line="98" column="78" selection-start-line="98" selection-start-column="72" selection-end-line="98" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.63084114">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -15,10 +15,10 @@ public class Route {
     private Trip mtst;
     private Trip stmt;
 
-    private DataToRouteFacade routeFacade;
+    private RouteFacade routeFacade;
 
     protected Route() {
-        routeFacade = new DataToRouteFacade();
+        routeFacade = new RouteFacade();
     }
 
     protected Route(String numberSign, int type, boolean circular, String info) {
@@ -60,7 +60,7 @@ public class Route {
     }
 
     public static Route buildFrom(String fullNumberSign) {
-        return DataToRouteFacade.buildFrom(fullNumberSign);
+        return RouteFacade.buildFrom(fullNumberSign);
     }
 
     @Override

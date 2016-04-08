@@ -14,13 +14,13 @@ import java.util.Map;
 /**
  * Created by ruan0408 on 12/03/2016.
  */
-public class DataToTripFacade {
+public class TripFacade {
 
     private int olhovivoTripId;
     private String gtfsTripId;
     private String tripShapeId;
 
-    public DataToTripFacade(Trip trip) {
+    public TripFacade(Trip trip) {
         String fullNumberSign = trip.getRouteFullNumberSign();
         String heading = trip.getHeading();
         boolean isCircular = trip.isRouteCircular();

@@ -39,7 +39,7 @@ public class BusLane {
     }
 
     public static List<BusLane> getAllBusLanes() {
-        return DataToBusLaneFacade.getAllBusLanes();
+        return BusLaneFacade.getAllBusLanes();
     }
 
     public void setName(String name) {

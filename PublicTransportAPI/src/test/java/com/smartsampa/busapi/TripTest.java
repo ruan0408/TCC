@@ -75,7 +75,7 @@ public class TripTest {
     @Test
     public void testGetShape() throws Exception {
         Shape shape = usp.getShape();
-        Assert.assertEquals(417, shape.size());
+        Assert.assertEquals(419, shape.size());
         Assert.assertNotNull(shape.getPoints());
         Assert.assertNotNull(shape.getTraveledDistances());
     }
@@ -83,7 +83,7 @@ public class TripTest {
     @Test
     public void testGetAllStops() throws Exception {
         List<Stop> allStops = butanta.getAllStops();
-        Assert.assertEquals(32, allStops.size());
+        Assert.assertEquals(33, allStops.size());
     }
 
     @Test

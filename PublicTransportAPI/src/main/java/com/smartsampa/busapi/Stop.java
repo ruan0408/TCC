@@ -15,10 +15,10 @@ public class Stop {
     private String address;
     private Point location;
 
-    private DataToStopFacade stopFacade;
+    private StopFacade stopFacade;
 
     protected Stop() {
-        stopFacade = new DataToStopFacade();
+        stopFacade = new StopFacade();
     }
 
     protected Stop(int id, String name, Point location) {
@@ -29,7 +29,7 @@ public class Stop {
     }
 
     public static List<Stop> searchStopsByTerm(String term) {
-        return DataToStopFacade.searchForStopsByTerm(term);
+        return StopFacade.searchForStopsByTerm(term);
     }
 
     public List<Trip> getAllTrips() {

@@ -12,16 +12,16 @@ public class Corridor {
     private int id;
     private String name;
 
-    private DataToCorridorFacade adapter;
+    private CorridorFacade adapter;
 
     public Corridor(int id, String name) {
         this.id = id;
         this.name = name;
-        adapter = new DataToCorridorFacade();
+        adapter = new CorridorFacade();
     }
 
     protected static List<Corridor> getAllCorridors() {
-        return DataToCorridorFacade.getAllCorridors();
+        return CorridorFacade.getAllCorridors();
     }
 
     public int getCode() {return id;}

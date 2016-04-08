@@ -8,20 +8,19 @@ import org.junit.Test;
  */
 public class ShapefileAPITest {
 
-    private static final ShapefileAPI shapefileApi;
-    static {
-        shapefileApi = new ShapefileAPI("faixa_onibus/sirgas_faixa_onibus.shp");
-        shapefileApi.init();
-    }
+    private ShapefileAPI shapefileApi;
 
+    @Ignore
     @Test
-    public void testInit() throws Exception {
-        shapefileApi.init();
+    public void testPrintBusLanesProperties() throws Exception {
+        shapefileApi = new ShapefileAPI("faixa_onibus/sirgas_faixa_onibus.shp");
+        shapefileApi.printProperties();
     }
 
     @Ignore
     @Test
-    public void testPrintProperties() throws Exception {
+    public void testPrintPluviometerProperties() throws Exception {
+        shapefileApi = new ShapefileAPI("pluviometro/sirgas_pluviometro.shp");
         shapefileApi.printProperties();
     }
 
@@ -29,10 +28,5 @@ public class ShapefileAPITest {
     @Test
     public void testPrintPropertiesToFile() throws Exception {
         shapefileApi.printPropertiesToFile();
-    }
-
-    @Test
-    public void testGroupBy() throws Exception {
-
     }
 }

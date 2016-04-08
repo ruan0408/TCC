@@ -12,7 +12,7 @@ import static com.smartsampa.busapi.BusAPIManager.olhovivo;
 /**
  * Created by ruan0408 on 13/03/2016.
  */
-public class DataToStopFacade {
+public class StopFacade {
 
     protected static List<Stop> searchForStopsByTerm(String term) {
         BusStop[] busStops = olhovivo.searchBusStops(term);

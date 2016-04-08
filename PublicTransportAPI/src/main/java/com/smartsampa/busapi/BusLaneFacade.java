@@ -2,7 +2,7 @@ package com.smartsampa.busapi;
 
 import com.smartsampa.shapefileapi.ShapefileAPI;
 import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.MultiLineString;
+import com.vividsolutions.jts.geom.Geometry;
 import org.jetbrains.annotations.NotNull;
 import org.opengis.feature.simple.SimpleFeature;
 
@@ -12,16 +12,10 @@ import java.util.stream.Collectors;
 /**
  * Created by ruan0408 on 22/03/2016.
  */
-public class DataToBusLaneFacade {
+public class BusLaneFacade {
 
-    private static final String SHAPEFILE_RELATIVE_PATH;
-    private static final ShapefileAPI shapefileApi;
-
-    static {
-        SHAPEFILE_RELATIVE_PATH = "faixa_onibus/sirgas_faixa_onibus.shp";
-        shapefileApi = new ShapefileAPI(SHAPEFILE_RELATIVE_PATH);
-        shapefileApi.init();
-    }
+    private static final String PATH_SHAPEFILE_BUSLANE = "faixa_onibus/sirgas_faixa_onibus.shp";
+    private static final ShapefileAPI shapefileApi = new ShapefileAPI(PATH_SHAPEFILE_BUSLANE);
 
     public static List<BusLane> getAllBusLanes() {
         Map<String, List<SimpleFeature>> groupedByName =
@@ -68,7 +62,7 @@ public class DataToBusLaneFacade {
         LinkedHashSet<Point> points = new LinkedHashSet<>();
         featureList.stream()
                 .map(feat -> {
-                    Coordinate[] coordinates = ((MultiLineString) feat.getDefaultGeometry()).getCoordinates();
+                    Coordinate[] coordinates = ((Geometry) feat.getDefaultGeometry()).getCoordinates();
                     return Arrays.asList(coordinates)
                             .stream()
                             .map(coord -> new Point(coord.x, coord.y))

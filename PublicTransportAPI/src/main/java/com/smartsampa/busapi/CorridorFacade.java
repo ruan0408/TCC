@@ -10,9 +10,9 @@ import static com.smartsampa.busapi.BusAPIManager.olhovivo;
 /**
  * Created by ruan0408 on 13/03/2016.
  */
-public class DataToCorridorFacade  {
+public class CorridorFacade {
 
-    protected DataToCorridorFacade(){}
+    protected CorridorFacade(){}
 
     protected static List<Corridor> getAllCorridors() {
         BusCorridor[] allBusCorridors = olhovivo.getAllBusCorridors();

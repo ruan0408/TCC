@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class Trip {
 
-    private DataToTripFacade tripFacade;
+    private TripFacade tripFacade;
     private Route route;
     private String destinationSign;
 
@@ -20,7 +20,7 @@ public class Trip {
 
     public static Trip getTrip(String fullNumberSign, String heading) {
         Trip newTrip = buildTrip(fullNumberSign, heading);
-        newTrip.tripFacade = new DataToTripFacade(newTrip);
+        newTrip.tripFacade = new TripFacade(newTrip);
         return newTrip;
     }
 
@@ -33,7 +33,7 @@ public class Trip {
     }
 
     public static List<Trip> searchTripByTerm(String term) {
-        return DataToTripFacade.searchTripByTerm(term);
+        return TripFacade.searchTripByTerm(term);
     }
 
     protected void setRoute(Route route) {
