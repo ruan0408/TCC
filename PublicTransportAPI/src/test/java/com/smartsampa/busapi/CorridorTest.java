@@ -1,10 +1,11 @@
 package com.smartsampa.busapi;
 
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 /**
  * Created by ruan0408 on 21/02/2016.
@@ -21,12 +22,12 @@ public class CorridorTest {
     @Test
     public void testGetAllStops() throws Exception {
         List<Stop> allStops = campoLimpo.getAllStops();
-        Assert.assertEquals(33, allStops.size());
+        assertEquals(33, allStops.size());
     }
 
     @Test
     public void testGetAllCorridors() throws Exception {
         List<Corridor> allCorridors = Corridor.getAllCorridors();
-        Assert.assertEquals(7, allCorridors.size());
+        assertEquals(7, allCorridors.size());
     }
 }

@@ -1,7 +1,7 @@
 package com.smartsampa.busapi;
 
-import com.smartsampa.olhovivoapi.BusLine;
 import com.intellij.openapi.util.Pair;
+import com.smartsampa.olhovivoapi.BusLine;
 
 import static com.smartsampa.busapi.BusAPIManager.gtfs;
 import static com.smartsampa.busapi.BusAPIManager.olhovivo;
@@ -17,9 +17,10 @@ public class RouteFacade {
     }
 
     protected static Route buildFrom(String fullNumberSign) {
-        Route newRoute = new Route();
+
         Pair<BusLine, BusLine> bothTrips = olhovivo.getBothTrips(fullNumberSign);
 
+        Route newRoute = new Route();
         newRoute.setNumberSign(fullNumberSign.substring(0,4));
         newRoute.setType(Integer.parseInt(fullNumberSign.substring(5)));
         newRoute.setCircular(bothTrips.first.isCircular());

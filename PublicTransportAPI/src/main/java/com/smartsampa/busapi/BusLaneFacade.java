@@ -33,10 +33,11 @@ public class BusLaneFacade {
     }
 
     private static BusLane buildFromFeatures(List<SimpleFeature> featureList) {
+
         SimpleFeature feature = featureList.get(0);
         if (feature == null) return null;
-        BusLane buslane = new BusLane();
 
+        BusLane buslane = new BusLane();
         buslane.setName(feature.getAttribute("nm_denomin").toString());
         buslane.setAddress(feature.getAttribute("nm_logrado").toString());
         buslane.setHeading(feature.getAttribute("tx_sentido").toString());

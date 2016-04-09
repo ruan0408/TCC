@@ -1,6 +1,5 @@
 package com.smartsampa.olhovivoapi;
 
-import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,6 +8,7 @@ import java.util.Arrays;
 import java.util.function.Predicate;
 
 import static com.smartsampa.busapi.BusAPITestUtils.isAfter4amAndBeforeMidnight;
+import static org.junit.Assert.*;
 
 /**
  * Created by ruan0408 on 11/02/2016.
@@ -41,7 +41,7 @@ public class OlhoVivoAPITest {
     @Test
     public void testAuthenticate() throws Exception{
         boolean resp = api.authenticate();
-        Assert.assertTrue(resp);
+        assertTrue(resp);
     }
 
     @Test
@@ -50,13 +50,13 @@ public class OlhoVivoAPITest {
         Predicate<BusLine> containsBusLine8000 =
                 busLine -> busLine.getNumberSign().equals("8000");
 
-        Assert.assertTrue(arrayHasMatch(busLines, containsBusLine8000));
+        assertTrue(arrayHasMatch(busLines, containsBusLine8000));
     }
 
     @Test
     public void testGetBusLineDetails() throws Exception {
         String response = api.getBusLineDetails(alvimPerua);
-        Assert.assertEquals("[]", response);
+        assertEquals("[]", response);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class OlhoVivoAPITest {
         BusStop[] busStops = api.searchBusStops("afonso");
         Predicate<BusStop> containsAfonso =
                 stop -> stop.getName().toLowerCase().contains("afonso");
-        Assert.assertTrue(arrayHasMatch(busStops, containsAfonso));
+        assertTrue(arrayHasMatch(busStops, containsAfonso));
     }
 
     @Test
@@ -74,8 +74,8 @@ public class OlhoVivoAPITest {
 
         Predicate<BusStop> namesNotNull = stop -> stop.getName() != null;
 
-        Assert.assertNotNull(busStops);
-        Assert.assertTrue(arrayHasMatch(busStops, namesNotNull));
+        assertNotNull(busStops);
+        assertTrue(arrayHasMatch(busStops, namesNotNull));
     }
 
     @Test
@@ -83,9 +83,9 @@ public class OlhoVivoAPITest {
         BusStop[] busStops = api.searchBusStopsByCorridor(campoLimpoCorridor);
         Predicate<BusStop> namesNotNull = stop -> stop.getName() != null;
 
-        Assert.assertNotNull(busStops);
-        Assert.assertTrue(busStops.length > 0);
-        Assert.assertTrue(arrayHasMatch(busStops, namesNotNull));
+        assertNotNull(busStops);
+        assertTrue(busStops.length > 0);
+        assertTrue(arrayHasMatch(busStops, namesNotNull));
     }
 
     @Test
@@ -94,17 +94,17 @@ public class OlhoVivoAPITest {
         Predicate<BusCorridor> containsCampoLimpo =
                 corridor -> corridor.getName().equalsIgnoreCase("Campo Limpo");
 
-        Assert.assertNotNull(corridors);
-        Assert.assertTrue(corridors.length > 0);
-        Assert.assertTrue(arrayHasMatch(corridors, containsCampoLimpo));
+        assertNotNull(corridors);
+        assertTrue(corridors.length > 0);
+        assertTrue(arrayHasMatch(corridors, containsCampoLimpo));
     }
 
     @Test
     public void testSearchBusPositionsByLine() throws Exception {
         Bus[] busesPosition = api.searchBusesByLine(bonifacio).getVehicles();
 
-        Assert.assertNotNull(busesPosition);
-        Assert.assertTrue(busesPosition.length > 0);
+        assertNotNull(busesPosition);
+        assertTrue(busesPosition.length > 0);
     }
 
     @Test
@@ -114,8 +114,8 @@ public class OlhoVivoAPITest {
         ForecastWithStopAndLine forecast =
                 api.getForecastWithStopAndLine(campanellaStopId, alvim);
 
-        Assert.assertNotNull(forecast.getBuses());
-        Assert.assertTrue(forecast.getBuses().length > 0);
+        assertNotNull(forecast.getBuses());
+        assertTrue(forecast.getBuses().length > 0);
     }
 
     @Test
@@ -123,8 +123,8 @@ public class OlhoVivoAPITest {
         ForecastWithLine forecast = api.getForecastWithLine(bonifacio);
         BusStopNow[] busStops = forecast.getBusStops();
 
-        Assert.assertNotNull(busStops);
-        Assert.assertTrue(busStops.length > 0);
+        assertNotNull(busStops);
+        assertTrue(busStops.length > 0);
     }
 
     @Test
@@ -134,9 +134,9 @@ public class OlhoVivoAPITest {
         ForecastWithStop forecast = api.getForecastWithStop(campanellaStopId);
         BusLineNow[] busLines = forecast.getBusLines();
 
-        Assert.assertEquals(forecast.getBusStop().getCode(), campanellaStopId);
-        Assert.assertNotNull(busLines);
-        Assert.assertTrue(busLines.length > 0);
+        assertEquals(forecast.getBusStop().getCode(), campanellaStopId);
+        assertNotNull(busLines);
+        assertTrue(busLines.length > 0);
     }
 
     private <T> boolean arrayHasMatch(T[] array, Predicate predicate) {

@@ -18,12 +18,12 @@ import java.util.stream.Collectors;
  */
 public class GtfsAPI {
 
-    public static final Comparator<StopTime> compByStopSequence = (s1, s2) -> {
+    public static final Comparator<StopTime> COMP_BY_STOP_SEQUENCE = (s1, s2) -> {
         if (s1.getStopSequence() < s2.getStopSequence()) return -1;
         if (s1.getStopSequence() > s2.getStopSequence()) return 1;
         return 0;
     };
-    public static final Comparator<ShapePoint> compByShapePointSequence = (p1, p2) -> {
+    public static final Comparator<ShapePoint> COMP_BY_SHAPE_POINT_SEQUENCE = (p1, p2) -> {
         if (p1.getSequence() < p2.getSequence()) return -1;
         if (p1.getSequence() > p2.getSequence()) return 1;
         return 0;

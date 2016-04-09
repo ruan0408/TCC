@@ -6,10 +6,10 @@ import org.onebusaway.gtfs.model.ShapePoint;
 import org.onebusaway.gtfs.model.StopTime;
 
 import java.text.ParseException;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import static com.smartsampa.busapi.BusAPIManager.gtfs;
+import static com.smartsampa.busapi.BusAPIManager.olhovivo;
 
 /**
  * Created by ruan0408 on 12/03/2016.
@@ -32,65 +32,100 @@ public class TripFacade {
     }
 
     public static List<Trip> searchTripByTerm(String term) {
-        BusLine[] busLines = BusAPIManager.olhovivo.searchBusLines(term);
-        List<Trip> trips = DataToAPIConverter.busLinesArrayToTrips(busLines);
+        BusLine[] busLines = olhovivo.searchBusLines(term);
+        List<Trip> trips = busLinesArrayToTrips(busLines);
         return trips;
     }
 
+    private static List<Trip> busLinesArrayToTrips(BusLine[] busLines) {
+
+        if (busLines == null) return new ArrayList<>();
+
+        List<Trip> trips = Utils.convertKArrayToTList(busLines, busLine -> busLineToTrip(busLine));
+
+        return trips;
+    }
+
+    protected static Trip busLineToTrip(BusLine line) {
+        String fullNumberSign = line.getNumberSign()+"-"+line.getType();
+
+        //due to weird behaviour of olhovivo
+        if (line.getNumberSign().matches("\\w{4}-\\w{2}"))
+            fullNumberSign = line.getNumberSign();
+
+        String heading = line.getHeading() == 1 ? "mtst" : "stmt";
+
+        return Trip.getTrip(fullNumberSign, heading);
+    }
+
     public List<Stop> getAllStops() {
-        List<StopTime> stopTimes = BusAPIManager.gtfs.getAllStopTimesFromTripId(gtfsTripId);
+        List<StopTime> stopTimes = gtfs.getAllStopTimesFromTripId(gtfsTripId);
 
         stopTimes = orderStopTimesBySequenceNumber(stopTimes);
 
-        List<Stop> stopsFromGtfs = DataToAPIConverter.stopTimesToStops(stopTimes);
-        List<Stop> stopsFromOlhoVivo = DataToAPIConverter.busStopArrayToStops(
-                BusAPIManager.olhovivo.searchBusStopsByLine(olhovivoTripId));
+        List<Stop> stopsFromGtfs = stopTimesToStops(stopTimes);
+        List<Stop> stopsFromOlhoVivo =
+                StopFacade.busStopArrayToStops(olhovivo.searchBusStopsByLine(olhovivoTripId));
 
         return getStopsWithAddresses(stopsFromGtfs, stopsFromOlhoVivo);
     }
 
+    private static List<Stop> stopTimesToStops(List<StopTime> stopTimes) {
+        return Utils.convertKListToT(stopTimes, stopTime -> gtfsStopToStop(stopTime.getStop()));
+    }
+
+    private static Stop gtfsStopToStop(org.onebusaway.gtfs.model.Stop gtfsStop) {
+        Stop newStop = new Stop();
+        newStop.setId(Integer.parseInt(gtfsStop.getId().getId()));
+        newStop.setName(gtfsStop.getName());
+        newStop.setAddress("");
+        newStop.setLocation(new Point(gtfsStop.getLat(), gtfsStop.getLon()));
+        return newStop;
+    }
+
     public String getWorkingDays() {
-        return BusAPIManager.gtfs.getWorkingDays(gtfsTripId);
+        return gtfs.getWorkingDays(gtfsTripId);
     }
 
     public Shape getShape() {
-        List<ShapePoint> shapePoints = BusAPIManager.gtfs.getShape(tripShapeId);
-        return DataToAPIConverter.shapePointsToShape(shapePoints);
+        List<ShapePoint> shapePoints = gtfs.getShape(tripShapeId);
+        return ShapeFacade.shapePointsToShape(shapePoints);
     }
 
     public int getDepartureIntervalAtTime(String hhmm) {
         try {
-            return BusAPIManager.gtfs.getDepartureIntervalAtTime(gtfsTripId, hhmm);
+            return gtfs.getDepartureIntervalAtTime(gtfsTripId, hhmm);
         } catch (ParseException e) {
+            e.printStackTrace();
             throw new RuntimeException("Error when parsing "+hhmm+
                     " in method getDepartureIntervalAtTime");
         }
     }
 
     public List<Bus> getAllRunningBuses() {
-        BusLinePositions busesWithTrip = BusAPIManager.olhovivo.searchBusesByLine(olhovivoTripId);
-        return DataToAPIConverter.olhovivoBusArrayToBuses(busesWithTrip.getVehicles());
+        BusLinePositions busesWithTrip = olhovivo.searchBusesByLine(olhovivoTripId);
+        return BusFacade.olhovivoBusArrayToBuses(busesWithTrip.getVehicles());
     }
 
     public Map<Stop, List<PredictedBus>> getAllPredictions() {
-        ForecastWithLine forecast = BusAPIManager.olhovivo.getForecastWithLine(olhovivoTripId);
+        ForecastWithLine forecast = olhovivo.getForecastWithLine(olhovivoTripId);
         BusStopNow[] busStopNowArray = forecast.getBusStops();
 
         Map<Stop, List<PredictedBus>> map = new HashMap<>(busStopNowArray.length);
 
         for (int i = 0; i < busStopNowArray.length; i++) {
             BusStopNow stopNow = busStopNowArray[i];
-            map.put(DataToAPIConverter.busStopToStop(stopNow.getBusStop()),
-                    DataToAPIConverter.busNowArrayToPredictedBuses(stopNow.getVehicles()));
+            map.put(StopFacade.busStopToStop(stopNow.getBusStop()),
+                    PredictedBusFacade.busNowArrayToPredictedBuses(stopNow.getVehicles()));
         }
         return map;
     }
 
     public List<PredictedBus> getPredictionsAtStop(Stop stop) {
         ForecastWithStopAndLine forecast =
-                BusAPIManager.olhovivo.getForecastWithStopAndLine(stop.getId(), olhovivoTripId);
+                olhovivo.getForecastWithStopAndLine(stop.getId(), olhovivoTripId);
         BusNow[] busNowArray = forecast.getBuses();
-        return DataToAPIConverter.busNowArrayToPredictedBuses(busNowArray);
+        return PredictedBusFacade.busNowArrayToPredictedBuses(busNowArray);
     }
 
     public int getOlhovivoTripId() {
@@ -98,8 +133,11 @@ public class TripFacade {
     }
 
     private List<Stop> getStopsWithAddresses(List<Stop> stopsFromGtfs, List<Stop> stopsFromOlhoVivo) {
+
         Map<Stop, Stop> map = new Hashtable<>(stopsFromOlhoVivo.size());
-        for (Stop stop : stopsFromOlhoVivo) map.put(stop, stop);
+
+        for (Stop stop : stopsFromOlhoVivo)
+            map.put(stop, stop);
 
         for (Stop stop : stopsFromGtfs) {
             Stop fromOlhoVivo = map.get(stop);
@@ -111,7 +149,7 @@ public class TripFacade {
     }
 
     private List<StopTime> orderStopTimesBySequenceNumber(List<StopTime> stopTimes) {
-        stopTimes.sort(GtfsAPI.compByStopSequence);
+        stopTimes.sort(GtfsAPI.COMP_BY_STOP_SEQUENCE);
         return stopTimes;
     }
 }
