@@ -24,10 +24,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="PublicTransportAPI" />
+        <module name="RestfulAPI" />
+        <module name="SmartSampa" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="PublicTransportAPI" target="1.8" />
+    <bytecodeTargetLevel>
+      <module name="SmartSampa" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
