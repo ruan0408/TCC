@@ -1,7 +1,7 @@
 package com.smartsampa.risk;
 
 import com.google.common.base.Objects;
-import com.smartsampa.busapi.Point;
+import com.smartsampa.utils.Point;
 
 import java.util.List;
 

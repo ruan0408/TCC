@@ -1,6 +1,7 @@
 package com.smartsampa.busapi;
 
 import com.smartsampa.shapefileapi.ShapefileAPI;
+import com.smartsampa.utils.Point;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Geometry;
 import org.opengis.feature.simple.SimpleFeature;

@@ -1,5 +1,8 @@
 package com.smartsampa.busapi;
 
+import com.smartsampa.olhovivoapi.OlhovivoBus;
+import com.smartsampa.utils.Point;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,11 +11,11 @@ import java.util.List;
  */
 public class BusFacade {
 
-    protected static List<Bus> olhovivoBusArrayToBuses(com.smartsampa.olhovivoapi.Bus[] busArray) {
+    protected static List<Bus> olhovivoBusArrayToBuses(OlhovivoBus[] busArray) {
         return convertAnyOlhovivoBusToAnyAPIBus(busArray, Bus.class);
     }
 
-    protected static <K extends com.smartsampa.olhovivoapi.Bus, T extends Bus>
+    protected static <K extends OlhovivoBus, T extends Bus>
     List<T> convertAnyOlhovivoBusToAnyAPIBus(K[] buses, Class<T> tClass) {
         if (buses == null) return new ArrayList<>();
 
@@ -20,7 +23,7 @@ public class BusFacade {
         return tList;
     }
 
-    private static <T extends Bus> T buildFromAPIBus(com.smartsampa.olhovivoapi.Bus bus, Class<T> tClass) {
+    private static <T extends Bus> T buildFromAPIBus(OlhovivoBus bus, Class<T> tClass) {
         T newBus = null;
         try {
             newBus = tClass.newInstance();

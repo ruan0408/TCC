@@ -1,6 +1,7 @@
 package com.smartsampa.busapi;
 
 import com.smartsampa.gtfsapi.GtfsAPI;
+import com.smartsampa.utils.Point;
 import org.onebusaway.gtfs.model.ShapePoint;
 
 import java.util.List;

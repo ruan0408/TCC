@@ -10,11 +10,11 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 public class BusLinePositions {
 
     private String currentTime;
-    private Bus[] vehicles;
+    private OlhovivoBus[] vehicles;
 
     @JsonCreator
     protected BusLinePositions(@JsonProperty("hr") String currentTime,
-                               @JsonProperty("vs") Bus[] vehicles) {
+                               @JsonProperty("vs") OlhovivoBus[] vehicles) {
 
         this.currentTime = currentTime;
         this.vehicles = vehicles;
@@ -30,7 +30,7 @@ public class BusLinePositions {
     /**
      * @return The vehicles on this line.
      */
-    public Bus[] getVehicles() {
+    public OlhovivoBus[] getVehicles() {
         return vehicles;
     }
 

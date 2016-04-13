@@ -2,12 +2,13 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.smartsampa.model.PredictedBus;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * Created by ruan0408 on 12/02/2016.
  */
-public class BusNow extends Bus {
+public class BusNow extends OlhovivoBus implements PredictedBus{
 
     private String predictedArrivalTime;
 

@@ -6,22 +6,23 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.smartsampa.model.Trip;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * Wrapper class for the bus line json returned by the PublicTransportAPI.
  * The fields are not in camel case so we can automatically parse the json.
  * */
-public class BusLine {
-
-    @JsonProperty("CodigoLinha") private int code;
-    @JsonProperty("Circular") private boolean circular;
-    @JsonProperty("Letreiro") private String numberSign;
-    @JsonProperty("Sentido") private int heading;
-    @JsonProperty("Tipo") private int type;
-    @JsonProperty("DenominacaoTPTS") private String destinationSignMTST;
-    @JsonProperty("DenominacaoTSTP") private String destinationSignSTMT;
-    @JsonProperty("Informacoes") private String info;
+public class BusLine extends Trip {
+//TODO change visibility of all classes from olhovivo, since they are data structures
+    @JsonProperty("CodigoLinha") public int code;
+    @JsonProperty("Circular") public boolean circular;
+    @JsonProperty("Letreiro") public String numberSign;
+    @JsonProperty("Sentido") public int heading;
+    @JsonProperty("Tipo") public int type;
+    @JsonProperty("DenominacaoTPTS") public String destinationSignMTST;
+    @JsonProperty("DenominacaoTSTP") public String destinationSignSTMT;
+    @JsonProperty("Informacoes") public String info;
 
 
     protected BusLine(int code, String numberSign, int heading,
@@ -50,64 +51,47 @@ public class BusLine {
         this.info = info;
     }
 
-    /**
-     * @return The code of this bus line
-     */
-    public int getCode() {
-        return code;
-    }
 
-    /**
-     * @return True if this bus line doesn't have a secondary terminal.
-     */
-    public boolean isCircular() {
-        return circular;
-    }
-
-    /**
-     * @return The destination sign, i.e. the destination being shown in the billboard.
-     */
-    public String getNumberSign() {
-        return numberSign;
-    }
-
-    /**
-     * @return 1 if this bus is heading to the main terminal.
-     * 2 if it's going to the secondary terminal.
-     */
-    public int getHeading() {
-        return heading;
-    }
-
-    /**
-     * @return Second part of the non-internal line code.
-     * BASE (10), ATENDIMENTO (21, 23, 32, 41).
-     * e.g.: In the line 2732-10, the type is 10.
-     */
     public int getType() {
         return type;
     }
 
-    /**
-     * @return The name displayed on the billboard when the buses on
-     * this line are heading towards the secondary terminal.
-     */
+    public String getInfo() {return info;}
+
     public String getDestinationSignMTST() {
         return destinationSignMTST;
     }
 
-    /**
-     * @return The name displayed on the billboard when the buses on
-     * this line are heading towards the main terminal.
-     */
     public String getDestinationSignSTMT() {
         return destinationSignSTMT;
     }
 
-    /**
-     * @return General information about this line.
-     */
-    public String getInfo() {return info;}
+    public int getCode() { return code; }
+
+    @Override
+    public Integer getOlhovivoId() {
+        return code;
+    }
+
+    @Override
+    public String getDestinationSign() {
+        return heading == 1 ? destinationSignMTST : destinationSignSTMT;
+    }
+
+    @Override
+    public String getNumberSign() {
+        return numberSign+"-"+getType();
+    }
+
+    @Override
+    public Integer getHeading() {
+        return heading;
+    }
+
+    @Override
+    public Boolean isCircular() {
+        return circular;
+    }
 
     @Override
     public String toString() {

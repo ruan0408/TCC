@@ -1,6 +1,7 @@
 package com.smartsampa.busapi;
 
 import com.smartsampa.olhovivoapi.*;
+import com.smartsampa.utils.Point;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -29,7 +30,7 @@ public class StopFacade {
 
     protected static Stop busStopToStop(BusStop busStop) {
         Stop newStop = new Stop();
-        newStop.setId(busStop.getCode());
+        newStop.setId(busStop.getOlhovivoId());
         newStop.setName(busStop.getName());
         newStop.setAddress(busStop.getAddress());
         newStop.setLocation(new Point(busStop.getLatitude(), busStop.getLongitude()));

@@ -2,12 +2,14 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.smartsampa.model.Bus;
+import com.smartsampa.utils.Point;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * Created by ruan0408 on 12/02/2016.
  */
-public class Bus {
+public class OlhovivoBus implements Bus {
 
     private String prefixNumber;
     private boolean isWheelChairCapable;
@@ -15,10 +17,10 @@ public class Bus {
     private double longitude;
 
     @JsonCreator
-    protected Bus(@JsonProperty("p") String prefixNumber,
-                  @JsonProperty("a")boolean isWheelChairCapable,
-                  @JsonProperty("py")double latitude,
-                  @JsonProperty("px")double longitude) {
+    protected OlhovivoBus(@JsonProperty("p") String prefixNumber,
+                          @JsonProperty("a")boolean isWheelChairCapable,
+                          @JsonProperty("py")double latitude,
+                          @JsonProperty("px")double longitude) {
         this.prefixNumber = prefixNumber;
         this.isWheelChairCapable = isWheelChairCapable;
         this.latitude = latitude;
@@ -51,6 +53,10 @@ public class Bus {
      */
     public double getLongitude() {
         return longitude;
+    }
+
+    public Point getLocation() {
+        return new Point(latitude, longitude);
     }
 
     @Override

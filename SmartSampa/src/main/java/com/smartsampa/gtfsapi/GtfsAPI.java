@@ -6,10 +6,7 @@ import org.onebusaway.gtfs.model.*;
 import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -34,6 +31,44 @@ public class GtfsAPI {
     public GtfsAPI(GtfsDaoImpl gtfsAcessor) {
         this.gtfsAcessor = gtfsAcessor;
     }
+
+    //TODO refactor getTripsByTerm
+    public Set<com.smartsampa.model.Trip> getTripsByTerm(String term) {
+        String lowerTerm = term.toLowerCase();
+        Predicate<Trip> containsTerm =
+                t -> t.getTripHeadsign().toLowerCase().contains(lowerTerm) ||
+                        t.getRoute().getShortName().toLowerCase().contains(lowerTerm);
+
+        List<Trip> matchTrips = filterToList("getAllTrips", containsTerm);
+
+        Set<GtfsTrip> resultTrips = matchTrips.stream()
+                .map(trip -> new GtfsTrip(trip))
+                .collect(Collectors.toSet());
+
+        Set<com.smartsampa.model.Trip> result = new HashSet<>(resultTrips);
+        for (GtfsTrip resultTrip : resultTrips) {
+            if (resultTrip.isCircular())
+                result.add(resultTrip.cloneChangingHeading());
+        }
+
+        return result;
+    }
+
+    public Set<com.smartsampa.model.Stop> getStopsByTerm(String term) {
+        String lowerTerm = term.toLowerCase();
+        Predicate<Stop> containsTerm =
+                stop -> stop.getName().toLowerCase().contains(lowerTerm);
+
+        List<Stop> matchStops = filterToList("getAllStops", containsTerm);
+
+        Set<com.smartsampa.model.Stop> resultStops;
+        resultStops = matchStops.stream()
+                .map(stop -> new GtfsStop(stop))
+                .collect(Collectors.toSet());
+
+        return resultStops;
+    }
+
 
     public List<StopTime> getAllStopTimesFromTripId(String gtfsTripId) {
         Predicate<StopTime> predicate;
@@ -90,8 +125,7 @@ public class GtfsAPI {
         return filterToElement("getAllTrips", predicate);
     }
 
-    private int
-    getDepartureInterval(String gtfsTripId, long time) {
+    private int getDepartureInterval(String gtfsTripId, long time) {
         Predicate<Frequency> predicate;
         predicate = f -> f.getTrip().getId().getId().equals(gtfsTripId) &&
                 (f.getStartTime() <= time) && (time < f.getEndTime());
@@ -100,7 +134,7 @@ public class GtfsAPI {
         return f.getHeadwaySecs();
     }
 
-    private <T> List<T> filterToList(String methodName, Predicate<T> predicate) {
+    protected <T> List<T> filterToList(String methodName, Predicate<T> predicate) {
         try {
             Method method = gtfsAcessor.getClass().getMethod(methodName);
             List<T> filtered = ((Collection<T>)method.invoke(gtfsAcessor))
@@ -111,11 +145,11 @@ public class GtfsAPI {
             return filtered;
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            return new ArrayList<>();
         }
     }
 
-    private <T> T filterToElement(String methodName, Predicate<T> predicate) {
+    protected <T> T filterToElement(String methodName, Predicate<T> predicate) {
         List<T> filtered = filterToList(methodName, predicate);
 
         if (filtered.isEmpty())

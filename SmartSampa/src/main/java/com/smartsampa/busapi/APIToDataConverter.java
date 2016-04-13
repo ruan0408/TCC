@@ -25,9 +25,9 @@ public class APIToDataConverter {
     public int getOlhovivoTripId(String fullNumberSign, String heading) {
         Pair<BusLine, BusLine> bothTrips = olhovivo.getBothTrips(fullNumberSign);
         if (heading.equalsIgnoreCase("mtst"))
-            return bothTrips.getLeft().getCode();
+            return bothTrips.getLeft().getOlhovivoId();
 
-        return bothTrips.getRight().getCode();
+        return bothTrips.getRight().getOlhovivoId();
     }
 
 }

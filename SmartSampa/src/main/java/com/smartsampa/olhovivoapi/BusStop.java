@@ -2,12 +2,14 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.smartsampa.model.Stop;
+import com.smartsampa.utils.Point;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * Created by ruan0408 on 12/02/2016.
  */
-public class BusStop {
+public class BusStop extends Stop {
 
     @JsonProperty("CodigoParada") private int code;
     @JsonProperty("Nome") private String name;
@@ -32,40 +34,31 @@ public class BusStop {
         this.address = address;
     }
 
-    /**
-     * @return The code of this bus stop.
-     */
-    public int getCode() {
-        return code;
-    }
-
-    /**
-     * @return The name of this bus stop.
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @return The address of this bus stop.
-     */
-    public String getAddress() {
-        return address;
-    }
-
-    /**
-     * @return The latitude of this bus stop.
-     */
     public double getLatitude() {
         return latitude;
     }
 
-    /**
-     * @return The longitude of this bus stop.
-     */
     public double getLongitude() {
         return longitude;
     }
+
+    @Override
+    public Integer getOlhovivoId() {
+        return code;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getAddress() {
+        return address;
+    }
+
+    @Override
+    public Point getLocation() { return new Point(latitude, longitude);}
 
     @Override
     public String toString() {

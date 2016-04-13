@@ -2,6 +2,7 @@ package com.smartsampa.busapi;
 
 import com.smartsampa.gtfsapi.GtfsAPI;
 import com.smartsampa.olhovivoapi.*;
+import com.smartsampa.utils.Point;
 import org.onebusaway.gtfs.model.ShapePoint;
 import org.onebusaway.gtfs.model.StopTime;
 

@@ -3,6 +3,10 @@ package com.smartsampa.olhovivoapi;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.smartsampa.model.Bus;
+import com.smartsampa.model.PredictedBus;
+import com.smartsampa.model.Stop;
+import com.smartsampa.model.Trip;
 import com.smartsampa.utils.APIConnectionException;
 import com.smartsampa.utils.HttpUrlConnector;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -10,6 +14,7 @@ import org.apache.commons.lang3.tuple.MutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.IOException;
+import java.util.*;
 
 /**
  * Created by ruan0408 on 10/02/2016.
@@ -22,7 +27,8 @@ public class OlhoVivoAPI {
     private HttpUrlConnector httpConnector;
 
     public OlhoVivoAPI(String key) {
-        jsonParser.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        jsonParser.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.NONE);
+        jsonParser.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.PUBLIC_ONLY);
         authKey = key;
         httpConnector = new HttpUrlConnector();
     }
@@ -42,10 +48,41 @@ public class OlhoVivoAPI {
         return false;
     }
 
-    public BusLine[] searchBusLines(String termosBusca) {
-        String url = BASE_URL +"/Linha/Buscar?termosBusca="+termosBusca;
+
+
+
+
+    public BusLine[] searchBusLines(String searchTerms) {
+        String url = BASE_URL +"/Linha/Buscar?termosBusca="+searchTerms;
         return performQuery(url, BusLine[].class);
     }
+
+    public Set<Trip> getTripsByTerm(String searchTerms) {
+        String url = BASE_URL +"/Linha/Buscar?termosBusca="+searchTerms;
+        BusLine[] busLines = performQuery(url, BusLine[].class);
+
+        return new HashSet<>(Arrays.asList(busLines));
+    }
+
+
+
+
+
+    public BusStop[] searchBusStops(String searchTerms) {
+        String url = BASE_URL +"/Parada/Buscar?termosBusca="+searchTerms;
+        return performQuery(url, BusStop[].class);
+    }
+
+    public Set<Stop> getStopsByTerm(String searchTerms) {
+        String url = BASE_URL +"/Parada/Buscar?termosBusca="+searchTerms;
+        BusStop[] busStops = performQuery(url, BusStop[].class);
+
+        return new HashSet<>(Arrays.asList(busStops));
+    }
+
+
+
+
 
     public String getBusLineDetails(int busLineCode) {
         try {
@@ -57,10 +94,11 @@ public class OlhoVivoAPI {
         }
     }
 
-    public BusStop[] searchBusStops(String searchTerms) {
-        String url = BASE_URL +"/Parada/Buscar?termosBusca="+searchTerms;
-        return performQuery(url, BusStop[].class);
-    }
+
+
+
+
+
 
     public BusStop[] searchBusStopsByLine(int busLineCode) {
         String url = BASE_URL +"/Parada/BuscarParadasPorLinha?codigoLinha="+busLineCode;
@@ -77,27 +115,81 @@ public class OlhoVivoAPI {
         return performQuery(url, BusCorridor[].class);
     }
 
+
+
+
+
     public BusLinePositions searchBusesByLine(int busLineCode) {
         String url = BASE_URL + "/Posicao?codigoLinha="+busLineCode;
         return performQuery(url, BusLinePositions.class);
     }
 
-    public ForecastWithStopAndLine
-    getForecastWithStopAndLine(int busStopCode, int busLineCode) {
+    public Set<Bus> getAllRunningBusesOfTrip(int busLineCode) {
+        String url = BASE_URL + "/Posicao?codigoLinha="+busLineCode;
+        BusLinePositions busLinePositions = performQuery(url, BusLinePositions.class);
+        Bus[] buses = busLinePositions.getVehicles();
+        return new HashSet<>(Arrays.asList(buses));
+    }
+
+
+
+
+
+    public ForecastWithStopAndLine getForecastWithStopAndLine(int busStopCode, int busLineCode) {
         String url = BASE_URL + "/Previsao?codigoParada="+busStopCode+"&codigoLinha="+busLineCode;
         return performQuery(url, ForecastWithStopAndLine.class);
     }
+
+    public List<PredictedBus> getPredictionsOfTripAtStop(int busStopCode, int busLineCode) {
+        String url = BASE_URL + "/Previsao?codigoParada="+busStopCode+"&codigoLinha="+busLineCode;
+        ForecastWithStopAndLine forecast = performQuery(url, ForecastWithStopAndLine.class);
+        return Arrays.asList(forecast.getBuses());
+    }
+
+
+
+
+
 
     public ForecastWithLine getForecastWithLine(int busLineCode) {
         String url = BASE_URL + "/Previsao/Linha?codigoLinha="+busLineCode;
         return performQuery(url, ForecastWithLine.class);
     }
 
-    public ForecastWithStop
-    getForecastWithStop(int busStopCode) {
+    public Map<Stop, List<PredictedBus>> getPredictionsOfTrip(int busLineCode) {
+        String url = BASE_URL + "/Previsao/Linha?codigoLinha="+busLineCode;
+        ForecastWithLine forecastWithLine = performQuery(url, ForecastWithLine.class);
+        BusStopNow[] stopsWithForecast = forecastWithLine.getBusStops();
+
+        Map<Stop, List<PredictedBus>> forecast = new HashMap<>();
+        for (BusStopNow stops : stopsWithForecast)
+            forecast.put(stops.getBusStop(), Arrays.asList(stops.getVehicles()));
+
+        return forecast;
+    }
+
+
+
+
+    public ForecastWithStop getForecastWithStop(int busStopCode) {
         String url = BASE_URL + "/Previsao/Parada?codigoParada="+busStopCode;
         return performQuery(url, ForecastWithStop.class);
     }
+
+    public Map<Trip, List<PredictedBus>> getPredictionsAtStop(int busStopCode) {
+        String url = BASE_URL + "/Previsao/Parada?codigoParada="+busStopCode;
+        ForecastWithStop forecastWithStop = performQuery(url, ForecastWithStop.class);
+        BusLineNow[] linesWithForecast = forecastWithStop.getBusLines();
+
+        Map<Trip, List<PredictedBus>> forecast = new HashMap<>();
+        for (BusLineNow lineNow : linesWithForecast)
+            forecast.put(lineNow.getBusLine(), Arrays.asList(lineNow.getVehicles()));
+
+        return forecast;
+    }
+
+
+
 
     private <T> T performQuery(String url, Class<T> tClass) {
         try {

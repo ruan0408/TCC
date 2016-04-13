@@ -1,6 +1,6 @@
 package com.smartsampa.risk;
 
-import com.smartsampa.busapi.Point;
+import com.smartsampa.utils.Point;
 import com.smartsampa.shapefileapi.ShapefileAPI;
 import com.vividsolutions.jts.geom.Coordinate;
 import org.opengis.feature.simple.SimpleFeature;

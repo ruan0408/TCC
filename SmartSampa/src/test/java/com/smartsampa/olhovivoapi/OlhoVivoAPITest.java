@@ -101,7 +101,7 @@ public class OlhoVivoAPITest {
 
     @Test
     public void testSearchBusPositionsByLine() throws Exception {
-        Bus[] busesPosition = api.searchBusesByLine(bonifacio).getVehicles();
+        OlhovivoBus[] busesPosition = api.searchBusesByLine(bonifacio).getVehicles();
 
         assertNotNull(busesPosition);
         assertTrue(busesPosition.length > 0);
@@ -134,7 +134,7 @@ public class OlhoVivoAPITest {
         ForecastWithStop forecast = api.getForecastWithStop(campanellaStopId);
         BusLineNow[] busLines = forecast.getBusLines();
 
-        assertEquals(forecast.getBusStop().getCode(), campanellaStopId);
+        assertEquals(forecast.getBusStop().getOlhovivoId().intValue(), campanellaStopId);
         assertNotNull(busLines);
         assertTrue(busLines.length > 0);
     }

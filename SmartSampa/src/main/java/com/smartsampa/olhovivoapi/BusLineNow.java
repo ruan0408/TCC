@@ -34,7 +34,7 @@ public class BusLineNow {
      * @return The code of this bus line.
      */
     public int getCode() {
-        return busLine.getCode();
+        return busLine.getOlhovivoId();
     }
 
     /**
