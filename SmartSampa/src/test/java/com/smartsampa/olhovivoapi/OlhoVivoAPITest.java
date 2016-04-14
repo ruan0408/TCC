@@ -1,6 +1,5 @@
 package com.smartsampa.olhovivoapi;
 
-import org.junit.Assume;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -9,6 +8,7 @@ import java.util.function.Predicate;
 
 import static com.smartsampa.busapi.BusAPITestUtils.isAfter4amAndBeforeMidnight;
 import static org.junit.Assert.*;
+import static org.junit.Assume.*;
 
 /**
  * Created by ruan0408 on 11/02/2016.
@@ -46,9 +46,9 @@ public class OlhoVivoAPITest {
 
     @Test
     public void testSearchBusLines() throws Exception {
-        BusLine[] busLines = api.searchBusLines("8000");
+        BusLine[] busLines = api.searchBusLines("800");
         Predicate<BusLine> containsBusLine8000 =
-                busLine -> busLine.getNumberSign().equals("8000");
+                busLine -> busLine.getNumberSign().equals("8000-10");
 
         assertTrue(arrayHasMatch(busLines, containsBusLine8000));
     }
@@ -70,7 +70,7 @@ public class OlhoVivoAPITest {
     @Test
     public void testSearchBusStopsByLine() throws Exception {
         BusStop[] busStops = api.searchBusStopsByLine(usp8012);
-        Assume.assumeTrue(busStops.length > 0);
+        assumeTrue(busStops.length > 0);
 
         Predicate<BusStop> namesNotNull = stop -> stop.getName() != null;
 
@@ -109,7 +109,7 @@ public class OlhoVivoAPITest {
 
     @Test
     public void testGetForecastWithLineAndStop() throws Exception {
-        Assume.assumeTrue(isAfter4amAndBeforeMidnight());
+        assumeTrue(isAfter4amAndBeforeMidnight());
 
         ForecastWithStopAndLine forecast =
                 api.getForecastWithStopAndLine(campanellaStopId, alvim);
@@ -129,7 +129,7 @@ public class OlhoVivoAPITest {
 
     @Test
     public void testGetForecastWithStop() throws Exception {
-        Assume.assumeTrue(isAfter4amAndBeforeMidnight());
+        assumeTrue(isAfter4amAndBeforeMidnight());
 
         ForecastWithStop forecast = api.getForecastWithStop(campanellaStopId);
         BusLineNow[] busLines = forecast.getBusLines();

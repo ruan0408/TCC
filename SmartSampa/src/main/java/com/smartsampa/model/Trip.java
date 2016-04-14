@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 /**
  * Created by ruan0408 on 12/04/2016.
  */
-//@JsonIgnoreProperties({"destinationSign", "numberSign", "workingDays", "heading", "shape", "stops", "farePrice", "isCircular", "olhovivoId", "gtfsId"})
 public abstract class Trip {
 
     private String destinationSign;
@@ -63,6 +62,7 @@ public abstract class Trip {
         if (trip1.getShape() == null) trip1.setShape(trip2.getShape());
         if (trip1.getStops() == null) trip1.setStops(trip2.getStops());
         if (trip1.getWorkingDays() == null) trip1.setWorkingDays(trip2.getWorkingDays());
+        if (trip1.isCircular() == null) trip1.setCircular(trip2.isCircular());
         return trip1;
     }
 

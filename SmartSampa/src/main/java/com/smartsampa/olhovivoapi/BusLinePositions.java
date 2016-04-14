@@ -1,6 +1,5 @@
 package com.smartsampa.olhovivoapi;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
@@ -9,27 +8,21 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class BusLinePositions {
 
-    private String currentTime;
-    private OlhovivoBus[] vehicles;
+    @JsonProperty("hr") public String currentTime;
+    @JsonProperty("vs") public OlhovivoBus[] vehicles;
 
-    @JsonCreator
-    protected BusLinePositions(@JsonProperty("hr") String currentTime,
-                               @JsonProperty("vs") OlhovivoBus[] vehicles) {
+//    @JsonCreator
+//    protected BusLinePositions(@JsonProperty("hr") String currentTime,
+//                               @JsonProperty("vs") OlhovivoBus[] vehicles) {
+//
+//        this.currentTime = currentTime;
+//        this.vehicles = vehicles;
+//    }
 
-        this.currentTime = currentTime;
-        this.vehicles = vehicles;
-    }
-
-    /**
-     * @return The time the response was sent.
-     */
     public String getCurrentTime() {
         return currentTime;
     }
 
-    /**
-     * @return The vehicles on this line.
-     */
     public OlhovivoBus[] getVehicles() {
         return vehicles;
     }

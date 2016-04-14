@@ -8,9 +8,9 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * Created by ruan0408 on 12/02/2016.
  */
-public class BusNow extends OlhovivoBus implements PredictedBus{
+public class BusNow extends OlhovivoBus implements PredictedBus {
 
-    private String predictedArrivalTime;
+    public String predictedArrivalTime;
 
     @JsonCreator
     protected BusNow(@JsonProperty("p") String prefixNumber,
@@ -23,9 +23,6 @@ public class BusNow extends OlhovivoBus implements PredictedBus{
         this.predictedArrivalTime = predictedArrivalTime;
     }
 
-    /**
-     * @return The predicted arrival time of this bus at the related bus stop.
-     */
     public String getPredictedArrivalTime() {
         return predictedArrivalTime;
     }

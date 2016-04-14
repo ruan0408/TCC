@@ -4,7 +4,6 @@ package com.smartsampa.olhovivoapi;
  * Created by ruan0408 on 12/02/2016.
  */
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.smartsampa.model.Trip;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -25,8 +24,9 @@ public class BusLine extends Trip {
     @JsonProperty("Informacoes") public String info;
 
 
-    protected BusLine(int code, String numberSign, int heading,
-                      String destinationSignMTST, String destinationSignSTMT) {
+    public BusLine() {}
+    BusLine(int code, String numberSign, int heading,
+            String destinationSignMTST, String destinationSignSTMT) {
 
         this.code = code;
         this.numberSign = numberSign;
@@ -35,21 +35,21 @@ public class BusLine extends Trip {
         this.destinationSignSTMT = destinationSignSTMT;
     }
 
-    @JsonCreator
-    protected BusLine(@JsonProperty("CodigoLinha") int code,
-                      @JsonProperty("Circular") boolean circular,
-                      @JsonProperty("Letreiro") String numberSign,
-                      @JsonProperty("Sentido") int heading,
-                      @JsonProperty("Tipo") int type,
-                      @JsonProperty("DenominacaoTPTS") String destinationSignMTST,
-                      @JsonProperty("DenominacaoTSTP") String destinationSignSTMT,
-                      @JsonProperty("Informacoes") String info) {
-
-        this(code, numberSign, heading, destinationSignMTST, destinationSignSTMT);
-        this.circular = circular;
-        this.type = type;
-        this.info = info;
-    }
+//    @JsonCreator
+//    protected BusLine(@JsonProperty("CodigoLinha") int code,
+//                      @JsonProperty("Circular") boolean circular,
+//                      @JsonProperty("Letreiro") String numberSign,
+//                      @JsonProperty("Sentido") int heading,
+//                      @JsonProperty("Tipo") int type,
+//                      @JsonProperty("DenominacaoTPTS") String destinationSignMTST,
+//                      @JsonProperty("DenominacaoTSTP") String destinationSignSTMT,
+//                      @JsonProperty("Informacoes") String info) {
+//
+//        this(code, numberSign, heading, destinationSignMTST, destinationSignSTMT);
+//        this.circular = circular;
+//        this.type = type;
+//        this.info = info;
+//    }
 
 
     public int getType() {

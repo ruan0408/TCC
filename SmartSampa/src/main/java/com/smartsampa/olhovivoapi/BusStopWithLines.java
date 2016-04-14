@@ -23,9 +23,6 @@ public class BusStopWithLines {
         this.busLines = busLines;
     }
 
-    /**
-     * @return The bus stop related to the request.
-     */
     public BusStop getBusStop() {
         return busStop;
     }

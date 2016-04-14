@@ -9,8 +9,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class BusStopNow {
 
-    private BusStop busStop;
-    private BusNow[] vehicles;
+    public BusStop busStop;
+    public BusNow[] vehicles;
 
     @JsonCreator
     protected BusStopNow(@JsonProperty("cp") int busStopCode,
@@ -23,16 +23,10 @@ public class BusStopNow {
         this.vehicles = vehicles;
     }
 
-    /**
-     * @return This bus stop.
-     */
     public BusStop getBusStop() {
         return busStop;
     }
 
-    /**
-     * @return The current vehicles that pass by this bus stop.
-     */
     public BusNow[] getVehicles() {
         return vehicles;
     }

@@ -1,6 +1,5 @@
 package com.smartsampa.olhovivoapi;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.smartsampa.model.Bus;
 import com.smartsampa.utils.Point;
@@ -11,46 +10,44 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class OlhovivoBus implements Bus {
 
-    private String prefixNumber;
-    private boolean isWheelChairCapable;
-    private double latitude;
-    private double longitude;
+    @JsonProperty("p") public String prefixNumber;
+    @JsonProperty("a") public boolean isWheelChairCapable;
+    @JsonProperty("py") public double latitude;
+    @JsonProperty("px") public double longitude;
 
-    @JsonCreator
-    protected OlhovivoBus(@JsonProperty("p") String prefixNumber,
-                          @JsonProperty("a")boolean isWheelChairCapable,
-                          @JsonProperty("py")double latitude,
-                          @JsonProperty("px")double longitude) {
+    public OlhovivoBus() {}
+
+    OlhovivoBus(String prefixNumber, boolean isWheelChairCapable,
+                double latitude, double longitude) {
         this.prefixNumber = prefixNumber;
         this.isWheelChairCapable = isWheelChairCapable;
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    /**
-     * @return The prefix number of the bus.
-     */
+//    @JsonCreator
+//    protected OlhovivoBus(@JsonProperty("p") String prefixNumber,
+//                          @JsonProperty("a")boolean isWheelChairCapable,
+//                          @JsonProperty("py")double latitude,
+//                          @JsonProperty("px")double longitude) {
+//        this.prefixNumber = prefixNumber;
+//        this.isWheelChairCapable = isWheelChairCapable;
+//        this.latitude = latitude;
+//        this.longitude = longitude;
+//    }
+
     public String getPrefixNumber() {
         return prefixNumber;
     }
 
-    /**
-     * @return True if the bus is wheelchar capable. False otherwise.
-     */
     public boolean isWheelChairCapable() {
         return isWheelChairCapable;
     }
 
-    /**
-     * @return The latitude coordinate of the bus.
-     */
     public double getLatitude() {
         return latitude;
     }
 
-    /**
-     * @return The longitude coordinate of the bus.
-     */
     public double getLongitude() {
         return longitude;
     }
