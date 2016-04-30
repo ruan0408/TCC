@@ -1,12 +1,16 @@
 package com.smartsampa.olhovivoapi;
 
+import com.smartsampa.busapi2.model.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.function.Predicate;
 
-import static com.smartsampa.busapi.BusAPITestUtils.isAfter4amAndBeforeMidnight;
+import static com.smartsampa.busapi2.model.BusAPITestUtils.isAfter4amAndBeforeMidnight;
 import static org.junit.Assert.*;
 import static org.junit.Assume.*;
 
@@ -45,27 +49,73 @@ public class OlhoVivoAPITest {
     }
 
     @Test
-    public void testSearchBusLines() throws Exception {
-        BusLine[] busLines = api.searchBusLines("800");
-        Predicate<BusLine> containsBusLine8000 =
-                busLine -> busLine.getNumberSign().equals("8000-10");
+    public void testGetTripsByTerm() throws Exception {
+        Set<AbstractTrip> trips = api.getTripsByTerm("8000");
+        assertTrue(trips.stream().anyMatch(t -> t.getNumberSign().equals("8000-10")));
 
-        assertTrue(arrayHasMatch(busLines, containsBusLine8000));
     }
 
     @Test
-    public void testGetBusLineDetails() throws Exception {
-        String response = api.getBusLineDetails(alvimPerua);
-        assertEquals("[]", response);
+    public void testGetStopsByTerm() throws Exception {
+        Set<AbstractStop> stops = api.getStopsByTerm("afonso");
+        assertTrue(stops.stream().anyMatch(s -> s.getName().toLowerCase().contains("afonso")));
     }
 
     @Test
-    public void testSearchBusStops() throws Exception {
-        BusStop[] busStops = api.searchBusStops("afonso");
-        Predicate<BusStop> containsAfonso =
-                stop -> stop.getName().toLowerCase().contains("afonso");
-        assertTrue(arrayHasMatch(busStops, containsAfonso));
+    public void testGetAllRunningBusesOfTrip() throws Exception {
+        assumeTrue(isAfter4amAndBeforeMidnight());
+        Set<Bus> buses = api.getAllRunningBusesOfTrip(bonifacio);
+        assertFalse(buses.isEmpty());
+        assertTrue(buses.stream().allMatch(b -> b.getPrefixNumber() != null));
     }
+
+    @Test
+    public void testGetPredictionsOfTripAtStop() throws Exception {
+        assumeTrue(isAfter4amAndBeforeMidnight());
+        List<PredictedBus> predictedBuses = api.getPredictionsOfTripAtStop(campanellaStopId, alvim);
+        assertFalse(predictedBuses.isEmpty());
+        assertTrue(predictedBuses.stream().allMatch(b -> b.getPrefixNumber() != null));
+    }
+
+    @Test
+    public void testGetPredictionsOfTrip() throws Exception {
+        assumeTrue(isAfter4amAndBeforeMidnight());
+        Map<AbstractStop, List<PredictedBus>> predictions = api.getPredictionsOfTrip(bonifacio);
+        assertFalse(predictions.isEmpty());
+    }
+
+
+    @Test
+    public void testGetPredictionsAtStop() throws Exception {
+        assumeTrue(isAfter4amAndBeforeMidnight());
+        Map<AbstractTrip, List<PredictedBus>> predictions = api.getPredictionsAtStop(campanellaStopId);
+        assertFalse(predictions.isEmpty());
+    }
+
+    @Test
+    public void testGetAllCorridors() throws Exception {
+        List<Corridor> corridors = api.getAllCorridors();
+        Predicate<Corridor> containsCampoLimpo =
+                corridor -> corridor.getName().equalsIgnoreCase("Campo Limpo");
+
+        assertNotNull(corridors);
+        assertTrue(corridors.size() > 0);
+        assertTrue(corridors.stream().anyMatch(containsCampoLimpo));
+    }
+
+    @Test
+    public void testGetStopsByCorridor() throws Exception {
+        List<Stop> stops = api.getStopsByCorridor(campoLimpoCorridor);
+        Predicate<Stop> namesNotNull = stop -> stop.getName() != null;
+
+        assertNotNull(stops);
+        assertTrue(stops.size() > 0);
+        assertTrue(stops.stream().allMatch(namesNotNull));
+    }
+
+
+
+
 
     @Test
     public void testSearchBusStopsByLine() throws Exception {
@@ -76,67 +126,6 @@ public class OlhoVivoAPITest {
 
         assertNotNull(busStops);
         assertTrue(arrayHasMatch(busStops, namesNotNull));
-    }
-
-    @Test
-    public void testSearchBusStopsByCorridor() throws Exception {
-        BusStop[] busStops = api.searchBusStopsByCorridor(campoLimpoCorridor);
-        Predicate<BusStop> namesNotNull = stop -> stop.getName() != null;
-
-        assertNotNull(busStops);
-        assertTrue(busStops.length > 0);
-        assertTrue(arrayHasMatch(busStops, namesNotNull));
-    }
-
-    @Test
-    public void testGetAllBusCorridors() throws Exception {
-        BusCorridor[] corridors = api.getAllBusCorridors();
-        Predicate<BusCorridor> containsCampoLimpo =
-                corridor -> corridor.getName().equalsIgnoreCase("Campo Limpo");
-
-        assertNotNull(corridors);
-        assertTrue(corridors.length > 0);
-        assertTrue(arrayHasMatch(corridors, containsCampoLimpo));
-    }
-
-    @Test
-    public void testSearchBusPositionsByLine() throws Exception {
-        OlhovivoBus[] busesPosition = api.searchBusesByLine(bonifacio).getVehicles();
-
-        assertNotNull(busesPosition);
-        assertTrue(busesPosition.length > 0);
-    }
-
-    @Test
-    public void testGetForecastWithLineAndStop() throws Exception {
-        assumeTrue(isAfter4amAndBeforeMidnight());
-
-        ForecastWithStopAndLine forecast =
-                api.getForecastWithStopAndLine(campanellaStopId, alvim);
-
-        assertNotNull(forecast.getBuses());
-        assertTrue(forecast.getBuses().length > 0);
-    }
-
-    @Test
-    public void testGetForecastWithLine() throws Exception {
-        ForecastWithLine forecast = api.getForecastWithLine(bonifacio);
-        BusStopNow[] busStops = forecast.getBusStops();
-
-        assertNotNull(busStops);
-        assertTrue(busStops.length > 0);
-    }
-
-    @Test
-    public void testGetForecastWithStop() throws Exception {
-        assumeTrue(isAfter4amAndBeforeMidnight());
-
-        ForecastWithStop forecast = api.getForecastWithStop(campanellaStopId);
-        BusLineNow[] busLines = forecast.getBusLines();
-
-        assertEquals(forecast.getBusStop().getOlhovivoId().intValue(), campanellaStopId);
-        assertNotNull(busLines);
-        assertTrue(busLines.length > 0);
     }
 
     private <T> boolean arrayHasMatch(T[] array, Predicate predicate) {

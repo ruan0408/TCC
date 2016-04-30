@@ -1,4 +1,4 @@
-package com.smartsampa.busapi;
+package com.smartsampa.busapi2.impl;
 
 import com.smartsampa.gtfsapi.GtfsAPI;
 import com.smartsampa.gtfsapi.GtfsDownloader;

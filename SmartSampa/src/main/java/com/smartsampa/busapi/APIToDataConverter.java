@@ -3,8 +3,8 @@ package com.smartsampa.busapi;
 import com.smartsampa.olhovivoapi.BusLine;
 import org.apache.commons.lang3.tuple.Pair;
 
-import static com.smartsampa.busapi.BusAPIManager.gtfs;
-import static com.smartsampa.busapi.BusAPIManager.olhovivo;
+import static com.smartsampa.busapi2.impl.BusAPIManager.gtfs;
+import static com.smartsampa.busapi2.impl.BusAPIManager.olhovivo;
 
 /**
  * Created by ruan0408 on 12/03/2016.

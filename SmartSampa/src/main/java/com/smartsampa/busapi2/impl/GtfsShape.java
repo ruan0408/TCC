@@ -1,6 +1,6 @@
-package com.smartsampa.gtfsapi;
+package com.smartsampa.busapi2.impl;
 
-import com.smartsampa.model.Shape;
+import com.smartsampa.busapi2.model.Shape;
 import com.smartsampa.utils.Point;
 import org.onebusaway.gtfs.model.ShapePoint;
 
@@ -17,7 +17,7 @@ public class GtfsShape implements Shape {
     //TODO readability
     public GtfsShape(List<ShapePoint> shapePoints) {
 
-        shapePoints.sort(GtfsAPI.COMP_BY_SHAPE_POINT_SEQUENCE);
+        shapePoints.sort(ShapePoint::compareTo);
 
         points = new Point[shapePoints.size()];
         traveledDistances = new double[shapePoints.size()];

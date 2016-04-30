@@ -1,13 +1,14 @@
 package com.smartsampa.busapi;
 
 
+import com.smartsampa.busapi2.model.BusAPITestUtils;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
 import java.util.Map;
 
-import static com.smartsampa.busapi.BusAPITestUtils.isAfter4amAndBeforeMidnight;
+import static com.smartsampa.busapi2.model.BusAPITestUtils.isAfter4amAndBeforeMidnight;
 import static org.junit.Assert.*;
 import static org.junit.Assume.*;
 import static org.mockito.Mockito.mock;

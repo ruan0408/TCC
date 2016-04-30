@@ -6,8 +6,8 @@ import com.smartsampa.utils.Point;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.smartsampa.busapi.BusAPIManager.gtfs;
-import static com.smartsampa.busapi.BusAPIManager.olhovivo;
+import static com.smartsampa.busapi2.impl.BusAPIManager.gtfs;
+import static com.smartsampa.busapi2.impl.BusAPIManager.olhovivo;
 
 /**
  * Created by ruan0408 on 13/03/2016.
@@ -30,7 +30,7 @@ public class StopFacade {
 
     protected static Stop busStopToStop(BusStop busStop) {
         Stop newStop = new Stop();
-        newStop.setId(busStop.getOlhovivoId());
+        newStop.setId(busStop.getId());
         newStop.setName(busStop.getName());
         newStop.setAddress(busStop.getAddress());
         newStop.setLocation(new Point(busStop.getLatitude(), busStop.getLongitude()));

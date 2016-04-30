@@ -1,4 +1,4 @@
-package com.smartsampa.model;
+package com.smartsampa.busapi2.model;
 
 import com.smartsampa.utils.Point;
 

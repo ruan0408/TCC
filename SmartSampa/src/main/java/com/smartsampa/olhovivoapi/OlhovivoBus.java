@@ -1,9 +1,8 @@
 package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smartsampa.model.Bus;
+import com.smartsampa.busapi2.model.Bus;
 import com.smartsampa.utils.Point;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * Created by ruan0408 on 12/02/2016.
@@ -58,11 +57,12 @@ public class OlhovivoBus implements Bus {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("prefixNumber", prefixNumber)
-                .append("isWheelChairCapable", isWheelChairCapable)
-                .append("latitude", latitude)
-                .append("longitude", longitude)
-                .toString();
+        final StringBuilder sb = new StringBuilder("OlhovivoBus{");
+        sb.append("prefixNumber='").append(prefixNumber).append('\'');
+        sb.append(", isWheelChairCapable=").append(isWheelChairCapable);
+        sb.append(", latitude=").append(latitude);
+        sb.append(", longitude=").append(longitude);
+        sb.append('}');
+        return sb.toString();
     }
 }

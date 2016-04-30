@@ -1,5 +1,6 @@
 package com.smartsampa.busapi;
 
+import com.smartsampa.busapi2.model.BusAPITestUtils;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

@@ -1,4 +1,6 @@
-package com.smartsampa.busapi;
+package com.smartsampa.busapi2.model;
+
+import com.smartsampa.busapi2.impl.BusAPIManager;
 
 import java.time.LocalTime;
 

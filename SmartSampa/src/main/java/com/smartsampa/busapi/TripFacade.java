@@ -1,6 +1,7 @@
 package com.smartsampa.busapi;
 
 import com.smartsampa.gtfsapi.GtfsAPI;
+import com.smartsampa.busapi2.model.Heading;
 import com.smartsampa.olhovivoapi.*;
 import com.smartsampa.utils.Point;
 import org.onebusaway.gtfs.model.ShapePoint;
@@ -9,8 +10,8 @@ import org.onebusaway.gtfs.model.StopTime;
 import java.text.ParseException;
 import java.util.*;
 
-import static com.smartsampa.busapi.BusAPIManager.gtfs;
-import static com.smartsampa.busapi.BusAPIManager.olhovivo;
+import static com.smartsampa.busapi2.impl.BusAPIManager.gtfs;
+import static com.smartsampa.busapi2.impl.BusAPIManager.olhovivo;
 
 /**
  * Created by ruan0408 on 12/03/2016.
@@ -54,7 +55,7 @@ public class TripFacade {
         if (line.getNumberSign().matches("\\w{4}-\\w{2}"))
             fullNumberSign = line.getNumberSign();
 
-        String heading = line.getHeading() == 1 ? "mtst" : "stmt";
+        String heading = line.getHeading() == Heading.SECONDARY_TERMINAL ? "mtst" : "stmt";
 
         return Trip.getTrip(fullNumberSign, heading);
     }

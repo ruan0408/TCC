@@ -5,14 +5,14 @@ package com.smartsampa.olhovivoapi;
  */
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smartsampa.model.Trip;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import com.smartsampa.busapi2.model.Heading;
+import com.smartsampa.busapi2.model.AbstractTrip;
 
 /**
  * Wrapper class for the bus line json returned by the PublicTransportAPI.
  * The fields are not in camel case so we can automatically parse the json.
  * */
-public class BusLine extends Trip {
+public class BusLine extends AbstractTrip {
 //TODO change visibility of all classes from olhovivo, since they are data structures
     @JsonProperty("CodigoLinha") public int code;
     @JsonProperty("Circular") public boolean circular;
@@ -24,37 +24,7 @@ public class BusLine extends Trip {
     @JsonProperty("Informacoes") public String info;
 
 
-    public BusLine() {}
-    BusLine(int code, String numberSign, int heading,
-            String destinationSignMTST, String destinationSignSTMT) {
-
-        this.code = code;
-        this.numberSign = numberSign;
-        this.heading = heading;
-        this.destinationSignMTST = destinationSignMTST;
-        this.destinationSignSTMT = destinationSignSTMT;
-    }
-
-//    @JsonCreator
-//    protected BusLine(@JsonProperty("CodigoLinha") int code,
-//                      @JsonProperty("Circular") boolean circular,
-//                      @JsonProperty("Letreiro") String numberSign,
-//                      @JsonProperty("Sentido") int heading,
-//                      @JsonProperty("Tipo") int type,
-//                      @JsonProperty("DenominacaoTPTS") String destinationSignMTST,
-//                      @JsonProperty("DenominacaoTSTP") String destinationSignSTMT,
-//                      @JsonProperty("Informacoes") String info) {
-//
-//        this(code, numberSign, heading, destinationSignMTST, destinationSignSTMT);
-//        this.circular = circular;
-//        this.type = type;
-//        this.info = info;
-//    }
-
-
-    public int getType() {
-        return type;
-    }
+    public int getType() {return type;}
 
     public String getInfo() {return info;}
 
@@ -69,41 +39,17 @@ public class BusLine extends Trip {
     public int getCode() { return code; }
 
     @Override
-    public Integer getOlhovivoId() {
-        return code;
-    }
+    public String getDestinationSign() {return heading == 1 ? destinationSignMTST : destinationSignSTMT;}
 
     @Override
-    public String getDestinationSign() {
-        return heading == 1 ? destinationSignMTST : destinationSignSTMT;
-    }
+    public String getNumberSign() {return numberSign+"-"+getType();}
 
     @Override
-    public String getNumberSign() {
-        return numberSign+"-"+getType();
-    }
+    public Heading getHeading() {return Heading.getHeadingFromInt(heading);}
 
     @Override
-    public Integer getHeading() {
-        return heading;
-    }
+    public Boolean isCircular() {return circular;}
 
     @Override
-    public Boolean isCircular() {
-        return circular;
-    }
-
-    @Override
-    public String toString() {
-        return new ToStringBuilder(this)
-                .append("code", code)
-                .append("circular", circular)
-                .append("numberSign", numberSign)
-                .append("heading", heading)
-                .append("type", type)
-                .append("destinationSignMTST", destinationSignMTST)
-                .append("destinationSignSTMT", destinationSignSTMT)
-                .append("info", info)
-                .toString();
-    }
+    public Integer getOlhovivoId() {return code;}
 }

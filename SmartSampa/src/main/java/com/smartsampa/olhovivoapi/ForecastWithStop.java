@@ -11,21 +11,8 @@ public class ForecastWithStop {
     @JsonProperty("hr") public String currentTime;
     @JsonProperty("p") public BusStopWithLines busStopWithLines;
 
-//    @JsonCreator
-//    protected ForecastWithStop(@JsonProperty("hr") String currentTime,
-//                               @JsonProperty("p")BusStopWithLines busStopWithLines) {
-//
-//        this.currentTime = currentTime;
-//        this.busStopWithLines = busStopWithLines;
-//    }
-
     public String getCurrentTime() {
         return currentTime;
-    }
-
-    public BusStop getBusStop() {
-        if (busStopWithLines == null) return null;
-        return busStopWithLines.getBusStop();
     }
 
     public BusLineNow[] getBusLines() {

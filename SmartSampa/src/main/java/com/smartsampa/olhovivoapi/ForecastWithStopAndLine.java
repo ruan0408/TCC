@@ -24,11 +24,6 @@ public class ForecastWithStopAndLine {
         return currentTime;
     }
 
-
-    public BusStop getBusStop() {
-        return busStopWithLines.getBusStop();
-    }
-
     public BusLineNow[] getBusLines() {
         return busStopWithLines.getBusLines();
     }

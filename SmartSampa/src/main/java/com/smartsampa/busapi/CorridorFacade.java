@@ -6,7 +6,7 @@ import com.smartsampa.olhovivoapi.BusStop;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.smartsampa.busapi.BusAPIManager.olhovivo;
+import static com.smartsampa.busapi2.impl.BusAPIManager.olhovivo;
 
 /**
  * Created by ruan0408 on 13/03/2016.
@@ -32,6 +32,6 @@ public class CorridorFacade {
     }
 
     private static Corridor busCorridorToCorridor(BusCorridor corridor) {
-        return new Corridor(corridor.getCode(), corridor.getName());
+        return new Corridor(corridor.getId(), corridor.getName());
     }
 }

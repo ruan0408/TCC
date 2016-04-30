@@ -2,8 +2,7 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smartsampa.model.PredictedBus;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import com.smartsampa.busapi2.model.PredictedBus;
 
 /**
  * Created by ruan0408 on 12/02/2016.
@@ -29,8 +28,10 @@ public class BusNow extends OlhovivoBus implements PredictedBus {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("predictedArrivalTime", predictedArrivalTime)
-                .toString();
+        final StringBuilder sb = new StringBuilder("BusNow{");
+        sb.append(super.toString());
+        sb.append("predictedArrivalTime='").append(predictedArrivalTime).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

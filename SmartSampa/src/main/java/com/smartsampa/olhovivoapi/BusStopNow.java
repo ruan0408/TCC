@@ -7,9 +7,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * Created by ruan0408 on 13/02/2016.
  */
-public class BusStopNow {
+public class BusStopNow extends BusStop {
 
-    public BusStop busStop;
     public BusNow[] vehicles;
 
     @JsonCreator
@@ -19,22 +18,18 @@ public class BusStopNow {
                          @JsonProperty("px") double busStopLongitude,
                          @JsonProperty("vs") BusNow[] vehicles ) {
 
-        busStop = new BusStop(busStopCode, busStopName, busStopLatitude, busStopLongitude);
+        this.code = busStopCode;
+        this.name = busStopName;
+        this.latitude = busStopLatitude;
+        this.longitude = busStopLongitude;
         this.vehicles = vehicles;
     }
 
-    public BusStop getBusStop() {
-        return busStop;
-    }
-
-    public BusNow[] getVehicles() {
-        return vehicles;
-    }
+    public BusNow[] getVehicles() {return vehicles;}
 
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("busStop", busStop)
                 .append("vehicles", vehicles)
                 .toString();
     }
