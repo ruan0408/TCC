@@ -3,7 +3,7 @@ package com.smartsampa.olhovivoapi;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.smartsampa.busapi2.model.*;
+import com.smartsampa.busapi.model.*;
 import com.smartsampa.utils.APIConnectionException;
 import com.smartsampa.utils.HttpUrlConnector;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -43,14 +43,14 @@ public class OlhoVivoAPI {
         return response.equalsIgnoreCase("true");
     }
 
-    public Set<AbstractTrip> getTripsByTerm(String searchTerms) {
+    public Set<Trip> getTripsByTerm(String searchTerms) {
         String url = BASE_URL +"/Linha/Buscar?termosBusca="+encodeToURL(searchTerms);
         BusLine[] busLines = performQuery(url, BusLine[].class);
 
         return busLines != null ? new HashSet<>(Arrays.asList(busLines)) : Collections.emptySet();
     }
 
-    public Set<AbstractStop> getStopsByTerm(String searchTerms) {
+    public Set<Stop> getStopsByTerm(String searchTerms) {
         String url = BASE_URL +"/Parada/Buscar?termosBusca="+encodeToURL(searchTerms);
         BusStop[] stops = performQuery(url, BusStop[].class);
 

@@ -2,10 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
-    <excludeFromCompile>
-      <directory url="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi" includeSubdirectories="true" />
-      <directory url="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi" includeSubdirectories="true" />
-    </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />

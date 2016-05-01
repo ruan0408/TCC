@@ -1,6 +1,6 @@
 package com.smartsampa.olhovivoapi;
 
-import com.smartsampa.busapi2.model.*;
+import com.smartsampa.busapi.model.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import static com.smartsampa.busapi2.model.BusAPITestUtils.isAfter4amAndBeforeMidnight;
+import static com.smartsampa.busapi.model.BusAPITestUtils.isAfter4amAndBeforeMidnight;
 import static org.junit.Assert.*;
 import static org.junit.Assume.*;
 
@@ -50,14 +50,14 @@ public class OlhoVivoAPITest {
 
     @Test
     public void testGetTripsByTerm() throws Exception {
-        Set<AbstractTrip> trips = api.getTripsByTerm("8000");
+        Set<Trip> trips = api.getTripsByTerm("8000");
         assertTrue(trips.stream().anyMatch(t -> t.getNumberSign().equals("8000-10")));
 
     }
 
     @Test
     public void testGetStopsByTerm() throws Exception {
-        Set<AbstractStop> stops = api.getStopsByTerm("afonso");
+        Set<Stop> stops = api.getStopsByTerm("afonso");
         assertTrue(stops.stream().anyMatch(s -> s.getName().toLowerCase().contains("afonso")));
     }
 

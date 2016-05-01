@@ -23,13 +23,12 @@ public class ShapefileAPI {
         features = ShapefileHandler.handleShapefile(shapefilePath);
     }
 
-    public List<SimpleFeature> getAllFeatures() {
-        return features;
-    }
+    public List<SimpleFeature> getAllFeatures() {return features;}
 
     public Map<String, List<SimpleFeature>> groupBy(Function<SimpleFeature, String> function) {
          return features.stream().collect(Collectors.groupingBy(function));
     }
+
 
     protected void printProperties() {
         for (SimpleFeature feature : features)

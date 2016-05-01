@@ -5,8 +5,8 @@ package com.smartsampa.olhovivoapi;
  */
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smartsampa.busapi2.model.Heading;
-import com.smartsampa.busapi2.model.AbstractTrip;
+import com.smartsampa.busapi.model.Heading;
+import com.smartsampa.busapi.model.AbstractTrip;
 
 /**
  * Wrapper class for the bus line json returned by the PublicTransportAPI.

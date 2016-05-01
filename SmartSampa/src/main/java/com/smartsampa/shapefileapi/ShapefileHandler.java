@@ -1,6 +1,7 @@
 package com.smartsampa.shapefileapi;
 
 import com.smartsampa.utils.APIConnectionException;
+import com.smartsampa.utils.SmartSampaDir;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.Geometry;
 import org.geotools.data.DataStore;
@@ -27,6 +28,9 @@ public class ShapefileHandler {
 
     private static final char latitudeZoneSP = 'K';
     private static final int longitudeZoneSP = 23;
+
+    private static final String SHAPEFILE_RELATIVE_PATH = "faixa_onibus/sirgas_faixa_onibus.shp";
+    private static final String SHAPEFILE_PATH = SmartSampaDir.getPath()+"/"+SHAPEFILE_RELATIVE_PATH;
 
     public static List<SimpleFeature> handleShapefile(String shapefilePath) {
         try {
