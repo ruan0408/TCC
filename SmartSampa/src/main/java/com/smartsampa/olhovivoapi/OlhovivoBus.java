@@ -24,31 +24,12 @@ public class OlhovivoBus implements Bus {
         this.longitude = longitude;
     }
 
-//    @JsonCreator
-//    protected OlhovivoBus(@JsonProperty("p") String prefixNumber,
-//                          @JsonProperty("a")boolean isWheelChairCapable,
-//                          @JsonProperty("py")double latitude,
-//                          @JsonProperty("px")double longitude) {
-//        this.prefixNumber = prefixNumber;
-//        this.isWheelChairCapable = isWheelChairCapable;
-//        this.latitude = latitude;
-//        this.longitude = longitude;
-//    }
-
     public String getPrefixNumber() {
         return prefixNumber;
     }
 
     public boolean isWheelChairCapable() {
         return isWheelChairCapable;
-    }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
     }
 
     public Point getLocation() {

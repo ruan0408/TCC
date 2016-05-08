@@ -121,15 +121,6 @@ public class OlhoVivoAPI {
         return performQuery(url, BusStop[].class);
     }
 
-    public BusStop[] searchBusStopsByCorridor(int busCorridorCode) {
-        String url = BASE_URL + "/Parada/BuscarParadasPorCorredor?codigoCorredor="+encodeToURL(busCorridorCode+"");
-        return performQuery(url, BusStop[].class);
-    }
-
-    public BusCorridor[] getAllBusCorridors() {
-        String url = BASE_URL + "/Corredor";
-        return performQuery(url, BusCorridor[].class);
-    }
 
 
 

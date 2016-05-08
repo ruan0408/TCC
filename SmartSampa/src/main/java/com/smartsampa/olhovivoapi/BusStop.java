@@ -16,15 +16,6 @@ public class BusStop extends AbstractStop {
     @JsonProperty("Latitude") public double latitude;
     @JsonProperty("Longitude") public double longitude;
 
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
     @Override
     public Integer getId() { return code; }
 

@@ -14,7 +14,6 @@ public class GtfsShape implements Shape {
     private Point[] points;
     private double[] traveledDistances;
 
-    //TODO readability
     public GtfsShape(List<ShapePoint> shapePoints) {
 
         shapePoints.sort(ShapePoint::compareTo);

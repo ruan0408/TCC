@@ -23,26 +23,11 @@ public class BusLine extends AbstractTrip {
     @JsonProperty("DenominacaoTSTP") public String destinationSignSTMT;
     @JsonProperty("Informacoes") public String info;
 
-
-    public int getType() {return type;}
-
-    public String getInfo() {return info;}
-
-    public String getDestinationSignMTST() {
-        return destinationSignMTST;
-    }
-
-    public String getDestinationSignSTMT() {
-        return destinationSignSTMT;
-    }
-
-    public int getCode() { return code; }
-
     @Override
     public String getDestinationSign() {return heading == 1 ? destinationSignMTST : destinationSignSTMT;}
 
     @Override
-    public String getNumberSign() {return numberSign+"-"+getType();}
+    public String getNumberSign() {return numberSign+"-"+type;}
 
     @Override
     public Heading getHeading() {return Heading.getHeadingFromInt(heading);}

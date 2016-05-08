@@ -11,18 +11,6 @@ public class ForecastWithLine {
     @JsonProperty("hr") public String currentTime;
     @JsonProperty("ps") public BusStopNow[] busStops;
 
-//    @JsonCreator
-//    protected ForecastWithLine(@JsonProperty("hr") String currentTime,
-//                               @JsonProperty("ps") BusStopNow[] busStops) {
-//
-//        this.currentTime = currentTime;
-//        this.busStops = busStops;
-//    }
-
-    public String getCurrentTime() {
-        return currentTime;
-    }
-
     public BusStopNow[] getBusStops() {
         return busStops;
     }

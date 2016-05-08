@@ -33,7 +33,6 @@ public class TripTest {
     //TODO test get cirular trip, non circular, hyphenated names
 
 
-    //TODO maybe refactor this test
     @Test
     public void testGetTripsByOneTerm() throws Exception {
         Set<Trip> trips = BusAPI.getTripsByTerm("regina");
@@ -116,7 +115,6 @@ public class TripTest {
         assumeNotNull(predictions);
         assertTrue(predictions.size() > 0);
         assertTrue(predictions.values().stream().anyMatch(buses -> !buses.isEmpty()));
-//        assertTrue(predictions.keySet().stream().anyMatch(stop -> stop.getAddress() != null));
     }
 
     @Test

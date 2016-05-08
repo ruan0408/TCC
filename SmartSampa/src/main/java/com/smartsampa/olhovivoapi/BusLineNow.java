@@ -21,7 +21,7 @@ public class BusLineNow extends BusLine {
                          @JsonProperty("lt1") String destinationSignSTMT,
                          @JsonProperty("qv") int numberOfVehicles,
                          @JsonProperty("vs") BusNow[] vehicles) {
-        //TODO the problem is passing fullNumberSign instead of just numberSign
+
         this.code = busLineCode;
         this.numberSign = getNumberSign(fullNumberSign);
         this.heading = heading;
@@ -32,8 +32,6 @@ public class BusLineNow extends BusLine {
     }
 
     private String getNumberSign(String fullNumberSign) {return fullNumberSign.split("-")[0];}
-
-    public int getNumberOfVehicles() {return numberOfVehicles;}
 
     public BusNow[] getVehicles() {return vehicles;}
 

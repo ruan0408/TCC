@@ -20,14 +20,6 @@ public class ForecastWithStopAndLine {
         this.busStopWithLines = busStopWithLines;
     }
 
-    public String getCurrentTime() {
-        return currentTime;
-    }
-
-    public BusLineNow[] getBusLines() {
-        return busStopWithLines.getBusLines();
-    }
-
     public BusNow[] getBuses() {
         if (busStopWithLines == null) return null;
         return busStopWithLines.getBuses();

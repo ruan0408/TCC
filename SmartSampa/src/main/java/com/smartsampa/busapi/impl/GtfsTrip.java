@@ -25,7 +25,7 @@ public class GtfsTrip extends AbstractTrip {
     static Set<Trip> getGtfsTripsByTerm(String term) {
         return BusAPIManager.gtfs.getTripsByTerm(term).stream()
                 .map(GtfsTrip::new)
-                .flatMap(trip -> Stream.of(trip, trip.cloneChangingHeading()))
+                .flatMap(trip -> Stream.of(trip, trip.cloneChangingHeadingAndDestinationSign()))
                 .collect(toSet());
     }
 
@@ -92,8 +92,14 @@ public class GtfsTrip extends AbstractTrip {
         return gtfsTrip.getId().getId();
     }
 
-    protected GtfsTrip cloneChangingHeading() {
-        GtfsTrip clone = new GtfsTrip (gtfsTrip) {
+    /*
+    * This method creates a clone of this GtfsTrip, but changes the heading
+    * and the destinationSign. It's necessary because the gtfs files have only one entry
+    * for circular trips, while the Olhovivo API has two entries for circular trips.
+    * Therefore we "falsify" one of the sides of the trip.
+    * */
+    private GtfsTrip cloneChangingHeadingAndDestinationSign() {
+        return new GtfsTrip (gtfsTrip) {
             @Override
             public Heading getHeading() {
                 return Heading.reverse(super.getHeading());
@@ -108,6 +114,5 @@ public class GtfsTrip extends AbstractTrip {
                 return getHeading() == Heading.SECONDARY_TERMINAL ? stSign : mtSign;
             }
         };
-        return clone;
     }
 }

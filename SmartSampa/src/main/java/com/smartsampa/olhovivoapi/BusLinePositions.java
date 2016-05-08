@@ -12,10 +12,6 @@ public class BusLinePositions {
     @JsonProperty("hr") public String currentTime;
     @JsonProperty("vs") public OlhovivoBus[] vehicles;
 
-    public String getCurrentTime() {
-        return currentTime;
-    }
-
     public Bus[] getVehicles() {return vehicles;}
 
     @Override
