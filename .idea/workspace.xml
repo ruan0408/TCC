@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="Adds comment to">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsShape.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsShape.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLineNow.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLineNow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLinePositions.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLinePositions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStop.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithLine.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStop.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhovivoBus.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhovivoBus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" afterPath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" />
-    </list>
+    <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="" />
     <ignored path="TheMachinePlugin.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,8 +44,8 @@
       <file leaf-file-name="GtfsTrip.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.429477">
-              <caret line="100" column="59" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="59" />
+            <state vertical-scroll-proportion="1.3408663">
+              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
                 <element signature="e#3046#3047#0" expanded="true" />
                 <element signature="e#3120#3121#0" expanded="true" />
@@ -1767,13 +1753,7 @@
       <workItem from="1460640237373" duration="38462000" />
       <workItem from="1461114464078" duration="80579000" />
       <workItem from="1462041932652" duration="15625000" />
-      <workItem from="1462679884227" duration="2081000" />
-    </task>
-    <task id="LOCAL-00004" summary="Doesn't build tool window if project doesn't support the Smart City Framework&#10;">
-      <created>1455130597881</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1455130597881</updated>
+      <workItem from="1462679884227" duration="2238000" />
     </task>
     <task id="LOCAL-00005" summary="Changes run simulator icon and toolwindow icon.">
       <created>1455158206633</created>
@@ -2063,7 +2043,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462067329156</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Adds comment to cloneChangingHeadingAndDestinationSign.">
+      <created>1462721900449</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1462721900450</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2099,7 +2085,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="746492000" />
+    <option name="totallyTimeSpent" value="746649000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2121,9 +2107,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987952" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2060241" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2060241" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987952" sideWeight="0.48569384" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.4901257" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2201,7 +2187,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Implementation of functionality seems to be finished. Still need to improve error handling and download the gtfs automatically.&#10;Removes gtfs." />
     <MESSAGE value="Renaming packages and directories." />
     <MESSAGE value="removing files?" />
     <MESSAGE value="Trying to automatically download the gtfs file." />
@@ -2226,7 +2211,8 @@
     <MESSAGE value="Removes useless code on olhovivo classes. Next step is to test all the functionality on the new Trip class." />
     <MESSAGE value="Adds tests to Trip, Stop and Corridor. Still needing to implement BusLane in the new architecture." />
     <MESSAGE value="Redesigning complete. Adds the Mergeable interface. Still needs to check all the TODOs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Redesigning complete. Adds the Mergeable interface. Still needs to check all the TODOs." />
+    <MESSAGE value="Adds comment to cloneChangingHeadingAndDestinationSign." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds comment to cloneChangingHeadingAndDestinationSign." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2670,8 +2656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.429477">
-          <caret line="100" column="59" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="59" />
+        <state vertical-scroll-proportion="1.3408663">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="e#3046#3047#0" expanded="true" />
             <element signature="e#3120#3121#0" expanded="true" />
