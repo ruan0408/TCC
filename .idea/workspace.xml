@@ -41,15 +41,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GtfsTrip.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GtfsTrip.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3408663">
+            <state vertical-scroll-proportion="0.0">
               <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
                 <element signature="e#3046#3047#0" expanded="true" />
                 <element signature="e#3120#3121#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1283677">
+              <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/impl/GtfsShape.java" />
         <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi2/model/BusAPITestUtils.java" />
         <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java" />
         <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/impl/GtfsStop.java" />
@@ -182,6 +191,7 @@
         <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" />
         <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsShape.java" />
         <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1753,7 +1763,7 @@
       <workItem from="1460640237373" duration="38462000" />
       <workItem from="1461114464078" duration="80579000" />
       <workItem from="1462041932652" duration="15625000" />
-      <workItem from="1462679884227" duration="2238000" />
+      <workItem from="1462679884227" duration="2547000" />
     </task>
     <task id="LOCAL-00005" summary="Changes run simulator icon and toolwindow icon.">
       <created>1455158206633</created>
@@ -2085,7 +2095,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="746649000" />
+    <option name="totallyTimeSpent" value="746958000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2107,9 +2117,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987952" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2060241" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2060241" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987952" sideWeight="0.48569384" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.4901257" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2225,17 +2235,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding>
-            <element signature="e#520#521#0" expanded="false" />
-            <element signature="e#560#561#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/ShapefileBusLane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2656,12 +2655,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3408663">
+        <state vertical-scroll-proportion="0.0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="e#3046#3047#0" expanded="true" />
             <element signature="e#3120#3121#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1283677">
+          <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
