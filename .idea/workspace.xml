@@ -1,36 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="11ade0a8-713c-4bab-baea-524317b5e11c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/ruan0408.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/SmartSampa.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsShape.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsStop.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/ShapefileBusLane.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractCorridor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractStop.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractTrip.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Bus.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/BusLane.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Corridor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Heading.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Mergeable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/PredictedBus.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Shape.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Stop.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Trip.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsDownloader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusCorridor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLineNow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLinePositions.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusNow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStop.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopNow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopWithLines.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithLine.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStop.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhovivoBus.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/FloodFacade.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/FloodPoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/Pluviometer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/PluviometerFacade.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/APIConnectionException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/HttpUrlConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/Point.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/SmartSampaDir.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/Utils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/resources/downloadGtfs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/BusAPITestUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/BusLaneTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/CorridorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/StopTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsAPITest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsDownloaderTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsHandlerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/risk/PluviometerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/shapefileapi/ShapefileAPITest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/SmartSampa.iml" afterPath="$PROJECT_DIR$/SmartSampa/SmartSampa.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/pom.xml" afterPath="$PROJECT_DIR$/SmartSampa/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPI.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractTrip.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractTrip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopWithLines.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopWithLines.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java" afterPath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/StopTest.java" afterPath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/StopTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" afterPath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsAPITest.java" afterPath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsAPITest.java" />
     </list>
-    <ignored path="TheMachinePlugin.iws" />
+    <ignored path="TCC.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
-    <ignored path="$PROJECT_DIR$/WebDemo/target/" />
-    <ignored path="$PROJECT_DIR$/PublicTransportAPI/target/" />
-    <ignored path="$PROJECT_DIR$/SmartSampaRestfulAPI/target/" />
-    <ignored path="$PROJECT_DIR$/RestfulAPI/target/" />
-    <ignored path="$PROJECT_DIR$/SmartSampa/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,186 +83,73 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/SmartSampa$All_in_PublicTransportAPI.coverage" NAME="All in PublicTransportAPI Coverage Results" MODIFIED="1458008516512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SmartCity$OlhoVivoAPITest.coverage" NAME="OlhoVivoAPITest Coverage Results" MODIFIED="1455559801979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.intellij.olhovivoapi.*</FILTER>
-    </SUITE>
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="TheMachinePlugin" />
+    <favorites_list name="TCC" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StopTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/StopTest.java">
+    <leaf>
+      <file leaf-file-name="BusAPIManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
-              <folding />
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#697#698#0" expanded="false" />
+                <element signature="e#731#732#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GtfsAPI.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java">
+      <file leaf-file-name="BusAPI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smartsampa/busapi/impl/BusAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2532833">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TripTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java">
+      <file leaf-file-name="ShapefileHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GtfsHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-              <folding />
+            <state vertical-scroll-proportion="0.93932587">
+              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Action" />
-        <option value="HTML File" />
-        <option value="Singleton" />
-        <option value="Enum" />
-        <option value="JUnit4 Test Class" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="ruan0408" />
-      </list>
-    </option>
-    <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/model/AbstractTrip.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi2/model/TripTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi2/model/StopTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/Corridor.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/impl/ShapefileCorridor.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/model/Corridor.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/impl/AbstractCorridor.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusCorridor.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi2/model/CorridorTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/model/AbstractCorridor.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/impl/BusAPIManager.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/model/BusLane.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi2/impl/ShapefileBusLane.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi2/impl/BusLaneTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi2/model/BusLaneTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractCorridor.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Mergeable.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractStop.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsStop.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/ShapefileBusLane.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLineNow.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLinePositions.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStop.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithLine.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStop.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhovivoBus.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsShape.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/Pluviometer.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopWithLines.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Stop.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Trip.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractTrip.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/StopTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPI.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/pom.xml" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/resources/data-source.xml" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsHibernateTest.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/test/resources/hibernate-configuration.xml" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java" />
-        <option value="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBowerSettings">
-    <exe-path />
-    <config-path />
-  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Bundled (Maven 3)" />
-        <option name="pluginUpdatePolicy" value="UPDATE" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -254,43 +185,6 @@
     <option name="width" value="1440" />
     <option name="height" value="797" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android Lint</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Plugin DevKit</id>
-          </State>
-          <State>
-            <id>Probable bugsJava</id>
-          </State>
-          <State>
-            <id>Resource management issuesJava</id>
-          </State>
-          <State>
-            <id>Serialization issuesJava</id>
-          </State>
-          <State>
-            <id>UI Form Problems</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>MissingMnemonic</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -298,16 +192,16 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
-    <ConfirmationsSetting value="2" id="Remove" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages PackagesPane="false" ProjectPane="true" />
+      <flattenPackages />
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages PackagesPane="false" />
+      <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -316,114 +210,172 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartsampa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="PublicTransportAPI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="SmartSampa">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemId" value="TCC" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemId" value="TCC" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartSampa" />
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartsampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartsampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartsampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartsampa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="busapi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,87 +394,20 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.256654" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi2/model" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="right" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="539" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="136" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="146" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="150" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="936" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="146" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="150" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="936" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/faculdade/tcc/libraries/jcoord-1.0.jar!/" />
   </component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.intellij.busapi" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.smartsampa.busapi2.impl" />
-      <recent name="com.smartsampa.busapi2.model" />
-      <recent name="com.smartsampa.model" />
-      <recent name="com.smartsampa.risk" />
-      <recent name="com.smartsampa.shapefileapi" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.smartsampa.busapi2.model" />
-      <recent name="com.smartsampa.shapefileapi" />
-      <recent name="com.smartsampa" />
-      <recent name="com.intellij" />
-      <recent name="com.intellij.olhovivoapi" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/PublicTransportAPI/src/main/resources" />
-      <recent name="$PROJECT_DIR$/PublicTransportAPI2" />
-      <recent name="$PROJECT_DIR$/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.intellij.model" />
-      <recent name="com.intellij.olhovivoapi" />
-    </key>
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="com.smartsampa.busapi.impl.BusAPI" />
-      <recent name="com.smartsampa.busapi.impl.GtfsStop" />
-      <recent name="com.smartsampa.busapi.impl.GtfsTrip" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.intellij.plugin" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.com.smartsampa.busapi.model in SmartSampa">
-    <configuration default="false" name="com.smartsampa.busapi.model in SmartSampa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.com.smartsampa.busapi.model in TCC">
+    <configuration default="false" name="com.smartsampa.busapi.model in TCC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.smartsampa.busapi.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="SmartSampa" />
+      <module name="TCC" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.smartsampa.busapi.model" />
@@ -541,141 +426,8 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TripTest.testGetStops" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.smartsampa.busapi.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SmartSampa" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.busapi.model" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.busapi.model.TripTest" />
-      <option name="METHOD_NAME" value="testGetStops" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TripTest.testGetTripByTwoTerms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.smartsampa.busapi.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SmartSampa" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.busapi.model" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.busapi.model.TripTest" />
-      <option name="METHOD_NAME" value="testGetTripByTwoTerms" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="StopTest.testGetStopById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.smartsampa.busapi.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SmartSampa" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.busapi.model" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.busapi.model.StopTest" />
-      <option name="METHOD_NAME" value="testGetStopById" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GtfsHibernateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.smartsampa.gtfsapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="SmartSampa" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.smartsampa.gtfsapi" />
-      <option name="MAIN_CLASS_NAME" value="com.smartsampa.gtfsapi.GtfsHibernateTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2meplugin.run.J2MEConfigurationType" factoryName="J2ME">
-      <module name="" />
-      <USER_OPTIONS />
-      <option name="TARGET_DEVICE_NAME" />
-      <option name="COMMAND_LINE_PARAMETERS" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="JAD_NAME" value="" />
-      <option name="IS_CLASSES" value="false" />
-      <option name="IS_OTA" value="false" />
-      <option name="INSTALL" />
-      <option name="REMOVE" />
-      <option name="RUN" />
-      <option name="TRANSIENT" />
-      <option name="FORCE" />
-      <option name="TO_START" />
-      <option name="SELECTION" value="0" />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="SmartSampa" />
+      <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <method />
@@ -851,7 +603,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="TARGET" value="" />
       <option name="SETTINGS_FILE" value="" />
@@ -907,20 +659,6 @@
       </option>
       <option name="moduleName" value="" />
       <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="DOMAIN" value="" />
-        <option name="PRESERVE" value="false" />
-        <option name="COMPATIBILITY" value="false" />
-        <option name="VIRTUAL_SERVER" />
-        <option name="USERNAME" value="admin" />
-        <option name="PASSWORD" value="" />
-      </server-settings>
-      <predefined_log_file id="GlassFish" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -1024,7 +762,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="TheMachinePlugin" />
+      <module name="TCC" />
       <envs />
       <method />
     </configuration>
@@ -1040,28 +778,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1071,7 +787,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
       <method />
@@ -1085,7 +801,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
       <method />
@@ -1101,7 +817,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
@@ -1208,35 +924,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="heroku-deploy" factoryName="Heroku Deployment" server-name="Heroku">
-      <deployment type="module" name="WebApp">
-        <settings>
-          <option name="host" value="" />
-        </settings>
-      </deployment>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="WebApp:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1260,7 +948,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -1280,7 +968,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -1300,7 +988,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -1322,7 +1010,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -1345,7 +1033,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PublicTransportAPI" />
+      <module name="TCC" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -1376,20 +1064,12 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.com.smartsampa.busapi.model in SmartSampa" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TripTest.testGetStops" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TripTest.testGetTripByTwoTerms" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StopTest.testGetStopById" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.GtfsHibernateTest" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.com.smartsampa.busapi.model in TCC" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.com.smartsampa.busapi.model in SmartSampa" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TripTest.testGetStops" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GtfsHibernateTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StopTest.testGetStopById" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TripTest.testGetTripByTwoTerms" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.com.smartsampa.busapi.model in TCC" />
       </list>
     </recent_temporary>
   </component>
@@ -1399,542 +1079,59 @@
     </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dd36e970-0dd1-4f5f-9870-c0e887a26f3d" name="Default" comment="" />
-      <created>1454350616932</created>
+      <changelist id="11ade0a8-713c-4bab-baea-524317b5e11c" name="Default" comment="" />
+      <created>1463795425289</created>
       <option name="number" value="Default" />
-      <updated>1454350616932</updated>
-      <workItem from="1454350619371" duration="5637000" />
-      <workItem from="1454517680378" duration="245000" />
-      <workItem from="1454972270791" duration="4903000" />
-      <workItem from="1454984835329" duration="1513000" />
-      <workItem from="1454990537215" duration="336000" />
-      <workItem from="1454991012010" duration="836000" />
-      <workItem from="1455032388352" duration="667000" />
-      <workItem from="1455034318002" duration="3551000" />
-      <workItem from="1455044059240" duration="6355000" />
-      <workItem from="1455056693377" duration="3837000" />
-      <workItem from="1455066870993" duration="18541000" />
-      <workItem from="1455132029438" duration="14130000" />
-      <workItem from="1455227357321" duration="53137000" />
-      <workItem from="1455557253536" duration="2127000" />
-      <workItem from="1455559794032" duration="53496000" />
-      <workItem from="1455843136091" duration="61326000" />
-      <workItem from="1456235790418" duration="8314000" />
-      <workItem from="1456277223012" duration="2696000" />
-      <workItem from="1456303663964" duration="21261000" />
-      <workItem from="1456450218973" duration="2440000" />
-      <workItem from="1456504060190" duration="12000" />
-      <workItem from="1456504103786" duration="908000" />
-      <workItem from="1456505521545" duration="859000" />
-      <workItem from="1456506392009" duration="1766000" />
-      <workItem from="1456508796223" duration="4187000" />
-      <workItem from="1456602552646" duration="5549000" />
-      <workItem from="1456609288885" duration="172000" />
-      <workItem from="1456609510404" duration="6280000" />
-      <workItem from="1456683510744" duration="4320000" />
-      <workItem from="1456710300896" duration="15322000" />
-      <workItem from="1456880271135" duration="8000" />
-      <workItem from="1457288830558" duration="15040000" />
-      <workItem from="1457452027619" duration="16000" />
-      <workItem from="1457452047653" duration="27000" />
-      <workItem from="1457452103499" duration="5828000" />
-      <workItem from="1457533262588" duration="79551000" />
-      <workItem from="1457898670503" duration="59112000" />
-      <workItem from="1458614349329" duration="3003000" />
-      <workItem from="1458617435199" duration="387000" />
-      <workItem from="1458618597361" duration="35013000" />
-      <workItem from="1459090290901" duration="3118000" />
-      <workItem from="1459335340000" duration="61000" />
-      <workItem from="1459883937711" duration="966000" />
-      <workItem from="1460123026241" duration="14717000" />
-      <workItem from="1460151473636" duration="161000" />
-      <workItem from="1460151661474" duration="167000" />
-      <workItem from="1460151850446" duration="3285000" />
-      <workItem from="1460176512441" duration="11917000" />
-      <workItem from="1460228544719" duration="5097000" />
-      <workItem from="1460243041704" duration="6258000" />
-      <workItem from="1460253300955" duration="10690000" />
-      <workItem from="1460422411598" duration="266000" />
-      <workItem from="1460464738647" duration="50334000" />
-      <workItem from="1460640237373" duration="38462000" />
-      <workItem from="1461114464078" duration="80579000" />
-      <workItem from="1462041932652" duration="15625000" />
-      <workItem from="1462679884227" duration="5894000" />
-      <workItem from="1462981909324" duration="620000" />
-      <workItem from="1463190730694" duration="473000" />
-      <workItem from="1463446162427" duration="22883000" />
-      <workItem from="1463689994016" duration="99000" />
-      <workItem from="1463690208538" duration="12659000" />
+      <updated>1463795425289</updated>
+      <workItem from="1463795426481" duration="557000" />
     </task>
-    <task id="LOCAL-00005" summary="Changes run simulator icon and toolwindow icon.">
-      <created>1455158206633</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1455158206634</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Http post working now">
-      <created>1455286970493</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1455286970493</updated>
-    </task>
-    <task id="LOCAL-00007" summary="API Wrapper half way through.">
-      <created>1455391129797</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1455391129797</updated>
-    </task>
-    <task id="LOCAL-00008" summary="API Wrapper half way through.">
-      <created>1455391150930</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1455391150930</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Writing methos for wrapper classes.">
-      <created>1455410033504</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1455410033505</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Writing methos for wrapper classes.">
-      <created>1455411474196</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1455411474196</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Trying to delegate instead of hierarchy with jackson.">
-      <created>1455427938865</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1455427938865</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Delagating instead of using hierarchy. Still need to create useful getter methods.">
-      <created>1455470160185</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1455470160185</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Creates acess methods and necessary documentation. Still need some testing on the bean classes.">
-      <created>1455500792924</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1455500792924</updated>
-    </task>
-    <task id="LOCAL-00014" summary="workspace.xml...">
-      <created>1455557485315</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1455557485315</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Accomodating the OlhoVivoAPI on its own module.">
-      <created>1455559572594</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1455559572594</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Beginning use of gtfs module.">
-      <created>1455680075311</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1455680075311</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Integrating gtfs">
-      <created>1455723521523</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1455723521523</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Adds searchTrip to API and getDepartureInterval to Trip.">
-      <created>1455832912077</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1455832912077</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Implements getDepartureIntervalNow, getDetails and getWorkingDays on Trip.">
-      <created>1455847220095</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1455847220095</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Implementing getAllStops. Still need to try to use olhovivo to get more information.">
-      <created>1455909766534</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1455909766534</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Adds more functionality to Trip and more tests.">
-      <created>1455981288514</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1455981288514</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Finishes Trip functionalities, adds Corridor's. Still need to add Stop's.">
-      <created>1456075477955</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1456075477955</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Implementation of functionality seems to be finished. Still need to improve error handling and download the gtfs automatically.&#10;Removes gtfs.">
-      <created>1456107665845</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1456107665845</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Renaming packages and directories.">
-      <created>1456238432155</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1456238432155</updated>
-    </task>
-    <task id="LOCAL-00025" summary="removing files?">
-      <created>1456238606129</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1456238606129</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Trying to automatically download the gtfs file.">
-      <created>1456276979916</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1456276979916</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Trying to automatically download the gtfs file.">
-      <created>1456277077777</created>
-      <option name="number" value="00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1456277077777</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Untracking gtfs files.">
-      <created>1456277752052</created>
-      <option name="number" value="00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1456277752052</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Untracking gtfs files.">
-      <created>1456278696547</created>
-      <option name="number" value="00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1456278696547</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Adding python script for downloading gtfs.">
-      <created>1456375379601</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1456375379601</updated>
-    </task>
-    <task id="LOCAL-00031" summary="gtfs being downloaded automatically to ~/SmartSampa/gtfs-sp">
-      <created>1456712224445</created>
-      <option name="number" value="00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1456712224445</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Deploy">
-      <created>1457534584974</created>
-      <option name="number" value="00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1457534584974</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Deploy">
-      <created>1457535275111</created>
-      <option name="number" value="00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1457535275111</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Makes APIConnectionException extend RuntimeException.">
-      <created>1457570443631</created>
-      <option name="number" value="00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1457570443631</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Refactors GtfsAPI creating GtfsHandler and GtfsDownloader.">
-      <created>1457740531427</created>
-      <option name="number" value="00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1457740531428</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Refactors PublicTransportAPI.">
-      <created>1458008953783</created>
-      <option name="number" value="00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1458008953783</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Removes BusAPIUser.">
-      <created>1458096551034</created>
-      <option name="number" value="00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1458096551034</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Mavenizes project and excludes the SmartSampa module.">
-      <created>1458617765572</created>
-      <option name="number" value="00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1458617765572</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Mavenizes project and excludes the SmartSampa module.">
-      <created>1458617791300</created>
-      <option name="number" value="00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1458617791300</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Adds the BusLane class to the busapi package. Adds static initialization to ShapefileApi.">
-      <created>1458702241284</created>
-      <option name="number" value="00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1458702241284</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Adds dependency injection to gtfsapi module.">
-      <created>1458706912931</created>
-      <option name="number" value="00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1458706912931</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Adds new fields to BusLane.">
-      <created>1458757343116</created>
-      <option name="number" value="00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1458757343116</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Excluding files from the old SmartSampa module from git.">
-      <created>1458757820247</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1458757820247</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Adds assumptions to tests that fail if run after midnight and before 4am.">
-      <created>1458764640246</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1458764640246</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Adds API to pluviometer data and refactors Shapefile API.">
-      <created>1460150718957</created>
-      <option name="number" value="00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1460150718957</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Scatters DataToAPIConverter methods to the Facades and refactors collector methods to use Util.convert...">
-      <created>1460229440014</created>
-      <option name="number" value="00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1460229440014</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Updating intellij...">
-      <created>1460465133919</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1460465133919</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Updating intellij...">
-      <created>1460465244428</created>
-      <option name="number" value="00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1460465244428</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Initiates redesign of the busapi.">
-      <created>1460577189369</created>
-      <option name="number" value="00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1460577189369</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Removes useless code on olhovivo classes. Next step is to test all the functionality on the new Trip class.">
-      <created>1460595002405</created>
-      <option name="number" value="00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1460595002418</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Adds tests to Trip, Stop and Corridor. Still needing to implement BusLane in the new architecture.">
-      <created>1461982973500</created>
-      <option name="number" value="00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1461982973506</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Redesigning complete. Adds the Mergeable interface. Still needs to check all the TODOs.">
-      <created>1462067329155</created>
-      <option name="number" value="00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1462067329156</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Adds comment to cloneChangingHeadingAndDestinationSign.">
-      <created>1462721900449</created>
-      <option name="number" value="00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1462721900450</updated>
-    </task>
-    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GtfsHibernateTest - 2016.05.20 at 16h 29m 48s.xml">
-      <configuration name="GtfsHibernateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GtfsHibernateTest - 2016.05.20 at 16h 32m 17s.xml">
-      <configuration name="GtfsHibernateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GtfsHibernateTest - 2016.05.20 at 16h 41m 58s.xml">
-      <configuration name="GtfsHibernateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GtfsHibernateTest - 2016.05.20 at 16h 49m 09s.xml">
-      <configuration name="GtfsHibernateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GtfsHibernateTest - 2016.05.20 at 16h 52m 24s.xml">
-      <configuration name="GtfsHibernateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GtfsHibernateTest - 2016.05.20 at 18h 07m 21s.xml">
-      <configuration name="GtfsHibernateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GtfsHibernateTest - 2016.05.20 at 18h 07m 47s.xml">
-      <configuration name="GtfsHibernateTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TripTest_testGetStops - 2016.05.20 at 16h 15m 48s.xml">
-      <configuration name="TripTest.testGetStops" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TripTest_testGetStops - 2016.05.20 at 18h 19m 42s.xml">
-      <configuration name="TripTest.testGetStops" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_smartsampa_busapi_model_in_SmartSampa - 2016.05.20 at 18h 24m 38s.xml">
-      <configuration name="com.smartsampa.busapi.model in SmartSampa" configurationId="JUnit" />
+    <history-entry file="com_smartsampa_busapi_model_in_TCC - 2016.05.20 at 22h 58m 23s.xml">
+      <configuration name="com.smartsampa.busapi.model in TCC" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="787039000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="557000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19759037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253012" sideWeight="0.4914163" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987952" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20425531" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33758864" sideWeight="0.48569384" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31688127" sideWeight="0.4901257" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.50668895" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27710843" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gerrit" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.87349397" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27753934" sideWeight="0.50987434" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24096386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gerrit" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987952" sideWeight="0.5143061" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.87349397" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27710843" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3248227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32624114" sideWeight="0.4914163" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2070922" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2987952" sideWeight="0.48569384" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17739628" sideWeight="0.4901257" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27753934" sideWeight="0.50987434" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24255319" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.50668895" order="3" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Renaming packages and directories." />
-    <MESSAGE value="removing files?" />
-    <MESSAGE value="Trying to automatically download the gtfs file." />
-    <MESSAGE value="Untracking gtfs files." />
-    <MESSAGE value="Adding python script for downloading gtfs." />
-    <MESSAGE value="gtfs being downloaded automatically to ~/SmartSampa/gtfs-sp" />
-    <MESSAGE value="Deploy" />
-    <MESSAGE value="Makes APIConnectionException extend RuntimeException." />
-    <MESSAGE value="Refactors GtfsAPI creating GtfsHandler and GtfsDownloader." />
-    <MESSAGE value="Refactors PublicTransportAPI." />
-    <MESSAGE value="Removes BusAPIUser." />
-    <MESSAGE value="Mavenizes project and excludes the SmartSampa module." />
-    <MESSAGE value="Adds the BusLane class to the busapi package. Adds static initialization to ShapefileApi." />
-    <MESSAGE value="Adds dependency injection to gtfsapi module." />
-    <MESSAGE value="Adds new fields to BusLane." />
-    <MESSAGE value="Excluding files from the old SmartSampa module from git." />
-    <MESSAGE value="Adds assumptions to tests that fail if run after midnight and before 4am." />
-    <MESSAGE value="Adds API to pluviometer data and refactors Shapefile API." />
-    <MESSAGE value="Scatters DataToAPIConverter methods to the Facades and refactors collector methods to use Util.convert..." />
-    <MESSAGE value="Updating intellij..." />
-    <MESSAGE value="Initiates redesign of the busapi." />
-    <MESSAGE value="Removes useless code on olhovivo classes. Next step is to test all the functionality on the new Trip class." />
-    <MESSAGE value="Adds tests to Trip, Stop and Corridor. Still needing to implement BusLane in the new architecture." />
-    <MESSAGE value="Redesigning complete. Adds the Mergeable interface. Still needs to check all the TODOs." />
-    <MESSAGE value="Adds comment to cloneChangingHeadingAndDestinationSign." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds comment to cloneChangingHeadingAndDestinationSign." />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="22" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1942,374 +1139,44 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4197349">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/CorridorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#697#698#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/BusLaneTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smartsampa/busapi/impl/BusAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46028882">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhovivoBus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52369076">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54239404">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20573565">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22069825">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6239601">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46758103">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/ShapefileBusLane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27238807">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/Pluviometer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42910448">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusCorridor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18691589">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28037384">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19626169">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopWithLines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32897195">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopNow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5794392">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24485981">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusNow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13271028">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLinePositions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3364486">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Stop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5721393">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Trip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80431175">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17412935">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLineNow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63653135">
-          <caret line="33" column="94" selection-start-line="33" selection-start-column="94" selection-end-line="33" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06749556">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Mergeable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55851066">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17553191">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractCorridor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44850498">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractTrip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24937657">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3179551">
-          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.93932587">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#541#542#0" expanded="false" />
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#1012#1013#0" expanded="false" />
-            <element signature="e#1061#1062#0" expanded="false" />
-            <element signature="e#1112#1113#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1378#1379#0" expanded="false" />
-            <element signature="e#1438#1439#0" expanded="false" />
-            <element signature="e#1490#1491#0" expanded="false" />
-            <element signature="e#1544#1545#0" expanded="false" />
-            <element signature="e#1934#1935#0" expanded="false" />
-            <element signature="e#1986#1987#0" expanded="false" />
-            <element signature="e#2431#2432#0" expanded="false" />
-            <element signature="e#2478#2479#0" expanded="false" />
-            <element signature="e#2974#2975#0" expanded="false" />
-            <element signature="e#3048#3049#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8097686">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsDownloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15957446">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/onebusaway/onebusaway-gtfs-hibernate/1.3.4/onebusaway-gtfs-hibernate-1.3.4.jar!/META-INF/maven/org.onebusaway/onebusaway-gtfs-hibernate/pom.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/onebusaway/onebusaway-gtfs/1.3.4/onebusaway-gtfs-1.3.4.jar!/org/onebusaway/gtfs/serialization/GtfsReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8324022">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/onebusaway/onebusaway-csv-entities/1.1.4/onebusaway-csv-entities-1.1.4.jar!/org/onebusaway/csv_entities/CsvEntityReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.92178774">
-          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/onebusaway/onebusaway-gtfs-hibernate/1.3.4/onebusaway-gtfs-hibernate-1.3.4.jar!/org/onebusaway/gtfs/model/GtfsMapping.hibernate.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3529413">
-          <caret line="49" column="69" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/onebusaway/onebusaway-gtfs-hibernate/1.3.4/onebusaway-gtfs-hibernate-1.3.4.jar!/org/onebusaway/gtfs/impl/HibernateGtfsRelationalDaoImpl.hibernate.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.875">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/StopTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/onebusaway/onebusaway-gtfs-hibernate/1.3.4/onebusaway-gtfs-hibernate-1.3.4.jar!/org/onebusaway/gtfs/impl/HibernateOperationsImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.033519555">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2532833">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArquillianSettingsConfigurable.UI">
+      <state key="ArtifactsStructureConfigurable.UI">
         <settings>
+          <artifact-editor />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2319,27 +1186,13 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>SmartSampa:jar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.256654" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Python</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.256654" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -2347,11 +1200,11 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>commons-beanutils-1.9.2</last-edited>
+          <last-edited>gluegen-rt</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.256654" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -2363,7 +1216,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.256654" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -2371,11 +1224,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SmartSampa</last-edited>
+          <last-edited>TCC</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.256654" />
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -2383,7 +1237,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>IntelliJ IDEA IU-143.1821.5</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2399,15 +1253,12 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.256654" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
         </settings>
       </state>
     </states>
-  </component>
-  <component name="mavenExecuteGoalHistory">
-    <option value="$PROJECT_DIR$/SmartSampa" />
   </component>
 </project>

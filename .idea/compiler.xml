@@ -23,13 +23,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="PublicTransportAPI" />
-        <module name="RestfulAPI" />
-        <module name="SmartSampa" />
+        <module name="TCC" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="SmartSampa" target="1.8" />
+    <bytecodeTargetLevel>
+      <module name="TCC" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
