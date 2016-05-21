@@ -9,7 +9,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class BusStopWithLines extends BusStop {
 
-    private BusLineNow[] busLines;
+    public BusLineNow[] busLines;
 
     @JsonCreator
     protected BusStopWithLines(@JsonProperty("cp") int busStopCode,

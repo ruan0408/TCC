@@ -2,6 +2,7 @@ package com.smartsampa.busapi.model;
 
 import com.smartsampa.busapi.impl.BusAPI;
 import com.smartsampa.busapi.impl.BusAPIManager;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.HashMap;
@@ -95,8 +96,15 @@ public abstract class AbstractTrip implements Trip {
     public String getGtfsId() {return gtfsId;}
     public void setGtfsId(String gtfsId) {this.gtfsId = gtfsId;}
 
+    public boolean containsTerm(String term) {
+        return StringUtils.containsIgnoreCase(getDestinationSign(), term) ||
+                StringUtils.containsIgnoreCase(getNumberSign(), term);
+    }
+
     @Override
     public void merge(Mergeable mergeable) {
+        if (mergeable == null) return;
+
         Trip other = (Trip) mergeable;
         if (getDestinationSign() == null) setDestinationSign(other.getDestinationSign());
         if (getFarePrice() == null) setFarePrice(other.getFarePrice());

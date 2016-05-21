@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by ruan0408 on 10/02/2016.
@@ -47,7 +48,12 @@ public class OlhoVivoAPI {
         String url = BASE_URL +"/Linha/Buscar?termosBusca="+encodeToURL(searchTerms);
         BusLine[] busLines = performQuery(url, BusLine[].class);
 
-        return busLines != null ? new HashSet<>(Arrays.asList(busLines)) : Collections.emptySet();
+        if (busLines == null)
+            return Collections.emptySet();
+
+        return Arrays.asList(busLines).stream()
+                .filter(line -> line.containsTerm(searchTerms))
+                .collect(Collectors.toSet());
     }
 
     public Set<Stop> getStopsByTerm(String searchTerms) {

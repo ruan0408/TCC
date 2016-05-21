@@ -19,6 +19,7 @@ public class BusAPI {
     public static Set<Trip> getTripsByTerm(String term) {
         Set<Trip> gtfsTrips = GtfsTrip.getGtfsTripsByTerm(term);
         Set<Trip> olhovivoTrips = BusAPIManager.olhovivo.getTripsByTerm(term);
+
         return Mergeable.mergeSets(gtfsTrips, olhovivoTrips);
     }
 
@@ -35,7 +36,6 @@ public class BusAPI {
         return Mergeable.mergeSets(gtfsStops, olhovivoStops);
     }
 
-    //TODO test this method
     public static Stop getStopById(int id) {
         Stop gtfsStop = GtfsStop.getStopById(id);
         Set<Stop> stops = getStopsByTerm(gtfsStop.getName());

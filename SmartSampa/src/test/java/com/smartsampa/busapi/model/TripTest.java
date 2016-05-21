@@ -30,29 +30,30 @@ public class TripTest {
     public static void setUp() {
         BusAPITestUtils.setUpDataSources();
     }
-    //TODO test get cirular trip, non circular, hyphenated names
 
+    @Test
+    public void testGetTripsWithHyphenatedName() {
+        Set<Trip> trips = BusAPI.getTripsByTerm("Shopping - D");
+        assertTrue(trips.size() == 1);
+        assertTrue(trips.stream().anyMatch(trip -> trip.getDestinationSign().equals("Shopping - D")));
+    }
 
     @Test
     public void testGetTripsByOneTerm() throws Exception {
         Set<Trip> trips = BusAPI.getTripsByTerm("regina");
-        assertTrue(trips.size() == 2);
-        assertTrue(trips.stream().allMatch(t -> t.isCircular() && t.getNumberSign().equals("2732-10")));
-        assertTrue(trips.stream().anyMatch(t -> containsIgnoreCase( t.getDestinationSign(),"vila regina") &&
-                                                                    t.getHeading() == SECONDARY_TERMINAL));
-        assertTrue(trips.stream().anyMatch(t -> containsIgnoreCase( t.getDestinationSign(),"artur alvim") &&
-                                                                    t.getHeading() == MAIN_TERMINAL));
+        assertTrue(trips.size() == 1);
+        assertTrue(trips.stream().anyMatch(t -> t.getNumberSign().equals("2732-10") &&
+                containsIgnoreCase( t.getDestinationSign(), "vila regina") &&
+                                    t.getHeading() == SECONDARY_TERMINAL));
     }
 
     @Test
     public void testGetTripByTwoTerms() throws Exception {
         Set<Trip> trips = BusAPI.getTripsByTerm("vila regina");
-        assertTrue(trips.size() == 2);
-        assertTrue(trips.stream().allMatch(t -> t.isCircular() && t.getNumberSign().equals("2732-10")));
-        assertTrue(trips.stream().anyMatch(t -> containsIgnoreCase( t.getDestinationSign(), "vila regina") &&
-                                                                    t.getHeading() == SECONDARY_TERMINAL));
-        assertTrue(trips.stream().anyMatch(t -> containsIgnoreCase( t.getDestinationSign(),"artur alvim") &&
-                                                                    t.getHeading() == MAIN_TERMINAL));
+        assertTrue(trips.size() == 1);
+        assertTrue(trips.stream().anyMatch(t -> t.getNumberSign().equals("2732-10") &&
+                containsIgnoreCase( t.getDestinationSign(), "vila regina") &&
+                        t.getHeading() == SECONDARY_TERMINAL));
     }
 
     @Test
@@ -66,6 +67,7 @@ public class TripTest {
     @Test
     public void testGetStops() throws Exception {
         Trip butanta8022 = BusAPI.getTrip("8022-10", MAIN_TERMINAL);
+//        System.out.println(butanta8022);
         List<Stop> stops = butanta8022.getStops();
         assertFalse(stops.isEmpty());
     }
@@ -76,7 +78,6 @@ public class TripTest {
         assertEquals("USD", usp8012.getWorkingDays());
     }
 
-    //TODO create iterator for shape to iterate over the two lists at the same time
     @Test
     public void testGetShape() throws Exception {
         Trip usp8012 = BusAPI.getTrip("8012-10", SECONDARY_TERMINAL);

@@ -30,7 +30,7 @@ public class BusAPIManager {
     public void init() {
         GtfsDownloader gtfsDownloader = new GtfsDownloader(sptransLogin, sptransPassword);
         GtfsHandler gtfsHandler = new GtfsHandler(gtfsDownloader);
-        gtfs = new GtfsAPI(gtfsHandler.getGtfsAcessor());
+        gtfs = new GtfsAPI(gtfsHandler.getGtfsDao());
 
         //TODO put this in the same architecture as the others
         shapefile = new ShapefileAPI("faixa_onibus/sirgas_faixa_onibus.shp");

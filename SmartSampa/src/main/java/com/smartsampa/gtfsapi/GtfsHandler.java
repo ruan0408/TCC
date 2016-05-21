@@ -4,6 +4,8 @@ import com.smartsampa.utils.APIConnectionException;
 import com.smartsampa.utils.SmartSampaDir;
 import org.onebusaway.gtfs.impl.GtfsDaoImpl;
 import org.onebusaway.gtfs.serialization.GtfsReader;
+import org.onebusaway.gtfs.services.GtfsDao;
+import org.onebusaway.gtfs.services.GtfsMutableDao;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +16,9 @@ import java.time.Duration;
  */
 public class GtfsHandler {
 
-    private static final int UPDATE_INTERVAL_IN_DAYS = 200;//TODO reset gtfs download days
+    private static final int UPDATE_INTERVAL_IN_DAYS = 200;//TODO reset gtfs download days to 3
     private static final long UPDATE_INTERVAL_IN_MILLIS = Duration.ofDays(UPDATE_INTERVAL_IN_DAYS).toMillis();
-    private static final String GTFS_DIR_NAME = "gtfs-sp";
+    private static final String GTFS_DIR_NAME = "gtfs.zip";
     private static final String GTFS_PATH = SmartSampaDir.getPath()+"/"+GTFS_DIR_NAME;
 
     private GtfsDownloader gtfsDownloader;
@@ -25,20 +27,24 @@ public class GtfsHandler {
         gtfsDownloader = downloader;
     }
 
-    public GtfsDaoImpl getGtfsAcessor() {
+    public GtfsDao getGtfsDao() {
         ensureGtfsIsUsable();
         return loadGtfsAndGetDataAcessor();
     }
 
-    private GtfsDaoImpl loadGtfsAndGetDataAcessor() {
+    private GtfsDao loadGtfsAndGetDataAcessor() {
         try {
+
             GtfsReader gtfsReader = new GtfsReader();
-            GtfsDaoImpl acessor = new GtfsDaoImpl();
+            GtfsMutableDao dao = new GtfsDaoImpl();
+
             gtfsReader.setInputLocation(new File(GTFS_PATH));
-            gtfsReader.setEntityStore(acessor);
+
+            gtfsReader.setEntityStore(dao);
+
             gtfsReader.run();
-            return acessor;
-        } catch (IOException e) {
+            return dao;
+        } catch (Exception e) {
             e.printStackTrace();
             throw new APIConnectionException("The "+GTFS_DIR_NAME+" was not found");
         }

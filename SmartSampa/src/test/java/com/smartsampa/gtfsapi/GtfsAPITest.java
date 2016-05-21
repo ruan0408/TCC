@@ -13,6 +13,6 @@ public class GtfsAPITest {
     public void testGetInstance() throws Exception {
         GtfsDownloader gtfsDownloader = new GtfsDownloader("ruan0408", "costaruan");
         GtfsHandler gtfsHandler = new GtfsHandler(gtfsDownloader);
-        gtfsAPI = new GtfsAPI(gtfsHandler.getGtfsAcessor());
+        gtfsAPI = new GtfsAPI(gtfsHandler.getGtfsDao());
     }
 }

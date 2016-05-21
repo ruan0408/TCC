@@ -56,6 +56,7 @@ public class ShapefileHandler {
 
         FeatureIterator<SimpleFeature> iterator = source.getFeatures(filter).features();
         features = buildListFromIterator(iterator);
+        features = convertCoordinatesFromUTMToLatLgn(features);
 
         iterator.close();
         dataStore.dispose();
@@ -64,12 +65,17 @@ public class ShapefileHandler {
 
     private static List<SimpleFeature> buildListFromIterator(FeatureIterator<SimpleFeature> iterator) {
         List<SimpleFeature> list = new ArrayList<>();
-        while (iterator.hasNext()) {
-            SimpleFeature feature = iterator.next();
-            fromUTMToLatLgn(feature);
-            list.add(feature);
-        }
+
+        while (iterator.hasNext())
+            list.add(iterator.next());
+
         return list;
+    }
+
+    private static List<SimpleFeature> convertCoordinatesFromUTMToLatLgn(List<SimpleFeature> features) {
+        features.stream()
+                .forEach(ShapefileHandler::fromUTMToLatLgn);
+        return features;
     }
 
     private static void fromUTMToLatLgn(SimpleFeature feature) {

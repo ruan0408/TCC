@@ -13,7 +13,7 @@ import com.smartsampa.busapi.model.AbstractTrip;
  * The fields are not in camel case so we can automatically parse the json.
  * */
 public class BusLine extends AbstractTrip {
-//TODO change visibility of all classes from olhovivo, since they are data structures
+
     @JsonProperty("CodigoLinha") public int code;
     @JsonProperty("Circular") public boolean circular;
     @JsonProperty("Letreiro") public String numberSign;

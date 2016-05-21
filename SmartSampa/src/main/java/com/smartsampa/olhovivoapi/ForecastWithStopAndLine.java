@@ -9,8 +9,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class ForecastWithStopAndLine {
 
-    private String currentTime;
-    private BusStopWithLines busStopWithLines;
+    public String currentTime;
+    public BusStopWithLines busStopWithLines;
 
     @JsonCreator
     protected ForecastWithStopAndLine(@JsonProperty("hr") String currentTime,

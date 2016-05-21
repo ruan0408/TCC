@@ -32,6 +32,12 @@ public class StopTest {
     }
 
     @Test
+    public void testGetStopById() throws Exception {
+        Stop campanella = BusAPI.getStopById(360004869);
+        assertTrue(campanella.getName() != null);
+    }
+
+    @Test
     public void testGetTrips() throws Exception {
         Stop campanella = BusAPI.getStopById(360004869);
         Set<Trip> trips = campanella.getTrips();

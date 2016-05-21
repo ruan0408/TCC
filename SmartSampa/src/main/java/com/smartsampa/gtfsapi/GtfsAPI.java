@@ -2,8 +2,8 @@ package com.smartsampa.gtfsapi;
 
 import com.smartsampa.utils.APIConnectionException;
 import org.apache.commons.lang3.StringUtils;
-import org.onebusaway.gtfs.impl.GtfsDaoImpl;
 import org.onebusaway.gtfs.model.*;
+import org.onebusaway.gtfs.services.GtfsDao;
 
 import java.lang.reflect.Method;
 import java.text.ParseException;
@@ -20,18 +20,20 @@ import java.util.stream.Collectors;
  */
 public class GtfsAPI {
 
-    private GtfsDaoImpl gtfsAcessor;
+    private GtfsDao gtfsDao;
 
-    public GtfsAPI(GtfsDaoImpl gtfsAcessor) {
-        this.gtfsAcessor = gtfsAcessor;
+    public GtfsAPI(GtfsDao gtfsDao) {
+        this.gtfsDao = gtfsDao;
     }
 
-    public List<Trip> getTripsByTerm(String term) {
-        Predicate<Trip> containsTerm =
-                t -> StringUtils.containsIgnoreCase(t.getTripHeadsign(), term) ||
-                     StringUtils.containsIgnoreCase(t.getRoute().getShortName(), term);
-
+    public List<Trip> getTripsWithRouteContaining(String term) {
+        Predicate<Trip> containsTerm = trip -> routeContainsTerm(trip, term);
         return filterToList("getAllTrips", containsTerm);
+    }
+
+    private boolean routeContainsTerm(Trip trip, String term) {
+        return StringUtils.containsIgnoreCase(trip.getRoute().getLongName(), term) ||
+                StringUtils.containsIgnoreCase(trip.getRoute().getId().getId(), term);
     }
 
     public List<Stop> getStopsByTerm(String term) {
@@ -60,9 +62,11 @@ public class GtfsAPI {
         return filterToList("getAllStopTimes", predicate);
     }
 
-    public boolean isTripCircular(String gtfsRouteId) {
+    public boolean isTripCircular(Trip trip) {
+        String gtfsRouteId = trip.getRoute().getShortName();
         Predicate<org.onebusaway.gtfs.model.Trip> sameRoute =
-                trip -> trip.getRoute().getShortName().equals(gtfsRouteId);
+                t -> t.getRoute().getShortName().equals(gtfsRouteId);
+
         return filterToList("getAllTrips", sameRoute).size() == 1;
     }
 
@@ -115,8 +119,8 @@ public class GtfsAPI {
 
     private <T> List<T> filterToList(String methodName, Predicate<T> predicate) {
         try {
-            Method method = gtfsAcessor.getClass().getMethod(methodName);
-            return ((Collection<T>)method.invoke(gtfsAcessor))
+            Method method = gtfsDao.getClass().getMethod(methodName);
+            return ((Collection<T>)method.invoke(gtfsDao))
                     .parallelStream()
                     .filter(predicate)
                     .collect(Collectors.toList());

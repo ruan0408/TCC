@@ -6,10 +6,10 @@ import org.onebusaway.gtfs.model.ShapePoint;
 
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toSet;
 
 /**
  * Created by ruan0408 on 12/04/2016.
@@ -23,10 +23,11 @@ public class GtfsTrip extends AbstractTrip {
     }
 
     static Set<Trip> getGtfsTripsByTerm(String term) {
-        return BusAPIManager.gtfs.getTripsByTerm(term).stream()
+        return BusAPIManager.gtfs.getTripsWithRouteContaining(term).stream()
                 .map(GtfsTrip::new)
                 .flatMap(trip -> Stream.of(trip, trip.cloneChangingHeadingAndDestinationSign()))
-                .collect(toSet());
+                .filter(trip -> trip.containsTerm(term))
+                .collect(Collectors.toSet());
     }
 
     @Override
@@ -46,11 +47,6 @@ public class GtfsTrip extends AbstractTrip {
 
     private boolean isHeadingToSecondaryTerminal() {
         return gtfsTrip.getDirectionId().equals("0");
-    }
-
-    @Override
-    public Boolean isCircular() {
-        return BusAPIManager.gtfs.isTripCircular(gtfsTrip.getRoute().getShortName());
     }
 
     @Override
@@ -92,6 +88,7 @@ public class GtfsTrip extends AbstractTrip {
         return gtfsTrip.getId().getId();
     }
 
+
     /*
     * This method creates a clone of this GtfsTrip, but changes the heading
     * and the destinationSign. It's necessary because the gtfs files have only one entry
@@ -105,13 +102,13 @@ public class GtfsTrip extends AbstractTrip {
                 return Heading.reverse(super.getHeading());
             }
 
-            //TODO this needs to be fixed to work with names that contain '-'
             @Override
             public String getDestinationSign() {
-                String[] names = gtfsTrip.getRoute().getLongName().split("-");
-                String mtSign = names[0].trim();
-                String stSign = names[1].trim();
-                return getHeading() == Heading.SECONDARY_TERMINAL ? stSign : mtSign;
+                String oldSign = super.getDestinationSign();
+                String longName = gtfsTrip.getRoute().getLongName();
+
+                String newSign = longName.replace(oldSign, "").trim();
+                return newSign.replaceAll("^-|-$", "").trim();
             }
         };
     }
