@@ -1,75 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11ade0a8-713c-4bab-baea-524317b5e11c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/ruan0408.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/SmartSampa.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/BusAPIManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsShape.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsStop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/GtfsTrip.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/impl/ShapefileBusLane.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractCorridor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractStop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/AbstractTrip.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Bus.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/BusLane.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Corridor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Heading.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Mergeable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/PredictedBus.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Shape.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Stop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/busapi/model/Trip.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsAPI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsDownloader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/gtfsapi/GtfsHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusCorridor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLineNow.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusLinePositions.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusNow.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopNow.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/BusStopWithLines.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/ForecastWithStopAndLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhoVivoAPI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/olhovivoapi/OlhovivoBus.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/FloodFacade.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/FloodPoint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/Pluviometer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/risk/PluviometerFacade.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileAPI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/shapefileapi/ShapefileHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/APIConnectionException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/HttpUrlConnector.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/Point.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/SmartSampaDir.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/java/com/smartsampa/utils/Utils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/main/resources/downloadGtfs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/BusAPITestUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/BusLaneTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/CorridorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/StopTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/busapi/model/TripTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsAPITest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsDownloaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/gtfsapi/GtfsHandlerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/olhovivoapi/OlhoVivoAPITest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/risk/PluviometerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SmartSampa/src/test/java/com/smartsampa/shapefileapi/ShapefileAPITest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="11ade0a8-713c-4bab-baea-524317b5e11c" name="Default" comment="" />
     <ignored path="TCC.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1085,8 +1017,15 @@
       <created>1463795425289</created>
       <option name="number" value="Default" />
       <updated>1463795425289</updated>
-      <workItem from="1463795426481" duration="557000" />
+      <workItem from="1463795426481" duration="591000" />
     </task>
+    <task id="LOCAL-00001" summary="...">
+      <created>1463795995829</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1463795995829</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1095,7 +1034,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557000" />
+    <option name="totallyTimeSpent" value="591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1129,6 +1068,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
