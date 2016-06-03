@@ -1,7 +1,6 @@
 package com.smartsampa.busapi.model;
 
 import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.impl.BusAPIManager;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
@@ -28,16 +27,15 @@ public abstract class AbstractTrip implements Trip {
     private String gtfsId;
 
     @Override
-    public Map<Stop, List<PredictedBus>> getAllPredictions() {
+    public Map<Stop, List<PredictedBus>> getPredictionsPerStop() {
         Map<AbstractStop, List<PredictedBus>> predictions =
-                BusAPIManager.olhovivo.getPredictionsOfTrip(getOlhovivoId());
+                BusAPI.olhovivo.getPredictionsOfTrip(getOlhovivoId());
 
         return replaceStopsByCompleteStop(predictions);
     }
 
     private Map<Stop, List<PredictedBus>> replaceStopsByCompleteStop(Map<AbstractStop, List<PredictedBus>> predictions) {
         Map<Stop, List<PredictedBus>> result = new HashMap<>(predictions.size());
-
         predictions.keySet().stream().forEach(oldStop -> {
             Stop newStop = BusAPI.getStopById(oldStop.getId());
             result.put(newStop, predictions.get(oldStop));
@@ -47,11 +45,16 @@ public abstract class AbstractTrip implements Trip {
 
     @Override
     public List<PredictedBus> getPredictionsAtStop(Stop stop) {
-        return BusAPIManager.olhovivo.getPredictionsOfTripAtStop(stop.getId(), getOlhovivoId());
+        return BusAPI.olhovivo.getPredictionsOfTripAtStop(getOlhovivoId(), stop.getId());
     }
 
     @Override
-    public Set<Bus> getAllRunningBuses() {return BusAPIManager.olhovivo.getAllRunningBusesOfTrip(getOlhovivoId());}
+    public Set<Bus> getAllRunningBuses() {return BusAPI.olhovivo.getAllRunningBusesOfTrip(getOlhovivoId());}
+
+    @Override
+    public String getId() {
+        return getNumberSign()+"-"+Heading.getIntFromHeading(getHeading());
+    }
 
     @Override
     public List<Stop> getStops() { return stops; }
@@ -63,6 +66,9 @@ public abstract class AbstractTrip implements Trip {
 
     @Override
     public int getDepartureIntervalInSecondsAtTime(String hhmm) { return -1; }
+
+    @Override
+    public int getDepartureIntervalInSecondsNow() {return -1;}
 
     @Override
     public String getNumberSign() {return numberSign;}

@@ -1,5 +1,6 @@
 package com.smartsampa.olhovivoapi;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.smartsampa.busapi.model.Bus;
 import com.smartsampa.utils.Point;
@@ -9,15 +10,16 @@ import com.smartsampa.utils.Point;
  */
 public class OlhovivoBus implements Bus {
 
-    @JsonProperty("p") public String prefixNumber;
-    @JsonProperty("a") public boolean isWheelChairCapable;
-    @JsonProperty("py") public double latitude;
-    @JsonProperty("px") public double longitude;
+    public String prefixNumber;
+    public boolean isWheelChairCapable;
+    public double latitude;
+    public double longitude;
 
-    public OlhovivoBus() {}
-
-    OlhovivoBus(String prefixNumber, boolean isWheelChairCapable,
-                double latitude, double longitude) {
+    @JsonCreator
+    OlhovivoBus(@JsonProperty("p") String prefixNumber,
+                @JsonProperty("a") boolean isWheelChairCapable,
+                @JsonProperty("py") double latitude,
+                @JsonProperty("px") double longitude) {
         this.prefixNumber = prefixNumber;
         this.isWheelChairCapable = isWheelChairCapable;
         this.latitude = latitude;

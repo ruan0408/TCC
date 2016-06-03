@@ -1,5 +1,6 @@
 package com.smartsampa.olhovivoapi;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.smartsampa.busapi.model.AbstractCorridor;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -9,9 +10,18 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class BusCorridor extends AbstractCorridor {
 
-    @JsonProperty("CodCorredor") public int code;
-    @JsonProperty("CodCot") public int codCot;
-    @JsonProperty("Nome") public String name;
+    public int code;
+    public int codCot;
+    public String name;
+
+    @JsonCreator
+    BusCorridor(@JsonProperty("CodCorredor") int code,
+                @JsonProperty("CodCot") int codCot,
+                @JsonProperty("Nome") String name) {
+        this.code = code;
+        this.codCot = codCot;
+        this.name = name;
+    }
 
     @Override
     public int getId() {return code;}

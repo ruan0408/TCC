@@ -72,7 +72,7 @@ public class OlhoVivoAPITest {
     @Test
     public void testGetPredictionsOfTripAtStop() throws Exception {
         assumeTrue(isAfter4amAndBeforeMidnight());
-        List<PredictedBus> predictedBuses = api.getPredictionsOfTripAtStop(campanellaStopId, alvim);
+        List<PredictedBus> predictedBuses = api.getPredictionsOfTripAtStop( alvim, campanellaStopId );
         assertFalse(predictedBuses.isEmpty());
         assertTrue(predictedBuses.stream().allMatch(b -> b.getPrefixNumber() != null));
     }

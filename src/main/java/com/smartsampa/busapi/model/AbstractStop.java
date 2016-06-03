@@ -1,7 +1,7 @@
 package com.smartsampa.busapi.model;
 
 import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.impl.BusAPIManager;
+import com.smartsampa.busapi.impl.BusAPI;
 import com.smartsampa.utils.Point;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
@@ -24,9 +24,9 @@ public abstract class AbstractStop implements Stop {
 
     //TODO test that the trips are complete
     @Override
-    public Map<Trip, List<PredictedBus>> getAllPredictions() {
+    public Map<Trip, List<PredictedBus>> getPredictionsPerTrip() {
         Map<AbstractTrip, List<PredictedBus>> predictions =
-                BusAPIManager.olhovivo.getPredictionsAtStop(getId());
+                BusAPI.olhovivo.getPredictionsAtStop(getId());
 
         return replaceTripByCompleteTrip(predictions);
     }
@@ -42,7 +42,7 @@ public abstract class AbstractStop implements Stop {
 
     @Override
     public List<PredictedBus> getPredictedBusesOfTrip(Trip trip) {
-        return BusAPIManager.olhovivo.getPredictionsOfTripAtStop(trip.getOlhovivoId(), getId());
+        return BusAPI.olhovivo.getPredictionsOfTripAtStop(trip.getOlhovivoId(), getId());
     }
 
     @Override
@@ -72,9 +72,10 @@ public abstract class AbstractStop implements Stop {
     public void setTrips(Set<Trip> trips) {this.trips = trips;}
 
     @Override
-    public void merge(Mergeable o) {
-        Stop other = (Stop) o;
-        if (other == null) return;
+    public void merge(Mergeable mergeable) {
+        if (mergeable == null) return;
+
+        Stop other = (Stop) mergeable;
         if (getId() == null) setId(other.getId());
         if (getName() == null) setName(other.getName());
         if (getReference() == null) setReference(other.getReference());

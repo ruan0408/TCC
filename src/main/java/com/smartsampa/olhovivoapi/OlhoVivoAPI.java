@@ -26,6 +26,7 @@ public class OlhoVivoAPI {
 
     public OlhoVivoAPI(String key) {
         jsonParser.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.NONE);
+        jsonParser.setVisibility(PropertyAccessor.CREATOR, JsonAutoDetect.Visibility.ANY);
         jsonParser.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.PUBLIC_ONLY);
         authKey = key;
         httpConnector = new HttpUrlConnector();
@@ -71,7 +72,7 @@ public class OlhoVivoAPI {
         return buses != null ? new HashSet<>(Arrays.asList(buses)) : Collections.emptySet();
     }
 
-    public List<PredictedBus> getPredictionsOfTripAtStop(int busStopCode, int busLineCode) {
+    public List<PredictedBus> getPredictionsOfTripAtStop(int busLineCode, int busStopCode) {
         String url = BASE_URL + "/Previsao?codigoParada="+busStopCode+"&codigoLinha="+busLineCode;
         ForecastWithStopAndLine forecast = performQuery(url, ForecastWithStopAndLine.class);
         BusNow[] buses = forecast.getBuses();
@@ -79,16 +80,23 @@ public class OlhoVivoAPI {
         return buses != null ? Arrays.asList(buses) : Collections.emptyList();
     }
 
+    //TODO check all possible nulls in this class
+    //TODO should I be using AbstractStop here?
     public Map<AbstractStop, List<PredictedBus>> getPredictionsOfTrip(int busLineCode) {
         String url = BASE_URL + "/Previsao/Linha?codigoLinha="+encodeToURL(busLineCode+"");
         ForecastWithLine forecastWithLine = performQuery(url, ForecastWithLine.class);
         BusStopNow[] stopsWithForecast = forecastWithLine.getBusStops();
 
-        if (stopsWithForecast == null) return Collections.emptyMap();
+        if (stopsWithForecast == null)
+            return Collections.emptyMap();
 
         Map<AbstractStop, List<PredictedBus>> forecast = new HashMap<>();
-        for (BusStopNow stopNow : stopsWithForecast)
+        for (BusStopNow stopNow : stopsWithForecast) {
+            if (stopNow == null)
+                continue;
+
             forecast.put(stopNow, Arrays.asList(stopNow.getVehicles()));
+        }
 
         return forecast;
     }
@@ -97,6 +105,9 @@ public class OlhoVivoAPI {
         String url = BASE_URL + "/Previsao/Parada?codigoParada="+encodeToURL(busStopCode+"");
         ForecastWithStop forecastWithStop = performQuery(url, ForecastWithStop.class);
         BusLineNow[] linesWithForecast = forecastWithStop.getBusLines();
+
+        if (linesWithForecast == null)
+            return Collections.emptyMap();
 
         Map<AbstractTrip, List<PredictedBus>> forecast = new HashMap<>();
         for (BusLineNow lineNow : linesWithForecast)
@@ -167,16 +178,4 @@ public class OlhoVivoAPI {
                 .toString();
     }
 }
-
-//    //assuming olhovivo will ALWAYS return two results for the same line number\
-//    public Pair<BusLine, BusLine> getBothTrips(String fullNumberSign) {
-//        BusLine[] busLines = this.searchBusLines(fullNumberSign);
-//
-//        if (busLines.length != 2)
-//            throw new RuntimeException("Couldn't find two trips for the fullNumberSign: "+fullNumberSign);
-//        if (busLines[0].getHeading() == Heading.SECONDARY_TERMINAL)
-//            return new MutablePair<>(busLines[0], busLines[1]);
-//
-//        return new MutablePair<>(busLines[1], busLines[0]);
-//    }
 

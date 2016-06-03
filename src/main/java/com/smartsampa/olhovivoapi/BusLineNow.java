@@ -24,6 +24,7 @@ public class BusLineNow extends BusLine {
 
         this.code = busLineCode;
         this.numberSign = getNumberSign(fullNumberSign);
+        this.type = getType(fullNumberSign);
         this.heading = heading;
         this.destinationSignMTST = destinationSignMTST;
         this.destinationSignSTMT = destinationSignSTMT;
@@ -31,7 +32,13 @@ public class BusLineNow extends BusLine {
         this.vehicles = vehicles;
     }
 
-    private String getNumberSign(String fullNumberSign) {return fullNumberSign.split("-")[0];}
+    private String getNumberSign(String fullNumberSign) {
+        return fullNumberSign.split("-")[0];
+    }
+
+    private int getType(String fullNumberSign) {
+        return Integer.parseInt(fullNumberSign.split("-")[1]);
+    }
 
     public BusNow[] getVehicles() {return vehicles;}
 

@@ -1,7 +1,6 @@
 package com.smartsampa.busapi.model;
 
 import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.impl.BusAPIManager;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.List;
@@ -12,9 +11,12 @@ import java.util.stream.Collectors;
  */
 public abstract class AbstractCorridor implements Corridor {
 
+    //TODO this is highly inefficient
+    //TODO maybe add method to BusAPI that finds and merges stops particularly for corridors
     @Override
     public List<Stop> getStops() {
-        List<Stop> stops = BusAPIManager.olhovivo.getStopsByCorridor(getId());
+//        return BusAPI.olhovivo.getStopsByCorridor(getId());
+        List<Stop> stops = BusAPI.olhovivo.getStopsByCorridor(getId());
         return stops.stream()
                 .map(Stop::getId)
                 .map(BusAPI::getStopById)

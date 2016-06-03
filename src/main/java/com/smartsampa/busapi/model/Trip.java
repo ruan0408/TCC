@@ -9,17 +9,7 @@ import java.util.Set;
  */
 public interface Trip extends Mergeable {
 
-    Map<Stop, List<PredictedBus>> getAllPredictions();
-
-    List<PredictedBus> getPredictionsAtStop(Stop stop);
-
-    Set<Bus> getAllRunningBuses();
-
-    List<Stop> getStops();
-
-    Shape getShape();
-
-    int getDepartureIntervalInSecondsAtTime(String hhmm);
+    String getId();
 
     String getNumberSign();
 
@@ -33,7 +23,21 @@ public interface Trip extends Mergeable {
 
     Boolean isCircular();
 
+    List<Stop> getStops();
+
+    Shape getShape();
+
+    int getDepartureIntervalInSecondsAtTime(String hhmm);
+
+    int getDepartureIntervalInSecondsNow();
+
     Integer getOlhovivoId();
 
     String getGtfsId();
+
+    Map<Stop, List<PredictedBus>> getPredictionsPerStop();
+
+    List<PredictedBus> getPredictionsAtStop(Stop stop);
+
+    Set<Bus> getAllRunningBuses();
 }

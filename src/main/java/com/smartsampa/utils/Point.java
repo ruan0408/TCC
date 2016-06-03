@@ -13,6 +13,9 @@ public class Point {
         this.px = px;
     }
 
+    public double getLatitude() { return py; }
+    public double getLongitude() { return px; }
+
     @Override
     public String toString() {
         return "("+py+","+px+")";

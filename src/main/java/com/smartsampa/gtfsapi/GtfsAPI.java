@@ -85,7 +85,7 @@ public class GtfsAPI {
         return rule.getFare().getPrice();
     }
 
-    public List<Trip> getAllTrips(int stopId) {
+    public List<Trip> getAllTripsFromStopId(int stopId) {
         Predicate<StopTime> predicate = stopTime -> stopTime.getStop().getId().getId().equals(stopId+"");
 
         List<StopTime> stopTimes = filterToList("getAllStopTimes", predicate);

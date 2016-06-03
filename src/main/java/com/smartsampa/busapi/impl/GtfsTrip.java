@@ -4,6 +4,8 @@ import com.smartsampa.busapi.model.*;
 import org.apache.commons.math3.util.Precision;
 import org.onebusaway.gtfs.model.ShapePoint;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -23,7 +25,7 @@ public class GtfsTrip extends AbstractTrip {
     }
 
     static Set<Trip> getGtfsTripsByTerm(String term) {
-        return BusAPIManager.gtfs.getTripsWithRouteContaining(term).stream()
+        return BusAPI.gtfs.getTripsWithRouteContaining(term).stream()
                 .map(GtfsTrip::new)
                 .flatMap(trip -> Stream.of(trip, trip.cloneChangingHeadingAndDestinationSign()))
                 .filter(trip -> trip.containsTerm(term))
@@ -56,13 +58,13 @@ public class GtfsTrip extends AbstractTrip {
 
     @Override
     public Double getFarePrice() {
-        double farePrice = BusAPIManager.gtfs.getFarePrice(getNumberSign());
+        double farePrice = BusAPI.gtfs.getFarePrice(getNumberSign());
         return Precision.round(farePrice, 2);
     }
 
     @Override
     public Shape getShape() {
-        List<ShapePoint> shapePoints = BusAPIManager.gtfs.getShape(getShapeId());
+        List<ShapePoint> shapePoints = BusAPI.gtfs.getShape(getShapeId());
         return new GtfsShape(shapePoints);
     }
 
@@ -70,9 +72,10 @@ public class GtfsTrip extends AbstractTrip {
         return gtfsTrip.getShapeId().getId();
     }
 
+    //TODO make this return complete stops. This might be slow due to sorting an already sorted list.
     @Override
     public List<Stop> getStops() {
-        return BusAPIManager.gtfs.getAllStopsOrderedFromTripId(getGtfsId())
+        return BusAPI.gtfs.getAllStopsOrderedFromTripId(getGtfsId())
                 .stream()
                 .map(GtfsStop::new)
                 .collect(toList());
@@ -80,7 +83,13 @@ public class GtfsTrip extends AbstractTrip {
 
     @Override
     public int getDepartureIntervalInSecondsAtTime(String hhmm) {
-        return BusAPIManager.gtfs.getDepartureIntervalAtTime(getGtfsId(), hhmm);
+        return BusAPI.gtfs.getDepartureIntervalAtTime(getGtfsId(), hhmm);
+    }
+
+    @Override
+    public int getDepartureIntervalInSecondsNow() {
+        String hhmm = new SimpleDateFormat("HH:mm").format(new Date());
+        return getDepartureIntervalInSecondsAtTime(hhmm);
     }
 
     @Override

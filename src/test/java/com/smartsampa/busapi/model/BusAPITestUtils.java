@@ -1,6 +1,6 @@
 package com.smartsampa.busapi.model;
 
-import com.smartsampa.busapi.impl.BusAPIManager;
+import com.smartsampa.busapi.impl.BusAPI;
 
 import java.time.LocalTime;
 
@@ -10,11 +10,10 @@ import java.time.LocalTime;
 public class BusAPITestUtils {
 
     public static void setUpDataSources() {
-        BusAPIManager.getInstance()
-                .setSptransLogin("ruan0408")
-                .setSptransPassword("costaruan")
-                .setOlhovivoKey("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3");
-        BusAPIManager.getInstance().init();
+        BusAPI.setSptransLogin("ruan0408");
+        BusAPI.setSptransPassword("costaruan");
+        BusAPI.setOlhovivoKey("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3");
+        BusAPI.initialize();
     }
 
     public static boolean isAfter4amAndBeforeMidnight() {

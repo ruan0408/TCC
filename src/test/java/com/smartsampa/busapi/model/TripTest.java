@@ -65,9 +65,20 @@ public class TripTest {
     }
 
     @Test
+    public void testGetIdMainTerminal() throws Exception {
+        Trip vilaJacui = BusAPI.getTrip("2730-10", MAIN_TERMINAL);
+        assertEquals("2730-10-2", vilaJacui.getId());
+    }
+
+    @Test
+    public void testGetIdSecondaryTerminal() throws Exception {
+        Trip pracaSe = BusAPI.getTrip("7411-10", SECONDARY_TERMINAL);
+        assertEquals("7411-10-1", pracaSe.getId());
+    }
+
+    @Test
     public void testGetStops() throws Exception {
         Trip butanta8022 = BusAPI.getTrip("8022-10", MAIN_TERMINAL);
-//        System.out.println(butanta8022);
         List<Stop> stops = butanta8022.getStops();
         assertFalse(stops.isEmpty());
     }
@@ -107,12 +118,18 @@ public class TripTest {
         assertEquals(600, barroBranco.getDepartureIntervalInSecondsAtTime("14:30"));
     }
 
+    @Test
+    public void testGetDepartureIntervalNow() throws Exception {
+        Trip penha = BusAPI.getTrip("263J-10", MAIN_TERMINAL);
+        assertTrue(penha.getDepartureIntervalInSecondsNow() > 0);
+    }
+
     //TODO test that the stops are complete(find a trip that has a stop which olhovivo knows its address)
     @Test
-    public void testGetAllPredictions() throws Exception {
+    public void testGetPredictionsPerStop() throws Exception {
         assumeTrue(isAfter4amAndBeforeMidnight());
         Trip alvim = BusAPI.getTrip("273L-10", SECONDARY_TERMINAL);
-        Map<Stop, List<PredictedBus>> predictions = alvim.getAllPredictions();
+        Map<Stop, List<PredictedBus>> predictions = alvim.getPredictionsPerStop();
         assumeNotNull(predictions);
         assertTrue(predictions.size() > 0);
         assertTrue(predictions.values().stream().anyMatch(buses -> !buses.isEmpty()));
@@ -123,7 +140,7 @@ public class TripTest {
         assumeTrue(isAfter4amAndBeforeMidnight());
 
         Trip alvimPerua = BusAPI.getTrip("2732-10", MAIN_TERMINAL);
-        AbstractStop campanella = mock(AbstractStop.class);
+        Stop campanella = mock(Stop.class);
         when(campanella.getId()).thenReturn(360004869);
         List<PredictedBus> buses = alvimPerua.getPredictionsAtStop(campanella);
 

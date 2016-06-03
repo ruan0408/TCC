@@ -47,24 +47,27 @@ public class StopTest {
     }
 
     @Test
-    public void testGetAllPredictions() throws Exception {
+    public void testGetPredictionsPerTrip() throws Exception {
         assumeTrue(isAfter4amAndBeforeMidnight());
 
         Stop vitalBrasil = BusAPI.getStopById(1211364);
-        Map<Trip, List<PredictedBus>> predictions = vitalBrasil.getAllPredictions();
+        Map<Trip, List<PredictedBus>> predictions = vitalBrasil.getPredictionsPerTrip();
 
         assumeNotNull(predictions);
         assertTrue(predictions.size() > 0);
         assertTrue(predictions.values().stream().anyMatch(buses -> !buses.isEmpty()));
     }
 
+    //TODO this is probably wrong
     @Test
     public void testGetPredictedBusesOfTrip() throws Exception {
         assumeTrue(isAfter4amAndBeforeMidnight());
 
-        Stop campanella = BusAPI.getStopById(1211364);
-        AbstractTrip alvimPerua = mock(AbstractTrip.class);
+        Stop campanella = BusAPI.getStopById(360004869);
+
+        Trip alvimPerua = mock(Trip.class);
         when(alvimPerua.getOlhovivoId()).thenReturn(33715);
+
         List<PredictedBus> predictions = campanella.getPredictedBusesOfTrip(alvimPerua);
 
         assumeNotNull(predictions);

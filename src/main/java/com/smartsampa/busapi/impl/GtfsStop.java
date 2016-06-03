@@ -22,13 +22,12 @@ public class GtfsStop extends AbstractStop {
     }
 
     static Stop getStopById(int id) {
-        org.onebusaway.gtfs.model.Stop stop = BusAPIManager.gtfs.getStopById(id);
+        org.onebusaway.gtfs.model.Stop stop = BusAPI.gtfs.getStopById(id);
         return new GtfsStop(stop);
     }
 
     public static Set<Stop> getStopsByTerm(String term) {
-        return BusAPIManager.gtfs.getStopsByTerm(term)
-                .stream()
+        return BusAPI.gtfs.getStopsByTerm(term).stream()
                 .map(GtfsStop::new)
                 .collect(toSet());
     }
@@ -51,11 +50,12 @@ public class GtfsStop extends AbstractStop {
         return new Point(gtfsStop.getLat(), gtfsStop.getLon());
     }
 
+    //TODO make this return complete trips and make it efficient
     @Override
     public Set<Trip> getTrips() {
-        return BusAPIManager.gtfs.getAllTrips(getId())
-                .stream()
+        return BusAPI.gtfs.getAllTripsFromStopId(getId()).stream()
                 .map(GtfsTrip::new)
+                .map(trip -> BusAPI.getTrip(trip.getNumberSign(), trip.getHeading()))
                 .collect(Collectors.toSet());
     }
 }
