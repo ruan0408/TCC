@@ -1,5 +1,6 @@
 package com.smartsampa.olhovivoapi;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.smartsampa.busapi.model.AbstractStop;
 import com.smartsampa.utils.Point;
@@ -10,11 +11,26 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class BusStop extends AbstractStop {
 
-    @JsonProperty("CodigoParada") public int code;
-    @JsonProperty("Nome") public String name;
-    @JsonProperty("Endereco") public String address;
-    @JsonProperty("Latitude") public double latitude;
-    @JsonProperty("Longitude") public double longitude;
+    public int code;
+    public String name;
+    public String address;
+    public double latitude;
+    public double longitude;
+
+    BusStop() {};
+
+    @JsonCreator
+    BusStop(@JsonProperty("CodigoParada") int code,
+            @JsonProperty("Nome") String name,
+            @JsonProperty("Endereco") String address,
+            @JsonProperty("Latitude") double latitude,
+            @JsonProperty("Longitude") double longitude) {
+        this.code = code;
+        this.name = name;
+        this.address = address;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 
     @Override
     public Integer getId() { return code; }

@@ -1,6 +1,7 @@
 package com.smartsampa.busapi.model;
 
 import com.smartsampa.busapi.impl.BusAPI;
+import com.smartsampa.olhovivoapi.OlhoVivoAPI;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
@@ -14,22 +15,22 @@ import java.util.Set;
  */
 public abstract class AbstractTrip implements Trip {
 
+    private static OlhoVivoAPI olhoVivoAPI = Provider.getOlhovivoAPI();
+
     private String destinationSign;
     private String numberSign;
     private String workingDays;
     private Heading heading;
     private Shape shape;
-    private List<Stop> stops;
     private Double farePrice;
     private Boolean isCircular;
-
     private Integer olhovivoId;
     private String gtfsId;
 
     @Override
     public Map<Stop, List<PredictedBus>> getPredictionsPerStop() {
         Map<AbstractStop, List<PredictedBus>> predictions =
-                BusAPI.olhovivo.getPredictionsOfTrip(getOlhovivoId());
+                olhoVivoAPI.getPredictionsOfTrip(getOlhovivoId());
 
         return replaceStopsByCompleteStop(predictions);
     }
@@ -45,11 +46,32 @@ public abstract class AbstractTrip implements Trip {
 
     @Override
     public List<PredictedBus> getPredictionsAtStop(Stop stop) {
-        return BusAPI.olhovivo.getPredictionsOfTripAtStop(getOlhovivoId(), stop.getId());
+        return olhoVivoAPI.getPredictionsOfTripAtStop(getOlhovivoId(), stop.getId());
     }
 
     @Override
-    public Set<Bus> getAllRunningBuses() {return BusAPI.olhovivo.getAllRunningBusesOfTrip(getOlhovivoId());}
+    public Set<Bus> getAllRunningBuses() {return olhoVivoAPI.getAllRunningBusesOfTrip(getOlhovivoId());}
+
+    @Override
+    public List<Stop> getStops() {
+        return BusAPI.getStopsFrom(this);
+    }
+
+    @Override
+    public void merge(Mergeable mergeable) {
+        if (mergeable == null) return;
+
+        Trip other = (Trip) mergeable;
+        if (getDestinationSign() == null) destinationSign = other.getDestinationSign();
+        if (getFarePrice() == null) farePrice = other.getFarePrice();
+        if (getGtfsId() == null) gtfsId = other.getGtfsId();
+        if (getHeading() == null) heading = other.getHeading();
+        if (getNumberSign() == null) numberSign = other.getNumberSign();
+        if (getOlhovivoId() == null) olhovivoId = other.getOlhovivoId();
+        if (getShape() == null) shape = other.getShape();
+        if (getWorkingDays() == null) workingDays = other.getWorkingDays();
+        if (isCircular() == null) isCircular = other.isCircular();
+    }
 
     @Override
     public String getId() {
@@ -57,12 +79,7 @@ public abstract class AbstractTrip implements Trip {
     }
 
     @Override
-    public List<Stop> getStops() { return stops; }
-    public void setStops(List<Stop> stops) {this.stops = stops;}
-
-    @Override
     public Shape getShape() {return shape;}
-    public void setShape(Shape shape) {this.shape = shape;}
 
     @Override
     public int getDepartureIntervalInSecondsAtTime(String hhmm) { return -1; }
@@ -72,56 +89,31 @@ public abstract class AbstractTrip implements Trip {
 
     @Override
     public String getNumberSign() {return numberSign;}
-    public void setNumberSign(String numberSign) {this.numberSign = numberSign;}
 
     @Override
     public Heading getHeading() {return heading;}
-    public void setHeading(Heading heading) {this.heading = heading;}
 
     @Override
     public String getDestinationSign() {return destinationSign;}
-    public void setDestinationSign(String destinationSign) {this.destinationSign = destinationSign;}
 
     @Override
     public String getWorkingDays() {return workingDays;}
-    public void setWorkingDays(String workingDays) {this.workingDays = workingDays;}
 
     @Override
     public Double getFarePrice() {return farePrice;}
-    public void setFarePrice(Double farePrice) {this.farePrice = farePrice;}
 
     @Override
     public Boolean isCircular() {return isCircular;}
-    public void setCircular(boolean circular) {isCircular = circular;}
 
     @Override
     public Integer getOlhovivoId() {return olhovivoId;}
-    public void setOlhovivoId(Integer olhovivoId) {this.olhovivoId = olhovivoId;}
 
     @Override
     public String getGtfsId() {return gtfsId;}
-    public void setGtfsId(String gtfsId) {this.gtfsId = gtfsId;}
 
     public boolean containsTerm(String term) {
         return StringUtils.containsIgnoreCase(getDestinationSign(), term) ||
                 StringUtils.containsIgnoreCase(getNumberSign(), term);
-    }
-
-    @Override
-    public void merge(Mergeable mergeable) {
-        if (mergeable == null) return;
-
-        Trip other = (Trip) mergeable;
-        if (getDestinationSign() == null) setDestinationSign(other.getDestinationSign());
-        if (getFarePrice() == null) setFarePrice(other.getFarePrice());
-        if (getGtfsId() == null) setGtfsId(other.getGtfsId());
-        if (getHeading() == null) setHeading(other.getHeading());
-        if (getNumberSign() == null) setNumberSign(other.getNumberSign());
-        if (getOlhovivoId() == null) setOlhovivoId(other.getOlhovivoId());
-        if (getShape() == null) setShape(other.getShape());
-        if (getStops() == null) setStops(other.getStops());
-        if (getWorkingDays() == null) setWorkingDays(other.getWorkingDays());
-        if (isCircular() == null) setCircular(other.isCircular());
     }
 
     @Override

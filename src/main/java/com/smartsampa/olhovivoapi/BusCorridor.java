@@ -26,6 +26,7 @@ public class BusCorridor extends AbstractCorridor {
     @Override
     public int getId() {return code;}
 
+
     @Override
     public int getCodCot() {return codCot;}
 

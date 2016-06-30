@@ -1,7 +1,7 @@
 package com.smartsampa.busapi.model;
 
 import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.impl.BusAPI;
+import com.smartsampa.olhovivoapi.OlhoVivoAPI;
 import com.smartsampa.utils.Point;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
@@ -15,18 +15,19 @@ import java.util.Set;
  */
 public abstract class AbstractStop implements Stop {
 
+    private static OlhoVivoAPI olhoVivoAPI = Provider.getOlhovivoAPI();
+
     private Integer id;
     private String name;
     private String address;
     private String reference;
     private Point location;
-    private Set<Trip> trips;
 
     //TODO test that the trips are complete
     @Override
     public Map<Trip, List<PredictedBus>> getPredictionsPerTrip() {
         Map<AbstractTrip, List<PredictedBus>> predictions =
-                BusAPI.olhovivo.getPredictionsAtStop(getId());
+                olhoVivoAPI.getPredictionsAtStop(getId());
 
         return replaceTripByCompleteTrip(predictions);
     }
@@ -42,7 +43,24 @@ public abstract class AbstractStop implements Stop {
 
     @Override
     public List<PredictedBus> getPredictedBusesOfTrip(Trip trip) {
-        return BusAPI.olhovivo.getPredictionsOfTripAtStop(trip.getOlhovivoId(), getId());
+        return olhoVivoAPI.getPredictionsOfTripAtStop(trip.getOlhovivoId(), getId());
+    }
+
+    @Override
+    public Set<Trip> getTrips() {
+        return BusAPI.getTripsFrom(this);
+    }
+
+    @Override
+    public void merge(Mergeable mergeable) {
+        if (mergeable == null) return;
+
+        Stop other = (Stop) mergeable;
+        if (getId() == null) setId(other.getId());
+        if (getName() == null) setName(other.getName());
+        if (getReference() == null) setReference(other.getReference());
+        if (getAddress() == null) setAddress(other.getAddress());
+        if (getLocation() == null) setLocation(other.getLocation());
     }
 
     @Override
@@ -66,23 +84,6 @@ public abstract class AbstractStop implements Stop {
     @Override
     public Point getLocation() {return location;}
     public void setLocation(Point location) {this.location = location;}
-
-    @Override
-    public Set<Trip> getTrips() {return trips;}
-    public void setTrips(Set<Trip> trips) {this.trips = trips;}
-
-    @Override
-    public void merge(Mergeable mergeable) {
-        if (mergeable == null) return;
-
-        Stop other = (Stop) mergeable;
-        if (getId() == null) setId(other.getId());
-        if (getName() == null) setName(other.getName());
-        if (getReference() == null) setReference(other.getReference());
-        if (getAddress() == null) setAddress(other.getAddress());
-        if (getLocation() == null) setLocation(other.getLocation());
-        if (getTrips() == null) setTrips(other.getTrips());
-    }
 
     @Override
     public boolean equals(Object o) {

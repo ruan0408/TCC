@@ -1,17 +1,16 @@
 package com.smartsampa.busapi.impl;
 
-import com.smartsampa.busapi.model.*;
+import com.smartsampa.busapi.model.AbstractTrip;
+import com.smartsampa.busapi.model.Heading;
+import com.smartsampa.busapi.model.Provider;
+import com.smartsampa.busapi.model.Shape;
+import com.smartsampa.gtfsapi.GtfsAPI;
 import org.apache.commons.math3.util.Precision;
 import org.onebusaway.gtfs.model.ShapePoint;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * Created by ruan0408 on 12/04/2016.
@@ -19,17 +18,10 @@ import static java.util.stream.Collectors.toList;
 public class GtfsTrip extends AbstractTrip {
 
     private org.onebusaway.gtfs.model.Trip gtfsTrip;
+    private GtfsAPI gtfsAPI = Provider.getGtfsAPI();
 
     public GtfsTrip(org.onebusaway.gtfs.model.Trip gtfsTrip) {
         this.gtfsTrip = gtfsTrip;
-    }
-
-    static Set<Trip> getGtfsTripsByTerm(String term) {
-        return BusAPI.gtfs.getTripsWithRouteContaining(term).stream()
-                .map(GtfsTrip::new)
-                .flatMap(trip -> Stream.of(trip, trip.cloneChangingHeadingAndDestinationSign()))
-                .filter(trip -> trip.containsTerm(term))
-                .collect(Collectors.toSet());
     }
 
     @Override
@@ -58,13 +50,13 @@ public class GtfsTrip extends AbstractTrip {
 
     @Override
     public Double getFarePrice() {
-        double farePrice = BusAPI.gtfs.getFarePrice(getNumberSign());
+        double farePrice = gtfsAPI.getFarePrice(getNumberSign());
         return Precision.round(farePrice, 2);
     }
 
     @Override
     public Shape getShape() {
-        List<ShapePoint> shapePoints = BusAPI.gtfs.getShape(getShapeId());
+        List<ShapePoint> shapePoints = gtfsAPI.getShape(getShapeId());
         return new GtfsShape(shapePoints);
     }
 
@@ -72,18 +64,10 @@ public class GtfsTrip extends AbstractTrip {
         return gtfsTrip.getShapeId().getId();
     }
 
-    //TODO make this return complete stops. This might be slow due to sorting an already sorted list.
-    @Override
-    public List<Stop> getStops() {
-        return BusAPI.gtfs.getAllStopsOrderedFromTripId(getGtfsId())
-                .stream()
-                .map(GtfsStop::new)
-                .collect(toList());
-    }
-
+    //TODO maybe it doesnt make sense to keep asking busapi for the gtfs
     @Override
     public int getDepartureIntervalInSecondsAtTime(String hhmm) {
-        return BusAPI.gtfs.getDepartureIntervalAtTime(getGtfsId(), hhmm);
+        return gtfsAPI.getDepartureIntervalAtTime(getGtfsId(), hhmm);
     }
 
     @Override
@@ -104,7 +88,7 @@ public class GtfsTrip extends AbstractTrip {
     * for circular trips, while the Olhovivo API has two entries for circular trips.
     * Therefore we "falsify" one of the sides of the trip.
     * */
-    private GtfsTrip cloneChangingHeadingAndDestinationSign() {
+    GtfsTrip cloneChangingHeadingAndDestinationSign() {
         return new GtfsTrip (gtfsTrip) {
             @Override
             public Heading getHeading() {
