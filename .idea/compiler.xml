@@ -23,14 +23,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="gs-rest-service" />
         <module name="main" />
+        <module name="SmartSampa" />
         <module name="TCC" />
         <module name="WebService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TCC" target="1.8" />
-      <module name="WebService" target="1.8" />
+      <module name="gs-rest-service" target="1.8" />
+      <module name="SmartSampa" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

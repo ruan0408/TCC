@@ -1,16 +1,15 @@
 package com.smartsampa.olhovivoapi;
 
-import com.smartsampa.busapi.model.*;
+import com.smartsampa.busapi.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import static com.smartsampa.busapi.model.BusAPITestUtils.isAfter4amAndBeforeMidnight;
+import static com.smartsampa.busapi.BusAPITestUtils.isAfter4amAndBeforeMidnight;
 import static org.junit.Assert.*;
 import static org.junit.Assume.*;
 
@@ -80,7 +79,7 @@ public class OlhoVivoAPITest {
     @Test
     public void testGetPredictionsOfTrip() throws Exception {
         assumeTrue(isAfter4amAndBeforeMidnight());
-        Map<AbstractStop, List<PredictedBus>> predictions = api.getPredictionsOfTrip(bonifacio);
+        Map<Stop, List<PredictedBus>> predictions = api.getPredictionsOfTrip(bonifacio);
         assertFalse(predictions.isEmpty());
     }
 
@@ -88,7 +87,7 @@ public class OlhoVivoAPITest {
     @Test
     public void testGetPredictionsAtStop() throws Exception {
         assumeTrue(isAfter4amAndBeforeMidnight());
-        Map<AbstractTrip, List<PredictedBus>> predictions = api.getPredictionsAtStop(campanellaStopId);
+        Map<Trip, List<PredictedBus>> predictions = api.getPredictionsAtStop(campanellaStopId);
         assertFalse(predictions.isEmpty());
     }
 
@@ -113,24 +112,20 @@ public class OlhoVivoAPITest {
         assertTrue(stops.stream().allMatch(namesNotNull));
     }
 
+//    @Test
+//    public void testSearchBusStopsByLine() throws Exception {
+//        BusStop[] busStops = api.searchBusStopsByLine(usp8012);
+//        assumeTrue(busStops.length > 0);
+//
+//        Predicate<BusStop> namesNotNull = stop -> stop.getName() != null;
+//
+//        assertNotNull(busStops);
+//        assertTrue(arrayHasMatch(busStops, namesNotNull));
+//    }
 
-
-
-
-    @Test
-    public void testSearchBusStopsByLine() throws Exception {
-        BusStop[] busStops = api.searchBusStopsByLine(usp8012);
-        assumeTrue(busStops.length > 0);
-
-        Predicate<BusStop> namesNotNull = stop -> stop.getName() != null;
-
-        assertNotNull(busStops);
-        assertTrue(arrayHasMatch(busStops, namesNotNull));
-    }
-
-    private <T> boolean arrayHasMatch(T[] array, Predicate predicate) {
-        return Arrays.asList(array)
-                .parallelStream()
-                .anyMatch(predicate);
-    }
+//    private <T> boolean arrayHasMatch(T[] array, Predicate predicate) {
+//        return Arrays.asList(array)
+//                .parallelStream()
+//                .anyMatch(predicate);
+//    }
 }

@@ -18,7 +18,7 @@ public class GtfsDownloader {
         this.password = password;
     }
 
-    public void downloadToDir(String pathToDir) throws IOException {
+    void downloadToDir(String pathToDir) throws IOException {
         try {
             startDownloadProcessOnPath(pathToDir);
         } catch (Exception e) {

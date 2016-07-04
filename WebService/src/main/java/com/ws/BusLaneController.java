@@ -1,7 +1,7 @@
 package com.ws;
 
-import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.model.BusLane;
+import com.smartsampa.busapi.BusAPI;
+import com.smartsampa.busapi.BusLane;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

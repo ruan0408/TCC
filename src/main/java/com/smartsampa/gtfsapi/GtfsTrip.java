@@ -1,10 +1,9 @@
-package com.smartsampa.busapi.impl;
+package com.smartsampa.gtfsapi;
 
-import com.smartsampa.busapi.model.AbstractTrip;
-import com.smartsampa.busapi.model.Heading;
-import com.smartsampa.busapi.model.Provider;
-import com.smartsampa.busapi.model.Shape;
-import com.smartsampa.gtfsapi.GtfsAPI;
+import com.smartsampa.busapi.AbstractTrip;
+import com.smartsampa.busapi.Heading;
+import com.smartsampa.busapi.Provider;
+import com.smartsampa.busapi.Shape;
 import org.apache.commons.math3.util.Precision;
 import org.onebusaway.gtfs.model.ShapePoint;
 
@@ -64,7 +63,6 @@ public class GtfsTrip extends AbstractTrip {
         return gtfsTrip.getShapeId().getId();
     }
 
-    //TODO maybe it doesnt make sense to keep asking busapi for the gtfs
     @Override
     public int getDepartureIntervalInSecondsAtTime(String hhmm) {
         return gtfsAPI.getDepartureIntervalAtTime(getGtfsId(), hhmm);

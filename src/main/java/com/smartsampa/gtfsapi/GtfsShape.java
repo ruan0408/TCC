@@ -1,6 +1,6 @@
-package com.smartsampa.busapi.impl;
+package com.smartsampa.gtfsapi;
 
-import com.smartsampa.busapi.model.Shape;
+import com.smartsampa.busapi.Shape;
 import com.smartsampa.utils.Point;
 import org.onebusaway.gtfs.model.ShapePoint;
 

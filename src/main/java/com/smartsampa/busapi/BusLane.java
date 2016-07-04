@@ -1,4 +1,4 @@
-package com.smartsampa.busapi.model;
+package com.smartsampa.busapi;
 
 /**
  * Created by ruan0408 on 30/04/2016.

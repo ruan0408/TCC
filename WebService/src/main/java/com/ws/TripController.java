@@ -1,11 +1,11 @@
 package com.ws;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.model.Bus;
-import com.smartsampa.busapi.model.PredictedBus;
-import com.smartsampa.busapi.model.Stop;
-import com.smartsampa.busapi.model.Trip;
+import com.smartsampa.busapi.BusAPI;
+import com.smartsampa.busapi.Bus;
+import com.smartsampa.busapi.PredictedBus;
+import com.smartsampa.busapi.Stop;
+import com.smartsampa.busapi.Trip;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

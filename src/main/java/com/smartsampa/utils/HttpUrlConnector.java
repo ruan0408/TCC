@@ -32,10 +32,10 @@ public class HttpUrlConnector {
         BufferedReader rd = new BufferedReader(
                 new InputStreamReader(response.getEntity().getContent()));
 
-            StringBuffer result = new StringBuffer();
-            String line = "";
-            while ((line = rd.readLine()) != null) result.append(line);
+        StringBuffer result = new StringBuffer();
+        String line = "";
+        while ((line = rd.readLine()) != null) result.append(line);
 
-            return result.toString();
+        return result.toString();
     }
 }

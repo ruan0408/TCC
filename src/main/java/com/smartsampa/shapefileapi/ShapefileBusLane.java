@@ -1,7 +1,7 @@
-package com.smartsampa.busapi.impl;
+package com.smartsampa.shapefileapi;
 
-import com.smartsampa.busapi.model.BusLane;
-import com.smartsampa.busapi.model.Shape;
+import com.smartsampa.busapi.BusLane;
+import com.smartsampa.busapi.Shape;
 import com.smartsampa.utils.Point;
 import com.vividsolutions.jts.geom.Geometry;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -19,11 +19,11 @@ public class ShapefileBusLane implements BusLane {
 
     private List<SimpleFeature> features;
 
-    ShapefileBusLane(List<SimpleFeature> features) {
+    public ShapefileBusLane(List<SimpleFeature> features) {
         this.features = features;
     }
 
-    boolean containsTerm(String term) {
+    public boolean containsTerm(String term) {
         if (containsIgnoreCase(getName(), term)) return true;
         if (containsIgnoreCase(getAddress(), term)) return true;
         if (containsIgnoreCase(getAddressStart(), term)) return true;

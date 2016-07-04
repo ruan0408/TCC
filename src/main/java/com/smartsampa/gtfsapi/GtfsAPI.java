@@ -2,16 +2,18 @@ package com.smartsampa.gtfsapi;
 
 import com.smartsampa.utils.APIConnectionException;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.onebusaway.gtfs.model.*;
 import org.onebusaway.gtfs.services.GtfsDao;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -21,6 +23,7 @@ import java.util.stream.Collectors;
 public class GtfsAPI {
 
     private GtfsDao gtfsDao;
+    private Logger logger = Logger.getLogger(GtfsAPI.class.getName());
 
     public GtfsAPI(GtfsDao gtfsDao) {
         this.gtfsDao = gtfsDao;
@@ -62,14 +65,6 @@ public class GtfsAPI {
         return filterToList("getAllStopTimes", predicate);
     }
 
-    public boolean isTripCircular(Trip trip) {
-        String gtfsRouteId = trip.getRoute().getShortName();
-        Predicate<org.onebusaway.gtfs.model.Trip> sameRoute =
-                t -> t.getRoute().getShortName().equals(gtfsRouteId);
-
-        return filterToList("getAllTrips", sameRoute).size() == 1;
-    }
-
     public List<ShapePoint> getShape(String shapeId) {
         Predicate<ShapePoint> predicate;
         predicate = point -> point.getShapeId().getId().equals(shapeId);
@@ -95,16 +90,17 @@ public class GtfsAPI {
                 .collect(Collectors.toList());
     }
 
-    public int getDepartureIntervalAtTime(String gtfsTripId, String hhmm) {
+    public int getDepartureIntervalAtTime(String gtfsTripId, String HHmm) {
         try {
-            Date date = new SimpleDateFormat("HH:mm").parse(hhmm);
+            Date date = new SimpleDateFormat("HH:mm").parse(HHmm);
             Date date0 = new SimpleDateFormat("HH:mm").parse("00:00");
             long time = (date.getTime() - date0.getTime())/1000;
             return getDepartureInterval(gtfsTripId, time);
         } catch (ParseException e) {
-            e.printStackTrace();
-            throw new APIConnectionException("There was a problem when finding the " +
-                    "departure interval at the time "+hhmm);
+            throw new IllegalArgumentException(e);
+        } catch (NoSuchElementException e) {
+            logger.error("No departure interval was found for trip "+gtfsTripId+" at time" + HHmm, e);
+            return 0;
         }
     }
 
@@ -117,6 +113,15 @@ public class GtfsAPI {
         return f.getHeadwaySecs();
     }
 
+    private <T> T filterToElement(String methodName, Predicate<T> predicate) {
+        List<T> filtered = filterToList(methodName, predicate);
+
+        if (filtered.isEmpty())
+            throw new NoSuchElementException();
+
+        return filtered.get(0);
+    }
+
     private <T> List<T> filterToList(String methodName, Predicate<T> predicate) {
         try {
             Method method = gtfsDao.getClass().getMethod(methodName);
@@ -124,19 +129,8 @@ public class GtfsAPI {
                     .parallelStream()
                     .filter(predicate)
                     .collect(Collectors.toList());
-        } catch (Exception e) {
-            e.printStackTrace();
-            return Collections.emptyList();
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+            throw new APIConnectionException("There was a problem invoking the method "+methodName);
         }
-    }
-
-    private <T> T filterToElement(String methodName, Predicate<T> predicate) {
-        List<T> filtered = filterToList(methodName, predicate);
-
-        if (filtered.isEmpty())
-            throw new APIConnectionException("No result found for method "+methodName+
-                    "and predicate "+predicate);
-
-        return filtered.get(0);
     }
 }

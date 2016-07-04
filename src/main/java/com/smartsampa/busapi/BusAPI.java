@@ -1,11 +1,9 @@
-package com.smartsampa.busapi.impl;
+package com.smartsampa.busapi;
 
-import com.smartsampa.busapi.model.*;
-import com.smartsampa.gtfsapi.GtfsAPI;
-import com.smartsampa.gtfsapi.GtfsDownloader;
-import com.smartsampa.gtfsapi.GtfsHandler;
+import com.smartsampa.gtfsapi.*;
 import com.smartsampa.olhovivoapi.OlhoVivoAPI;
 import com.smartsampa.shapefileapi.ShapefileAPI;
+import com.smartsampa.shapefileapi.ShapefileBusLane;
 import org.opengis.feature.simple.SimpleFeature;
 
 import java.util.List;
@@ -13,7 +11,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -25,8 +22,8 @@ import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
  */
 public final class BusAPI {
 
-    private static GtfsAPI gtfs;
-    public static OlhoVivoAPI olhovivo;
+    private static GtfsAPIWrapper gtfsAPIWrapper;
+    private static OlhoVivoAPI olhovivo;
     private static ShapefileAPI shapefile;
 
     private static String sptransLogin;
@@ -38,7 +35,8 @@ public final class BusAPI {
     public static void initialize() {
         GtfsDownloader gtfsDownloader = new GtfsDownloader(sptransLogin, sptransPassword);
         GtfsHandler gtfsHandler = new GtfsHandler(gtfsDownloader);
-        gtfs = new GtfsAPI(gtfsHandler.getGtfsDao());
+        GtfsAPI gtfs = new GtfsAPI(gtfsHandler.getGtfsDao());
+        gtfsAPIWrapper = new GtfsAPIWrapper(gtfs);
 
         //TODO put this in the same architecture as the others
         shapefile = new ShapefileAPI("faixa_onibus/sirgas_faixa_onibus.shp");
@@ -56,23 +54,17 @@ public final class BusAPI {
 
     public static void setOlhovivoKey(String key) {olhovivoKey = key;}
 
-
-
-
-
     public static Set<Trip> getTripsByTerm(String term) {
-        Set<Trip> gtfsTrips = getGtfsTripsByTerm(term);
+        Set<Trip> gtfsTrips = gtfsAPIWrapper.getTripsByTerm(term);
         Set<Trip> olhovivoTrips = olhovivo.getTripsByTerm(term);
 
         return Mergeable.mergeSets(gtfsTrips, olhovivoTrips);
     }
 
-    private static Set<Trip> getGtfsTripsByTerm(String term) {
-        return gtfs.getTripsWithRouteContaining(term).stream()
-                .map(GtfsTrip::new)
-                .flatMap(trip -> Stream.of(trip, trip.cloneChangingHeadingAndDestinationSign()))
-                .filter(trip -> trip.containsTerm(term))
-                .collect(Collectors.toSet());
+    public static Set<Stop> getStopsByTerm(String term) {
+        Set<Stop> gtfsStops = gtfsAPIWrapper.getStopsByTerm(term);
+        Set<Stop> olhovivoStops = olhovivo.getStopsByTerm(term);
+        return Mergeable.mergeSets(gtfsStops, olhovivoStops);
     }
 
     public static Trip getTripById(String tripId) {
@@ -85,54 +77,8 @@ public final class BusAPI {
         return getTrip(numberSign, Heading.getHeadingFromInt(heading));
     }
 
-    //TODO returning null might be bad...
-    public static Trip getTrip(String numberSign, Heading heading) {
-        return getTripsByTerm(numberSign).stream()
-                .filter(t -> t.getHeading() == heading)
-                .findAny()
-                .orElse(null);
-    }
-
-    public static Set<Trip> getTripsFrom(Stop stop) {
-        return gtfs.getAllTripsFromStopId(stop.getId()).stream()
-                .map(GtfsTrip::new)
-                .map(trip -> getTrip(trip.getNumberSign(), trip.getHeading()))
-                .collect(toSet());
-    }
-
-
-
-
-
-
-    public static Set<Stop> getStopsByTerm(String term) {
-        Set<Stop> gtfsStops = getGtfsStopsByTerm(term);
-        Set<Stop> olhovivoStops = olhovivo.getStopsByTerm(term);
-        return Mergeable.mergeSets(gtfsStops, olhovivoStops);
-    }
-
-    public static List<Stop> getStopsFrom(Corridor corridor) {
-        List<Stop> olhovivoStops = olhovivo.getStopsByCorridor(corridor.getId());
-        return olhovivoStops.stream()
-                .map(olhovivoStop -> {
-                    Stop gtfsStop = getGtfsStopsByTerm(olhovivoStop.getName()).stream()
-                            .filter(olhovivoStop::equals)
-                            .findAny()
-                            .orElse(null);
-                    olhovivoStop.merge(gtfsStop);
-                    return olhovivoStop;
-                })
-                .collect(toList());
-    }
-
-    private static Set<Stop> getGtfsStopsByTerm(String term) {
-        return gtfs.getStopsByTerm(term).stream()
-                .map(GtfsStop::new)
-                .collect(toSet());
-    }
-
     public static Stop getStopById(int id) {
-        Stop gtfsStop = new GtfsStop(gtfs.getStopById(id));
+        Stop gtfsStop = gtfsAPIWrapper.getStopById(id);
         Set<Stop> stops = getStopsByTerm(gtfsStop.getName());
         return stops.stream()
                 .filter(gtfsStop::equals)
@@ -140,23 +86,29 @@ public final class BusAPI {
                 .orElse(null);
     }
 
-    //TODO make this return complete stops
-    public static List<Stop> getStopsFrom(Trip trip) {
-        return gtfs.getAllStopsOrderedFromTripId(trip.getGtfsId())
-                .stream()
-                .map(GtfsStop::new)
-                .collect(toList());
+    static Set<Trip> getTripsFromStop(Stop stop) {
+        return gtfsAPIWrapper.getTripsFromStop(stop).stream()
+                .map(trip -> getTrip(trip.getNumberSign(), trip.getHeading()))
+                .collect(toSet());
     }
 
+    //TODO make this return complete stops
+    static List<Stop> getStopsFromTrip(Trip trip) {
+        return gtfsAPIWrapper.getStopsFromTrip(trip);
+    }
 
-
-
-
-
+    //TODO returning null might be bad...
+    static Trip getTrip(String numberSign, Heading heading) {
+        return getTripsByTerm(numberSign).stream()
+                .filter(t -> t.getHeading() == heading)
+                .findAny()
+                .orElse(null);
+    }
 
     public static List<Corridor> getAllCorridors() {
         return olhovivo.getAllCorridors();
     }
+
 
     public static Corridor getCorridorByTerm(String term) {
         return getAllCorridors().stream()
@@ -165,10 +117,19 @@ public final class BusAPI {
                 .orElse(null);
     }
 
-
-
-
-
+    static List<Stop> getStopsFromCorridor(Corridor corridor) {
+        List<Stop> olhovivoStops = olhovivo.getStopsByCorridor(corridor.getId());
+        return olhovivoStops.stream()
+                .map(olhovivoStop -> {
+                    Stop gtfsStop = gtfsAPIWrapper.getStopsByTerm(olhovivoStop.getName()).stream()
+                            .filter(olhovivoStop::equals)
+                            .findAny()
+                            .orElse(null);
+                    olhovivoStop.merge(gtfsStop);
+                    return olhovivoStop;
+                })
+                .collect(toList());
+    }
 
     public static List<BusLane> getAllBusLanes() {
         return getAllShapefileBusLanes().collect(toList());
