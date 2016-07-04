@@ -1,6 +1,6 @@
-package com.smartsampa.busapi.impl;
+package com.smartsampa.gtfsapi;
 
-import com.smartsampa.busapi.model.AbstractStop;
+import com.smartsampa.busapi.AbstractStop;
 import com.smartsampa.utils.Point;
 
 /**

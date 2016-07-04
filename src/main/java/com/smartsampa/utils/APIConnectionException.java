@@ -9,4 +9,8 @@ public class APIConnectionException extends RuntimeException {
         super(message);
     }
 
+    public APIConnectionException(String message, Exception e) {
+        super(message, e);
+    }
+
 }

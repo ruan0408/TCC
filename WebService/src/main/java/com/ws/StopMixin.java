@@ -1,8 +1,8 @@
 package com.ws;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.smartsampa.busapi.model.PredictedBus;
-import com.smartsampa.busapi.model.Trip;
+import com.smartsampa.busapi.PredictedBus;
+import com.smartsampa.busapi.Trip;
 import com.smartsampa.utils.Point;
 
 import java.util.List;

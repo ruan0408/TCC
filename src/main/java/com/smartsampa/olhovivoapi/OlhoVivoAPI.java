@@ -3,7 +3,7 @@ package com.smartsampa.olhovivoapi;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.smartsampa.busapi.model.*;
+import com.smartsampa.busapi.*;
 import com.smartsampa.utils.APIConnectionException;
 import com.smartsampa.utils.HttpUrlConnector;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
  */
 public class OlhoVivoAPI {
 
-    private static final String BASE_URL = "http://api.olhovivo.sptrans.com.br/v0/";
-    protected static ObjectMapper jsonParser = new ObjectMapper();
+    private final static String BASE_URL = "http://api.olhovivo.sptrans.com.br/v0/";
+    private static ObjectMapper jsonParser = new ObjectMapper();
     private String authKey;
     private HttpUrlConnector httpConnector;
 
@@ -33,24 +33,21 @@ public class OlhoVivoAPI {
     }
 
     public boolean authenticate() {
-        String url = BASE_URL +"Login/Autenticar?token="+encodeToURL(authKey);
-        String response = null;
         try {
-            response = httpConnector.executePostWithoutForm(url);
+            String url = BASE_URL +"Login/Autenticar?token="+encodeToURL(authKey);
+            String response = httpConnector.executePostWithoutForm(url);
+            return response.equalsIgnoreCase("true");
         } catch (IOException e) {
-            e.printStackTrace();
-            throw new APIConnectionException("There was a problem authenticating with the OlhoVivoAPI");
+            throw new APIConnectionException("There was a problem " +
+                    "authenticating in the OlhoVivoAPI with the key "+authKey, e);
         }
-
-        return response.equalsIgnoreCase("true");
     }
 
     public Set<Trip> getTripsByTerm(String searchTerms) {
         String url = BASE_URL +"/Linha/Buscar?termosBusca="+encodeToURL(searchTerms);
         BusLine[] busLines = performQuery(url, BusLine[].class);
 
-        if (busLines == null)
-            return Collections.emptySet();
+        if (busLines == null) return Collections.emptySet();
 
         return Arrays.asList(busLines).stream()
                 .filter(line -> line.containsTerm(searchTerms))
@@ -66,31 +63,35 @@ public class OlhoVivoAPI {
 
     public Set<Bus> getAllRunningBusesOfTrip(int busLineCode) {
         String url = BASE_URL + "/Posicao?codigoLinha="+encodeToURL(busLineCode+"");
-        BusLinePositions busLinePositions = performQuery(url, BusLinePositions.class);
-        Bus[] buses = busLinePositions.getVehicles();
 
+        BusLinePositions busLinePositions = performQuery(url, BusLinePositions.class);
+        if (busLinePositions == null) return Collections.emptySet();
+
+        Bus[] buses = busLinePositions.getVehicles();
         return buses != null ? new HashSet<>(Arrays.asList(buses)) : Collections.emptySet();
     }
 
     public List<PredictedBus> getPredictionsOfTripAtStop(int busLineCode, int busStopCode) {
         String url = BASE_URL + "/Previsao?codigoParada="+busStopCode+"&codigoLinha="+busLineCode;
+
         ForecastWithStopAndLine forecast = performQuery(url, ForecastWithStopAndLine.class);
+        if (forecast == null) return Collections.emptyList();
+
         BusNow[] buses = forecast.getBuses();
 
         return buses != null ? Arrays.asList(buses) : Collections.emptyList();
     }
 
-    //TODO check all possible nulls in this class
-    //TODO should I be using AbstractStop here?
-    public Map<AbstractStop, List<PredictedBus>> getPredictionsOfTrip(int busLineCode) {
+    public Map<Stop, List<PredictedBus>> getPredictionsOfTrip(int busLineCode) {
         String url = BASE_URL + "/Previsao/Linha?codigoLinha="+encodeToURL(busLineCode+"");
+
         ForecastWithLine forecastWithLine = performQuery(url, ForecastWithLine.class);
+        if (forecastWithLine == null) return Collections.emptyMap();
+
         BusStopNow[] stopsWithForecast = forecastWithLine.getBusStops();
+        if (stopsWithForecast == null) return Collections.emptyMap();
 
-        if (stopsWithForecast == null)
-            return Collections.emptyMap();
-
-        Map<AbstractStop, List<PredictedBus>> forecast = new HashMap<>();
+        Map<Stop, List<PredictedBus>> forecast = new HashMap<>();
         for (BusStopNow stopNow : stopsWithForecast) {
             if (stopNow == null)
                 continue;
@@ -101,15 +102,16 @@ public class OlhoVivoAPI {
         return forecast;
     }
 
-    public Map<AbstractTrip, List<PredictedBus>> getPredictionsAtStop(int busStopCode) {
+    public Map<Trip, List<PredictedBus>> getPredictionsAtStop(int busStopCode) {
         String url = BASE_URL + "/Previsao/Parada?codigoParada="+encodeToURL(busStopCode+"");
+
         ForecastWithStop forecastWithStop = performQuery(url, ForecastWithStop.class);
+        if (forecastWithStop== null) return Collections.emptyMap();
+
         BusLineNow[] linesWithForecast = forecastWithStop.getBusLines();
+        if (linesWithForecast == null) return Collections.emptyMap();
 
-        if (linesWithForecast == null)
-            return Collections.emptyMap();
-
-        Map<AbstractTrip, List<PredictedBus>> forecast = new HashMap<>();
+        Map<Trip, List<PredictedBus>> forecast = new HashMap<>();
         for (BusLineNow lineNow : linesWithForecast)
             forecast.put(lineNow, Arrays.asList(lineNow.vehicles));
 
@@ -128,20 +130,6 @@ public class OlhoVivoAPI {
         return stops != null ? Arrays.asList(stops) : Collections.emptyList();
     }
 
-
-
-
-
-
-    public BusStop[] searchBusStopsByLine(int busLineCode) {
-        String url = BASE_URL +"/Parada/BuscarParadasPorLinha?codigoLinha="+encodeToURL(busLineCode+"");
-        return performQuery(url, BusStop[].class);
-    }
-
-
-
-
-
     private <T> T performQuery(String url, Class<T> tClass) {
         try {
             String jsonResponse = httpConnector.executeGet(url);
@@ -152,21 +140,15 @@ public class OlhoVivoAPI {
         }
     }
 
-    private <T> T jsonToObject(String jsonResponse, Class<T> tClass) {
-        try {
-            return jsonParser.readValue(jsonResponse, tClass);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+    private <T> T jsonToObject(String jsonResponse, Class<T> tClass) throws IOException {
+        return jsonParser.readValue(jsonResponse, tClass);
     }
 
     private String encodeToURL(String string) {
         try {
             return URLEncoder.encode(string, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-            throw new APIConnectionException("There was a problem encoding the string "+string);
+            throw new APIConnectionException("There was a problem encoding the string "+string, e);
         }
     }
 
@@ -177,5 +159,10 @@ public class OlhoVivoAPI {
                 .append("httpConnector", httpConnector)
                 .toString();
     }
+
+    //    public BusStop[] searchBusStopsByLine(int busLineCode) {
+//        String url = BASE_URL +"/Parada/BuscarParadasPorLinha?codigoLinha="+encodeToURL(busLineCode+"");
+//        return performQuery(url, BusStop[].class);
+//    }
 }
 

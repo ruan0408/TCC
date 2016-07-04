@@ -1,4 +1,4 @@
-package com.smartsampa.busapi.model;
+package com.smartsampa.busapi;
 
 import java.util.List;
 

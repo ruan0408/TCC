@@ -1,7 +1,7 @@
 package com.ws;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.smartsampa.busapi.model.*;
+import com.smartsampa.busapi.*;
 
 import java.util.List;
 import java.util.Map;

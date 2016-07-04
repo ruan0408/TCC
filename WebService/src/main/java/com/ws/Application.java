@@ -7,9 +7,9 @@ import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.model.Stop;
-import com.smartsampa.busapi.model.Trip;
+import com.smartsampa.busapi.BusAPI;
+import com.smartsampa.busapi.Stop;
+import com.smartsampa.busapi.Trip;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -49,7 +49,7 @@ public class Application {
         return mapper;
     }
 
-    class TripKeySerializer extends JsonSerializer<Trip> {
+    private class TripKeySerializer extends JsonSerializer<Trip> {
         @Override
         public void serialize(Trip trip, JsonGenerator jgen, SerializerProvider provider)
                 throws IOException {
@@ -57,7 +57,7 @@ public class Application {
         }
     }
 
-    class StopKeySerializer extends JsonSerializer<Stop> {
+    private class StopKeySerializer extends JsonSerializer<Stop> {
         @Override
         public void serialize(Stop stop, JsonGenerator jgen, SerializerProvider provider)
                 throws IOException {

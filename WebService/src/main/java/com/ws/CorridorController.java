@@ -1,8 +1,8 @@
 package com.ws;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.smartsampa.busapi.impl.BusAPI;
-import com.smartsampa.busapi.model.Corridor;
+import com.smartsampa.busapi.BusAPI;
+import com.smartsampa.busapi.Corridor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

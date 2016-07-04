@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SmartSampa.iml" filepath="$PROJECT_DIR$/SmartSampa.iml" />
       <module fileurl="file://$PROJECT_DIR$/TCC.iml" filepath="$PROJECT_DIR$/TCC.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebService/WebService.iml" filepath="$PROJECT_DIR$/WebService/WebService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebService/gs-rest-service.iml" filepath="$PROJECT_DIR$/WebService/gs-rest-service.iml" />
     </modules>
   </component>
 </project>

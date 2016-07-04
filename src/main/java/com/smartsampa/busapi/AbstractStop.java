@@ -1,6 +1,5 @@
-package com.smartsampa.busapi.model;
+package com.smartsampa.busapi;
 
-import com.smartsampa.busapi.impl.BusAPI;
 import com.smartsampa.olhovivoapi.OlhoVivoAPI;
 import com.smartsampa.utils.Point;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -26,13 +25,13 @@ public abstract class AbstractStop implements Stop {
     //TODO test that the trips are complete
     @Override
     public Map<Trip, List<PredictedBus>> getPredictionsPerTrip() {
-        Map<AbstractTrip, List<PredictedBus>> predictions =
+        Map<Trip, List<PredictedBus>> predictions =
                 olhoVivoAPI.getPredictionsAtStop(getId());
 
         return replaceTripByCompleteTrip(predictions);
     }
 
-    private Map<Trip, List<PredictedBus>> replaceTripByCompleteTrip(Map<AbstractTrip, List<PredictedBus>> predictions) {
+    private Map<Trip, List<PredictedBus>> replaceTripByCompleteTrip(Map<Trip, List<PredictedBus>> predictions) {
         Map<Trip, List<PredictedBus>> result = new HashMap<>(predictions.size());
         predictions.keySet().stream().forEach(oldTrip -> {
             Trip newTrip = BusAPI.getTrip(oldTrip.getNumberSign(), oldTrip.getHeading());
@@ -48,7 +47,7 @@ public abstract class AbstractStop implements Stop {
 
     @Override
     public Set<Trip> getTrips() {
-        return BusAPI.getTripsFrom(this);
+        return BusAPI.getTripsFromStop(this);
     }
 
     @Override

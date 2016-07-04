@@ -1,6 +1,5 @@
-package com.smartsampa.busapi.model;
+package com.smartsampa.busapi;
 
-import com.smartsampa.busapi.impl.BusAPI;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.List;
@@ -12,7 +11,7 @@ public abstract class AbstractCorridor implements Corridor {
 
     @Override
     public List<Stop> getStops() {
-        return BusAPI.getStopsFrom(this);
+        return BusAPI.getStopsFromCorridor(this);
     }
 
     @Override

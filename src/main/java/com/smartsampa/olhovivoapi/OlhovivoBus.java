@@ -2,7 +2,7 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smartsampa.busapi.model.Bus;
+import com.smartsampa.busapi.Bus;
 import com.smartsampa.utils.Point;
 
 /**
