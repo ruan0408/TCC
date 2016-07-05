@@ -11,6 +11,8 @@ import java.util.Set;
  */
 public interface Stop extends Mergeable {
 
+    static Stop emptyStop() { return NullStop.getInstance(); }
+
     Map<Trip, List<PredictedBus>> getPredictionsPerTrip();
 
     List<PredictedBus> getPredictedBusesOfTrip(Trip trip);

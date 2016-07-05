@@ -74,7 +74,7 @@ public abstract class AbstractTrip implements Trip {
 
     @Override
     public String getId() {
-        return getNumberSign()+"-"+Heading.getIntFromHeading(getHeading());
+        return getNumberSign()+"-"+getHeading().getIntFromHeading();
     }
 
     @Override

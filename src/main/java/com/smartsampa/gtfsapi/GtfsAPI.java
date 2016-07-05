@@ -25,8 +25,8 @@ public class GtfsAPI {
     private GtfsDao gtfsDao;
     private Logger logger = Logger.getLogger(GtfsAPI.class.getName());
 
-    public GtfsAPI(GtfsDao gtfsDao) {
-        this.gtfsDao = gtfsDao;
+    public GtfsAPI(GtfsHandler gtfsHandler) {
+        this.gtfsDao = gtfsHandler.getGtfsDao();
     }
 
     public List<Trip> getTripsWithRouteContaining(String term) {

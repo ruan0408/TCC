@@ -8,28 +8,28 @@ import com.smartsampa.utils.Point;
  */
 public class GtfsStop extends AbstractStop {
 
-    private org.onebusaway.gtfs.model.Stop gtfsStop;
+    private org.onebusaway.gtfs.model.Stop gtfsRawStop;
 
-    public GtfsStop(org.onebusaway.gtfs.model.Stop gtfsStop) {
-        this.gtfsStop = gtfsStop;
+    public GtfsStop(org.onebusaway.gtfs.model.Stop gtfsRawStop) {
+        this.gtfsRawStop = gtfsRawStop;
     }
 
     @Override
     public Integer getId() {
-        return Integer.parseInt(gtfsStop.getId().getId());
+        return Integer.parseInt(gtfsRawStop.getId().getId());
     }
 
     @Override
     public String getName() {
-        return gtfsStop.getName();
+        return gtfsRawStop.getName();
     }
 
     @Override
-    public String getReference() {return gtfsStop.getDesc();}
+    public String getReference() {return gtfsRawStop.getDesc();}
 
     @Override
     public Point getLocation() {
-        return new Point(gtfsStop.getLat(), gtfsStop.getLon());
+        return new Point(gtfsRawStop.getLat(), gtfsRawStop.getLon());
     }
 
 }

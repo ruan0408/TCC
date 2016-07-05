@@ -8,7 +8,7 @@ import java.io.IOException;
 public class GtfsDownloader {
 
     private static final String DOWNLOAD_GTFS_SCRIPT_PATH =
-            GtfsAPI.class.getClassLoader().getResource("downloadGtfs.py").getPath();
+            GtfsDownloader.class.getClassLoader().getResource("downloadGtfs.py").getPath();
 
     private String login;
     private String password;

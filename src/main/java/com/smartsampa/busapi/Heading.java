@@ -20,8 +20,8 @@ public enum Heading {
         return MAIN_TERMINAL;
     }
 
-    public static int getIntFromHeading(Heading heading) {
-        if (heading == SECONDARY_TERMINAL)
+    public int getIntFromHeading() {
+        if (this == SECONDARY_TERMINAL)
             return 1;
 
         return 2;

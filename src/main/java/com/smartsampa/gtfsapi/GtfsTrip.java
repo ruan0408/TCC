@@ -16,21 +16,21 @@ import java.util.List;
  */
 public class GtfsTrip extends AbstractTrip {
 
-    private org.onebusaway.gtfs.model.Trip gtfsTrip;
+    private org.onebusaway.gtfs.model.Trip gtfsRawTrip;
     private GtfsAPI gtfsAPI = Provider.getGtfsAPI();
 
-    public GtfsTrip(org.onebusaway.gtfs.model.Trip gtfsTrip) {
-        this.gtfsTrip = gtfsTrip;
+    public GtfsTrip(org.onebusaway.gtfs.model.Trip gtfsRawTrip) {
+        this.gtfsRawTrip = gtfsRawTrip;
     }
 
     @Override
     public String getDestinationSign() {
-        return gtfsTrip.getTripHeadsign();
+        return gtfsRawTrip.getTripHeadsign();
     }
 
     @Override
     public String getNumberSign() {
-        return gtfsTrip.getRoute().getShortName();
+        return gtfsRawTrip.getRoute().getShortName();
     }
 
     @Override
@@ -39,12 +39,12 @@ public class GtfsTrip extends AbstractTrip {
     }
 
     private boolean isHeadingToSecondaryTerminal() {
-        return gtfsTrip.getDirectionId().equals("0");
+        return gtfsRawTrip.getDirectionId().equals("0");
     }
 
     @Override
     public String getWorkingDays() {
-        return gtfsTrip.getServiceId().getId();
+        return gtfsRawTrip.getServiceId().getId();
     }
 
     @Override
@@ -60,7 +60,7 @@ public class GtfsTrip extends AbstractTrip {
     }
 
     private String getShapeId() {
-        return gtfsTrip.getShapeId().getId();
+        return gtfsRawTrip.getShapeId().getId();
     }
 
     @Override
@@ -76,31 +76,7 @@ public class GtfsTrip extends AbstractTrip {
 
     @Override
     public String getGtfsId() {
-        return gtfsTrip.getId().getId();
+        return gtfsRawTrip.getId().getId();
     }
 
-
-    /*
-    * This method creates a clone of this GtfsTrip, but changes the heading
-    * and the destinationSign. It's necessary because the gtfs files have only one entry
-    * for circular trips, while the Olhovivo API has two entries for circular trips.
-    * Therefore we "falsify" one of the sides of the trip.
-    * */
-    GtfsTrip cloneChangingHeadingAndDestinationSign() {
-        return new GtfsTrip (gtfsTrip) {
-            @Override
-            public Heading getHeading() {
-                return Heading.reverse(super.getHeading());
-            }
-
-            @Override
-            public String getDestinationSign() {
-                String oldSign = super.getDestinationSign();
-                String longName = gtfsTrip.getRoute().getLongName();
-
-                String newSign = longName.replace(oldSign, "").trim();
-                return newSign.replaceAll("^-|-$", "").trim();
-            }
-        };
-    }
 }

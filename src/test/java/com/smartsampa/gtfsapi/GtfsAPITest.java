@@ -7,12 +7,10 @@ import org.junit.Test;
  */
 public class GtfsAPITest {
 
-    private static GtfsAPI gtfsAPI;
-
     @Test
     public void testGetInstance() throws Exception {
         GtfsDownloader gtfsDownloader = new GtfsDownloader("ruan0408", "costaruan");
         GtfsHandler gtfsHandler = new GtfsHandler(gtfsDownloader);
-        gtfsAPI = new GtfsAPI(gtfsHandler.getGtfsDao());
+        GtfsAPI gtfsAPI = new GtfsAPI(gtfsHandler);
     }
 }

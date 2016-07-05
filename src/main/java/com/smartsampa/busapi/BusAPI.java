@@ -1,6 +1,9 @@
 package com.smartsampa.busapi;
 
-import com.smartsampa.gtfsapi.*;
+import com.smartsampa.gtfsapi.GtfsAPI;
+import com.smartsampa.gtfsapi.GtfsAPIWrapper;
+import com.smartsampa.gtfsapi.GtfsDownloader;
+import com.smartsampa.gtfsapi.GtfsHandler;
 import com.smartsampa.olhovivoapi.OlhoVivoAPI;
 import com.smartsampa.shapefileapi.ShapefileAPI;
 import com.smartsampa.shapefileapi.ShapefileBusLane;
@@ -22,6 +25,7 @@ import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
  */
 public final class BusAPI {
 
+    private static final Pattern tripIdPattern = Pattern.compile("(\\w+-\\d+)-([12])");
     private static GtfsAPIWrapper gtfsAPIWrapper;
     private static OlhoVivoAPI olhovivo;
     private static ShapefileAPI shapefile;
@@ -35,7 +39,7 @@ public final class BusAPI {
     public static void initialize() {
         GtfsDownloader gtfsDownloader = new GtfsDownloader(sptransLogin, sptransPassword);
         GtfsHandler gtfsHandler = new GtfsHandler(gtfsDownloader);
-        GtfsAPI gtfs = new GtfsAPI(gtfsHandler.getGtfsDao());
+        GtfsAPI gtfs = new GtfsAPI(gtfsHandler);
         gtfsAPIWrapper = new GtfsAPIWrapper(gtfs);
 
         //TODO put this in the same architecture as the others
@@ -67,23 +71,33 @@ public final class BusAPI {
         return Mergeable.mergeSets(gtfsStops, olhovivoStops);
     }
 
-    public static Trip getTripById(String tripId) {
-        Pattern pattern = Pattern.compile("(\\w+-\\d+)-([12])");
-        Matcher matcher = pattern.matcher(tripId);
-        matcher.find();
-        String numberSign = matcher.group(1);
-        int heading = Integer.parseInt(matcher.group(2));
-
-        return getTrip(numberSign, Heading.getHeadingFromInt(heading));
-    }
-
     public static Stop getStopById(int id) {
         Stop gtfsStop = gtfsAPIWrapper.getStopById(id);
         Set<Stop> stops = getStopsByTerm(gtfsStop.getName());
         return stops.stream()
                 .filter(gtfsStop::equals)
                 .findAny()
-                .orElse(null);
+                .orElse(Stop.emptyStop());
+    }
+
+    public static Trip getTripById(String id) {
+        String numberSign = getNumberSignFromTripId(id);
+        Heading heading = getHeadingFromTripId(id);
+        return getTrip(numberSign, heading);
+    }
+
+    private static String getNumberSignFromTripId(String tripId) {
+        Matcher matcher = tripIdPattern.matcher(tripId);
+        return matcher.find() ? matcher.group(1) : null;
+    }
+
+    private static Heading getHeadingFromTripId(String tripId) {
+        Matcher matcher = tripIdPattern.matcher(tripId);
+        if (matcher.find()) {
+            int heading = Integer.parseInt(matcher.group(2));
+            return Heading.getHeadingFromInt(heading);
+        }
+        return null;
     }
 
     static Set<Trip> getTripsFromStop(Stop stop) {
@@ -92,18 +106,18 @@ public final class BusAPI {
                 .collect(toSet());
     }
 
+    static Trip getTrip(String numberSign, Heading heading) {
+        return getTripsByTerm(numberSign).stream()
+                .filter(t -> t.getHeading() == heading)
+                .findAny()
+                .orElse(Trip.emptyTrip());
+    }
+
     //TODO make this return complete stops
     static List<Stop> getStopsFromTrip(Trip trip) {
         return gtfsAPIWrapper.getStopsFromTrip(trip);
     }
 
-    //TODO returning null might be bad...
-    static Trip getTrip(String numberSign, Heading heading) {
-        return getTripsByTerm(numberSign).stream()
-                .filter(t -> t.getHeading() == heading)
-                .findAny()
-                .orElse(null);
-    }
 
     public static List<Corridor> getAllCorridors() {
         return olhovivo.getAllCorridors();
@@ -114,7 +128,7 @@ public final class BusAPI {
         return getAllCorridors().stream()
                 .filter(c -> containsIgnoreCase(c.getName(), term))
                 .findAny()
-                .orElse(null);
+                .orElse(Corridor.emptyCorridor());
     }
 
     static List<Stop> getStopsFromCorridor(Corridor corridor) {
@@ -124,7 +138,7 @@ public final class BusAPI {
                     Stop gtfsStop = gtfsAPIWrapper.getStopsByTerm(olhovivoStop.getName()).stream()
                             .filter(olhovivoStop::equals)
                             .findAny()
-                            .orElse(null);
+                            .orElse(Stop.emptyStop());
                     olhovivoStop.merge(gtfsStop);
                     return olhovivoStop;
                 })

@@ -28,10 +28,10 @@ public abstract class AbstractStop implements Stop {
         Map<Trip, List<PredictedBus>> predictions =
                 olhoVivoAPI.getPredictionsAtStop(getId());
 
-        return replaceTripByCompleteTrip(predictions);
+        return replaceTripsByCompleteTrips(predictions);
     }
 
-    private Map<Trip, List<PredictedBus>> replaceTripByCompleteTrip(Map<Trip, List<PredictedBus>> predictions) {
+    private Map<Trip, List<PredictedBus>> replaceTripsByCompleteTrips(Map<Trip, List<PredictedBus>> predictions) {
         Map<Trip, List<PredictedBus>> result = new HashMap<>(predictions.size());
         predictions.keySet().stream().forEach(oldTrip -> {
             Trip newTrip = BusAPI.getTrip(oldTrip.getNumberSign(), oldTrip.getHeading());
@@ -55,34 +55,29 @@ public abstract class AbstractStop implements Stop {
         if (mergeable == null) return;
 
         Stop other = (Stop) mergeable;
-        if (getId() == null) setId(other.getId());
-        if (getName() == null) setName(other.getName());
-        if (getReference() == null) setReference(other.getReference());
-        if (getAddress() == null) setAddress(other.getAddress());
-        if (getLocation() == null) setLocation(other.getLocation());
+        if (getId() == null) id = other.getId();
+        if (getName() == null) name = other.getName();
+        if (getReference() == null) reference = other.getReference();
+        if (getAddress() == null) address = other.getAddress();
+        if (getLocation() == null) location = other.getLocation();
     }
 
     @Override
     public Integer getId() { return id; }
-    public void setId(Integer id) { this.id = id; }
 
     @Override
     public String getName() {
         return name;
     }
-    public void setName(String name) {this.name = name;}
 
     @Override
     public String getReference() {return reference;}
-    public void setReference(String reference) {this.reference = reference;}
 
     @Override
     public String getAddress() {return address;}
-    public void setAddress(String address) {this.address = address;}
 
     @Override
     public Point getLocation() {return location;}
-    public void setLocation(Point location) {this.location = location;}
 
     @Override
     public boolean equals(Object o) {

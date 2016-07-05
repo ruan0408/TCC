@@ -9,6 +9,8 @@ import java.util.Set;
  */
 public interface Trip extends Mergeable {
 
+    static Trip emptyTrip() { return NullTrip.getInstance(); }
+
     String getId();
 
     String getNumberSign();

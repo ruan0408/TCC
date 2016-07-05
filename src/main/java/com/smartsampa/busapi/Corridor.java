@@ -7,6 +7,8 @@ import java.util.List;
  */
 public interface Corridor {
 
+    static Corridor emptyCorridor() { return NullCorridor.getInstance(); }
+
     int getId();
 
     int getCodCot();
