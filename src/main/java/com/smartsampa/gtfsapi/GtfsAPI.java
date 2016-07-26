@@ -25,18 +25,19 @@ public class GtfsAPI {
     private GtfsDao gtfsDao;
     private Logger logger = Logger.getLogger(GtfsAPI.class.getName());
 
-    public GtfsAPI(GtfsHandler gtfsHandler) {
-        this.gtfsDao = gtfsHandler.getGtfsDao();
+    public GtfsAPI(GtfsDao gtfsDao) {
+        this.gtfsDao = gtfsDao;
     }
 
-    public List<Trip> getTripsWithRouteContaining(String term) {
-        Predicate<Trip> containsTerm = trip -> routeContainsTerm(trip, term);
+    public List<Trip> getTripsWithRouteContainingTerm(String term) {
+        Predicate<Trip> containsTerm =
+                trip -> routeContainsTerm(trip.getRoute(), term);
         return filterToList("getAllTrips", containsTerm);
     }
 
-    private boolean routeContainsTerm(Trip trip, String term) {
-        return StringUtils.containsIgnoreCase(trip.getRoute().getLongName(), term) ||
-                StringUtils.containsIgnoreCase(trip.getRoute().getId().getId(), term);
+    private boolean routeContainsTerm(Route route, String term) {
+        return StringUtils.containsIgnoreCase(route.getLongName(), term) ||
+                StringUtils.containsIgnoreCase(route.getId().getId(), term);
     }
 
     public List<Stop> getStopsByTerm(String term) {
@@ -46,6 +47,7 @@ public class GtfsAPI {
         return filterToList("getAllStops", containsTerm);
     }
 
+    //TODO maybe throw checked exceptions here and return empty stop.
     public Stop getStopById(int id) {
         Predicate<Stop> hasId = stop -> stop.getId().getId().equals(id + "");
         return filterToElement("getAllStops", hasId);
@@ -60,8 +62,7 @@ public class GtfsAPI {
     }
 
     private List<StopTime> getAllStopTimesFromTripId(String gtfsTripId) {
-        Predicate<StopTime> predicate;
-        predicate = s -> s.getTrip().getId().getId().equals(gtfsTripId);
+        Predicate<StopTime> predicate = s -> s.getTrip().getId().getId().equals(gtfsTripId);
         return filterToList("getAllStopTimes", predicate);
     }
 

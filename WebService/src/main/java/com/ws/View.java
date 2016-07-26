@@ -5,12 +5,5 @@ package com.ws;
  */
 public class View {
     interface TripSummary {}
-    interface TripComplete extends TripSummary, StopSummary {}
-
-    interface StopSummary {}
-    interface StopComplete extends StopSummary, TripSummary {}
-
-    interface CorridorComplete extends StopSummary {}
-
-    interface NotIncluded {}
+    interface TripComplete extends TripSummary {}
 }

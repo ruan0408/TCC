@@ -1,11 +1,7 @@
 package com.ws;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.smartsampa.busapi.BusAPI;
-import com.smartsampa.busapi.Bus;
-import com.smartsampa.busapi.PredictedBus;
-import com.smartsampa.busapi.Stop;
-import com.smartsampa.busapi.Trip;
+import com.smartsampa.busapi.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,13 +18,6 @@ import java.util.Set;
 @RequestMapping("/trips")
 public class TripController {
 
-    static {
-//        BusAPI.setSptransLogin("ruan0408");
-//        BusAPI.setSptransPassword("costaruan");
-//        BusAPI.setOlhovivoKey("3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3");
-//        BusAPI.initialize();
-    }
-
     @JsonView(View.TripSummary.class)
     @RequestMapping("/search")
     public Set<Trip> getTripsSummaryByTerm(@RequestParam(value="term", defaultValue="") String searchTerm) {
@@ -41,21 +30,29 @@ public class TripController {
         return BusAPI.getTripById(tripId);
     }
 
+    @RequestMapping("/{tripId}/stops")
+    public List<Stop> getStops(@PathVariable(value = "tripId") String tripId) {
+        Trip trip = BusAPI.getTripById(tripId);
+        return BusAPI.getStopsFromTrip(trip);
+    }
+
     @RequestMapping("/{tripId}/predictions/buses")
     public Set<Bus> getAllRunningBuses(@PathVariable(value = "tripId") String tripId) {
-        return BusAPI.getTripById(tripId).getAllRunningBuses();
+        Trip trip = BusAPI.getTripById(tripId);
+        return BusAPI.getAllRunningBuses(trip);
     }
 
     @RequestMapping("/{tripId}/predictions/stops")
     public Map<Stop, List<PredictedBus>> getPredictionsPerStop(@PathVariable(value = "tripId") String tripId) {
-        return BusAPI.getTripById(tripId).getPredictionsPerStop();
+        Trip trip = BusAPI.getTripById(tripId);
+        return BusAPI.getPredictionsPerStop(trip);
     }
 
     @RequestMapping("/{tripId}/predictions/stops/{stopId}")
     public List<PredictedBus> getTripPredictionsAtStop(@PathVariable(value = "tripId") String tripId,
                                                        @PathVariable(value = "stopId") int stopId) {
-        Stop stop = BusAPI.getStopById(stopId);
         Trip trip = BusAPI.getTripById(tripId);
-        return trip.getPredictionsAtStop(stop);
+        Stop stop = BusAPI.getStopById(stopId);
+        return BusAPI.getPredictions(trip, stop);
     }
 }

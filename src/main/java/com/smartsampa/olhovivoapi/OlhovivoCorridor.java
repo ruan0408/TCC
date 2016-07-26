@@ -2,22 +2,22 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smartsampa.busapi.AbstractCorridor;
+import com.smartsampa.busapi.Corridor;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * Created by ruan0408 on 12/02/2016.
  */
-public class BusCorridor extends AbstractCorridor {
+public class OlhovivoCorridor implements Corridor {
 
     public int code;
     public int codCot;
     public String name;
 
     @JsonCreator
-    BusCorridor(@JsonProperty("CodCorredor") int code,
-                @JsonProperty("CodCot") int codCot,
-                @JsonProperty("Nome") String name) {
+    OlhovivoCorridor(@JsonProperty("CodCorredor") int code,
+                     @JsonProperty("CodCot") int codCot,
+                     @JsonProperty("Nome") String name) {
         this.code = code;
         this.codCot = codCot;
         this.name = name;

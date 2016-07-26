@@ -1,4 +1,4 @@
-package com.smartsampa.gtfsapi;
+package com.smartsampa.gtfswrapper;
 
 import com.smartsampa.busapi.Shape;
 import com.smartsampa.utils.Point;
@@ -9,12 +9,12 @@ import java.util.List;
 /**
  * Created by ruan0408 on 12/04/2016.
  */
-public class GtfsShape implements Shape {
+public class GtfsShapeAdapter implements Shape {
 
     private Point[] points;
     private double[] traveledDistances;
 
-    public GtfsShape(List<ShapePoint> shapePoints) {
+    public GtfsShapeAdapter(List<ShapePoint> shapePoints) {
 
         shapePoints.sort(ShapePoint::compareTo);
 

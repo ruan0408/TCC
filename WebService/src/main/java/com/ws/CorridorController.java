@@ -1,6 +1,5 @@
 package com.ws;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import com.smartsampa.busapi.BusAPI;
 import com.smartsampa.busapi.Corridor;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,13 +14,11 @@ import java.util.List;
 @RestController
 public class CorridorController {
 
-    @JsonView(View.CorridorComplete.class)
     @RequestMapping("/corridors")
     public List<Corridor> getAllCorridors() {
         return BusAPI.getAllCorridors();
     }
 
-    @JsonView(View.CorridorComplete.class)
     @RequestMapping("/corridors/search")
     public Corridor getCorridorByTerm(@RequestParam(value = "term", defaultValue = "") String term) {
         return BusAPI.getCorridorByTerm(term);

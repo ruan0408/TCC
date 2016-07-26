@@ -9,18 +9,18 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 public class ForecastWithStop {
 
     @JsonProperty("hr") public String currentTime;
-    @JsonProperty("p") public BusStopWithLines busStopWithLines;
+    @JsonProperty("p") public StopWithTrips stopWithTrips;
 
-    public BusLineNow[] getBusLines() {
-        if (busStopWithLines == null) return null;
-        return busStopWithLines.getBusLines();
+    public TripNow[] getBusLines() {
+        if (stopWithTrips == null) return null;
+        return stopWithTrips.getTripsNow();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this)
                 .append("currentTime", currentTime)
-                .append("busStopWithLines", busStopWithLines)
+                .append("stopWithTrips", stopWithTrips)
                 .toString();
     }
 }

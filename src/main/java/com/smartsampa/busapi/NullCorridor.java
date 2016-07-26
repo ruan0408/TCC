@@ -1,7 +1,5 @@
 package com.smartsampa.busapi;
 
-import java.util.List;
-
 /**
  * Created by ruan0408 on 5/07/2016.
  */
@@ -25,11 +23,6 @@ final class NullCorridor implements Corridor {
 
     @Override
     public String getName() {
-        return null;
-    }
-
-    @Override
-    public List<Stop> getStops() {
         return null;
     }
 }

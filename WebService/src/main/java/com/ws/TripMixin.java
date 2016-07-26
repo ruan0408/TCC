@@ -1,11 +1,8 @@
 package com.ws;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import com.smartsampa.busapi.*;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import com.smartsampa.busapi.Heading;
+import com.smartsampa.busapi.Shape;
 
 /**
  * Created by ruan0408 on 21/05/2016.
@@ -34,27 +31,8 @@ abstract class TripMixin {
     public abstract Boolean isCircular();
 
     @JsonView(View.TripComplete.class)
-    public abstract List<Stop> getStops();
-
-    @JsonView(View.TripComplete.class)
     public abstract Shape getShape();
 
     @JsonView(View.TripComplete.class)
     public abstract int getDepartureIntervalInSecondsNow();
-
-    @JsonView(View.NotIncluded.class)
-    public abstract Map<Stop, List<PredictedBus>> getPredictionsPerStop();
-
-    @JsonView(View.NotIncluded.class)
-    public abstract Set<Bus> getAllRunningBuses();
-
-    @JsonView(View.NotIncluded.class)
-    public abstract List<PredictedBus> getPredictionsAtStop(Stop stop);
-
-    @JsonView(View.NotIncluded.class)
-    public abstract Integer getOlhovivoId();
-
-    @JsonView(View.NotIncluded.class)
-    public abstract String getGtfsId();
-
 }

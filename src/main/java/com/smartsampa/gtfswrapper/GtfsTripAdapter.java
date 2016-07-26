@@ -1,25 +1,22 @@
-package com.smartsampa.gtfsapi;
+package com.smartsampa.gtfswrapper;
 
-import com.smartsampa.busapi.AbstractTrip;
 import com.smartsampa.busapi.Heading;
 import com.smartsampa.busapi.Provider;
 import com.smartsampa.busapi.Shape;
-import org.apache.commons.math3.util.Precision;
-import org.onebusaway.gtfs.model.ShapePoint;
+import com.smartsampa.busapi.Trip;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by ruan0408 on 12/04/2016.
  */
-public class GtfsTrip extends AbstractTrip {
+public class GtfsTripAdapter extends Trip {
 
     private org.onebusaway.gtfs.model.Trip gtfsRawTrip;
-    private GtfsAPI gtfsAPI = Provider.getGtfsAPI();
+    private GtfsAPIFacade gtfsAPIFacade = Provider.getGtfsAPIFacade();
 
-    public GtfsTrip(org.onebusaway.gtfs.model.Trip gtfsRawTrip) {
+    public GtfsTripAdapter(org.onebusaway.gtfs.model.Trip gtfsRawTrip) {
         this.gtfsRawTrip = gtfsRawTrip;
     }
 
@@ -49,14 +46,12 @@ public class GtfsTrip extends AbstractTrip {
 
     @Override
     public Double getFarePrice() {
-        double farePrice = gtfsAPI.getFarePrice(getNumberSign());
-        return Precision.round(farePrice, 2);
+        return gtfsAPIFacade.getFarePrice(getNumberSign());
     }
 
     @Override
     public Shape getShape() {
-        List<ShapePoint> shapePoints = gtfsAPI.getShape(getShapeId());
-        return new GtfsShape(shapePoints);
+        return gtfsAPIFacade.getShape(getShapeId());
     }
 
     private String getShapeId() {
@@ -64,14 +59,14 @@ public class GtfsTrip extends AbstractTrip {
     }
 
     @Override
-    public int getDepartureIntervalInSecondsAtTime(String hhmm) {
-        return gtfsAPI.getDepartureIntervalAtTime(getGtfsId(), hhmm);
+    public int getDepartureIntervalInSecondsAtTime(String HHmm) {
+        return gtfsAPIFacade.getDepartureIntervalAtTime(getGtfsId(), HHmm);
     }
 
     @Override
     public int getDepartureIntervalInSecondsNow() {
-        String hhmm = new SimpleDateFormat("HH:mm").format(new Date());
-        return getDepartureIntervalInSecondsAtTime(hhmm);
+        String HHmm = new SimpleDateFormat("HH:mm").format(new Date());
+        return getDepartureIntervalInSecondsAtTime(HHmm);
     }
 
     @Override

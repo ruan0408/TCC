@@ -5,20 +5,20 @@ package com.smartsampa.utils;
  */
 public class Point {
 
-    private double py;
-    private double px;
+    private double latitude;
+    private double longitude;
 
-    public Point(double py, double px) {
-        this.py = py;
-        this.px = px;
+    public Point(double latitude, double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
-    public double getLatitude() { return py; }
-    public double getLongitude() { return px; }
+    public double getLatitude() { return latitude; }
+    public double getLongitude() { return longitude; }
 
     @Override
     public String toString() {
-        return "("+py+","+px+")";
+        return "("+ latitude +","+ longitude +")";
     }
 
     @Override
@@ -26,8 +26,8 @@ public class Point {
         if (!(obj instanceof Point)) return false;
         Point that = (Point) obj;
 
-        if (Math.abs(this.px-that.px) < 0.0000000000000001 &&
-                Math.abs(this.py-that.py) < 0.0000000000000001)
+        if (Math.abs(this.longitude -that.longitude) < 0.0000000000000001 &&
+                Math.abs(this.latitude -that.latitude) < 0.0000000000000001)
             return true;
 
         return false;
@@ -35,8 +35,8 @@ public class Point {
 
     @Override
     public int hashCode() {
-        long longPy = Double.doubleToLongBits(py);
-        long longPx = Double.doubleToLongBits(px);
+        long longPy = Double.doubleToLongBits(latitude);
+        long longPx = Double.doubleToLongBits(longitude);
         int result = 17;
         result = 31 * result + (int)(longPy^(longPy>>>32));
         result = 31 * result + (int)(longPx^(longPx>>>32));

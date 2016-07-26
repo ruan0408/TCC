@@ -16,10 +16,10 @@ import static org.junit.Assume.*;
 /**
  * Created by ruan0408 on 11/02/2016.
  */
-public class OlhoVivoAPITest {
+public class OlhovivoAPITest {
 
     private static final String AUTHKEY = "3de5ce998806e0c0750b1434e17454b6490ccf0a595f3884795da34460a7e7b3";
-    private static OlhoVivoAPI api;
+    private static OlhovivoAPI api;
 
     private final int campanellaStopId = 360004869;
     private final int bibBrasilianaStopId = 120010354;
@@ -37,7 +37,7 @@ public class OlhoVivoAPITest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        api = new OlhoVivoAPI(AUTHKEY);
+        api = new OlhovivoAPI(AUTHKEY);
         api.authenticate();
     }
 
@@ -111,21 +111,4 @@ public class OlhoVivoAPITest {
         assertTrue(stops.size() > 0);
         assertTrue(stops.stream().allMatch(namesNotNull));
     }
-
-//    @Test
-//    public void testSearchBusStopsByLine() throws Exception {
-//        BusStop[] busStops = api.searchBusStopsByLine(usp8012);
-//        assumeTrue(busStops.length > 0);
-//
-//        Predicate<BusStop> namesNotNull = stop -> stop.getName() != null;
-//
-//        assertNotNull(busStops);
-//        assertTrue(arrayHasMatch(busStops, namesNotNull));
-//    }
-
-//    private <T> boolean arrayHasMatch(T[] array, Predicate predicate) {
-//        return Arrays.asList(array)
-//                .parallelStream()
-//                .anyMatch(predicate);
-//    }
 }

@@ -1,29 +1,35 @@
 package com.smartsampa.busapi;
 
-import com.smartsampa.gtfsapi.GtfsAPI;
-import com.smartsampa.olhovivoapi.OlhoVivoAPI;
+import com.smartsampa.gtfswrapper.GtfsAPIFacade;
+import com.smartsampa.olhovivoapi.OlhovivoAPI;
+import com.smartsampa.shapefileapi.ShapefileAPI;
 
 /**
  * Created by ruan0408 on 4/06/2016.
  */
 public final class Provider {
 
-    private static OlhoVivoAPI olhovivoAPI;
-    private static GtfsAPI gtfsAPI;
+    private static OlhovivoAPI olhovivoAPI;
+    private static GtfsAPIFacade gtfsAPIFacade;
+    private static ShapefileAPI shapefileAPI;
 
-    public static OlhoVivoAPI getOlhovivoAPI() {
+    public static OlhovivoAPI getOlhovivoAPI() {
         return olhovivoAPI;
     }
 
-    public static void setOlhovivoAPI(OlhoVivoAPI olhovivo) {
+    public static void setOlhovivoAPI(OlhovivoAPI olhovivo) {
         olhovivoAPI = olhovivo;
     }
 
-    public static GtfsAPI getGtfsAPI() {
-        return gtfsAPI;
+    public static GtfsAPIFacade getGtfsAPIFacade() {
+        return gtfsAPIFacade;
     }
 
-    public static void setGtfsAPI(GtfsAPI gtfs) {
-        gtfsAPI = gtfs;
+    public static void setGtfsAPIFacade(GtfsAPIFacade gtfs) {
+        gtfsAPIFacade = gtfs;
     }
+
+    public static ShapefileAPI getShapefileAPI() { return shapefileAPI; }
+
+    public static void setShapefileAPI(ShapefileAPI shapefile) { shapefileAPI = shapefile; }
 }

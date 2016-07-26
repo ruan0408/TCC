@@ -6,13 +6,13 @@ package com.smartsampa.olhovivoapi;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.smartsampa.busapi.Heading;
-import com.smartsampa.busapi.AbstractTrip;
+import com.smartsampa.busapi.Trip;
 
 /**
  * Wrapper class for the bus line json returned by the PublicTransportAPI.
  * The fields are not in camel case so we can automatically parse the json.
  * */
-public class BusLine extends AbstractTrip {
+public class OlhovivoTrip extends Trip {
 
     @JsonProperty("CodigoLinha") public int code;
     @JsonProperty("Circular") public boolean circular;

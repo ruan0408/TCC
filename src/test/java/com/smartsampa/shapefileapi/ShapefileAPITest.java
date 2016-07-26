@@ -19,20 +19,6 @@ public class ShapefileAPITest {
 
     @Ignore
     @Test
-    public void testPrintPluviometerProperties() throws Exception {
-        shapefileApi = new ShapefileAPI("pluviometro/sirgas_pluviometro.shp");
-        shapefileApi.printProperties();
-    }
-
-    @Ignore
-    @Test
-    public void testPrintFloodPointProperties() throws Exception {
-        shapefileApi = new ShapefileAPI("equipamento_servicos/sirgas_equipamento_servico_wifi.shp");
-        shapefileApi.printProperties();
-    }
-
-    @Ignore
-    @Test
     public void testPrintPropertiesToFile() throws Exception {
         shapefileApi.printPropertiesToFile();
     }

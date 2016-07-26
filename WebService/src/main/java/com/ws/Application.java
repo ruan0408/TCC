@@ -39,7 +39,6 @@ public class Application {
         mapper.setVisibility(PropertyAccessor.IS_GETTER, JsonAutoDetect.Visibility.PUBLIC_ONLY);
 
         mapper.addMixIn(Trip.class, TripMixin.class);
-        mapper.addMixIn(Stop.class, StopMixin.class);
 
         SimpleModule module = new SimpleModule();
         module.addKeySerializer(Trip.class, new TripKeySerializer());

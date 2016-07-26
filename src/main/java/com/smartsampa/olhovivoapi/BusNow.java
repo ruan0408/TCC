@@ -22,9 +22,8 @@ public class BusNow extends OlhovivoBus implements PredictedBus {
         this.predictedArrivalTime = predictedArrivalTime;
     }
 
-    public String getPredictedArrivalTime() {
-        return predictedArrivalTime;
-    }
+    @Override
+    public String getPredictedArrivalTime() { return predictedArrivalTime; }
 
     @Override
     public String toString() {
